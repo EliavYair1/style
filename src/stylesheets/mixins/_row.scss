@@ -1,0 +1,54 @@
+@mixin row-flex {
+  @include display-flex;
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+}
+
+@mixin row_rtl($num: 2, $gap: 0px, $justify: center, $grow: 0) {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  justify-content: $justify;
+  @if ($justify == "flex-start") {
+    margin-left: calc(-1 * #{$gap});
+  } @else if ($justify == "flex-end") {
+    margin-right: calc(-1 * #{$gap});
+  } @else {
+    margin-right: calc(-1 * #{$gap});
+  }
+
+  & > * {
+    margin-bottom: $gap;
+    flex-basis: calc(((100% / #{$num}) - #{$gap}));
+    @if ($justify == "flex-end") {
+      &:not(:nth-child(#{$num}n)) {
+        margin-left: $gap;
+      }
+      &:last-child {
+        margin-left: 0;
+      }
+    } @else if($justify == "flex-start") {
+      &:not(:nth-child(#{$num}n)) {
+        margin-left: $gap;
+      }
+    } @else {
+      margin-right: $gap;
+    }
+  }
+}
+
+@mixin row($num: 2, $gap: 0px, $justify: center) {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  justify-content: $justify;
+  margin-right: -$gap * 0.5;
+  margin-left: -$gap * 0.5;
+
+  & > * {
+    margin-bottom: $gap;
+    flex-basis: calc((100% / #{$num}) - #{$gap});
+    margin: $gap * 0.5;
+    flex-grow: 0;
+  }
+}

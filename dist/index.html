@@ -15,7 +15,8 @@
 </head>
 
   <body>
-    <!-- * header -->
+    <div id="style-container">
+      <!-- * header -->
 <nav class="header">
   <div class="header__row header__row--top">
     <div class="header__logo">
@@ -56,7 +57,7 @@
   </div>
 
   <div class="header__row header__row--middle">
-    <div class="header__cart">
+    <a href="#cart" class="header__cart">
       <span class="header__cart-text"> סל קניות </span>
       <svg
         class="header__cart-icon"
@@ -83,8 +84,8 @@
         />
       </svg>
       <span class="header__cart-count" id="cart-count"></span>
-    </div>
-    <div class="header__profile">
+    </a>
+    <a href="#profile" class="header__profile">
       <span class="header__profile-text">אזור אישי</span>
       <svg
         class="header__profile-icon"
@@ -102,7 +103,7 @@
           stroke-linejoin="round"
         />
       </svg>
-    </div>
+    </a>
   </div>
 
   <div class="header__row header__row--search">
@@ -138,10 +139,15 @@
   </div>
 
   <div class="header__row header__row--buttons">
-    <button class="header__button header__button--category">
-      <span class="header__button-text">MY CORPORATE</span>
+    <button class="header__button header__button--corprate">
+      <img
+        src="../img/toggle-menus/my-corprate-menu/my_corprate-cards.svg"
+        alt="isracard corprate"
+        class="header__button-cards"
+      />
+      <span class="header__button-text corprate">MY CORPORATE</span>
       <svg
-        class="header__button-arrow"
+        class="header__button-arrow mobile"
         viewBox="0 0 21 22"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -154,10 +160,25 @@
           stroke-linejoin="round"
         />
       </svg>
+      <svg
+        class="header__button-arrow desktop"
+        viewBox="0 0 31 30"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect x="0.651367" width="30" height="30" rx="15" fill="#F3F3F3" />
+        <path
+          d="M11.1514 12.5L15.6514 17.5L20.1514 12.5"
+          stroke="#2020B3"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
     </button>
 
     <button class="header__button header__button--menuItem">
-      <span class="header__button-text">קטגוריות באתר</span>
+      <span class="header__button-text menuItem">קטגוריות באתר</span>
       <svg
         class="header__button-arrow"
         viewBox="0 0 21 22"
@@ -174,7 +195,7 @@
       </svg>
     </button>
   </div>
-  <!-- * my categories -->
+  <!-- * mob/desk categories list-->
   <div class="header__menu header__menu--categories" id="categories-menu">
     <!-- category item #1 -->
     <div class="header__menu-item header__menu-item--category">
@@ -200,12 +221,15 @@
         </svg>
       </span>
     </div>
-    <a href="#" class="header__menu-subcategory">
-      <span class="header__menu-subcategory-text"> Subcategory 1.1 </span>
-    </a>
-    <a href="#" class="header__menu-subcategory">
-      <span class="header__menu-subcategory-text"> Subcategory 1.2 </span>
-    </a>
+    <div class="header__menu-subcategories">
+      <a href="#" class="header__menu-subcategory">
+        <span class="header__menu-subcategory-text"> Subcategory 1.1 </span>
+      </a>
+      <a href="#" class="header__menu-subcategory">
+        <span class="header__menu-subcategory-text"> Subcategory 1.2 </span>
+      </a>
+    </div>
+
     <!-- category item #2 -->
     <div class="header__menu-item header__menu-item--category">
       <div>
@@ -230,12 +254,15 @@
         </svg>
       </span>
     </div>
-    <a href="#" class="header__menu-subcategory">
-      <span class="header__menu-subcategory-text"> Subcategory 2.1 </span>
-    </a>
-    <a href="#" class="header__menu-subcategory">
-      <span class="header__menu-subcategory-text"> Subcategory 2.2 </span>
-    </a>
+    <div class="header__menu-subcategories">
+      <a href="#" class="header__menu-subcategory">
+        <span class="header__menu-subcategory-text"> Subcategory 2.1 </span>
+      </a>
+      <a href="#" class="header__menu-subcategory">
+        <span class="header__menu-subcategory-text"> Subcategory 2.2 </span>
+      </a>
+    </div>
+
     <!-- category item #3 -->
     <div class="header__menu-item header__menu-item--category">
       <div>
@@ -260,12 +287,15 @@
         </svg>
       </span>
     </div>
-    <a href="#" class="header__menu-subcategory">
-      <span class="header__menu-subcategory-text"> Subcategory 3.1 </span>
-    </a>
-    <a href="#" class="header__menu-subcategory">
-      <span class="header__menu-subcategory-text"> Subcategory 3.2 </span>
-    </a>
+    <div class="header__menu-subcategories">
+      <a href="#" class="header__menu-subcategory">
+        <span class="header__menu-subcategory-text"> Subcategory 3.1 </span>
+      </a>
+      <a href="#" class="header__menu-subcategory">
+        <span class="header__menu-subcategory-text"> Subcategory 3.2 </span>
+      </a>
+    </div>
+
     <!-- category item #4 -->
     <div class="header__menu-item header__menu-item--category">
       <div>
@@ -290,13 +320,14 @@
         </svg>
       </span>
     </div>
-    <a href="#" class="header__menu-subcategory">
-      <span class="header__menu-subcategory-text"> Subcategory 4.1 </span>
-    </a>
-    <a href="#" class="header__menu-subcategory">
-      <span class="header__menu-subcategory-text"> Subcategory 4.2 </span>
-    </a>
-
+    <div class="header__menu-subcategories">
+      <a href="#" class="header__menu-subcategory">
+        <span class="header__menu-subcategory-text"> Subcategory 4.1 </span>
+      </a>
+      <a href="#" class="header__menu-subcategory">
+        <span class="header__menu-subcategory-text"> Subcategory 4.2 </span>
+      </a>
+    </div>
     <!-- category item #5 -->
     <div class="header__menu-item header__menu-item--category">
       <div>
@@ -321,12 +352,14 @@
         </svg>
       </span>
     </div>
-    <a href="#" class="header__menu-subcategory">
-      <span class="header__menu-subcategory-text"> Subcategory 5.1 </span>
-    </a>
-    <a href="#" class="header__menu-subcategory">
-      <span class="header__menu-subcategory-text"> Subcategory 5.2 </span>
-    </a>
+    <div class="header__menu-subcategories">
+      <a href="#" class="header__menu-subcategory">
+        <span class="header__menu-subcategory-text"> Subcategory 5.1 </span>
+      </a>
+      <a href="#" class="header__menu-subcategory">
+        <span class="header__menu-subcategory-text"> Subcategory 5.2 </span>
+      </a>
+    </div>
 
     <!-- category item #6 -->
     <div class="header__menu-item header__menu-item--category">
@@ -352,19 +385,20 @@
         </svg>
       </span>
     </div>
-    <a href="#" class="header__menu-subcategory">
-      <span class="header__menu-subcategory-text"> תיירות פנים</span>
-    </a>
-    <a href="#" class="header__menu-subcategory">
-      <span class="header__menu-subcategory-text"> טיסות </span>
-    </a>
-    <a href="#" class="header__menu-subcategory">
-      <span class="header__menu-subcategory-text"> תיירות חוץ </span>
-    </a>
-    <a href="#" class="header__menu-subcategory">
-      <span class="header__menu-subcategory-text"> אילת</span>
-    </a>
-
+    <div class="header__menu-subcategories">
+      <a href="#" class="header__menu-subcategory">
+        <span class="header__menu-subcategory-text"> תיירות פנים</span>
+      </a>
+      <a href="#" class="header__menu-subcategory">
+        <span class="header__menu-subcategory-text"> טיסות </span>
+      </a>
+      <a href="#" class="header__menu-subcategory">
+        <span class="header__menu-subcategory-text"> תיירות חוץ </span>
+      </a>
+      <a href="#" class="header__menu-subcategory">
+        <span class="header__menu-subcategory-text"> אילת</span>
+      </a>
+    </div>
     <!-- category item #7 -->
     <div class="header__menu-item header__menu-item--category">
       <div>
@@ -389,60 +423,77 @@
         </svg>
       </span>
     </div>
-    <a href="#" class="header__menu-subcategory">
-      <span class="header__menu-subcategory-text"> Subcategory 7.1 </span>
-    </a>
-    <a href="#" class="header__menu-subcategory">
-      <span class="header__menu-subcategory-text"> Subcategory 7.2 </span>
-    </a>
+    <div class="header__menu-subcategories">
+      <a href="#" class="header__menu-subcategory">
+        <span class="header__menu-subcategory-text"> Subcategory 7.1 </span>
+      </a>
+      <a href="#" class="header__menu-subcategory">
+        <span class="header__menu-subcategory-text"> Subcategory 7.2 </span>
+      </a>
+    </div>
   </div>
 
-  <!-- * my hamburger -->
+  <!-- * mobile hamburger list-->
   <div class="header__menu header__menu--hamburger" id="hamburger-menu">
-    <div class="header__menu-item">
+    <a href="#" class="header__menu-item">
       <img src="../img/toggle-menus/my-corprate-menu/card.svg" alt="" />
       <span> הצטרפות לכרטיס Corporate </span>
-    </div>
+    </a>
     <hr class="break-line" />
-    <div class="header__menu-item">
+    <a href="#" class="header__menu-item">
       <img src="../img/toggle-menus/my-corprate-menu/heart.svg" alt="" />
       <span> הטבות שאהבתי </span>
-    </div>
+    </a>
     <hr class="break-line" />
-    <div class="header__menu-item">
+    <a href="#" class="header__menu-item">
       <img src="../img/toggle-menus/my-corprate-menu/star.svg" alt="" />
       <span> הנקודות שלי </span>
-    </div>
+    </a>
     <hr class="break-line" />
-    <div class="header__menu-item">
+    <a href="#" class="header__menu-item">
       <img src="../img/toggle-menus/my-corprate-menu/present.svg" alt="" />
       <span> מתנת הצטרפות </span>
-    </div>
+    </a>
   </div>
 
-  <!-- * my corprate -->
-  <div class="header__menu header__menu--hamburger" id="corprate-menu">
-    <div class="header__menu-item">
+  <!-- * mob/desk corprate list -->
+  <div class="header__menu header__menu--corprate" id="corprate-menu">
+    <svg
+      class="icon"
+      viewBox="0 0 64 64"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <rect
+        x="31.8193"
+        width="45"
+        height="45"
+        transform="rotate(45 31.8193 0)"
+        fill="white"
+      />
+    </svg>
+
+    <a href="#" class="header__menu-item">
       <span> כרטיס אשראי Corporate </span>
-    </div>
+    </a>
     <hr class="break-line" />
-    <div class="header__menu-item">
+    <a href="#" class="header__menu-item">
       <span> TOPCASH </span>
-    </div>
+    </a>
     <hr class="break-line" />
-    <div class="header__menu-item">
+    <a href="#" class="header__menu-item">
       <span> GOOGLE PAY </span>
-    </div>
+    </a>
     <hr class="break-line" />
-    <div class="header__menu-item">
+    <a href="#" class="header__menu-item">
       <span> APPLE PAY </span>
-    </div>
+    </a>
   </div>
 </nav>
 <!-- ? header end -->
 
-    <!-- * swiper  -->
-    <!-- * swiper  -->
+      <!-- * swiper  -->
+      <!-- * swiper  -->
 <div class="swiper-container">
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
@@ -520,10 +571,10 @@
 
 <!-- Initialize Swiper -->
 
-    <!-- ? swiper  -->
+      <!-- ? swiper  -->
 
-    <!-- * footer  -->
-    <div class="footer">
+      <!-- * footer  -->
+      <div class="footer">
   <div class="footer_row first">
     <!-- <span class="footer_text first">ישראכרט</span> -->
     <svg
@@ -643,7 +694,8 @@
   </div>
 </div>
 
-    <!-- ? footer  -->
+      <!-- ? footer  -->
+    </div>
 
     <!-- ! scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

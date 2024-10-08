@@ -1,11 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
   const hamburgerButton = document.querySelector(".header__hamburger");
-  const categoryButton = document.querySelector(".header__button--category");
+  const categoryButton = document.querySelector(".header__button--corprate");
   const menuButton = document.querySelector(".header__button--menuItem");
   const categoryItems = document.querySelectorAll(
     ".header__menu-item--category"
   );
-
   hamburgerButton.addEventListener("click", toggleHamburgerMenu);
   categoryButton.addEventListener("click", toggleCorporateMenu);
   menuButton.addEventListener("click", toggleCategories);
@@ -16,14 +15,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const closeAllMenus = () => {
   const menus = document.querySelectorAll(
-    ".header__menu--categories, .header__menu--hamburger"
+    ".header__menu--corprate, .header__menu--categories , .header__menu--hamburger"
   );
+
   menus.forEach((menu) => {
     menu.classList.remove("show");
   });
 
   const buttons = document.querySelectorAll(
-    ".header__button--category, .header__button--menuItem"
+    ".header__button--corprate, .header__button--menuItem"
   );
   buttons.forEach((button) => {
     button.classList.remove("active-button");
@@ -40,7 +40,7 @@ const closeAllMenus = () => {
     }
   });
 };
-
+// mobile hamburger menu
 const toggleHamburgerMenu = () => {
   const hamburgerMenu = document.getElementById("hamburger-menu");
   const hamburgerIcon = document.querySelector(".header__hamburger-icon");
@@ -58,7 +58,7 @@ const toggleHamburgerMenu = () => {
     `;
   }
 };
-
+//  toggleCategories
 const toggleCategories = () => {
   const categoriesMenu = document.getElementById("categories-menu");
   const menuButton = document.querySelector(".header__button--menuItem");
@@ -81,9 +81,10 @@ const toggleCategories = () => {
   }
 };
 
+//* corporate menu
 const toggleCorporateMenu = () => {
   const corporateMenu = document.getElementById("corprate-menu");
-  const categoryButton = document.querySelector(".header__button--category");
+  const categoryButton = document.querySelector(".header__button--corprate");
   const categoryArrow = categoryButton.querySelector(".header__button-arrow");
   const categoryArrowPath = categoryButton.querySelector(
     ".header__button-arrow path"
@@ -105,24 +106,51 @@ const toggleCorporateMenu = () => {
   }
 };
 
+// subcategories menu
 const toggleSubCategory = (event) => {
   const categoryElement = event.currentTarget;
-  let nextSibling = categoryElement.nextElementSibling;
-  const arrow = categoryElement.querySelector(".header__menu-arrow");
 
-  while (
-    nextSibling &&
-    nextSibling.classList.contains("header__menu-subcategory")
-  ) {
-    if (nextSibling.style.display === "block") {
-      nextSibling.style.display = "none";
-    } else {
-      nextSibling.style.display = "block";
+  const subCategoriesWrapper = categoryElement.nextElementSibling;
+  // make only one subcategory open and reset status
+  const isCurrentlyOpen =
+    subCategoriesWrapper.style.maxHeight !== "0px" &&
+    subCategoriesWrapper.style.maxHeight !== "";
+
+  const allSubcategories = document.querySelectorAll(
+    ".header__menu-subcategories"
+  );
+  const allArrows = document.querySelectorAll(".header__menu-arrow");
+
+  const allCategories = document.querySelectorAll(
+    ".header__menu-item--category"
+  );
+  allSubcategories.forEach((subCategory) => {
+    subCategory.style.maxHeight = "0px";
+    subCategory.style.height = "0px";
+    subCategory.style.display = "none";
+  });
+  allArrows.forEach((arrow) => {
+    arrow.classList.remove("rotate");
+  });
+  allCategories.forEach((cat) => {
+    cat.style.background = "unset";
+  });
+
+  // if category is close do then...
+  if (!isCurrentlyOpen) {
+    if (
+      subCategoriesWrapper &&
+      subCategoriesWrapper.classList.contains("header__menu-subcategories")
+    ) {
+      const arrow = categoryElement.querySelector(".header__menu-arrow");
+      subCategoriesWrapper.style.height = "auto";
+      subCategoriesWrapper.style.maxHeight = "100%";
+      subCategoriesWrapper.style.display = "flex";
+      subCategoriesWrapper.style.flexDirection = "column";
+      arrow.classList.add("rotate");
+      categoryElement.style.background = "#6327F10F";
     }
-    nextSibling = nextSibling.nextElementSibling;
   }
-
-  arrow.classList.toggle("rotate");
 };
 
 

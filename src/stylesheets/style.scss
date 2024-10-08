@@ -1,7 +1,11 @@
+* {
+  box-sizing: border-box;
+}
 html,
 body {
   position: relative;
   height: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -17,4 +21,6 @@ body.body--menu-open {
   position: relative;
   z-index: 0;
   background: rgba(0, 0, 0, 0.8) !important;
+}
+#style-container {
 }

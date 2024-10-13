@@ -1,0 +1,35 @@
+$ICPangeaText-font-path: "../fonts/" !default;
+$simple-line-font-family: "ICPangeaText" !default;
+
+@font-face {
+  font-family: "ICPangeaText";
+  src: url("../fonts/ICPangeaText-Light.otf") format("otf"),
+    url("../fonts/ICPangeaText-Light.woff2") format("woff2"),
+    url("../fonts/ICPangeaText-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ICPangeaText";
+  src: url("../fonts/ICPangeaText-Regular.otf") format("otf"),
+    url("../fonts/ICPangeaText-Regular.woff2") format("woff2"),
+    url("../fonts/ICPangeaText-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ICPangeaText";
+  src: url("../fonts/ICPangeaText-Medium.otf") format("otf"),
+    url("../fonts/ICPangeaText-Medium.woff2") format("woff2"),
+    url("../fonts/ICPangeaText-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "ICPangeaText";
+  src: url("../fonts/ICPangeaText-SemiBold.otf") format("otf"),
+    url("../fonts/ICPangeaText-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}

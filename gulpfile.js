@@ -49,7 +49,7 @@ var paths = {
     dist: "dist/fonts/",
   },
   watch: {
-    html: ["src/template/*.html", "src/*.html"],
+    html: ["src/template/*.html", "src/template/**.html", "src/*.html"],
     scss: "src/stylesheets/**/*.scss",
     css: "src/stylesheets/**/*.css",
     less: "src/stylesheets/**/*.less",
@@ -106,16 +106,6 @@ gulp.task("css", function () {
       .pipe(browserSync.stream())
   );
 });
-
-// gulp.task('less', function () {
-//     return gulp.src(paths.less.src)
-//         .pipe(sourcemaps.init())
-//         .pipe(less())
-//         .pipe(autoprefixer('last 5 version', 'ie 9'))
-//         .pipe(sourcemaps.write(paths.maps))
-//         .pipe(gulp.dest(paths.less.dist))
-//         .pipe(browserSync.stream());
-// });
 
 // img
 gulp.task("img", function () {
@@ -190,7 +180,11 @@ gulp.task("clean", function () {
 
 // watch
 gulp.task("watch", function () {
-  gulp.watch(paths.watch.html, gulp.series("html"));
+  // gulp.watch(paths.watch.html, gulp.series("html"));
+  gulp.watch(paths.watch.html, function (done) {
+    console.log("HTML file changed, reloading...");
+    gulp.series("html")(done);
+  });
   gulp.watch(paths.watch.scss, gulp.series("css"));
   gulp.watch(paths.watch.css, gulp.series("css"));
   gulp.watch(paths.watch.js, gulp.series("js"));
@@ -213,12 +207,3 @@ gulp.task(
     "watch"
   )
 );
-
-/*
-Update all the Node dependencies to their latest version
-
-npm install -g npm-check-updates
-ncu -u
-npm update
-npm install
-*/

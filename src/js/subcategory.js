@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     1: [
       {
         text: "אופנה",
-        href: "/fashion",
+        href: "#",
         productFile: "../template/features/product.html",
       },
       { text: "ביגוד", href: "/clothing" },
@@ -35,20 +35,6 @@ document.addEventListener("DOMContentLoaded", () => {
       { text: "Subcategory 7.2", href: "/subcategory7-2" },
     ],
   };
-
-  async function fetchProductHTML(productFile) {
-    try {
-      const response = await fetch(productFile);
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
-      const productHTML = await response.text();
-      return productHTML;
-    } catch (error) {
-      console.error("Failed to fetch product HTML:", error);
-      return "<div>Product not available</div>"; // Fallback if fetch fails
-    }
-  }
 
   function generateSubcategoryLinks() {
     const subcategoryContainers = document.querySelectorAll(
@@ -93,11 +79,14 @@ document.addEventListener("DOMContentLoaded", () => {
         `.header__menu-subcategories[data-subcatId="${subcatId}"]`
       );
 
+      const productDiv = document.querySelector(`.product-wrapper`);
+
       if (!subcategoryDiv) {
         if (subcategoryDiv.style.display === "flex") {
           subcategoryDiv.style.display = "none";
         } else {
           subcategoryDiv.style.display = "flex";
+          productDiv.style.display = "flex";
         }
       }
     });

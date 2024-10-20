@@ -1,0 +1,21 @@
+@import "../stylesheets/image-window.scss";
+@import "../stylesheets/product.scss";
+.product-image-container {
+  display: none;
+
+  @media (min-width: 992px) {
+  }
+  @media (min-width: 1200px) {
+  }
+  @media (min-width: 1600px) {
+    display: none;
+    gap: 24px;
+    padding: 25px;
+    position: absolute;
+    right: 307px;
+    border-top: 2px solid #e9e1fd;
+    background: #fff;
+    top: 0px;
+    // width: 1466px;
+  }
+}

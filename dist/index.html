@@ -198,38 +198,331 @@
       </svg>
     </button>
   </div>
-
   <!-- * mob/desk categories menu-->
-<div class="header__menu header__menu--categories" id="categories-menu">
-  <!-- category item #1 -->
-  <div class="header__menu-item header__menu-item--category">
-    <div>
-      <img src="../img/toggle-menus/categories-menu/store.svg" alt="" />
-      <span>צרכנות</span>
-    </div>
-    <span class="header__menu-arrow">
-      <svg
-        width="21"
-        height="22"
-        viewBox="0 0 21 22"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M13.0714 5.85742L7.92855 11.0003L13.0714 16.1431"
-          stroke="black"
-          stroke-width="1.37143"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    </span>
+<ul class="header__menu header__menu--categories" id="categories-menu">
+  <li class="header__menu-item header__menu-item--category" data-id="1">
+    <a class="category-link">
+      <div class="image-text">
+        <img src="../img/toggle-menus/categories-menu/store.svg" alt="" />
+        <span>צרכנות</span>
+      </div>
+
+      <span class="header__menu-arrow">
+        <svg
+          width="21"
+          height="22"
+          viewBox="0 0 21 22"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M13.0714 5.85742L7.92855 11.0003L13.0714 16.1431"
+            stroke="black"
+            stroke-width="1.37143"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </span>
+    </a>
+    <ul
+      class="header__menu-subcategories"
+      data-subcatId="1"
+      style="display: none"
+    >
+      <li class="header__menu-subcategory">
+        <a href="/fashion" class="header__menu-subcategory-link"
+          ><span class="header__menu-subcategory-text">אופנה</span>
+        </a>
+      </li>
+      <li class="header__menu-subcategory">
+        <a href="/clothing" class="header__menu-subcategory-link"
+          ><span class="header__menu-subcategory-text">ביגוד</span></a
+        >
+      </li>
+    </ul>
+  </li>
+
+  <hr class="break-line" />
+  <li class="header__menu-item header__menu-item--category" data-id="2">
+    <a class="category-link">
+      <div class="image-text">
+        <img src="../img/toggle-menus/categories-menu/ups.svg" alt="" />
+        <span>עד הבית online</span>
+      </div>
+      <span class="header__menu-arrow">
+        <svg
+          width="21"
+          height="22"
+          viewBox="0 0 21 22"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M13.0714 5.85742L7.92855 11.0003L13.0714 16.1431"
+            stroke="black"
+            stroke-width="1.37143"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </span>
+    </a>
+    <ul
+      class="header__menu-subcategories"
+      data-subcatId="2"
+      style="display: none"
+    >
+      <li class="header__menu-subcategory">
+        <a href="/subcategory2-1" class="header__menu-subcategory-link"
+          ><span class="header__menu-subcategory-text">Subcategory 2.1</span></a
+        >
+      </li>
+      <li class="header__menu-subcategory">
+        <a href="/subcategory2-2" class="header__menu-subcategory-link"
+          ><span class="header__menu-subcategory-text">Subcategory 2.2</span></a
+        >
+      </li>
+    </ul>
+  </li>
+
+  <hr class="break-line" />
+  <li class="header__menu-item header__menu-item--category" data-id="3">
+    <a class="category-link">
+      <div class="image-text">
+        <img src="../img/toggle-menus/categories-menu/prey-heart.svg" alt="" />
+        <span>אורח חיים בריא</span>
+      </div>
+      <span class="header__menu-arrow">
+        <svg
+          width="21"
+          height="22"
+          viewBox="0 0 21 22"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M13.0714 5.85742L7.92855 11.0003L13.0714 16.1431"
+            stroke="black"
+            stroke-width="1.37143"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </span>
+    </a>
+    <ul
+      class="header__menu-subcategories"
+      data-subcatId="3"
+      style="display: none"
+    >
+      <li class="header__menu-subcategory">
+        <a href="/subcategory3-1" class="header__menu-subcategory-link"
+          ><span class="header__menu-subcategory-text">Subcategory 3.1</span></a
+        >
+      </li>
+      <li class="header__menu-subcategory">
+        <a href="/subcategory3-2" class="header__menu-subcategory-link"
+          ><span class="header__menu-subcategory-text">Subcategory 3.2</span></a
+        >
+      </li>
+    </ul>
+  </li>
+
+  <hr class="break-line" />
+  <li class="header__menu-item header__menu-item--category" data-id="4">
+    <a class="category-link">
+      <div class="image-text">
+        <img src="../img/toggle-menus/categories-menu/soup.svg" alt="" />
+        <span>מסעדות</span>
+      </div>
+      <span class="header__menu-arrow">
+        <svg
+          width="21"
+          height="22"
+          viewBox="0 0 21 22"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M13.0714 5.85742L7.92855 11.0003L13.0714 16.1431"
+            stroke="black"
+            stroke-width="1.37143"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </span>
+    </a>
+    <ul
+      class="header__menu-subcategories"
+      data-subcatId="4"
+      style="display: none"
+    >
+      <li class="header__menu-subcategory">
+        <a href="/subcategory4-1" class="header__menu-subcategory-link"
+          ><span class="header__menu-subcategory-text">Subcategory 4.1</span></a
+        >
+      </li>
+      <li class="header__menu-subcategory">
+        <a href="/subcategory4-2" class="header__menu-subcategory-link"
+          ><span class="header__menu-subcategory-text">Subcategory 4.2</span></a
+        >
+      </li>
+    </ul>
+  </li>
+
+  <hr class="break-line" />
+  <li class="header__menu-item header__menu-item--category" data-id="5">
+    <a class="category-link">
+      <div class="image-text">
+        <img src="../img/toggle-menus/categories-menu/youtube.svg" alt="" />
+        <span>תרבות ובידור</span>
+      </div>
+      <span class="header__menu-arrow">
+        <svg
+          width="21"
+          height="22"
+          viewBox="0 0 21 22"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M13.0714 5.85742L7.92855 11.0003L13.0714 16.1431"
+            stroke="black"
+            stroke-width="1.37143"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </span>
+    </a>
+    <ul
+      class="header__menu-subcategories"
+      data-subcatId="5"
+      style="display: none"
+    >
+      <li class="header__menu-subcategory">
+        <a href="/subcategory5-1" class="header__menu-subcategory-link"
+          ><span class="header__menu-subcategory-text">Subcategory 5.1</span></a
+        >
+      </li>
+      <li class="header__menu-subcategory">
+        <a href="/subcategory5-2" class="header__menu-subcategory-link"
+          ><span class="header__menu-subcategory-text">Subcategory 5.2</span></a
+        >
+      </li>
+    </ul>
+  </li>
+
+  <hr class="break-line" />
+  <li class="header__menu-item header__menu-item--category" data-id="6">
+    <a class="category-link">
+      <div class="image-text">
+        <img src="../img/toggle-menus/categories-menu/beach.svg" alt="" />
+        <span>תיירות ונופש</span>
+      </div>
+      <span class="header__menu-arrow">
+        <svg
+          width="21"
+          height="22"
+          viewBox="0 0 21 22"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M13.0714 5.85742L7.92855 11.0003L13.0714 16.1431"
+            stroke="black"
+            stroke-width="1.37143"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </span>
+    </a>
+
+    <ul
+      class="header__menu-subcategories"
+      data-subcatId="6"
+      style="display: none"
+    >
+      <li class="header__menu-subcategory">
+        <a href="/domestic-tourism" class="header__menu-subcategory-link"
+          ><span class="header__menu-subcategory-text">תיירות פנים</span></a
+        >
+      </li>
+      <li class="header__menu-subcategory">
+        <a href="/flights" class="header__menu-subcategory-link"
+          ><span class="header__menu-subcategory-text">טיסות</span></a
+        >
+      </li>
+      <li class="header__menu-subcategory">
+        <a href="/international-tourism" class="header__menu-subcategory-link"
+          ><span class="header__menu-subcategory-text">תיירות חוץ</span>
+        </a>
+      </li>
+      <li class="header__menu-subcategory">
+        <a href="/eilat" class="header__menu-subcategory-link"
+          ><span class="header__menu-subcategory-text">אילת</span>
+        </a>
+      </li>
+    </ul>
+  </li>
+
+  <hr class="break-line" />
+  <li class="header__menu-item header__menu-item--category" data-id="7">
+    <a class="category-link">
+      <div class="image-text">
+        <img src="../img/toggle-menus/categories-menu/shnorkel.svg" alt="" />
+        <span>אטרקציות</span>
+      </div>
+      <span class="header__menu-arrow">
+        <svg
+          width="21"
+          height="22"
+          viewBox="0 0 21 22"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M13.0714 5.85742L7.92855 11.0003L13.0714 16.1431"
+            stroke="black"
+            stroke-width="1.37143"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </span>
+    </a>
+    <ul
+      class="header__menu-subcategories"
+      data-subcatId="7"
+      style="display: none"
+    >
+      <li class="header__menu-subcategory">
+        <a href="/subcategory7-1" class="header__menu-subcategory-link"
+          ><span class="header__menu-subcategory-text">Subcategory 7.1</span></a
+        >
+      </li>
+      <li class="header__menu-subcategory">
+        <a href="/subcategory7-2" class="header__menu-subcategory-link"
+          ><span class="header__menu-subcategory-text">Subcategory 7.2</span></a
+        >
+      </li>
+    </ul>
+  </li>
+  <div class="product-image-container">
+    <div class="image-window" style="display: none">
+  <div class="wrapper">
+    <h2 class="title">אופנה</h2>
+    <p class="subtext">אופנה</p>
+    <a href="/fashion" class="link">
+      <span class="link-text">לפרטים נוספים</span>
+    </a>
   </div>
+</div>
 
-  <div class="header__menu-subcategories" data-subcatId="1"></div>
-
-  <div style="display: none" class="product-wrapper">
-    <div class="product">
+    <div class="product" style="display: none">
   <div class="product__imgWrap">
     <a href="#" class="product__imgWrap-favBtn" id="favIcon">
       <svg
@@ -289,170 +582,8 @@
 </div>
 
   </div>
-  <hr class="break-line" />
-  <!-- category item #2 -->
-  <div class="header__menu-item header__menu-item--category">
-    <div>
-      <img src="../img/toggle-menus/categories-menu/ups.svg" alt="" />
-      <span>עד הבית online</span>
-    </div>
-    <span class="header__menu-arrow">
-      <svg
-        width="21"
-        height="22"
-        viewBox="0 0 21 22"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M13.0714 5.85742L7.92855 11.0003L13.0714 16.1431"
-          stroke="black"
-          stroke-width="1.37143"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    </span>
-  </div>
+</ul>
 
-  <div class="header__menu-subcategories" data-subcatId="2"></div>
-
-  <hr class="break-line" />
-  <!-- category item #3 -->
-  <div class="header__menu-item header__menu-item--category">
-    <div>
-      <img src="../img/toggle-menus/categories-menu/prey-heart.svg" alt="" />
-      <span>אורח חיים בריא</span>
-    </div>
-    <span class="header__menu-arrow">
-      <svg
-        width="21"
-        height="22"
-        viewBox="0 0 21 22"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M13.0714 5.85742L7.92855 11.0003L13.0714 16.1431"
-          stroke="black"
-          stroke-width="1.37143"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    </span>
-  </div>
-
-  <div class="header__menu-subcategories" data-subcatId="3"></div>
-  <hr class="break-line" />
-  <!-- category item #4 -->
-  <div class="header__menu-item header__menu-item--category">
-    <div>
-      <img src="../img/toggle-menus/categories-menu/soup.svg" alt="" />
-      <span>מסעדות</span>
-    </div>
-    <span class="header__menu-arrow">
-      <svg
-        width="21"
-        height="22"
-        viewBox="0 0 21 22"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M13.0714 5.85742L7.92855 11.0003L13.0714 16.1431"
-          stroke="black"
-          stroke-width="1.37143"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    </span>
-  </div>
-
-  <div class="header__menu-subcategories" data-subcatId="4"></div>
-  <hr class="break-line" />
-  <!-- category item #5 -->
-  <div class="header__menu-item header__menu-item--category">
-    <div>
-      <img src="../img/toggle-menus/categories-menu/youtube.svg" alt="" />
-      <span>תרבות ובידור</span>
-    </div>
-    <span class="header__menu-arrow">
-      <svg
-        width="21"
-        height="22"
-        viewBox="0 0 21 22"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M13.0714 5.85742L7.92855 11.0003L13.0714 16.1431"
-          stroke="black"
-          stroke-width="1.37143"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    </span>
-  </div>
-
-  <div class="header__menu-subcategories" data-subcatId="5"></div>
-  <hr class="break-line" />
-  <!-- category item #6 -->
-  <div class="header__menu-item header__menu-item--category">
-    <div>
-      <img src="../img/toggle-menus/categories-menu/beach.svg" alt="" />
-      <span>תיירות ונופש</span>
-    </div>
-    <span class="header__menu-arrow">
-      <svg
-        width="21"
-        height="22"
-        viewBox="0 0 21 22"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M13.0714 5.85742L7.92855 11.0003L13.0714 16.1431"
-          stroke="black"
-          stroke-width="1.37143"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    </span>
-  </div>
-
-  <div class="header__menu-subcategories" data-subcatId="6"></div>
-  <hr class="break-line" />
-  <!-- category item #7 -->
-  <div class="header__menu-item header__menu-item--category">
-    <div>
-      <img src="../img/toggle-menus/categories-menu/shnorkel.svg" alt="" />
-      <span>אטרקציות</span>
-    </div>
-    <span class="header__menu-arrow">
-      <svg
-        width="21"
-        height="22"
-        viewBox="0 0 21 22"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M13.0714 5.85742L7.92855 11.0003L13.0714 16.1431"
-          stroke="black"
-          stroke-width="1.37143"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    </span>
-  </div>
-
-  <div class="header__menu-subcategories" data-subcatId="7"></div>
-</div>
 <!-- * mob/desk hamburger menu-->
 <div class="header__menu header__menu--hamburger" id="hamburger-menu">
   <a href="#hamb#1" class="header__menu-item">
@@ -593,13 +724,101 @@
 <!-- Initialize Swiper -->
 
       <!-- ? swiper  -->
+      <!-- *category search -->
+      <div class="category-navigator">
+  <h1 class="category-navigator--title">חיפוש לפי קטגוריה</h1>
 
+  <div class="category-navigator--items">
+    <a href="#" class="item">
+      <img
+        src="../../img/category-navigator/catItem1.png"
+        alt=""
+        class="item-img"
+      />
+      <h4 class="item-text">רכב</h4>
+    </a>
+    <a href="#" class="item">
+      <img
+        src="../../img/category-navigator/catItem2.png"
+        alt=""
+        class="item-img"
+      />
+      <h4 class="item-text">לבית</h4>
+    </a>
+    <a href="#" class="item">
+      <img
+        src="../../img/category-navigator/catItem3.png"
+        alt=""
+        class="item-img"
+      />
+      <h4 class="item-text">חשמל ואלקטרוניקה</h4>
+    </a>
+    <a href="#" class="item">
+      <img
+        src="../../img/category-navigator/catItem4.png"
+        alt=""
+        class="item-img"
+      />
+      <h4 class="item-text">אטרקציות</h4>
+    </a>
+    <a href="#" class="item">
+      <img
+        src="../../img/category-navigator/catItem5.png"
+        alt=""
+        class="item-img"
+      />
+      <h4 class="item-text">תיירות ונופש</h4>
+    </a>
+    <a href="#" class="item">
+      <img
+        src="../../img/category-navigator/catItem6.png"
+        alt=""
+        class="item-img"
+      />
+      <h4 class="item-text">תרבות ובידור</h4>
+    </a>
+    <a href="#" class="item">
+      <img
+        src="../../img/category-navigator/catItem7.png"
+        alt=""
+        class="item-img"
+      />
+      <h4 class="item-text">מסעדות</h4>
+    </a>
+    <a href="#" class="item">
+      <img
+        src="../../img/category-navigator/catItem8.png"
+        alt=""
+        class="item-img"
+      />
+      <h4 class="item-text">אורח חיים בריא</h4>
+    </a>
+    <a href="#" class="item">
+      <img
+        src="../../img/category-navigator/catItem9.png"
+        alt=""
+        class="item-img"
+      />
+      <h4 class="item-text">עד הבית ONLINE</h4>
+    </a>
+    <a href="#" class="item">
+      <img
+        src="../../img/category-navigator/catItem10.png"
+        alt=""
+        class="item-img"
+      />
+      <h4 class="item-text">צרכנות</h4>
+    </a>
+  </div>
+</div>
+
+      <!-- ?category search -->
       <!-- * footer  -->
       <div class="footer">
   <div class="footer_row first">
     <!-- <span class="footer_text first">ישראכרט</span> -->
     <svg
-      class="footer_isracard-text"
+      class="isracard-text"
       viewBox="0 0 68 11"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -639,7 +858,7 @@
     </svg>
 
     <svg
-      class="footer-text-logo"
+      class="text-logo"
       viewBox="0 0 33 32"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -671,16 +890,46 @@
         />
       </defs>
     </svg>
-    <!-- <img src="" alt="" class="footer_img" /> -->
-    <span class="footer_text second">corporate</span>
+    <!-- <img src="" alt="" class="img" /> -->
+    <span class="corprate-text second">corporate</span>
   </div>
-  <div class="footer_row second">
-    <a href="" class="footer-link">הצטרפות לכרטיס אשראי CORPORATE</a>
-  </div>
-  <div class="footer_row third">
-    <a href="" class="footer_social-link">
-      <span class="footer_social-link-text">אנחנו בפייסבוק</span>
-      <div class="footer_social-logo">
+  <div class="desktop-wrapper">
+    <div class="footer_row second">
+      <a href="" class="link">הצטרפות לכרטיס אשראי CORPORATE</a>
+    </div>
+
+    <div class="footer_row third">
+      <a href="" class="social-link">
+        <span class="social-link-text">אנחנו בפייסבוק</span>
+        <div class="social-logo">
+          <svg
+            viewBox="0 0 23 23"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              x="0.542969"
+              y="0.617188"
+              width="21.916"
+              height="21.916"
+              rx="7.1676"
+              fill="white"
+            />
+            <path
+              d="M14.3499 11.9612L14.6817 9.79926H12.6073V8.3963C12.6073 7.80483 12.897 7.2283 13.8261 7.2283H14.7692V5.38764C14.7692 5.38764 13.9134 5.24158 13.0951 5.24158C11.3868 5.24158 10.2701 6.27705 10.2701 8.15155V9.79926H8.37109V11.9612H10.2701V17.1876H12.6073V11.9612H14.3499Z"
+              fill="black"
+            />
+          </svg>
+        </div>
+      </a>
+    </div>
+    <div class="footer_row forth">
+      <a href="" class="footer-contact white first">צור קשר</a>
+      <hr class="footer_seperator" />
+      <a href="" class="footer-contact white second">תקנון</a>
+      <hr class="footer_seperator" />
+      <a href="" class="footer-contact white third">נגישות</a>
+      <a class="social-logo">
         <svg viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect
             x="0.542969"
@@ -695,23 +944,22 @@
             fill="black"
           />
         </svg>
+      </a>
+    </div>
+    <div class="footer_row fifth">
+      <a href="" class="footer-contact grey first">אודות המועדון</a>|
+      <hr class="footer_seperator" />
+      <a href="" class="footer-contact grey second">TOPCASH</a>
+      <div class="footer-contact-third">
+        <a href="" class="footer-contact grey third">צור קשר</a>
+        <hr class="footer_seperator third" />
       </div>
-    </a>
-  </div>
-  <div class="footer_row forth">
-    <a href="" class="footer-contact white first">צור קשר</a>|
-    <a href="" class="footer-contact white second">תקנון</a>|
-    <a href="" class="footer-contact white third">נגישות</a>
-  </div>
-  <div class="footer_row fifth">
-    <a href="" class="footer-contact grey first">אודות</a>|
-    <!-- <hr class="footer_seperator"> -->
-    <a href="" class="footer-contact grey second">TOPCASH</a>
-  </div>
-  <div class="footer_row sixth">
-    <span class="footer-trade-marks"
-      >כל הזכויות שמורות STYLE ניהול מועדוני לקוחות ©</span
-    >
+    </div>
+    <div class="footer_row sixth">
+      <span class="footer-trade-marks"
+        >כל הזכויות שמורות STYLE ניהול מועדוני לקוחות ©</span
+      >
+    </div>
   </div>
 </div>
 

@@ -1,0 +1,223 @@
+.footer {
+  background-color: #101820;
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  &_row {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+
+    .footer_seperator {
+      height: 12px;
+      margin: 0 12px;
+      opacity: 0.5;
+    }
+    .footer_seperator.third {
+      display: none;
+    }
+  }
+
+  /* #1 row */
+  &_row.first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 9px;
+    .isracard-text {
+      width: 68px;
+      height: auto;
+    }
+    .text-logo {
+      width: 30px;
+      height: auto;
+    }
+
+    .corprate-text {
+      color: #fff;
+    }
+    .img {
+    }
+  }
+
+  .desktop-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    &_row.second,
+    &_row.third,
+    &_row.forth,
+    &_row.fifth,
+    &_row.sixth {
+    }
+  }
+  /* #2 row */
+
+  &_row.second {
+    .link {
+      color: #fff;
+      font-weight: 500;
+    }
+  }
+  /* #3 row */
+
+  &_row.third {
+    .social-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row-reverse;
+      background: rgba(255, 255, 255, 0.08);
+      width: 168px;
+      padding: 8px 16px;
+      border-radius: 8px;
+      gap: 14px;
+      &-text {
+        color: #fff;
+      }
+      .social-logo {
+        display: flex;
+        justify-content: center;
+        svg {
+          width: 23px;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  &_row.forth {
+    .social-logo {
+      display: none;
+    }
+    .footer-contact.white {
+      color: #fff;
+    }
+  }
+  &_row.fifth {
+    .footer-contact.grey {
+      color: #ffffff;
+      opacity: 0.7;
+    }
+
+    .footer-contact-third {
+      display: none;
+    }
+  }
+  &_row.sixth {
+    .footer-trade-marks {
+      color: #ffffff;
+      opacity: 0.7;
+    }
+  }
+
+  @media (min-width: 992px) {
+  }
+  @media (min-width: 1200px) {
+  }
+  @media (min-width: 1600px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 42px 60px;
+    .footer_seperator.third {
+      display: flex;
+    }
+    &_row.first {
+      justify-content: flex-start;
+      gap: 12px;
+      margin-bottom: 0;
+      .isracard-text {
+        width: 144.492px;
+        height: auto;
+      }
+      .text-logo {
+        width: 70px;
+        height: auto;
+      }
+
+      .corprate-text {
+        color: #fff;
+        font-size: 30px;
+      }
+      .img {
+      }
+    }
+    .desktop-wrapper {
+      align-items: flex-end;
+      &_row.second,
+      &_row.third,
+      &_row.forth,
+      &_row.fifth,
+      &_row.sixth {
+        justify-content: flex-end;
+      }
+    }
+
+    &_row.second {
+      order: 1;
+      justify-content: space-around;
+      .link {
+        font-size: 22px;
+      }
+    }
+    &_row.third {
+      order: 2;
+      display: none;
+      width: 200px;
+      gap: 20px;
+    }
+    &_row.forth {
+      order: 2;
+      display: flex;
+      gap: 27px;
+      order: 2;
+      .social-logo {
+        display: flex;
+        cursor: pointer;
+        svg {
+          width: 31px;
+          height: auto;
+        }
+      }
+      .footer-contact.white {
+        font-size: 18px;
+        font-weight: 600;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .footer-contact.first {
+      }
+      .footer-contact.second {
+      }
+      .footer-contact.third {
+      }
+    }
+    &_row.fifth {
+      order: 1;
+      .footer-contact.grey {
+        opacity: 0.9;
+        font-size: 18px;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .footer-contact-third {
+        display: flex;
+        align-items: center;
+      }
+    }
+    &_row.sixth {
+      order: 3;
+      .footer-trade-marks {
+        font-size: 18px;
+      }
+    }
+  }
+}

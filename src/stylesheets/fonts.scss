@@ -13,7 +13,7 @@ $simple-line-font-family: "ICPangeaText" !default;
 @font-face {
   font-family: "ICPangeaText";
   src: url("../fonts/ICPangeaText-Regular.otf") format("otf"),
-    url("../fonts/ICPangeaText-Regular.woff2") format("woff2"),
+    url("../fonts/ICPangeaText-RegularWeb.woff2") format("woff2"),
     url("../fonts/ICPangeaText-Regular.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
@@ -21,7 +21,7 @@ $simple-line-font-family: "ICPangeaText" !default;
 @font-face {
   font-family: "ICPangeaText";
   src: url("../fonts/ICPangeaText-Medium.otf") format("otf"),
-    url("../fonts/ICPangeaText-Medium.woff2") format("woff2"),
+    url("../fonts/ICPangeaText-MediumWeb.woff2") format("woff2"),
     url("../fonts/ICPangeaText-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;

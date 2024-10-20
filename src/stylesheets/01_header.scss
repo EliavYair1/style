@@ -8,6 +8,7 @@
 
   .break-line {
     background: rgba(99, 39, 241, 0.1);
+    display: none;
   }
   &__row {
     display: flex;
@@ -322,8 +323,11 @@
       font-style: normal;
 
       font-weight: 500;
+      border-bottom: 2.5px solid #6327f11a;
     }
-
+    &--category.last-child {
+      border-bottom: unset;
+    }
     &:focus {
       background: rgba(242, 163, 71, 0.14);
     }
@@ -399,11 +403,8 @@
         flex-direction: column;
         position: static;
 
-        border-bottom: 1px solid rgba(99, 39, 241, 0.1);
+        border-bottom: 2.5px solid #6327f11a;
 
-        &:last-child {
-          border-bottom: unset;
-        }
         &:focus {
         }
         &:hover {
@@ -414,6 +415,9 @@
             ),
             #fff;
         }
+      }
+      &--category.last-child {
+        border-bottom: unset;
       }
       a {
         // justify-content: center;
@@ -529,8 +533,8 @@
 
   @media (min-width: 1600px) {
     position: fixed;
-    top: 180px;
-    // top: 112px;
+    // top: 180px;
+    top: 135px;
     background: #fff;
     right: 0;
     width: 307px;
@@ -542,10 +546,12 @@
     margin: 0;
     padding: 12px 20px;
     //
-    // display: flex;
-    // justify-content: flex-end;
+    max-height: 576px;
+    // height: 576px;
+    display: flex;
+    justify-content: flex-end;
     // max-height: 576px !important;
-    // height: 100vh;
+    height: 100vh;
   }
 }
 #corprate-menu.show {

@@ -405,6 +405,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // todo to check why the mobile menu dosent open
 // todo to cancel the mouse leave on the desktop
 const categoryItems = document.querySelectorAll(".header__menu-item--category");
+const categoryLink = document.querySelectorAll(".category-link");
 const categoriesMenu = document.getElementById("categories-menu");
 const parentHeader = document.querySelectorAll(".header");
 const subcategoryLinks = document.querySelectorAll(
@@ -447,7 +448,11 @@ document.addEventListener("DOMContentLoaded", () => {
       categoryItems.forEach((category) => {
         category.removeEventListener("mouseenter", toggleSubCategory);
         category.removeEventListener("mouseleave", closeSubCategoryOnHoverOut);
-        category.addEventListener("click", toggleSubCategory);
+        // category.addEventListener("click", toggleSubCategory);
+        category.addEventListener("click", (e) => {
+          e.stopPropagation();
+          toggleSubCategory(e);
+        });
       });
     }
   };
@@ -462,28 +467,47 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Function to toggle subcategory on click/hover
+// const toggleSubCategory = (e) => {
+//   const isDesktop = window.innerWidth >= 1600;
+
+//   const elementTarget = e.currentTarget.closest(".header__menu-item--category");
+//   const dataId = elementTarget.getAttribute("data-id");
+//   const subCategoriesWrapper = document.querySelector(
+//     `.header__menu-subcategories[data-subcatId="${dataId}"]`
+//   );
+//   // console.log("categoryItems", categoryItems[0].clientHeight);
+
+//   const isCurrentlyOpen =
+//     subCategoriesWrapper.style.maxHeight !== "0px" &&
+//     subCategoriesWrapper.style.maxHeight !== "";
+
+//     if (isDesktop) {
+//     closeAllSubCategories();
+//   }
+
+//   if (!isDesktop) {
+//     if (!isCurrentlyOpen) {
+//       closeAllSubCategories(subCategoriesWrapper);
+//     }
+//   }
+
+//   if (!isCurrentlyOpen) {
+//     openSubCategory(elementTarget, subCategoriesWrapper, isDesktop);
+//   }
+// };
 const toggleSubCategory = (e) => {
   const isDesktop = window.innerWidth >= 1600;
-
   const elementTarget = e.currentTarget.closest(".header__menu-item--category");
   const dataId = elementTarget.getAttribute("data-id");
   const subCategoriesWrapper = document.querySelector(
-    `.header__menu-subcategories[data-subcatId="${dataId}"]`
+    `.header__menu-subcategories[data-subcatid="${dataId}"]`
   );
-  // console.log("categoryItems", categoryItems[0].clientHeight);
-
   const isCurrentlyOpen =
     subCategoriesWrapper.style.maxHeight !== "0px" &&
     subCategoriesWrapper.style.maxHeight !== "";
 
   if (isDesktop) {
     closeAllSubCategories();
-  }
-
-  if (!isDesktop) {
-    if (!isCurrentlyOpen) {
-      closeAllSubCategories(subCategoriesWrapper);
-    }
   }
 
   if (!isCurrentlyOpen) {
@@ -520,7 +544,7 @@ const openSubCategory = (elementTarget, subCategoriesWrapper, isDesktop) => {
   subCategoriesWrapper.style.display = "flex";
   subCategoriesWrapper.style.flexDirection = "column";
   subCategoriesWrapper.style.maxHeight = "100vh";
-  subCategoriesWrapper.style.top = "0";
+  subCategoriesWrapper.style.top = "39px";
   subCategoriesWrapper.style.right = "307px";
 
   // subCategoriesWrapper.style.height = categoriesMenu.clientHeight;
@@ -532,10 +556,10 @@ const openSubCategory = (elementTarget, subCategoriesWrapper, isDesktop) => {
     backgroundSubMenus.style.transition = "max-width 0.3s ease;";
     // backgroundSubMenus.style.display = "none";
     backgroundSubMenus.style.display = "flex";
-    backgroundSubMenus.style.height = "636px";
+    backgroundSubMenus.style.height = "565px";
     backgroundSubMenus.style.width = "386px";
     backgroundSubMenus.style.position = "absolute";
-    backgroundSubMenus.style.top = "-34px";
+    backgroundSubMenus.style.top = "11px";
     backgroundSubMenus.style.zIndex = -1;
     backgroundSubMenus.style.right = "300px";
     dynamicImageWindow.style.display = "none";
@@ -551,9 +575,10 @@ const openSubCategory = (elementTarget, subCategoriesWrapper, isDesktop) => {
 // subcategory link&& text click handler
 subcategoryLinks.forEach((link) => {
   link.addEventListener("mouseenter", function (event) {
+    event.stopPropagation();
     event.preventDefault();
     backgroundSubMenus.style.width = parentHeader[0].clientWidth - 300 + "px";
-    backgroundSubMenus.style.height = "634px";
+    backgroundSubMenus.style.height = "565px";
     dynamicImageWindow.style.display = "flex";
     productContainer.style.display = "flex";
 

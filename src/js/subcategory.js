@@ -16,29 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const applyHoverOnCategories = () => {
     if (window.innerWidth > 1600) {
       categoryItems.forEach((category) => {
-        // const subCategoriesWrapper = category.nextElementSibling;
         category.querySelector("a").addEventListener("mouseenter", (e) => {
           // clearTimeout(closeTimeout);
           toggleSubCategory(e, true);
         });
-
-        // category.addEventListener("mouseleave", () => {
-        //   closeTimeout = setTimeout(() => {
-        //     closeSubCategoryOnHoverOut(category);
-        //   }, 600);
-        // });
-
-        // if (subCategoriesWrapper) {
-        //   subCategoriesWrapper.addEventListener("mouseenter", () => {
-        //     clearTimeout(closeTimeout);
-        //   });
-
-        //   subCategoriesWrapper.addEventListener("mouseleave", () => {
-        //     closeTimeout = setTimeout(() => {
-        //       closeSubCategoryOnHoverOut(category);
-        //     }, 600);
-        //   });
-        // }
       });
     } else {
       categoryItems.forEach((category) => {
@@ -62,35 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
   applyHoverOnCategories();
 });
 
-// Function to toggle subcategory on click/hover
-// const toggleSubCategory = (e) => {
-//   const isDesktop = window.innerWidth >= 1600;
-
-//   const elementTarget = e.currentTarget.closest(".header__menu-item--category");
-//   const dataId = elementTarget.getAttribute("data-id");
-//   const subCategoriesWrapper = document.querySelector(
-//     `.header__menu-subcategories[data-subcatId="${dataId}"]`
-//   );
-//   // console.log("categoryItems", categoryItems[0].clientHeight);
-
-//   const isCurrentlyOpen =
-//     subCategoriesWrapper.style.maxHeight !== "0px" &&
-//     subCategoriesWrapper.style.maxHeight !== "";
-
-//     if (isDesktop) {
-//     closeAllSubCategories();
-//   }
-
-//   if (!isDesktop) {
-//     if (!isCurrentlyOpen) {
-//       closeAllSubCategories(subCategoriesWrapper);
-//     }
-//   }
-
-//   if (!isCurrentlyOpen) {
-//     openSubCategory(elementTarget, subCategoriesWrapper, isDesktop);
-//   }
-// };
+// function to toggle subcategory on click/hover
 const toggleSubCategory = (e) => {
   const isDesktop = window.innerWidth >= 1600;
   const elementTarget = e.currentTarget.closest(".header__menu-item--category");
@@ -143,14 +96,10 @@ const openSubCategory = (elementTarget, subCategoriesWrapper, isDesktop) => {
   subCategoriesWrapper.style.top = "39px";
   subCategoriesWrapper.style.right = "307px";
 
-  // subCategoriesWrapper.style.height = categoriesMenu.clientHeight;
-  // console.log("subCategoriesWrapper height:", categoriesMenu.clientHeight);
-
   arrow.classList.add("rotate");
 
   if (isDesktop) {
     backgroundSubMenus.style.transition = "max-width 0.3s ease;";
-    // backgroundSubMenus.style.display = "none";
     backgroundSubMenus.style.display = "flex";
     backgroundSubMenus.style.height = "565px";
     backgroundSubMenus.style.width = "386px";
@@ -166,7 +115,6 @@ const openSubCategory = (elementTarget, subCategoriesWrapper, isDesktop) => {
     productContainer.style.display = "block";
   }
 };
-// console.log("subcategoryLinks", subcategoryLinks);
 
 // subcategory link&& text click handler
 subcategoryLinks.forEach((link) => {
@@ -213,7 +161,6 @@ const closeSubCategoryOnHoverOut = (categoryElement) => {
   const subCategoriesWrapper = document.querySelector(
     `.header__menu-subcategories[data-subcatId="${dataId}"]`
   );
-  // console.log("subCategoriesWrapper", subCategoriesWrapper);
 
   subCategoriesWrapper.style.maxHeight = "0px";
   backgroundSubMenus.style.width = "364px";

@@ -452,6 +452,13 @@
   .header__menu-item--category.last-child {
     border-bottom: unset;
   }
+  .header__menu-item:hover {
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(99, 39, 241, 0.06)), to(rgba(99, 39, 241, 0.06))), #fff;
+    background: linear-gradient(0deg, rgba(99, 39, 241, 0.06) 0%, rgba(99, 39, 241, 0.06) 100%), #fff;
+  }
+  .header__menu-item:focus {
+    background-color: unset;
+  }
   .header__menu .icon {
     display: block;
     position: absolute;

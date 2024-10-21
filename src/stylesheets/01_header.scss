@@ -424,6 +424,17 @@
         &:focus {
         }
       }
+      &:hover {
+        background: linear-gradient(
+            0deg,
+            rgba(99, 39, 241, 0.06) 0%,
+            rgba(99, 39, 241, 0.06) 100%
+          ),
+          #fff;
+      }
+      &:focus {
+        background-color: unset;
+      }
     }
     .icon {
       display: block;

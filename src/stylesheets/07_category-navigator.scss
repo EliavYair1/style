@@ -3,6 +3,9 @@
   //   height: 808px;
   padding: 40px 58px;
   background-color: $header-bg;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   &--title {
     font-size: 28px;
     font-style: normal;
@@ -15,7 +18,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
-
+    max-width: 321px;
     .item {
       width: 142px;
       display: flex;
@@ -49,6 +52,7 @@
     }
     &--items {
       justify-content: space-between;
+      max-width: unset;
       .item {
         .item-img {
         }

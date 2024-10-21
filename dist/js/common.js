@@ -150,8 +150,12 @@ function updateHeader(userData) {
     }
   }
 }
+const params = new URLSearchParams(window.location.search);
 
-const isLoggedIn = false;
+const isLoggedIn = params.has("LoggedIn");
+// console.log("params", params);
+
+// const isLoggedIn = false;
 updateHeader(isLoggedIn ? connectedUser : newUser);
 
 

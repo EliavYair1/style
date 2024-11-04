@@ -19,24 +19,6 @@
       <!-- * header -->
 <nav class="header">
   <div class="header__row header__row--top">
-  <a href="#home" class="header__logo">
-    <img
-      src="../img/header_corporate.svg"
-      alt="corporate"
-      class="header__logo-image header__logo-image--primary"
-    />
-    <img
-      src="../img/header_icon.svg"
-      alt="icon"
-      class="header__logo-image header__logo-image--secondary"
-    />
-    <img
-      src="../img/header_isracard.svg"
-      alt="isracard"
-      class="header__logo-image header__logo-image--tertiary"
-    />
-  </a>
-
   <div class="header__hamburger">
     <svg
       class="header__hamburger-icon"
@@ -55,9 +37,45 @@
       />
     </svg>
   </div>
+  <a href="#home" class="header__logo">
+    <img
+      src="../img/header_corporate.svg"
+      alt="corporate"
+      class="header__logo-image header__logo-image--primary"
+    />
+    <img
+      src="../img/header_icon.svg"
+      alt="icon"
+      class="header__logo-image header__logo-image--secondary"
+    />
+    <img
+      src="../img/header_isracard.svg"
+      alt="isracard"
+      class="header__logo-image header__logo-image--tertiary"
+    />
+  </a>
 </div>
 
 <div class="header__row header__row--middle">
+  <a href="#" class="header__profile">
+    <span class="header__profile-text"></span>
+    <svg
+      class="header__profile-icon"
+      width="32"
+      height="33"
+      viewBox="0 0 32 33"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M5 26.5C7.85485 23.4397 11.7308 21.5588 16 21.5588C20.2692 21.5588 24.1451 23.4397 27 26.5M21.5 11.0588C21.5 14.1289 19.0376 16.6176 16 16.6176C12.9624 16.6176 10.5 14.1289 10.5 11.0588C10.5 7.98877 12.9624 5.5 16 5.5C19.0376 5.5 21.5 7.98877 21.5 11.0588Z"
+        stroke="#0B0427"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>
+  </a>
   <a href="#cart" class="header__cart">
     <span class="header__cart-text"> סל קניות </span>
     <svg
@@ -86,30 +104,16 @@
     </svg>
     <span class="header__cart-count" id="cart-count"></span>
   </a>
-
-  <a href="#" class="header__profile">
-    <span class="header__profile-text"></span>
-    <svg
-      class="header__profile-icon"
-      width="32"
-      height="33"
-      viewBox="0 0 32 33"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M5 26.5C7.85485 23.4397 11.7308 21.5588 16 21.5588C20.2692 21.5588 24.1451 23.4397 27 26.5M21.5 11.0588C21.5 14.1289 19.0376 16.6176 16 16.6176C12.9624 16.6176 10.5 14.1289 10.5 11.0588C10.5 7.98877 12.9624 5.5 16 5.5C19.0376 5.5 21.5 7.98877 21.5 11.0588Z"
-        stroke="#0B0427"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </svg>
-  </a>
 </div>
 
 
   <div class="header__row header__row--search">
+    <input
+      type="text"
+      placeholder="חיפוש הטבה"
+      dir="rtl"
+      class="header__search-bar"
+    />
     <svg
       class="icon"
       viewBox="0 0 40 40"
@@ -132,16 +136,26 @@
         stroke-linejoin="round"
       />
     </svg>
-
-    <input
-      type="text"
-      placeholder="חיפוש הטבה"
-      dir="rtl"
-      class="header__search-bar"
-    />
   </div>
 
   <div class="header__row header__row--buttons">
+    <button class="header__button header__button--menuItem">
+      <span class="header__button-text menuItem">קטגוריות באתר</span>
+      <svg
+        class="header__button-arrow"
+        viewBox="0 0 21 22"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M13.0714 5.85742L7.92855 11.0003L13.0714 16.1431"
+          stroke="black"
+          stroke-width="1.37143"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
     <button class="header__button header__button--corprate">
       <img
         src="../img/toggle-menus/my-corprate-menu/my_corprate-cards.svg"
@@ -174,24 +188,6 @@
           d="M11.1514 12.5L15.6514 17.5L20.1514 12.5"
           stroke="#2020B3"
           stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    </button>
-
-    <button class="header__button header__button--menuItem">
-      <span class="header__button-text menuItem">קטגוריות באתר</span>
-      <svg
-        class="header__button-arrow"
-        viewBox="0 0 21 22"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M13.0714 5.85742L7.92855 11.0003L13.0714 16.1431"
-          stroke="black"
-          stroke-width="1.37143"
           stroke-linecap="round"
           stroke-linejoin="round"
         />
@@ -515,25 +511,10 @@
     </ul>
   </li>
   <div class="product-image-container">
-    <div class="image-window" style="display: none">
-  <div class="wrapper">
-    <h2 class="title">אופנה</h2>
-    <p class="subtext">אופנה</p>
-    <a href="/fashion" class="link">
-      <span class="link-text">לפרטים נוספים</span>
-    </a>
-  </div>
-</div>
-
     <div class="product">
-  <div class="product__imgWrap">
-    <a href="#" class="product__imgWrap-favBtn" id="favIcon">
-      <svg
-        height="49"
-        viewBox="0 0 50 49"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+  <div class="imgWrap">
+    <a href="#" class="imgWrap-favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect
           x="0.533203"
           y="0.0654297"
@@ -550,24 +531,16 @@
         />
       </svg>
     </a>
-    <img
-      src="../../img/product-card/iphone-product.png"
-      alt="iphone"
-      class="product__imgWrap-img"
-    />
+    <img src="../../img/product-card/iphone-product.png" alt="iphone" class="imgWrap-img" />
   </div>
 
-  <div class="product__description">
-    <img
-      src="../../img/product-card/samsung-logo.svg"
-      alt=""
-      class="product__description--logo"
-    />
-    <span class="product__description--device">Galaxy S23 S911 256GB</span>
-    <span class="product__description--desc">Flip 6 | יבואן רשמי</span>
-    <div class="product__priceWrap">
-      <span class="product__priceWrap--priceText">₪1,650</span>
-      <del class="product__priceWrap--priceDel">₪3,600</del>
+  <div class="description">
+    <img src="../../img/product-card/samsung-logo.svg" alt="" class="description--logo" />
+    <span class="description--device">Galaxy S23 S911 256GB</span>
+    <span class="description--desc">Flip 6 | יבואן רשמי</span>
+    <div class="priceWrap">
+      <span class="priceWrap--priceText">₪1,650</span>
+      <del class="priceWrap--priceDel">₪3,600</del>
     </div>
   </div>
 
@@ -581,6 +554,16 @@
     <button class="product__counter--addToCartBtn" id="addToCartBtn">
       <span class="product__counter--addToCartText">הוספה</span>
     </button>
+  </div>
+</div>
+
+    <div class="image-window" style="display: none">
+  <div class="wrapper">
+    <h2 class="title">אופנה</h2>
+    <p class="subtext">אופנה</p>
+    <a href="/fashion" class="link">
+      <span class="link-text">לפרטים נוספים</span>
+    </a>
   </div>
 </div>
 
@@ -667,185 +650,268 @@
   <div class="swiper heroSlider">
     <div class="swiper-wrapper">
       <!-- #1 -->
-      <div class="swiper-slide">
+      <div class="swiper-slide first">
         <picture>
           <source
             srcset="../img/hero/slider-1.png"
             media="(max-width: 1599px)"
           />
-          <img src="../img/hero/slider-1_desktop.png" loading="lazy" />
+          <img
+            src="../img/hero/slider-1_desktop.png"
+            class="slider-bg-img first"
+            loading="lazy"
+          />
         </picture>
+        <img
+          class="slider-bg-svg first"
+          src="../img/hero/slider-1-desktop.svg"
+          alt=""
+          srcset=""
+        />
 
         <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         <div class="swiper-text-wrapper">
-          <h2 class="swiper-slide-title">ארוחה במקדונלד'ס</h2>
-          <h4 class="swiper-slide-subtext">
+          <h2 class="title">ארוחה במקדונלד'ס</h2>
+          <h4 class="subtext">
+            ב-
             <bdi>
               <span class="price-note">₪</span>
               <span class="price-number">15</span>
             </bdi>
-            -ב
           </h4>
-          <a href="" class="swiper-slide-link"
-            ><span class="swiper-link-text">מימוש הטבה</span></a
-          >
-          <h6 class="swiper-slide-desclamer">
+          <a href="" class="link"><span class="link-text">מימוש הטבה</span></a>
+          <h6 class="desclamer">
             ההטבה בכפוף לאישור החברה ותנאיה. המנפיקה ישראכרט בע״מ
           </h6>
         </div>
       </div>
       <!-- #2 -->
       <div class="swiper-slide">
+        <picture>
+          <source
+            srcset="../img/hero/slider-2.png"
+            media="(max-width: 1599px)"
+          />
+          <img
+            src="../img/hero/slider-2_desktop.png"
+            class="slider-bg-img second"
+            loading="lazy"
+          />
+        </picture>
         <img
-          src="https://swiperjs.com/demos/images/nature-2.jpg"
+          src="../img/hero/slider-2-desktop.svg"
+          class="slider-bg-svg second"
           loading="lazy"
         />
         <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         <div class="swiper-text-wrapper">
-          <h2 class="swiper-slide-title">ארוחה במקדונלד'ס</h2>
-          <h4 class="swiper-slide-subtext">
-            <bdi>
+          <h2 class="title">חווית נופש מושלמת</h2>
+          <h4 class="subtext second">
+            <!-- <bdi>
               <span class="price-note">₪</span>
               <span class="price-number">15</span>
-            </bdi>
-            -ב
+            </bdi> -->
+            חלומות התיירות מתגשמים אצלנו<span>לפני כולם</span>
           </h4>
-          <a href="" class="swiper-slide-link"
-            ><span class="swiper-link-text">מימוש הטבה</span></a
+          <!-- <a href="" class="link"
+            ><span class="link-text">מימוש הטבה</span></a
           >
-          <h6 class="swiper-slide-desclamer">
+          <h6 class="desclamer">
             ההטבה בכפוף לאישור החברה ותנאיה. המנפיקה ישראכרט בע״מ
-          </h6>
+          </h6> -->
         </div>
       </div>
       <!-- #3 -->
       <div class="swiper-slide">
+        <picture>
+          <source
+            srcset="../img/hero/slider-2.png"
+            media="(max-width: 1599px)"
+          />
+          <img
+            src="../img/hero/slider-2_desktop.png"
+            class="slider-bg-img second"
+            loading="lazy"
+          />
+        </picture>
         <img
-          src="https://swiperjs.com/demos/images/nature-3.jpg"
+          src="../img/hero/slider-2-desktop.svg"
+          class="slider-bg-svg third"
           loading="lazy"
         />
+
         <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         <div class="swiper-text-wrapper">
-          <h2 class="swiper-slide-title">ארוחה במקדונלד'ס</h2>
-          <h4 class="swiper-slide-subtext">
+          <h2 class="title">ארוחה במקדונלד'ס</h2>
+          <h4 class="subtext">
+            ב-
             <bdi>
               <span class="price-note">₪</span>
               <span class="price-number">15</span>
             </bdi>
-            -ב
           </h4>
-          <a href="" class="swiper-slide-link"
-            ><span class="swiper-link-text">מימוש הטבה</span></a
-          >
-          <h6 class="swiper-slide-desclamer">
+          <a href="" class="link"><span class="link-text">מימוש הטבה</span></a>
+          <h6 class="desclamer">
             ההטבה בכפוף לאישור החברה ותנאיה. המנפיקה ישראכרט בע״מ
           </h6>
         </div>
       </div>
       <!-- #4 -->
       <div class="swiper-slide">
+        <picture>
+          <source
+            srcset="../img/hero/slider-2.png"
+            media="(max-width: 1599px)"
+          />
+          <img
+            src="../img/hero/slider-2_desktop.png"
+            class="slider-bg-img second"
+            loading="lazy"
+          />
+        </picture>
         <img
-          src="https://swiperjs.com/demos/images/nature-4.jpg"
+          src="../img/hero/slider-2-desktop.svg"
+          class="slider-bg-svg forth"
           loading="lazy"
         />
+
         <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         <div class="swiper-text-wrapper">
-          <h2 class="swiper-slide-title">ארוחה במקדונלד'ס</h2>
-          <h4 class="swiper-slide-subtext">
+          <h2 class="title">ארוחה במקדונלד'ס</h2>
+          <h4 class="subtext">
+            ב-
             <bdi>
               <span class="price-note">₪</span>
               <span class="price-number">15</span>
             </bdi>
-            -ב
           </h4>
-          <a href="" class="swiper-slide-link"
-            ><span class="swiper-link-text">מימוש הטבה</span></a
-          >
-          <h6 class="swiper-slide-desclamer">
+          <a href="" class="link"><span class="link-text">מימוש הטבה</span></a>
+          <h6 class="desclamer">
             ההטבה בכפוף לאישור החברה ותנאיה. המנפיקה ישראכרט בע״מ
           </h6>
         </div>
       </div>
       <!-- #5 -->
       <div class="swiper-slide">
+        <picture>
+          <source
+            srcset="../img/hero/slider-2.png"
+            media="(max-width: 1599px)"
+          />
+          <img
+            src="../img/hero/slider-2_desktop.png"
+            class="slider-bg-img second"
+            loading="lazy"
+          />
+        </picture>
         <img
-          src="https://swiperjs.com/demos/images/nature-5.jpg"
+          src="../img/hero/slider-2-desktop.svg"
+          class="slider-bg-svg fifth"
           loading="lazy"
         />
+
         <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         <div class="swiper-text-wrapper">
-          <h2 class="swiper-slide-title">ארוחה במקדונלד'ס</h2>
-          <h4 class="swiper-slide-subtext">
+          <h2 class="title">ארוחה במקדונלד'ס</h2>
+          <h4 class="subtext">
+            ב-
             <bdi>
               <span class="price-note">₪</span>
               <span class="price-number">15</span>
             </bdi>
-            -ב
           </h4>
-          <a href="" class="swiper-slide-link"
-            ><span class="swiper-link-text">מימוש הטבה</span></a
-          >
-          <h6 class="swiper-slide-desclamer">
+          <a href="" class="link"><span class="link-text">מימוש הטבה</span></a>
+          <h6 class="desclamer">
             ההטבה בכפוף לאישור החברה ותנאיה. המנפיקה ישראכרט בע״מ
           </h6>
         </div>
       </div>
       <!-- #6 -->
       <div class="swiper-slide">
+        <picture>
+          <source
+            srcset="../img/hero/slider-2.png"
+            media="(max-width: 1599px)"
+          />
+          <img
+            src="../img/hero/slider-2_desktop.png"
+            class="slider-bg-img second"
+            loading="lazy"
+          />
+        </picture>
         <img
-          src="https://swiperjs.com/demos/images/nature-6.jpg"
+          src="../img/hero/slider-2-desktop.svg"
+          class="slider-bg-svg sixth"
           loading="lazy"
         />
+
         <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         <div class="swiper-text-wrapper">
-          <h2 class="swiper-slide-title">ארוחה במקדונלד'ס</h2>
-          <h4 class="swiper-slide-subtext">
+          <h2 class="title">ארוחה במקדונלד'ס</h2>
+          <h4 class="subtext">
+            ב-
             <bdi>
               <span class="price-note">₪</span>
               <span class="price-number">15</span>
             </bdi>
-            -ב
           </h4>
-          <a href="" class="swiper-slide-link"
-            ><span class="swiper-link-text">מימוש הטבה</span></a
-          >
-          <h6 class="swiper-slide-desclamer">
+          <a href="" class="link"> <span class="link-text">מימוש הטבה</span></a>
+          <h6 class="desclamer">
             ההטבה בכפוף לאישור החברה ותנאיה. המנפיקה ישראכרט בע״מ
           </h6>
         </div>
       </div>
       <!-- #7 -->
       <div class="swiper-slide">
+        <picture>
+          <source
+            srcset="../img/hero/slider-2.png"
+            media="(max-width: 1599px)"
+          />
+          <img
+            src="../img/hero/slider-2_desktop.png"
+            class="slider-bg-img second"
+            loading="lazy"
+          />
+        </picture>
         <img
-          src="https://swiperjs.com/demos/images/nature-7.jpg"
+          src="../img/hero/slider-2-desktop.svg"
+          class="slider-bg-svg seven"
           loading="lazy"
         />
+
         <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
         <div class="swiper-text-wrapper">
-          <h2 class="swiper-slide-title">ארוחה במקדונלד'ס</h2>
-          <h4 class="swiper-slide-subtext">
+          <h2 class="title">ארוחה במקדונלד'ס</h2>
+          <h4 class="subtext">
+            ב-
             <bdi>
               <span class="price-note">₪</span>
               <span class="price-number">15</span>
             </bdi>
-            -ב
           </h4>
-          <a href="" class="swiper-slide-link"
-            ><span class="swiper-link-text">מימוש הטבה</span></a
-          >
-          <h6 class="swiper-slide-desclamer">
+          <a href="" class="link"><span class="link-text">מימוש הטבה</span></a>
+          <h6 class="desclamer">
             ההטבה בכפוף לאישור החברה ותנאיה. המנפיקה ישראכרט בע״מ
           </h6>
         </div>
       </div>
     </div>
-    <div class="swiper-pagination"></div>
+    <div class="pagination-wrapper">
+      <div class="swiper-pagination"></div>
+      <div class="pagination-swiper-location" data-swiperId="1">
+  <span class="pagination-swiper-current">1</span>
+  <span class="pagination-swiper-of">מתוך</span>
+  <span class="pagination-swiper-length">5</span>
+</div>
 
+    </div>
     <!-- ? swiper  -->
   </div>
 </div>
 
       <!-- ? swiper  -->
+
       <!-- * product-slider  -->
       <div class="product-slider">
   <h2 class="section-header">
@@ -867,14 +933,9 @@
     <div class="swiper-wrapper">
       <div class="swiper-slide">
         <div class="product">
-  <div class="product__imgWrap">
-    <a href="#" class="product__imgWrap-favBtn" id="favIcon">
-      <svg
-        height="49"
-        viewBox="0 0 50 49"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+  <div class="imgWrap">
+    <a href="#" class="imgWrap-favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect
           x="0.533203"
           y="0.0654297"
@@ -891,24 +952,16 @@
         />
       </svg>
     </a>
-    <img
-      src="../../img/product-card/iphone-product.png"
-      alt="iphone"
-      class="product__imgWrap-img"
-    />
+    <img src="../../img/product-card/iphone-product.png" alt="iphone" class="imgWrap-img" />
   </div>
 
-  <div class="product__description">
-    <img
-      src="../../img/product-card/samsung-logo.svg"
-      alt=""
-      class="product__description--logo"
-    />
-    <span class="product__description--device">Galaxy S23 S911 256GB</span>
-    <span class="product__description--desc">Flip 6 | יבואן רשמי</span>
-    <div class="product__priceWrap">
-      <span class="product__priceWrap--priceText">₪1,650</span>
-      <del class="product__priceWrap--priceDel">₪3,600</del>
+  <div class="description">
+    <img src="../../img/product-card/samsung-logo.svg" alt="" class="description--logo" />
+    <span class="description--device">Galaxy S23 S911 256GB</span>
+    <span class="description--desc">Flip 6 | יבואן רשמי</span>
+    <div class="priceWrap">
+      <span class="priceWrap--priceText">₪1,650</span>
+      <del class="priceWrap--priceDel">₪3,600</del>
     </div>
   </div>
 
@@ -928,14 +981,9 @@
       </div>
       <div class="swiper-slide">
         <div class="product">
-  <div class="product__imgWrap">
-    <a href="#" class="product__imgWrap-favBtn" id="favIcon">
-      <svg
-        height="49"
-        viewBox="0 0 50 49"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+  <div class="imgWrap">
+    <a href="#" class="imgWrap-favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect
           x="0.533203"
           y="0.0654297"
@@ -952,24 +1000,16 @@
         />
       </svg>
     </a>
-    <img
-      src="../../img/product-card/iphone-product.png"
-      alt="iphone"
-      class="product__imgWrap-img"
-    />
+    <img src="../../img/product-card/iphone-product.png" alt="iphone" class="imgWrap-img" />
   </div>
 
-  <div class="product__description">
-    <img
-      src="../../img/product-card/samsung-logo.svg"
-      alt=""
-      class="product__description--logo"
-    />
-    <span class="product__description--device">Galaxy S23 S911 256GB</span>
-    <span class="product__description--desc">Flip 6 | יבואן רשמי</span>
-    <div class="product__priceWrap">
-      <span class="product__priceWrap--priceText">₪1,650</span>
-      <del class="product__priceWrap--priceDel">₪3,600</del>
+  <div class="description">
+    <img src="../../img/product-card/samsung-logo.svg" alt="" class="description--logo" />
+    <span class="description--device">Galaxy S23 S911 256GB</span>
+    <span class="description--desc">Flip 6 | יבואן רשמי</span>
+    <div class="priceWrap">
+      <span class="priceWrap--priceText">₪1,650</span>
+      <del class="priceWrap--priceDel">₪3,600</del>
     </div>
   </div>
 
@@ -989,14 +1029,9 @@
       </div>
       <div class="swiper-slide">
         <div class="product">
-  <div class="product__imgWrap">
-    <a href="#" class="product__imgWrap-favBtn" id="favIcon">
-      <svg
-        height="49"
-        viewBox="0 0 50 49"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+  <div class="imgWrap">
+    <a href="#" class="imgWrap-favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect
           x="0.533203"
           y="0.0654297"
@@ -1013,24 +1048,16 @@
         />
       </svg>
     </a>
-    <img
-      src="../../img/product-card/iphone-product.png"
-      alt="iphone"
-      class="product__imgWrap-img"
-    />
+    <img src="../../img/product-card/iphone-product.png" alt="iphone" class="imgWrap-img" />
   </div>
 
-  <div class="product__description">
-    <img
-      src="../../img/product-card/samsung-logo.svg"
-      alt=""
-      class="product__description--logo"
-    />
-    <span class="product__description--device">Galaxy S23 S911 256GB</span>
-    <span class="product__description--desc">Flip 6 | יבואן רשמי</span>
-    <div class="product__priceWrap">
-      <span class="product__priceWrap--priceText">₪1,650</span>
-      <del class="product__priceWrap--priceDel">₪3,600</del>
+  <div class="description">
+    <img src="../../img/product-card/samsung-logo.svg" alt="" class="description--logo" />
+    <span class="description--device">Galaxy S23 S911 256GB</span>
+    <span class="description--desc">Flip 6 | יבואן רשמי</span>
+    <div class="priceWrap">
+      <span class="priceWrap--priceText">₪1,650</span>
+      <del class="priceWrap--priceDel">₪3,600</del>
     </div>
   </div>
 
@@ -1050,14 +1077,9 @@
       </div>
       <div class="swiper-slide">
         <div class="product">
-  <div class="product__imgWrap">
-    <a href="#" class="product__imgWrap-favBtn" id="favIcon">
-      <svg
-        height="49"
-        viewBox="0 0 50 49"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+  <div class="imgWrap">
+    <a href="#" class="imgWrap-favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect
           x="0.533203"
           y="0.0654297"
@@ -1074,24 +1096,16 @@
         />
       </svg>
     </a>
-    <img
-      src="../../img/product-card/iphone-product.png"
-      alt="iphone"
-      class="product__imgWrap-img"
-    />
+    <img src="../../img/product-card/iphone-product.png" alt="iphone" class="imgWrap-img" />
   </div>
 
-  <div class="product__description">
-    <img
-      src="../../img/product-card/samsung-logo.svg"
-      alt=""
-      class="product__description--logo"
-    />
-    <span class="product__description--device">Galaxy S23 S911 256GB</span>
-    <span class="product__description--desc">Flip 6 | יבואן רשמי</span>
-    <div class="product__priceWrap">
-      <span class="product__priceWrap--priceText">₪1,650</span>
-      <del class="product__priceWrap--priceDel">₪3,600</del>
+  <div class="description">
+    <img src="../../img/product-card/samsung-logo.svg" alt="" class="description--logo" />
+    <span class="description--device">Galaxy S23 S911 256GB</span>
+    <span class="description--desc">Flip 6 | יבואן רשמי</span>
+    <div class="priceWrap">
+      <span class="priceWrap--priceText">₪1,650</span>
+      <del class="priceWrap--priceDel">₪3,600</del>
     </div>
   </div>
 
@@ -1111,14 +1125,9 @@
       </div>
       <div class="swiper-slide">
         <div class="product">
-  <div class="product__imgWrap">
-    <a href="#" class="product__imgWrap-favBtn" id="favIcon">
-      <svg
-        height="49"
-        viewBox="0 0 50 49"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+  <div class="imgWrap">
+    <a href="#" class="imgWrap-favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect
           x="0.533203"
           y="0.0654297"
@@ -1135,24 +1144,16 @@
         />
       </svg>
     </a>
-    <img
-      src="../../img/product-card/iphone-product.png"
-      alt="iphone"
-      class="product__imgWrap-img"
-    />
+    <img src="../../img/product-card/iphone-product.png" alt="iphone" class="imgWrap-img" />
   </div>
 
-  <div class="product__description">
-    <img
-      src="../../img/product-card/samsung-logo.svg"
-      alt=""
-      class="product__description--logo"
-    />
-    <span class="product__description--device">Galaxy S23 S911 256GB</span>
-    <span class="product__description--desc">Flip 6 | יבואן רשמי</span>
-    <div class="product__priceWrap">
-      <span class="product__priceWrap--priceText">₪1,650</span>
-      <del class="product__priceWrap--priceDel">₪3,600</del>
+  <div class="description">
+    <img src="../../img/product-card/samsung-logo.svg" alt="" class="description--logo" />
+    <span class="description--device">Galaxy S23 S911 256GB</span>
+    <span class="description--desc">Flip 6 | יבואן רשמי</span>
+    <div class="priceWrap">
+      <span class="priceWrap--priceText">₪1,650</span>
+      <del class="priceWrap--priceDel">₪3,600</del>
     </div>
   </div>
 
@@ -1171,29 +1172,3550 @@
 
       </div>
     </div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-pagination"></div>
+    <div class="static-slide">
+      <a href="#" class="link">
+        <h2 class="title">
+          להטבות
+          <br />
+          נוספות
+          <br />
+          בקטגוריה
+        </h2>
+        <svg
+          class="icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 36 35"
+          fill="none"
+        >
+          <rect
+            x="1"
+            y="1"
+            width="34"
+            height="33"
+            rx="16.5"
+            stroke="white"
+            stroke-width="2"
+          />
+          <path
+            d="M25.0827 18.01H10.916M10.916 18.01L17.9993 24.885M10.916 18.01L17.9993 11.135"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </a>
+    </div>
+    <div class="pagination-wrapper">
+      <div class="swiper-pagination"></div>
+      <div class="pagination-swiper-location" data-swiperId="2">
+  <span class="pagination-swiper-current">1</span>
+  <span class="pagination-swiper-of">מתוך</span>
+  <span class="pagination-swiper-length">5</span>
+</div>
+
+    </div>
   </div>
 
+  <!-- <div class="static-slide">
+    <h2 class="title">
+      להטבות
+      <br />
+      נוספות
+      <br />
+      בקטגוריה
+    </h2>
+    <a href="#" class="link">
+      <svg
+        class="icon"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 36 35"
+        fill="none"
+      >
+        <rect
+          x="1"
+          y="1"
+          width="34"
+          height="33"
+          rx="16.5"
+          stroke="white"
+          stroke-width="2"
+        />
+        <path
+          d="M25.0827 18.01H10.916M10.916 18.01L17.9993 24.885M10.916 18.01L17.9993 11.135"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+        .static-slide.static {
+      width: 235px;
+      background-image: url("../img/product-slider/cat-static-link.jpg");
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  </div> -->
   <!-- mobile -->
-  <div class="swiper mobileSwiper">
+  <div class="swiper mobileSwiper" dir="rtl">
     <div class="swiper-wrapper">
-      <div class="swiper-slide">Slide 1</div>
-      <div class="swiper-slide">Slide 2</div>
-      <div class="swiper-slide">Slide 3</div>
-      <div class="swiper-slide">Slide 4</div>
-      <div class="swiper-slide">Slide 5</div>
-      <div class="swiper-slide">Slide 6</div>
-      <div class="swiper-slide">Slide 7</div>
-      <div class="swiper-slide">Slide 8</div>
-      <div class="swiper-slide">Slide 9</div>
+      <div class="swiper-slide">
+        <div class="slide-group">
+          <div class="single-slide">
+            <div class="product">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap-favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/product-card/iphone-product.png" alt="iphone" class="imgWrap-img" />
+  </div>
+
+  <div class="description">
+    <img src="../../img/product-card/samsung-logo.svg" alt="" class="description--logo" />
+    <span class="description--device">Galaxy S23 S911 256GB</span>
+    <span class="description--desc">Flip 6 | יבואן רשמי</span>
+    <div class="priceWrap">
+      <span class="priceWrap--priceText">₪1,650</span>
+      <del class="priceWrap--priceDel">₪3,600</del>
     </div>
-    <div class="swiper-pagination"></div>
+  </div>
+
+  <div class="product__counter">
+    <div class="product__counter--counterWrap">
+      <button class="product__counter--counterWrap--minBtn">-</button>
+      <span class="product__counter--counterWrap--indicatorText">יח׳</span>
+      <span class="product__counter--counterWrap--countDigit">1</span>
+      <button class="product__counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="product__counter--addToCartBtn" id="addToCartBtn">
+      <span class="product__counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+          </div>
+          <div class="single-slide">
+            <div class="product">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap-favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/product-card/iphone-product.png" alt="iphone" class="imgWrap-img" />
+  </div>
+
+  <div class="description">
+    <img src="../../img/product-card/samsung-logo.svg" alt="" class="description--logo" />
+    <span class="description--device">Galaxy S23 S911 256GB</span>
+    <span class="description--desc">Flip 6 | יבואן רשמי</span>
+    <div class="priceWrap">
+      <span class="priceWrap--priceText">₪1,650</span>
+      <del class="priceWrap--priceDel">₪3,600</del>
+    </div>
+  </div>
+
+  <div class="product__counter">
+    <div class="product__counter--counterWrap">
+      <button class="product__counter--counterWrap--minBtn">-</button>
+      <span class="product__counter--counterWrap--indicatorText">יח׳</span>
+      <span class="product__counter--counterWrap--countDigit">1</span>
+      <button class="product__counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="product__counter--addToCartBtn" id="addToCartBtn">
+      <span class="product__counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+          </div>
+          <div class="single-slide">
+            <div class="product">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap-favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/product-card/iphone-product.png" alt="iphone" class="imgWrap-img" />
+  </div>
+
+  <div class="description">
+    <img src="../../img/product-card/samsung-logo.svg" alt="" class="description--logo" />
+    <span class="description--device">Galaxy S23 S911 256GB</span>
+    <span class="description--desc">Flip 6 | יבואן רשמי</span>
+    <div class="priceWrap">
+      <span class="priceWrap--priceText">₪1,650</span>
+      <del class="priceWrap--priceDel">₪3,600</del>
+    </div>
+  </div>
+
+  <div class="product__counter">
+    <div class="product__counter--counterWrap">
+      <button class="product__counter--counterWrap--minBtn">-</button>
+      <span class="product__counter--counterWrap--indicatorText">יח׳</span>
+      <span class="product__counter--counterWrap--countDigit">1</span>
+      <button class="product__counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="product__counter--addToCartBtn" id="addToCartBtn">
+      <span class="product__counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+          </div>
+          <div class="single-slide static">
+            <a href="#" class="link">
+              <h2 class="title">להטבות נוספות בקטגוריה</h2>
+              <svg
+                class="icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 36 35"
+                fill="none"
+              >
+                <rect
+                  x="1"
+                  y="1"
+                  width="34"
+                  height="33"
+                  rx="16.5"
+                  stroke="white"
+                  stroke-width="2"
+                />
+                <path
+                  d="M25.0827 18.01H10.916M10.916 18.01L17.9993 24.885M10.916 18.01L17.9993 11.135"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="slide-group">
+          <div class="single-slide">
+            <div class="product">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap-favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/product-card/iphone-product.png" alt="iphone" class="imgWrap-img" />
+  </div>
+
+  <div class="description">
+    <img src="../../img/product-card/samsung-logo.svg" alt="" class="description--logo" />
+    <span class="description--device">Galaxy S23 S911 256GB</span>
+    <span class="description--desc">Flip 6 | יבואן רשמי</span>
+    <div class="priceWrap">
+      <span class="priceWrap--priceText">₪1,650</span>
+      <del class="priceWrap--priceDel">₪3,600</del>
+    </div>
+  </div>
+
+  <div class="product__counter">
+    <div class="product__counter--counterWrap">
+      <button class="product__counter--counterWrap--minBtn">-</button>
+      <span class="product__counter--counterWrap--indicatorText">יח׳</span>
+      <span class="product__counter--counterWrap--countDigit">1</span>
+      <button class="product__counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="product__counter--addToCartBtn" id="addToCartBtn">
+      <span class="product__counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+          </div>
+          <div class="single-slide">
+            <div class="product">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap-favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/product-card/iphone-product.png" alt="iphone" class="imgWrap-img" />
+  </div>
+
+  <div class="description">
+    <img src="../../img/product-card/samsung-logo.svg" alt="" class="description--logo" />
+    <span class="description--device">Galaxy S23 S911 256GB</span>
+    <span class="description--desc">Flip 6 | יבואן רשמי</span>
+    <div class="priceWrap">
+      <span class="priceWrap--priceText">₪1,650</span>
+      <del class="priceWrap--priceDel">₪3,600</del>
+    </div>
+  </div>
+
+  <div class="product__counter">
+    <div class="product__counter--counterWrap">
+      <button class="product__counter--counterWrap--minBtn">-</button>
+      <span class="product__counter--counterWrap--indicatorText">יח׳</span>
+      <span class="product__counter--counterWrap--countDigit">1</span>
+      <button class="product__counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="product__counter--addToCartBtn" id="addToCartBtn">
+      <span class="product__counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+          </div>
+          <div class="single-slide">
+            <div class="product">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap-favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/product-card/iphone-product.png" alt="iphone" class="imgWrap-img" />
+  </div>
+
+  <div class="description">
+    <img src="../../img/product-card/samsung-logo.svg" alt="" class="description--logo" />
+    <span class="description--device">Galaxy S23 S911 256GB</span>
+    <span class="description--desc">Flip 6 | יבואן רשמי</span>
+    <div class="priceWrap">
+      <span class="priceWrap--priceText">₪1,650</span>
+      <del class="priceWrap--priceDel">₪3,600</del>
+    </div>
+  </div>
+
+  <div class="product__counter">
+    <div class="product__counter--counterWrap">
+      <button class="product__counter--counterWrap--minBtn">-</button>
+      <span class="product__counter--counterWrap--indicatorText">יח׳</span>
+      <span class="product__counter--counterWrap--countDigit">1</span>
+      <button class="product__counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="product__counter--addToCartBtn" id="addToCartBtn">
+      <span class="product__counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+          </div>
+          <div class="single-slide static">
+            <a href="#" class="link">
+              <h2 class="title">להטבות נוספות בקטגוריה</h2>
+              <svg
+                class="icon"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 36 35"
+                fill="none"
+              >
+                <rect
+                  x="1"
+                  y="1"
+                  width="34"
+                  height="33"
+                  rx="16.5"
+                  stroke="white"
+                  stroke-width="2"
+                />
+                <path
+                  d="M25.0827 18.01H10.916M10.916 18.01L17.9993 24.885M10.916 18.01L17.9993 11.135"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pagination-wrapper">
+      <div class="swiper-pagination"></div>
+      <div class="pagination-swiper-location" data-swiperId="3">
+  <span class="pagination-swiper-current">1</span>
+  <span class="pagination-swiper-of">מתוך</span>
+  <span class="pagination-swiper-length">5</span>
+</div>
+
+    </div>
   </div>
 </div>
 
       <!-- ? product-slider  -->
+
+      <!-- * showcase-slider  -->
+      <div class="showcase-slider">
+  <div class="swiper showcaseSwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <picture>
+          <source
+            srcset="../../img/showcase-slider/showcase-desktop-img1.jpg"
+            media="(min-width: 1600px)"
+          />
+          <img
+            src="../../img/showcase-slider/showcase-img1.jpg"
+            alt="castro slide"
+            class="slide-img"
+          />
+        </picture>
+
+        <div class="text-wrapper">
+          <h3 class="slide-text">הכל לבית</h3>
+          <h4 class="slide-subtext">מוצרים שאסור לכם לפספס!</h4>
+          <a href="" class="slide-link">לפרטים נוספים</a>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <picture>
+          <source
+            srcset="../../img/showcase-slider/showcase-desktop-img1.jpg"
+            media="(min-width: 1600px)"
+          />
+          <img
+            src="../../img/showcase-slider/showcase-img1.jpg"
+            alt="castro slide"
+            class="slide-img"
+          />
+        </picture>
+
+        <div class="text-wrapper">
+          <h3 class="slide-text">הכל לבית</h3>
+          <h4 class="slide-subtext">מוצרים שאסור לכם לפספס!</h4>
+          <a href="" class="slide-link">לפרטים נוספים</a>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <picture>
+          <source
+            srcset="../../img/showcase-slider/showcase-desktop-img1.jpg"
+            media="(min-width: 1600px)"
+          />
+          <img
+            src="../../img/showcase-slider/showcase-img1.jpg"
+            alt="castro slide"
+            class="slide-img"
+          />
+        </picture>
+
+        <div class="text-wrapper">
+          <h3 class="slide-text">הכל לבית</h3>
+          <h4 class="slide-subtext">מוצרים שאסור לכם לפספס!</h4>
+          <a href="" class="slide-link">לפרטים נוספים</a>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <picture>
+          <source
+            srcset="../../img/showcase-slider/showcase-desktop-img1.jpg"
+            media="(min-width: 1600px)"
+          />
+          <img
+            src="../../img/showcase-slider/showcase-img1.jpg"
+            alt="castro slide"
+            class="slide-img"
+          />
+        </picture>
+
+        <div class="text-wrapper">
+          <h3 class="slide-text">הכל לבית</h3>
+          <h4 class="slide-subtext">מוצרים שאסור לכם לפספס!</h4>
+          <a href="" class="slide-link">לפרטים נוספים</a>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <picture>
+          <source
+            srcset="../../img/showcase-slider/showcase-desktop-img1.jpg"
+            media="(min-width: 1600px)"
+          />
+          <img
+            src="../../img/showcase-slider/showcase-img1.jpg"
+            alt="castro slide"
+            class="slide-img"
+          />
+        </picture>
+
+        <div class="text-wrapper">
+          <h3 class="slide-text">הכל לבית</h3>
+          <h4 class="slide-subtext">מוצרים שאסור לכם לפספס!</h4>
+          <a href="" class="slide-link">לפרטים נוספים</a>
+        </div>
+      </div>
+    </div>
+    <div class="pagination-wrapper">
+      <div class="swiper-pagination"></div>
+      <div class="pagination-swiper-location" data-swiperId="8">
+  <span class="pagination-swiper-current">1</span>
+  <span class="pagination-swiper-of">מתוך</span>
+  <span class="pagination-swiper-length">5</span>
+</div>
+
+    </div>
+  </div>
+</div>
+
+      <!-- ? showcase-slider  -->
+
+      <!-- * sale-slider  -->
+      <div class="sale-slider">
+  <h2 class="section-header">
+  <svg
+    class="section-header__icon"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 42 32"
+    fill="none"
+  >
+    <path
+      d="M21 32L20.9689 31.9791L0.5 19.9681C3.19511 17.2986 8.95098 15.2266 15.3909 14.4961L0.5 5.75828C3.96123 2.32869 12.4769 -0.114146 21 0.00411522C29.5219 -0.114146 38.0388 2.32993 41.5 5.75828L26.6091 14.4961C33.0478 15.2278 38.8061 17.2998 41.5 19.9681L21.0311 31.9791L21 32Z"
+      fill="#3F3FEA"
+    />
+  </svg>
+  <span class="section-header__text">חדש באתר</span>
+</h2>
+
+  <div #swiperRef="" class="swiper SaleSwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="sale-card">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap--favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/sale-card/card-img1.jpg" alt="iphone" class="imgWrap--img" />
+
+    <svg
+      data-isStampShown="false"
+      class="img-stamp"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 119 25"
+      fill="none"
+    >
+      <path d="M-48.25 0L118.75 0L108.082 12.5L118.75 25L-48.25 25V0Z" fill="#2020b3" />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg>
+
+    <!-- <svg
+      data-isStampShown="false"
+      class="img-stamp desktop"
+      xmlns="http://www.w3.org/2000/svg"
+      width="124"
+      height="48"
+      viewBox="0 0 124 48"
+      fill="none"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M0.0708338 51.7698L123.925 51.7698C118.465 22.3037 92.8158 0.000291359 61.9981 0.000284641C31.1803 0.000277922 5.5307 22.3037 0.0708338 51.7698Z"
+        fill="#2020b3"
+      />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg> -->
+  </div>
+
+  <div class="description">
+    <img src="../../img/sale-card/traklin.png" alt="" class="description--logo" />
+    <span class="description--device">רשת החשמל בישראל</span>
+    <!-- <span class="description--desc">Flip 6 | יבואן רשמי</span> -->
+    <div class="priceWrap">
+      <span class="priceWrap--priceText">4% הנחה</span>
+      <!-- <del class="priceWrap--priceDel">₪3,600</del> -->
+      <span class="priceWrap--pricesubtextText">למשלמים בכרטיס המועדון כולל כפל מבצעים</span>
+    </div>
+  </div>
+
+  <div class="counter" data-isShown="false">
+    <div class="counter--counterWrap">
+      <button class="counter--counterWrap--minBtn">-</button>
+      <span class="counter--counterWrap--indicatorText">יח׳</span>
+      <span class="counter--counterWrap--countDigit">1</span>
+      <button class="counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="counter--addToCartBtn" id="addToCartBtn">
+      <span class="counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+      </div>
+      <div class="swiper-slide">
+        <div class="sale-card">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap--favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/sale-card/card-img2.jpg" alt="iphone" class="imgWrap--img" />
+
+    <svg
+      data-isStampShown="true"
+      class="img-stamp"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 119 25"
+      fill="none"
+    >
+      <path d="M-48.25 0L118.75 0L108.082 12.5L118.75 25L-48.25 25V0Z" fill="#2020b3" />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg>
+
+    <!-- <svg
+      data-isStampShown="true"
+      class="img-stamp desktop"
+      xmlns="http://www.w3.org/2000/svg"
+      width="124"
+      height="48"
+      viewBox="0 0 124 48"
+      fill="none"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M0.0708338 51.7698L123.925 51.7698C118.465 22.3037 92.8158 0.000291359 61.9981 0.000284641C31.1803 0.000277922 5.5307 22.3037 0.0708338 51.7698Z"
+        fill="#2020b3"
+      />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg> -->
+  </div>
+
+  <div class="description">
+    <img src="../../img/sale-card/theathor.png" alt="" class="description--logo" />
+    <span class="description--device">תיאטרון ילדים</span>
+    <!-- <span class="description--desc">Flip 6 | יבואן רשמי</span> -->
+    <div class="priceWrap">
+      <span class="priceWrap--priceText">₪55</span>
+      <!-- <del class="priceWrap--priceDel">₪3,600</del> -->
+      <span class="priceWrap--pricesubtextText">כרטיס להצגה</span>
+    </div>
+  </div>
+
+  <div class="counter" data-isShown="false">
+    <div class="counter--counterWrap">
+      <button class="counter--counterWrap--minBtn">-</button>
+      <span class="counter--counterWrap--indicatorText">יח׳</span>
+      <span class="counter--counterWrap--countDigit">1</span>
+      <button class="counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="counter--addToCartBtn" id="addToCartBtn">
+      <span class="counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+      </div>
+      <div class="swiper-slide">
+        <div class="sale-card">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap--favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/sale-card/card-img3.jpg" alt="iphone" class="imgWrap--img" />
+
+    <svg
+      data-isStampShown="true"
+      class="img-stamp"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 119 25"
+      fill="none"
+    >
+      <path d="M-48.25 0L118.75 0L108.082 12.5L118.75 25L-48.25 25V0Z" fill="#000000" />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        5% הנחה בחיוב
+      </text>
+    </svg>
+
+    <!-- <svg
+      data-isStampShown="true"
+      class="img-stamp desktop"
+      xmlns="http://www.w3.org/2000/svg"
+      width="124"
+      height="48"
+      viewBox="0 0 124 48"
+      fill="none"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M0.0708338 51.7698L123.925 51.7698C118.465 22.3037 92.8158 0.000291359 61.9981 0.000284641C31.1803 0.000277922 5.5307 22.3037 0.0708338 51.7698Z"
+        fill="#000000"
+      />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        5% הנחה בחיוב
+      </text>
+    </svg> -->
+  </div>
+
+  <div class="description">
+    <img src="../../img/sale-card/traklin.png" alt="" class="description--logo" />
+    <span class="description--device">רשת החשמל בישראל</span>
+    <!-- <span class="description--desc">Flip 6 | יבואן רשמי</span> -->
+    <div class="priceWrap">
+      <span class="priceWrap--priceText">4% הנחה</span>
+      <!-- <del class="priceWrap--priceDel">₪3,600</del> -->
+      <span class="priceWrap--pricesubtextText">למשלמים בכרטיס המועדון כולל כפל מבצעים</span>
+    </div>
+  </div>
+
+  <div class="counter" data-isShown="false">
+    <div class="counter--counterWrap">
+      <button class="counter--counterWrap--minBtn">-</button>
+      <span class="counter--counterWrap--indicatorText">יח׳</span>
+      <span class="counter--counterWrap--countDigit">1</span>
+      <button class="counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="counter--addToCartBtn" id="addToCartBtn">
+      <span class="counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+      </div>
+      <div class="swiper-slide">
+        <div class="sale-card">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap--favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/sale-card/card-img4.jpg" alt="iphone" class="imgWrap--img" />
+
+    <svg
+      data-isStampShown="true"
+      class="img-stamp"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 119 25"
+      fill="none"
+    >
+      <path d="M-48.25 0L118.75 0L108.082 12.5L118.75 25L-48.25 25V0Z" fill="#2020b3" />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg>
+
+    <!-- <svg
+      data-isStampShown="true"
+      class="img-stamp desktop"
+      xmlns="http://www.w3.org/2000/svg"
+      width="124"
+      height="48"
+      viewBox="0 0 124 48"
+      fill="none"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M0.0708338 51.7698L123.925 51.7698C118.465 22.3037 92.8158 0.000291359 61.9981 0.000284641C31.1803 0.000277922 5.5307 22.3037 0.0708338 51.7698Z"
+        fill="#2020b3"
+      />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg> -->
+  </div>
+
+  <div class="description">
+    <img src="../../img/sale-card/traklin.png" alt="" class="description--logo" />
+    <span class="description--device">רשת החשמל בישראל</span>
+    <!-- <span class="description--desc">Flip 6 | יבואן רשמי</span> -->
+    <div class="priceWrap">
+      <span class="priceWrap--priceText">4% הנחה</span>
+      <!-- <del class="priceWrap--priceDel">₪3,600</del> -->
+      <span class="priceWrap--pricesubtextText">למשלמים בכרטיס המועדון כולל כפל מבצעים</span>
+    </div>
+  </div>
+
+  <div class="counter" data-isShown="false">
+    <div class="counter--counterWrap">
+      <button class="counter--counterWrap--minBtn">-</button>
+      <span class="counter--counterWrap--indicatorText">יח׳</span>
+      <span class="counter--counterWrap--countDigit">1</span>
+      <button class="counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="counter--addToCartBtn" id="addToCartBtn">
+      <span class="counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+      </div>
+      <div class="swiper-slide">
+        <div class="sale-card">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap--favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/sale-card/card-img5.jpg" alt="iphone" class="imgWrap--img" />
+
+    <svg
+      data-isStampShown="false"
+      class="img-stamp"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 119 25"
+      fill="none"
+    >
+      <path d="M-48.25 0L118.75 0L108.082 12.5L118.75 25L-48.25 25V0Z" fill="#2020b3" />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg>
+
+    <!-- <svg
+      data-isStampShown="false"
+      class="img-stamp desktop"
+      xmlns="http://www.w3.org/2000/svg"
+      width="124"
+      height="48"
+      viewBox="0 0 124 48"
+      fill="none"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M0.0708338 51.7698L123.925 51.7698C118.465 22.3037 92.8158 0.000291359 61.9981 0.000284641C31.1803 0.000277922 5.5307 22.3037 0.0708338 51.7698Z"
+        fill="#2020b3"
+      />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg> -->
+  </div>
+
+  <div class="description">
+    <img src="../../img/sale-card/traklin.png" alt="" class="description--logo" />
+    <span class="description--device">רשת החשמל בישראל</span>
+    <!-- <span class="description--desc">Flip 6 | יבואן רשמי</span> -->
+    <div class="priceWrap">
+      <span class="priceWrap--priceText">4% הנחה</span>
+      <!-- <del class="priceWrap--priceDel">₪3,600</del> -->
+      <span class="priceWrap--pricesubtextText">למשלמים בכרטיס המועדון כולל כפל מבצעים</span>
+    </div>
+  </div>
+
+  <div class="counter" data-isShown="false">
+    <div class="counter--counterWrap">
+      <button class="counter--counterWrap--minBtn">-</button>
+      <span class="counter--counterWrap--indicatorText">יח׳</span>
+      <span class="counter--counterWrap--countDigit">1</span>
+      <button class="counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="counter--addToCartBtn" id="addToCartBtn">
+      <span class="counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+      </div>
+    </div>
+    <div class="static-slide">
+      <a href="#" class="link">
+        <h2 class="title">
+          להטבות
+          <br />
+          נוספות
+          <br />
+          בקטגוריה
+        </h2>
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 35" fill="none">
+          <rect x="1" y="1" width="34" height="33" rx="16.5" stroke="white" stroke-width="2" />
+          <path
+            d="M25.0827 18.01H10.916M10.916 18.01L17.9993 24.885M10.916 18.01L17.9993 11.135"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </a>
+    </div>
+    <div class="pagination-wrapper">
+      <div class="swiper-pagination"></div>
+      <div class="pagination-swiper-location" data-swiperId="4">
+  <span class="pagination-swiper-current">1</span>
+  <span class="pagination-swiper-of">מתוך</span>
+  <span class="pagination-swiper-length">5</span>
+</div>
+
+    </div>
+  </div>
+
+  <!-- <div class="static-slide">
+    <h2 class="title">
+      להטבות
+      <br />
+      נוספות
+      <br />
+      בקטגוריה
+    </h2>
+    <a href="#" class="link">
+      <svg
+        class="icon"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 36 35"
+        fill="none"
+      >
+        <rect
+          x="1"
+          y="1"
+          width="34"
+          height="33"
+          rx="16.5"
+          stroke="white"
+          stroke-width="2"
+        />
+        <path
+          d="M25.0827 18.01H10.916M10.916 18.01L17.9993 24.885M10.916 18.01L17.9993 11.135"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+        .static-slide.static {
+      width: 235px;
+      background-image: url("../img/product-slider/cat-static-link.jpg");
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  </div> -->
+  <!-- mobile -->
+  <div class="swiper salemobileSwiper" dir="rtl">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="slide-group">
+          <div class="single-slide">
+            <div class="sale-card">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap--favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/sale-card/card-img1.jpg" alt="iphone" class="imgWrap--img" />
+
+    <svg
+      data-isStampShown="false"
+      class="img-stamp"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 119 25"
+      fill="none"
+    >
+      <path d="M-48.25 0L118.75 0L108.082 12.5L118.75 25L-48.25 25V0Z" fill="#2020b3" />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg>
+
+    <!-- <svg
+      data-isStampShown="false"
+      class="img-stamp desktop"
+      xmlns="http://www.w3.org/2000/svg"
+      width="124"
+      height="48"
+      viewBox="0 0 124 48"
+      fill="none"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M0.0708338 51.7698L123.925 51.7698C118.465 22.3037 92.8158 0.000291359 61.9981 0.000284641C31.1803 0.000277922 5.5307 22.3037 0.0708338 51.7698Z"
+        fill="#2020b3"
+      />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg> -->
+  </div>
+
+  <div class="description">
+    <img src="../../img/sale-card/traklin.png" alt="" class="description--logo" />
+    <span class="description--device">רשת החשמל בישראל</span>
+    <!-- <span class="description--desc">Flip 6 | יבואן רשמי</span> -->
+    <div class="priceWrap">
+      <span class="priceWrap--priceText">4% הנחה</span>
+      <!-- <del class="priceWrap--priceDel">₪3,600</del> -->
+      <span class="priceWrap--pricesubtextText">למשלמים בכרטיס המועדון כולל כפל מבצעים</span>
+    </div>
+  </div>
+
+  <div class="counter" data-isShown="false">
+    <div class="counter--counterWrap">
+      <button class="counter--counterWrap--minBtn">-</button>
+      <span class="counter--counterWrap--indicatorText">יח׳</span>
+      <span class="counter--counterWrap--countDigit">1</span>
+      <button class="counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="counter--addToCartBtn" id="addToCartBtn">
+      <span class="counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+          </div>
+          <div class="single-slide">
+            <div class="sale-card">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap--favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/sale-card/card-img2.jpg" alt="iphone" class="imgWrap--img" />
+
+    <svg
+      data-isStampShown="true"
+      class="img-stamp"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 119 25"
+      fill="none"
+    >
+      <path d="M-48.25 0L118.75 0L108.082 12.5L118.75 25L-48.25 25V0Z" fill="#2020b3" />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg>
+
+    <!-- <svg
+      data-isStampShown="true"
+      class="img-stamp desktop"
+      xmlns="http://www.w3.org/2000/svg"
+      width="124"
+      height="48"
+      viewBox="0 0 124 48"
+      fill="none"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M0.0708338 51.7698L123.925 51.7698C118.465 22.3037 92.8158 0.000291359 61.9981 0.000284641C31.1803 0.000277922 5.5307 22.3037 0.0708338 51.7698Z"
+        fill="#2020b3"
+      />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg> -->
+  </div>
+
+  <div class="description">
+    <img src="../../img/sale-card/theathor.png" alt="" class="description--logo" />
+    <span class="description--device">תיאטרון ילדים</span>
+    <!-- <span class="description--desc">Flip 6 | יבואן רשמי</span> -->
+    <div class="priceWrap">
+      <span class="priceWrap--priceText">₪55</span>
+      <!-- <del class="priceWrap--priceDel">₪3,600</del> -->
+      <span class="priceWrap--pricesubtextText">כרטיס להצגה</span>
+    </div>
+  </div>
+
+  <div class="counter" data-isShown="false">
+    <div class="counter--counterWrap">
+      <button class="counter--counterWrap--minBtn">-</button>
+      <span class="counter--counterWrap--indicatorText">יח׳</span>
+      <span class="counter--counterWrap--countDigit">1</span>
+      <button class="counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="counter--addToCartBtn" id="addToCartBtn">
+      <span class="counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+          </div>
+          <div class="single-slide">
+            <div class="sale-card">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap--favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/sale-card/card-img3.jpg" alt="iphone" class="imgWrap--img" />
+
+    <svg
+      data-isStampShown="true"
+      class="img-stamp"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 119 25"
+      fill="none"
+    >
+      <path d="M-48.25 0L118.75 0L108.082 12.5L118.75 25L-48.25 25V0Z" fill="#000000" />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        5% הנחה בחיוב
+      </text>
+    </svg>
+
+    <!-- <svg
+      data-isStampShown="true"
+      class="img-stamp desktop"
+      xmlns="http://www.w3.org/2000/svg"
+      width="124"
+      height="48"
+      viewBox="0 0 124 48"
+      fill="none"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M0.0708338 51.7698L123.925 51.7698C118.465 22.3037 92.8158 0.000291359 61.9981 0.000284641C31.1803 0.000277922 5.5307 22.3037 0.0708338 51.7698Z"
+        fill="#000000"
+      />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        5% הנחה בחיוב
+      </text>
+    </svg> -->
+  </div>
+
+  <div class="description">
+    <img src="../../img/sale-card/traklin.png" alt="" class="description--logo" />
+    <span class="description--device">רשת החשמל בישראל</span>
+    <!-- <span class="description--desc">Flip 6 | יבואן רשמי</span> -->
+    <div class="priceWrap">
+      <span class="priceWrap--priceText">4% הנחה</span>
+      <!-- <del class="priceWrap--priceDel">₪3,600</del> -->
+      <span class="priceWrap--pricesubtextText">למשלמים בכרטיס המועדון כולל כפל מבצעים</span>
+    </div>
+  </div>
+
+  <div class="counter" data-isShown="false">
+    <div class="counter--counterWrap">
+      <button class="counter--counterWrap--minBtn">-</button>
+      <span class="counter--counterWrap--indicatorText">יח׳</span>
+      <span class="counter--counterWrap--countDigit">1</span>
+      <button class="counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="counter--addToCartBtn" id="addToCartBtn">
+      <span class="counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+          </div>
+          <div class="single-slide">
+            <div class="sale-card">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap--favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/sale-card/card-img4.jpg" alt="iphone" class="imgWrap--img" />
+
+    <svg
+      data-isStampShown="true"
+      class="img-stamp"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 119 25"
+      fill="none"
+    >
+      <path d="M-48.25 0L118.75 0L108.082 12.5L118.75 25L-48.25 25V0Z" fill="#2020b3" />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg>
+
+    <!-- <svg
+      data-isStampShown="true"
+      class="img-stamp desktop"
+      xmlns="http://www.w3.org/2000/svg"
+      width="124"
+      height="48"
+      viewBox="0 0 124 48"
+      fill="none"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M0.0708338 51.7698L123.925 51.7698C118.465 22.3037 92.8158 0.000291359 61.9981 0.000284641C31.1803 0.000277922 5.5307 22.3037 0.0708338 51.7698Z"
+        fill="#2020b3"
+      />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg> -->
+  </div>
+
+  <div class="description">
+    <img src="../../img/sale-card/traklin.png" alt="" class="description--logo" />
+    <span class="description--device">רשת החשמל בישראל</span>
+    <!-- <span class="description--desc">Flip 6 | יבואן רשמי</span> -->
+    <div class="priceWrap">
+      <span class="priceWrap--priceText">4% הנחה</span>
+      <!-- <del class="priceWrap--priceDel">₪3,600</del> -->
+      <span class="priceWrap--pricesubtextText">למשלמים בכרטיס המועדון כולל כפל מבצעים</span>
+    </div>
+  </div>
+
+  <div class="counter" data-isShown="false">
+    <div class="counter--counterWrap">
+      <button class="counter--counterWrap--minBtn">-</button>
+      <span class="counter--counterWrap--indicatorText">יח׳</span>
+      <span class="counter--counterWrap--countDigit">1</span>
+      <button class="counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="counter--addToCartBtn" id="addToCartBtn">
+      <span class="counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+          </div>
+          <div class="single-slide">
+            <div class="sale-card">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap--favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/sale-card/card-img5.jpg" alt="iphone" class="imgWrap--img" />
+
+    <svg
+      data-isStampShown="false"
+      class="img-stamp"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 119 25"
+      fill="none"
+    >
+      <path d="M-48.25 0L118.75 0L108.082 12.5L118.75 25L-48.25 25V0Z" fill="#2020b3" />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg>
+
+    <!-- <svg
+      data-isStampShown="false"
+      class="img-stamp desktop"
+      xmlns="http://www.w3.org/2000/svg"
+      width="124"
+      height="48"
+      viewBox="0 0 124 48"
+      fill="none"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M0.0708338 51.7698L123.925 51.7698C118.465 22.3037 92.8158 0.000291359 61.9981 0.000284641C31.1803 0.000277922 5.5307 22.3037 0.0708338 51.7698Z"
+        fill="#2020b3"
+      />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg> -->
+  </div>
+
+  <div class="description">
+    <img src="../../img/sale-card/traklin.png" alt="" class="description--logo" />
+    <span class="description--device">רשת החשמל בישראל</span>
+    <!-- <span class="description--desc">Flip 6 | יבואן רשמי</span> -->
+    <div class="priceWrap">
+      <span class="priceWrap--priceText">4% הנחה</span>
+      <!-- <del class="priceWrap--priceDel">₪3,600</del> -->
+      <span class="priceWrap--pricesubtextText">למשלמים בכרטיס המועדון כולל כפל מבצעים</span>
+    </div>
+  </div>
+
+  <div class="counter" data-isShown="false">
+    <div class="counter--counterWrap">
+      <button class="counter--counterWrap--minBtn">-</button>
+      <span class="counter--counterWrap--indicatorText">יח׳</span>
+      <span class="counter--counterWrap--countDigit">1</span>
+      <button class="counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="counter--addToCartBtn" id="addToCartBtn">
+      <span class="counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+          </div>
+          <div class="single-slide static">
+            <a href="#" class="link">
+              <h2 class="title">להטבות נוספות בקטגוריה</h2>
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 35" fill="none">
+                <rect
+                  x="1"
+                  y="1"
+                  width="34"
+                  height="33"
+                  rx="16.5"
+                  stroke="white"
+                  stroke-width="2"
+                />
+                <path
+                  d="M25.0827 18.01H10.916M10.916 18.01L17.9993 24.885M10.916 18.01L17.9993 11.135"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="slide-group">
+          <div class="single-slide">
+            <div class="sale-card">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap--favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/sale-card/card-img1.jpg" alt="iphone" class="imgWrap--img" />
+
+    <svg
+      data-isStampShown="false"
+      class="img-stamp"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 119 25"
+      fill="none"
+    >
+      <path d="M-48.25 0L118.75 0L108.082 12.5L118.75 25L-48.25 25V0Z" fill="#2020b3" />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg>
+
+    <!-- <svg
+      data-isStampShown="false"
+      class="img-stamp desktop"
+      xmlns="http://www.w3.org/2000/svg"
+      width="124"
+      height="48"
+      viewBox="0 0 124 48"
+      fill="none"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M0.0708338 51.7698L123.925 51.7698C118.465 22.3037 92.8158 0.000291359 61.9981 0.000284641C31.1803 0.000277922 5.5307 22.3037 0.0708338 51.7698Z"
+        fill="#2020b3"
+      />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg> -->
+  </div>
+
+  <div class="description">
+    <img src="../../img/sale-card/traklin.png" alt="" class="description--logo" />
+    <span class="description--device">רשת החשמל בישראל</span>
+    <!-- <span class="description--desc">Flip 6 | יבואן רשמי</span> -->
+    <div class="priceWrap">
+      <span class="priceWrap--priceText">4% הנחה</span>
+      <!-- <del class="priceWrap--priceDel">₪3,600</del> -->
+      <span class="priceWrap--pricesubtextText">למשלמים בכרטיס המועדון כולל כפל מבצעים</span>
+    </div>
+  </div>
+
+  <div class="counter" data-isShown="false">
+    <div class="counter--counterWrap">
+      <button class="counter--counterWrap--minBtn">-</button>
+      <span class="counter--counterWrap--indicatorText">יח׳</span>
+      <span class="counter--counterWrap--countDigit">1</span>
+      <button class="counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="counter--addToCartBtn" id="addToCartBtn">
+      <span class="counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+          </div>
+          <div class="single-slide">
+            <div class="sale-card">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap--favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/sale-card/card-img2.jpg" alt="iphone" class="imgWrap--img" />
+
+    <svg
+      data-isStampShown="true"
+      class="img-stamp"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 119 25"
+      fill="none"
+    >
+      <path d="M-48.25 0L118.75 0L108.082 12.5L118.75 25L-48.25 25V0Z" fill="#2020b3" />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg>
+
+    <!-- <svg
+      data-isStampShown="true"
+      class="img-stamp desktop"
+      xmlns="http://www.w3.org/2000/svg"
+      width="124"
+      height="48"
+      viewBox="0 0 124 48"
+      fill="none"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M0.0708338 51.7698L123.925 51.7698C118.465 22.3037 92.8158 0.000291359 61.9981 0.000284641C31.1803 0.000277922 5.5307 22.3037 0.0708338 51.7698Z"
+        fill="#2020b3"
+      />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg> -->
+  </div>
+
+  <div class="description">
+    <img src="../../img/sale-card/theathor.png" alt="" class="description--logo" />
+    <span class="description--device">תיאטרון ילדים</span>
+    <!-- <span class="description--desc">Flip 6 | יבואן רשמי</span> -->
+    <div class="priceWrap">
+      <span class="priceWrap--priceText">₪55</span>
+      <!-- <del class="priceWrap--priceDel">₪3,600</del> -->
+      <span class="priceWrap--pricesubtextText">כרטיס להצגה</span>
+    </div>
+  </div>
+
+  <div class="counter" data-isShown="false">
+    <div class="counter--counterWrap">
+      <button class="counter--counterWrap--minBtn">-</button>
+      <span class="counter--counterWrap--indicatorText">יח׳</span>
+      <span class="counter--counterWrap--countDigit">1</span>
+      <button class="counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="counter--addToCartBtn" id="addToCartBtn">
+      <span class="counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+          </div>
+          <div class="single-slide">
+            <div class="sale-card">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap--favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/sale-card/card-img3.jpg" alt="iphone" class="imgWrap--img" />
+
+    <svg
+      data-isStampShown="block"
+      class="img-stamp"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 119 25"
+      fill="none"
+    >
+      <path d="M-48.25 0L118.75 0L108.082 12.5L118.75 25L-48.25 25V0Z" fill="#000000" />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        5% הנחה בחיוב
+      </text>
+    </svg>
+
+    <!-- <svg
+      data-isStampShown="block"
+      class="img-stamp desktop"
+      xmlns="http://www.w3.org/2000/svg"
+      width="124"
+      height="48"
+      viewBox="0 0 124 48"
+      fill="none"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M0.0708338 51.7698L123.925 51.7698C118.465 22.3037 92.8158 0.000291359 61.9981 0.000284641C31.1803 0.000277922 5.5307 22.3037 0.0708338 51.7698Z"
+        fill="#000000"
+      />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        5% הנחה בחיוב
+      </text>
+    </svg> -->
+  </div>
+
+  <div class="description">
+    <img src="../../img/sale-card/traklin.png" alt="" class="description--logo" />
+    <span class="description--device">רשת החשמל בישראל</span>
+    <!-- <span class="description--desc">Flip 6 | יבואן רשמי</span> -->
+    <div class="priceWrap">
+      <span class="priceWrap--priceText">4% הנחה</span>
+      <!-- <del class="priceWrap--priceDel">₪3,600</del> -->
+      <span class="priceWrap--pricesubtextText">למשלמים בכרטיס המועדון כולל כפל מבצעים</span>
+    </div>
+  </div>
+
+  <div class="counter" data-isShown="false">
+    <div class="counter--counterWrap">
+      <button class="counter--counterWrap--minBtn">-</button>
+      <span class="counter--counterWrap--indicatorText">יח׳</span>
+      <span class="counter--counterWrap--countDigit">1</span>
+      <button class="counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="counter--addToCartBtn" id="addToCartBtn">
+      <span class="counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+          </div>
+          <div class="single-slide">
+            <div class="sale-card">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap--favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/sale-card/card-img4.jpg" alt="iphone" class="imgWrap--img" />
+
+    <svg
+      data-isStampShown="true"
+      class="img-stamp"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 119 25"
+      fill="none"
+    >
+      <path d="M-48.25 0L118.75 0L108.082 12.5L118.75 25L-48.25 25V0Z" fill="#2020b3" />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg>
+
+    <!-- <svg
+      data-isStampShown="true"
+      class="img-stamp desktop"
+      xmlns="http://www.w3.org/2000/svg"
+      width="124"
+      height="48"
+      viewBox="0 0 124 48"
+      fill="none"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M0.0708338 51.7698L123.925 51.7698C118.465 22.3037 92.8158 0.000291359 61.9981 0.000284641C31.1803 0.000277922 5.5307 22.3037 0.0708338 51.7698Z"
+        fill="#2020b3"
+      />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg> -->
+  </div>
+
+  <div class="description">
+    <img src="../../img/sale-card/traklin.png" alt="" class="description--logo" />
+    <span class="description--device">רשת החשמל בישראל</span>
+    <!-- <span class="description--desc">Flip 6 | יבואן רשמי</span> -->
+    <div class="priceWrap">
+      <span class="priceWrap--priceText">4% הנחה</span>
+      <!-- <del class="priceWrap--priceDel">₪3,600</del> -->
+      <span class="priceWrap--pricesubtextText">למשלמים בכרטיס המועדון כולל כפל מבצעים</span>
+    </div>
+  </div>
+
+  <div class="counter" data-isShown="false">
+    <div class="counter--counterWrap">
+      <button class="counter--counterWrap--minBtn">-</button>
+      <span class="counter--counterWrap--indicatorText">יח׳</span>
+      <span class="counter--counterWrap--countDigit">1</span>
+      <button class="counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="counter--addToCartBtn" id="addToCartBtn">
+      <span class="counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+          </div>
+          <div class="single-slide">
+            <div class="sale-card">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap--favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/sale-card/card-img5.jpg" alt="iphone" class="imgWrap--img" />
+
+    <svg
+      data-isStampShown="false"
+      class="img-stamp"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 119 25"
+      fill="none"
+    >
+      <path d="M-48.25 0L118.75 0L108.082 12.5L118.75 25L-48.25 25V0Z" fill="#2020b3" />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg>
+
+    <!-- <svg
+      data-isStampShown="false"
+      class="img-stamp desktop"
+      xmlns="http://www.w3.org/2000/svg"
+      width="124"
+      height="48"
+      viewBox="0 0 124 48"
+      fill="none"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M0.0708338 51.7698L123.925 51.7698C118.465 22.3037 92.8158 0.000291359 61.9981 0.000284641C31.1803 0.000277922 5.5307 22.3037 0.0708338 51.7698Z"
+        fill="#2020b3"
+      />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg> -->
+  </div>
+
+  <div class="description">
+    <img src="../../img/sale-card/traklin.png" alt="" class="description--logo" />
+    <span class="description--device">רשת החשמל בישראל</span>
+    <!-- <span class="description--desc">Flip 6 | יבואן רשמי</span> -->
+    <div class="priceWrap">
+      <span class="priceWrap--priceText">4% הנחה</span>
+      <!-- <del class="priceWrap--priceDel">₪3,600</del> -->
+      <span class="priceWrap--pricesubtextText">למשלמים בכרטיס המועדון כולל כפל מבצעים</span>
+    </div>
+  </div>
+
+  <div class="counter" data-isShown="false">
+    <div class="counter--counterWrap">
+      <button class="counter--counterWrap--minBtn">-</button>
+      <span class="counter--counterWrap--indicatorText">יח׳</span>
+      <span class="counter--counterWrap--countDigit">1</span>
+      <button class="counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="counter--addToCartBtn" id="addToCartBtn">
+      <span class="counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+          </div>
+          <div class="single-slide static">
+            <a href="#" class="link">
+              <h2 class="title">להטבות נוספות בקטגוריה</h2>
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 35" fill="none">
+                <rect
+                  x="1"
+                  y="1"
+                  width="34"
+                  height="33"
+                  rx="16.5"
+                  stroke="white"
+                  stroke-width="2"
+                />
+                <path
+                  d="M25.0827 18.01H10.916M10.916 18.01L17.9993 24.885M10.916 18.01L17.9993 11.135"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pagination-wrapper">
+      <div class="swiper-pagination"></div>
+      <div class="pagination-swiper-location" data-swiperId="5">
+  <span class="pagination-swiper-current">1</span>
+  <span class="pagination-swiper-of">מתוך</span>
+  <span class="pagination-swiper-length">5</span>
+</div>
+
+    </div>
+  </div>
+</div>
+
+      <!-- ? sale-slider  -->
+
+      <!-- * lifestyle-slider  -->
+      <div class="lifestyle-slider">
+  <div class="swiper lifestyleSwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <picture>
+          <source
+            srcset="../../img/lifestyle-slider/lifestyle-slide-01.jpg"
+            media="(min-width: 1600px)"
+          />
+          <img
+            src="../../img/lifestyle-slider/lifestyle-slide-01.jpg"
+            alt="castro slide"
+            class="slide-img"
+          />
+        </picture>
+
+        <div class="text-wrapper">
+          <h3 class="slide-text">מתנות סוף שנה למורה</h3>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <picture>
+          <source
+            srcset="../../img/lifestyle-slider/lifestyle-slide-02.jpg"
+            media="(min-width: 1600px)"
+          />
+          <img
+            src="../../img/lifestyle-slider/lifestyle-slide-02.jpg"
+            alt="castro slide"
+            class="slide-img"
+          />
+        </picture>
+
+        <div class="text-wrapper">
+          <h3 class="slide-text">מגוון מסעדות שף</h3>
+        </div>
+      </div>
+      <div class="swiper-slide">
+        <picture>
+          <source
+            srcset="../../img/lifestyle-slider/lifestyle-slide-03.jpg"
+            media="(min-width: 1600px)"
+          />
+          <img
+            src="../../img/lifestyle-slider/lifestyle-slide-03.jpg"
+            alt="castro slide"
+            class="slide-img"
+          />
+        </picture>
+
+        <div class="text-wrapper">
+          <h3 class="slide-text">TOTAL FASHION</h3>
+        </div>
+      </div>
+    </div>
+    <div class="pagination-wrapper">
+      <div class="swiper-pagination"></div>
+      <div class="pagination-swiper-location" data-swiperId="9">
+  <span class="pagination-swiper-current">1</span>
+  <span class="pagination-swiper-of">מתוך</span>
+  <span class="pagination-swiper-length">5</span>
+</div>
+
+    </div>
+  </div>
+</div>
+
+      <!-- ? lifestyle-slider  -->
+
+      <!-- * voucher-slider  -->
+      <div class="voucher-slider">
+  <h2 class="section-header">
+  <svg
+    class="section-header__icon"
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 42 32"
+    fill="none"
+  >
+    <path
+      d="M21 32L20.9689 31.9791L0.5 19.9681C3.19511 17.2986 8.95098 15.2266 15.3909 14.4961L0.5 5.75828C3.96123 2.32869 12.4769 -0.114146 21 0.00411522C29.5219 -0.114146 38.0388 2.32993 41.5 5.75828L26.6091 14.4961C33.0478 15.2278 38.8061 17.2998 41.5 19.9681L21.0311 31.9791L21 32Z"
+      fill="#3F3FEA"
+    />
+  </svg>
+  <span class="section-header__text">שוברים</span>
+</h2>
+
+  <div #swiperRef="" class="swiper VoucherSwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="voucher-card">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap--favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/voucher-card/voucher-img1.jpg" alt="iphone" class="imgWrap--img" />
+
+    <!-- <svg
+      data-isStampShown="false"
+      class="img-stamp"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 119 25"
+      fill="none"
+    >
+      <path d="M-48.25 0L118.75 0L108.082 12.5L118.75 25L-48.25 25V0Z" fill="#2020b3" />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg> -->
+  </div>
+
+  <div class="description">
+    <img src="../../img/voucher-card/golbary.png" alt="" class="description--logo" />
+    <span class="description--device"></span>
+    <!-- <span class="description--desc">Flip 6 | יבואן רשמי</span> -->
+    <div class="priceWrap">
+      <span class="priceWrap--pricesubtextText">שובר בשווי 100 ₪</span>
+      <span class="priceWrap--priceText">4% הנחה</span>
+      <!-- <del class="priceWrap--priceDel">₪3,600</del> -->
+    </div>
+  </div>
+
+  <div class="voucher-card__counter" data-isShown="true">
+    <div class="voucher-card__counter--counterWrap">
+      <button class="voucher-card__counter--counterWrap--minBtn">-</button>
+      <span class="voucher-card__counter--counterWrap--indicatorText">יח׳</span>
+      <span class="voucher-card__counter--counterWrap--countDigit">1</span>
+      <button class="voucher-card__counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="voucher-card__counter--addToCartBtn" id="addToCartBtn">
+      <span class="voucher-card__counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+      </div>
+      <div class="swiper-slide">
+        <div class="voucher-card">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap--favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/voucher-card/voucher-img2.jpg" alt="iphone" class="imgWrap--img" />
+
+    <!-- <svg
+      data-isStampShown="false"
+      class="img-stamp"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 119 25"
+      fill="none"
+    >
+      <path d="M-48.25 0L118.75 0L108.082 12.5L118.75 25L-48.25 25V0Z" fill="#2020b3" />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg> -->
+  </div>
+
+  <div class="description">
+    <img src="../../img/voucher-card/pizzahut.png" alt="" class="description--logo" />
+    <span class="description--device">משפחתית+שתייה</span>
+    <!-- <span class="description--desc">Flip 6 | יבואן רשמי</span> -->
+    <div class="priceWrap">
+      <span class="priceWrap--pricesubtextText"> בשווי 83 ₪</span>
+      <span class="priceWrap--priceText">₪55</span>
+      <!-- <del class="priceWrap--priceDel">₪3,600</del> -->
+    </div>
+  </div>
+
+  <div class="voucher-card__counter" data-isShown="false">
+    <div class="voucher-card__counter--counterWrap">
+      <button class="voucher-card__counter--counterWrap--minBtn">-</button>
+      <span class="voucher-card__counter--counterWrap--indicatorText">יח׳</span>
+      <span class="voucher-card__counter--counterWrap--countDigit">1</span>
+      <button class="voucher-card__counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="voucher-card__counter--addToCartBtn" id="addToCartBtn">
+      <span class="voucher-card__counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+      </div>
+      <div class="swiper-slide">
+        <div class="voucher-card">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap--favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/voucher-card/voucher-img3.jpg" alt="iphone" class="imgWrap--img" />
+
+    <!-- <svg
+      data-isStampShown="false"
+      class="img-stamp"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 119 25"
+      fill="none"
+    >
+      <path d="M-48.25 0L118.75 0L108.082 12.5L118.75 25L-48.25 25V0Z" fill="#000000" />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        5% הנחה בחיוב
+      </text>
+    </svg> -->
+  </div>
+
+  <div class="description">
+    <img src="../../img/voucher-card/stevemadden.png" alt="" class="description--logo" />
+    <span class="description--device"></span>
+    <!-- <span class="description--desc">Flip 6 | יבואן רשמי</span> -->
+    <div class="priceWrap">
+      <span class="priceWrap--pricesubtextText">שובר בשווי 200 ₪</span>
+      <span class="priceWrap--priceText">4% הנחה</span>
+      <!-- <del class="priceWrap--priceDel">₪3,600</del> -->
+    </div>
+  </div>
+
+  <div class="voucher-card__counter" data-isShown="false">
+    <div class="voucher-card__counter--counterWrap">
+      <button class="voucher-card__counter--counterWrap--minBtn">-</button>
+      <span class="voucher-card__counter--counterWrap--indicatorText">יח׳</span>
+      <span class="voucher-card__counter--counterWrap--countDigit">1</span>
+      <button class="voucher-card__counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="voucher-card__counter--addToCartBtn" id="addToCartBtn">
+      <span class="voucher-card__counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+      </div>
+      <div class="swiper-slide">
+        <div class="voucher-card">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap--favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/voucher-card/voucher-img4.jpg" alt="iphone" class="imgWrap--img" />
+
+    <!-- <svg
+      data-isStampShown="false"
+      class="img-stamp"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 119 25"
+      fill="none"
+    >
+      <path d="M-48.25 0L118.75 0L108.082 12.5L118.75 25L-48.25 25V0Z" fill="#2020b3" />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg> -->
+  </div>
+
+  <div class="description">
+    <img src="../../img/voucher-card/agadir.png" alt="" class="description--logo" />
+    <span class="description--device">ארוחת שלישיה אגאדיר</span>
+    <!-- <span class="description--desc">Flip 6 | יבואן רשמי</span> -->
+    <div class="priceWrap">
+      <span class="priceWrap--pricesubtextText">בשווי 83 ₪</span>
+      <span class="priceWrap--priceText">4% הנחה</span>
+      <!-- <del class="priceWrap--priceDel">₪3,600</del> -->
+    </div>
+  </div>
+
+  <div class="voucher-card__counter" data-isShown="false">
+    <div class="voucher-card__counter--counterWrap">
+      <button class="voucher-card__counter--counterWrap--minBtn">-</button>
+      <span class="voucher-card__counter--counterWrap--indicatorText">יח׳</span>
+      <span class="voucher-card__counter--counterWrap--countDigit">1</span>
+      <button class="voucher-card__counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="voucher-card__counter--addToCartBtn" id="addToCartBtn">
+      <span class="voucher-card__counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+      </div>
+      <div class="swiper-slide">
+        <div class="voucher-card">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap--favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/voucher-card/voucher-img5.jpg" alt="iphone" class="imgWrap--img" />
+
+    <!-- <svg
+      data-isStampShown="false"
+      class="img-stamp"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 119 25"
+      fill="none"
+    >
+      <path d="M-48.25 0L118.75 0L108.082 12.5L118.75 25L-48.25 25V0Z" fill="#2020b3" />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg> -->
+  </div>
+
+  <div class="description">
+    <img src="../../img/voucher-card/maffeneman.png" alt="" class="description--logo" />
+    <span class="description--device">שובר למאפה נאמן</span>
+    <!-- <span class="description--desc">Flip 6 | יבואן רשמי</span> -->
+    <div class="priceWrap">
+      <span class="priceWrap--pricesubtextText">בשווי 100 ₪</span>
+      <span class="priceWrap--priceText">4% הנחה</span>
+      <!-- <del class="priceWrap--priceDel">₪3,600</del> -->
+    </div>
+  </div>
+
+  <div class="voucher-card__counter" data-isShown="false">
+    <div class="voucher-card__counter--counterWrap">
+      <button class="voucher-card__counter--counterWrap--minBtn">-</button>
+      <span class="voucher-card__counter--counterWrap--indicatorText">יח׳</span>
+      <span class="voucher-card__counter--counterWrap--countDigit">1</span>
+      <button class="voucher-card__counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="voucher-card__counter--addToCartBtn" id="addToCartBtn">
+      <span class="voucher-card__counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+      </div>
+    </div>
+    <div class="static-slide">
+      <a href="#" class="link">
+        <h2 class="title">
+          להטבות
+          <br />
+          נוספות
+          <br />
+          בקטגוריה
+        </h2>
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 35" fill="none">
+          <rect x="1" y="1" width="34" height="33" rx="16.5" stroke="white" stroke-width="2" />
+          <path
+            d="M25.0827 18.01H10.916M10.916 18.01L17.9993 24.885M10.916 18.01L17.9993 11.135"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </a>
+    </div>
+    <div class="pagination-wrapper">
+      <div class="swiper-pagination"></div>
+      <div class="pagination-swiper-location" data-swiperId="6">
+  <span class="pagination-swiper-current">1</span>
+  <span class="pagination-swiper-of">מתוך</span>
+  <span class="pagination-swiper-length">5</span>
+</div>
+
+    </div>
+  </div>
+
+  <!-- *mobile -->
+  <div class="swiper vouchermobileSwiper" dir="rtl">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="slide-group">
+          <div class="single-slide">
+            <div class="voucher-card">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap--favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/voucher-card/voucher-img1.jpg" alt="iphone" class="imgWrap--img" />
+
+    <!-- <svg
+      data-isStampShown="false"
+      class="img-stamp"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 119 25"
+      fill="none"
+    >
+      <path d="M-48.25 0L118.75 0L108.082 12.5L118.75 25L-48.25 25V0Z" fill="#2020b3" />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg> -->
+  </div>
+
+  <div class="description">
+    <img src="../../img/voucher-card/golbary.png" alt="" class="description--logo" />
+    <span class="description--device"></span>
+    <!-- <span class="description--desc">Flip 6 | יבואן רשמי</span> -->
+    <div class="priceWrap">
+      <span class="priceWrap--pricesubtextText">שובר בשווי 100 ₪</span>
+      <span class="priceWrap--priceText">4% הנחה</span>
+      <!-- <del class="priceWrap--priceDel">₪3,600</del> -->
+    </div>
+  </div>
+
+  <div class="voucher-card__counter" data-isShown="true">
+    <div class="voucher-card__counter--counterWrap">
+      <button class="voucher-card__counter--counterWrap--minBtn">-</button>
+      <span class="voucher-card__counter--counterWrap--indicatorText">יח׳</span>
+      <span class="voucher-card__counter--counterWrap--countDigit">1</span>
+      <button class="voucher-card__counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="voucher-card__counter--addToCartBtn" id="addToCartBtn">
+      <span class="voucher-card__counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+          </div>
+          <div class="single-slide">
+            <div class="voucher-card">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap--favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/voucher-card/voucher-img2.jpg" alt="iphone" class="imgWrap--img" />
+
+    <!-- <svg
+      data-isStampShown="false"
+      class="img-stamp"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 119 25"
+      fill="none"
+    >
+      <path d="M-48.25 0L118.75 0L108.082 12.5L118.75 25L-48.25 25V0Z" fill="#2020b3" />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg> -->
+  </div>
+
+  <div class="description">
+    <img src="../../img/voucher-card/pizzahut.png" alt="" class="description--logo" />
+    <span class="description--device">משפחתית+שתייה</span>
+    <!-- <span class="description--desc">Flip 6 | יבואן רשמי</span> -->
+    <div class="priceWrap">
+      <span class="priceWrap--pricesubtextText"> בשווי 83 ₪</span>
+      <span class="priceWrap--priceText">₪55</span>
+      <!-- <del class="priceWrap--priceDel">₪3,600</del> -->
+    </div>
+  </div>
+
+  <div class="voucher-card__counter" data-isShown="false">
+    <div class="voucher-card__counter--counterWrap">
+      <button class="voucher-card__counter--counterWrap--minBtn">-</button>
+      <span class="voucher-card__counter--counterWrap--indicatorText">יח׳</span>
+      <span class="voucher-card__counter--counterWrap--countDigit">1</span>
+      <button class="voucher-card__counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="voucher-card__counter--addToCartBtn" id="addToCartBtn">
+      <span class="voucher-card__counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+          </div>
+          <div class="single-slide">
+            <div class="voucher-card">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap--favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/voucher-card/voucher-img3.jpg" alt="iphone" class="imgWrap--img" />
+
+    <!-- <svg
+      data-isStampShown="false"
+      class="img-stamp"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 119 25"
+      fill="none"
+    >
+      <path d="M-48.25 0L118.75 0L108.082 12.5L118.75 25L-48.25 25V0Z" fill="#000000" />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        5% הנחה בחיוב
+      </text>
+    </svg> -->
+  </div>
+
+  <div class="description">
+    <img src="../../img/voucher-card/stevemadden.png" alt="" class="description--logo" />
+    <span class="description--device"></span>
+    <!-- <span class="description--desc">Flip 6 | יבואן רשמי</span> -->
+    <div class="priceWrap">
+      <span class="priceWrap--pricesubtextText">שובר בשווי 200 ₪ </span>
+      <span class="priceWrap--priceText">4% הנחה</span>
+      <!-- <del class="priceWrap--priceDel">₪3,600</del> -->
+    </div>
+  </div>
+
+  <div class="voucher-card__counter" data-isShown="false">
+    <div class="voucher-card__counter--counterWrap">
+      <button class="voucher-card__counter--counterWrap--minBtn">-</button>
+      <span class="voucher-card__counter--counterWrap--indicatorText">יח׳</span>
+      <span class="voucher-card__counter--counterWrap--countDigit">1</span>
+      <button class="voucher-card__counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="voucher-card__counter--addToCartBtn" id="addToCartBtn">
+      <span class="voucher-card__counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+          </div>
+          <div class="single-slide">
+            <div class="voucher-card">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap--favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/voucher-card/voucher-img4.jpg" alt="iphone" class="imgWrap--img" />
+
+    <!-- <svg
+      data-isStampShown="false"
+      class="img-stamp"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 119 25"
+      fill="none"
+    >
+      <path d="M-48.25 0L118.75 0L108.082 12.5L118.75 25L-48.25 25V0Z" fill="#2020b3" />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg> -->
+  </div>
+
+  <div class="description">
+    <img src="../../img/voucher-card/agadir.png" alt="" class="description--logo" />
+    <span class="description--device">ארוחת שלישיה אגאדיר</span>
+    <!-- <span class="description--desc">Flip 6 | יבואן רשמי</span> -->
+    <div class="priceWrap">
+      <span class="priceWrap--pricesubtextText">בשווי 83 ₪</span>
+      <span class="priceWrap--priceText">4% הנחה</span>
+      <!-- <del class="priceWrap--priceDel">₪3,600</del> -->
+    </div>
+  </div>
+
+  <div class="voucher-card__counter" data-isShown="false">
+    <div class="voucher-card__counter--counterWrap">
+      <button class="voucher-card__counter--counterWrap--minBtn">-</button>
+      <span class="voucher-card__counter--counterWrap--indicatorText">יח׳</span>
+      <span class="voucher-card__counter--counterWrap--countDigit">1</span>
+      <button class="voucher-card__counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="voucher-card__counter--addToCartBtn" id="addToCartBtn">
+      <span class="voucher-card__counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+          </div>
+          <div class="single-slide">
+            <div class="voucher-card">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap--favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/voucher-card/voucher-img5.jpg" alt="iphone" class="imgWrap--img" />
+
+    <!-- <svg
+      data-isStampShown="false"
+      class="img-stamp"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 119 25"
+      fill="none"
+    >
+      <path d="M-48.25 0L118.75 0L108.082 12.5L118.75 25L-48.25 25V0Z" fill="#2020b3" />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg> -->
+  </div>
+
+  <div class="description">
+    <img src="../../img/voucher-card/maffeneman.png" alt="" class="description--logo" />
+    <span class="description--device">שובר למאפה נאמן</span>
+    <!-- <span class="description--desc">Flip 6 | יבואן רשמי</span> -->
+    <div class="priceWrap">
+      <span class="priceWrap--pricesubtextText">בשווי 100 ₪</span>
+      <span class="priceWrap--priceText">4% הנחה</span>
+      <!-- <del class="priceWrap--priceDel">₪3,600</del> -->
+    </div>
+  </div>
+
+  <div class="voucher-card__counter" data-isShown="false">
+    <div class="voucher-card__counter--counterWrap">
+      <button class="voucher-card__counter--counterWrap--minBtn">-</button>
+      <span class="voucher-card__counter--counterWrap--indicatorText">יח׳</span>
+      <span class="voucher-card__counter--counterWrap--countDigit">1</span>
+      <button class="voucher-card__counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="voucher-card__counter--addToCartBtn" id="addToCartBtn">
+      <span class="voucher-card__counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+          </div>
+          <div class="single-slide static">
+            <a href="#" class="link">
+              <h2 class="title">להטבות נוספות בקטגוריה</h2>
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 35" fill="none">
+                <rect
+                  x="1"
+                  y="1"
+                  width="34"
+                  height="33"
+                  rx="16.5"
+                  stroke="white"
+                  stroke-width="2"
+                />
+                <path
+                  d="M25.0827 18.01H10.916M10.916 18.01L17.9993 24.885M10.916 18.01L17.9993 11.135"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper-slide">
+        <div class="slide-group">
+          <div class="single-slide">
+            <div class="voucher-card">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap--favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/voucher-card/voucher-img1.jpg" alt="iphone" class="imgWrap--img" />
+
+    <!-- <svg
+      data-isStampShown="false"
+      class="img-stamp"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 119 25"
+      fill="none"
+    >
+      <path d="M-48.25 0L118.75 0L108.082 12.5L118.75 25L-48.25 25V0Z" fill="#2020b3" />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg> -->
+  </div>
+
+  <div class="description">
+    <img src="../../img/voucher-card/golbary.png" alt="" class="description--logo" />
+    <span class="description--device"></span>
+    <!-- <span class="description--desc">Flip 6 | יבואן רשמי</span> -->
+    <div class="priceWrap">
+      <span class="priceWrap--pricesubtextText">שובר בשווי 100 ₪</span>
+      <span class="priceWrap--priceText">4% הנחה</span>
+      <!-- <del class="priceWrap--priceDel">₪3,600</del> -->
+    </div>
+  </div>
+
+  <div class="voucher-card__counter" data-isShown="true">
+    <div class="voucher-card__counter--counterWrap">
+      <button class="voucher-card__counter--counterWrap--minBtn">-</button>
+      <span class="voucher-card__counter--counterWrap--indicatorText">יח׳</span>
+      <span class="voucher-card__counter--counterWrap--countDigit">1</span>
+      <button class="voucher-card__counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="voucher-card__counter--addToCartBtn" id="addToCartBtn">
+      <span class="voucher-card__counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+          </div>
+          <div class="single-slide">
+            <div class="voucher-card">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap--favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/voucher-card/voucher-img2.jpg" alt="iphone" class="imgWrap--img" />
+
+    <!-- <svg
+      data-isStampShown="false"
+      class="img-stamp"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 119 25"
+      fill="none"
+    >
+      <path d="M-48.25 0L118.75 0L108.082 12.5L118.75 25L-48.25 25V0Z" fill="#2020b3" />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg> -->
+  </div>
+
+  <div class="description">
+    <img src="../../img/voucher-card/pizzahut.png" alt="" class="description--logo" />
+    <span class="description--device">משפחתית+שתייה</span>
+    <!-- <span class="description--desc">Flip 6 | יבואן רשמי</span> -->
+    <div class="priceWrap">
+      <span class="priceWrap--pricesubtextText"> בשווי 83 ₪</span>
+      <span class="priceWrap--priceText">₪55</span>
+      <!-- <del class="priceWrap--priceDel">₪3,600</del> -->
+    </div>
+  </div>
+
+  <div class="voucher-card__counter" data-isShown="false">
+    <div class="voucher-card__counter--counterWrap">
+      <button class="voucher-card__counter--counterWrap--minBtn">-</button>
+      <span class="voucher-card__counter--counterWrap--indicatorText">יח׳</span>
+      <span class="voucher-card__counter--counterWrap--countDigit">1</span>
+      <button class="voucher-card__counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="voucher-card__counter--addToCartBtn" id="addToCartBtn">
+      <span class="voucher-card__counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+          </div>
+          <div class="single-slide">
+            <div class="voucher-card">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap--favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/voucher-card/voucher-img3.jpg" alt="iphone" class="imgWrap--img" />
+
+    <!-- <svg
+      data-isStampShown="false"
+      class="img-stamp"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 119 25"
+      fill="none"
+    >
+      <path d="M-48.25 0L118.75 0L108.082 12.5L118.75 25L-48.25 25V0Z" fill="#000000" />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        5% הנחה בחיוב
+      </text>
+    </svg> -->
+  </div>
+
+  <div class="description">
+    <img src="../../img/voucher-card/stevemadden.png" alt="" class="description--logo" />
+    <span class="description--device"></span>
+    <!-- <span class="description--desc">Flip 6 | יבואן רשמי</span> -->
+    <div class="priceWrap">
+      <span class="priceWrap--pricesubtextText">שובר בשווי 200 ₪ </span>
+      <span class="priceWrap--priceText">4% הנחה</span>
+      <!-- <del class="priceWrap--priceDel">₪3,600</del> -->
+    </div>
+  </div>
+
+  <div class="voucher-card__counter" data-isShown="false">
+    <div class="voucher-card__counter--counterWrap">
+      <button class="voucher-card__counter--counterWrap--minBtn">-</button>
+      <span class="voucher-card__counter--counterWrap--indicatorText">יח׳</span>
+      <span class="voucher-card__counter--counterWrap--countDigit">1</span>
+      <button class="voucher-card__counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="voucher-card__counter--addToCartBtn" id="addToCartBtn">
+      <span class="voucher-card__counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+          </div>
+          <div class="single-slide">
+            <div class="voucher-card">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap--favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/voucher-card/voucher-img4.jpg" alt="iphone" class="imgWrap--img" />
+
+    <!-- <svg
+      data-isStampShown="false"
+      class="img-stamp"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 119 25"
+      fill="none"
+    >
+      <path d="M-48.25 0L118.75 0L108.082 12.5L118.75 25L-48.25 25V0Z" fill="#2020b3" />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg> -->
+  </div>
+
+  <div class="description">
+    <img src="../../img/voucher-card/agadir.png" alt="" class="description--logo" />
+    <span class="description--device">ארוחת שלישיה אגאדיר</span>
+    <!-- <span class="description--desc">Flip 6 | יבואן רשמי</span> -->
+    <div class="priceWrap">
+      <span class="priceWrap--pricesubtextText">בשווי 83 ₪</span>
+      <span class="priceWrap--priceText">4% הנחה</span>
+      <!-- <del class="priceWrap--priceDel">₪3,600</del> -->
+    </div>
+  </div>
+
+  <div class="voucher-card__counter" data-isShown="false">
+    <div class="voucher-card__counter--counterWrap">
+      <button class="voucher-card__counter--counterWrap--minBtn">-</button>
+      <span class="voucher-card__counter--counterWrap--indicatorText">יח׳</span>
+      <span class="voucher-card__counter--counterWrap--countDigit">1</span>
+      <button class="voucher-card__counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="voucher-card__counter--addToCartBtn" id="addToCartBtn">
+      <span class="voucher-card__counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+          </div>
+          <div class="single-slide">
+            <div class="voucher-card">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap--favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/voucher-card/voucher-img5.jpg" alt="iphone" class="imgWrap--img" />
+
+    <!-- <svg
+      data-isStampShown="false"
+      class="img-stamp"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 119 25"
+      fill="none"
+    >
+      <path d="M-48.25 0L118.75 0L108.082 12.5L118.75 25L-48.25 25V0Z" fill="#2020b3" />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        הטבת פרימיום
+      </text>
+    </svg> -->
+  </div>
+
+  <div class="description">
+    <img src="../../img/voucher-card/maffeneman.png" alt="" class="description--logo" />
+    <span class="description--device">שובר למאפה נאמן</span>
+    <!-- <span class="description--desc">Flip 6 | יבואן רשמי</span> -->
+    <div class="priceWrap">
+      <span class="priceWrap--pricesubtextText">בשווי 100 ₪</span>
+      <span class="priceWrap--priceText">4% הנחה</span>
+      <!-- <del class="priceWrap--priceDel">₪3,600</del> -->
+    </div>
+  </div>
+
+  <div class="voucher-card__counter" data-isShown="false">
+    <div class="voucher-card__counter--counterWrap">
+      <button class="voucher-card__counter--counterWrap--minBtn">-</button>
+      <span class="voucher-card__counter--counterWrap--indicatorText">יח׳</span>
+      <span class="voucher-card__counter--counterWrap--countDigit">1</span>
+      <button class="voucher-card__counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="voucher-card__counter--addToCartBtn" id="addToCartBtn">
+      <span class="voucher-card__counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>
+
+          </div>
+          <div class="single-slide static">
+            <a href="#" class="link">
+              <h2 class="title">להטבות נוספות בקטגוריה</h2>
+              <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 35" fill="none">
+                <rect
+                  x="1"
+                  y="1"
+                  width="34"
+                  height="33"
+                  rx="16.5"
+                  stroke="white"
+                  stroke-width="2"
+                />
+                <path
+                  d="M25.0827 18.01H10.916M10.916 18.01L17.9993 24.885M10.916 18.01L17.9993 11.135"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pagination-wrapper">
+      <div class="swiper-pagination"></div>
+      <div class="pagination-swiper-location" data-swiperId="7">
+  <span class="pagination-swiper-current">1</span>
+  <span class="pagination-swiper-of">מתוך</span>
+  <span class="pagination-swiper-length">5</span>
+</div>
+
+    </div>
+  </div>
+</div>
+
+      <!-- ? voucher-slider  -->
+
       <!-- *category search -->
       <div class="category-navigator">
   <h1 class="category-navigator--title">חיפוש לפי קטגוריה</h1>
@@ -1283,6 +4805,7 @@
 </div>
 
       <!-- ?category search -->
+
       <!-- * footer  -->
       <div class="footer">
   <div class="footer_row first">

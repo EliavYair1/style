@@ -3,6 +3,12 @@
   @@include('./top-middle-row.html')
 
   <div class="header__row header__row--search">
+    <input
+      type="text"
+      placeholder="חיפוש הטבה"
+      dir="rtl"
+      class="header__search-bar"
+    />
     <svg
       class="icon"
       viewBox="0 0 40 40"
@@ -25,16 +31,26 @@
         stroke-linejoin="round"
       />
     </svg>
-
-    <input
-      type="text"
-      placeholder="חיפוש הטבה"
-      dir="rtl"
-      class="header__search-bar"
-    />
   </div>
 
   <div class="header__row header__row--buttons">
+    <button class="header__button header__button--menuItem">
+      <span class="header__button-text menuItem">קטגוריות באתר</span>
+      <svg
+        class="header__button-arrow"
+        viewBox="0 0 21 22"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M13.0714 5.85742L7.92855 11.0003L13.0714 16.1431"
+          stroke="black"
+          stroke-width="1.37143"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </button>
     <button class="header__button header__button--corprate">
       <img
         src="../img/toggle-menus/my-corprate-menu/my_corprate-cards.svg"
@@ -67,24 +83,6 @@
           d="M11.1514 12.5L15.6514 17.5L20.1514 12.5"
           stroke="#2020B3"
           stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-    </button>
-
-    <button class="header__button header__button--menuItem">
-      <span class="header__button-text menuItem">קטגוריות באתר</span>
-      <svg
-        class="header__button-arrow"
-        viewBox="0 0 21 22"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M13.0714 5.85742L7.92855 11.0003L13.0714 16.1431"
-          stroke="black"
-          stroke-width="1.37143"
           stroke-linecap="round"
           stroke-linejoin="round"
         />

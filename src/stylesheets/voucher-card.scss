@@ -1,0 +1,364 @@
+.voucher-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  max-width: 161px;
+  // position: absolute;
+  top: 0;
+  height: 100%;
+  // max-width: 161px;
+  width: auto;
+  height: 283px;
+  .imgWrap {
+    display: flex;
+    position: relative;
+    // margin-bottom: 16px;
+    justify-content: center;
+    width: 100%;
+    &--favBtn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 1;
+
+      svg {
+        width: 50px;
+        fill: white;
+        rect {
+          //   fill: white;
+          fill: transparent;
+        }
+
+        path {
+          stroke: black;
+        }
+      }
+    }
+    .img-stamp {
+      //   background: #2020b3;
+      height: 25px;
+      position: absolute;
+      bottom: 12px;
+      left: 0;
+      &--text {
+        font-size: 15px;
+        color: #ffffff;
+        font-style: normal;
+        font-weight: 700;
+      }
+    }
+    &--img {
+      width: 161px;
+      height: auto;
+    }
+  }
+
+  .priceWrap {
+    margin: 0px 0 0px;
+    // align-self: end;
+    display: flex;
+    align-items: flex-start;
+    // flex-direction: row-reverse;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 6px;
+    &--priceText {
+      font-size: 20px;
+      color: #46494f;
+      font-weight: 700;
+    }
+    &--pricesubtextText {
+      font-size: 11px;
+      font-style: normal;
+      font-weight: 500;
+      text-align: right;
+    }
+    &--priceDel {
+      font-size: 20px;
+      color: rgba(0, 0, 0, 0.5);
+    }
+  }
+  .description {
+    padding: 0 12px 12px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    &--logo {
+      width: 100px;
+      height: auto;
+      // align-self: end;
+    }
+
+    &--device {
+      font-size: 13px;
+      font-weight: 500;
+      // align-self: end;
+      text-align: right;
+      height: 16px;
+    }
+
+    &--desc {
+      font-size: 15px;
+      color: #666;
+      // align-self: end;
+      font-weight: 400;
+      margin-bottom: 16px;
+      text-align: right;
+    }
+  }
+  .voucher-card__counter {
+    padding: 0 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    &--hidden {
+      display: none;
+    }
+    &--counterWrap {
+      display: flex;
+      align-items: center;
+      flex-direction: row-reverse;
+      &--maxBtn,
+      &--minBtn {
+        background-color: #fff;
+        border: none;
+        border-radius: 5px;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        font-size: 20px;
+        border: 1px solid #ddd;
+        border-radius: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+      }
+      &--maxBtn {
+        margin-left: 8.5px;
+      }
+      &--minBtn {
+        margin-right: 8.5px;
+      }
+
+      &--indicatorText {
+        font-size: 15px;
+        margin-right: 5px;
+      }
+
+      &--countDigit {
+        font-size: 18px;
+        font-weight: 500;
+        border-radius: 2.164px;
+        border: 1.082px solid #ddd;
+        background: #fff;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        padding: 0px 0;
+      }
+    }
+
+    &--addToCartBtn {
+      background-color: #f2a347;
+      color: black;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      border: none;
+      border-radius: 5px;
+      padding: 2px 16px;
+      width: 100px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        // background-color: #1818a3;
+      }
+
+      &--addToCartText {
+        font-size: 16px;
+      }
+    }
+  }
+
+  @media (min-width: 1600px) {
+    height: 100%;
+    width: 100%;
+    min-height: 459px;
+    max-width: 328px;
+    width: 328px;
+    height: 100%;
+    padding-bottom: 20px;
+    .imgWrap {
+      display: flex;
+      position: relative;
+      // margin-bottom: 16px;
+      .img-stamp {
+        bottom: 154px;
+        height: 31px;
+        width: 161px;
+        &--text {
+          font-size: 15px;
+          color: #ffffff;
+          font-style: normal;
+          font-weight: 700;
+          transform: translate(-8px, 2px);
+        }
+      }
+      &--favBtn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1;
+
+        svg {
+          width: 50px;
+          fill: white;
+          rect {
+            // fill: white;
+          }
+
+          path {
+            stroke: black;
+          }
+        }
+      }
+
+      &--img {
+        width: 100%;
+        max-width: 441px;
+        height: auto;
+      }
+    }
+
+    .priceWrap {
+      // margin: 0 0 35px;
+      // align-self: end;
+      display: flex;
+      align-items: flex-start;
+      // flex-direction: row-reverse;
+      justify-content: flex-start;
+      gap: 6px;
+      // width: 100px;
+      &--priceText {
+        font-size: 32px;
+        color: #46494f;
+        font-weight: 700;
+      }
+      &--pricesubtextText {
+        font-size: 21px;
+        font-weight: 400;
+      }
+      &--priceDel {
+        font-size: 30.295px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+    }
+    .description {
+      padding: 20px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      &--logo {
+        width: 155px;
+        height: auto;
+        // align-self: end;
+      }
+
+      &--device {
+        font-size: 24px;
+        font-weight: 500;
+        // align-self: end;
+        height: 30px;
+      }
+
+      &--desc {
+        font-size: 25px;
+        color: #666;
+        // align-self: end;
+        font-weight: 400;
+        margin-bottom: 16px;
+      }
+    }
+    .voucher-card__counter {
+      padding: 0 21px 0px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      width: 100%;
+
+      &--counterWrap {
+        display: flex;
+        align-items: center;
+        flex-direction: row-reverse;
+        &--maxBtn,
+        &--minBtn {
+          background-color: #fff;
+          border: none;
+          border-radius: 5px;
+          width: 30px;
+          height: 30px;
+          cursor: pointer;
+          font-size: 20px;
+          border: 1px solid #ddd;
+          border-radius: 50%;
+        }
+        &--maxBtn {
+          margin-left: 20px;
+        }
+        &--minBtn {
+          margin-right: 20px;
+        }
+
+        &--indicatorText {
+          font-size: 17px;
+          margin-right: 5px;
+        }
+
+        &--countDigit {
+          font-size: 21px;
+          font-weight: 500;
+          border-radius: 2.164px;
+          border: 1.082px solid #ddd;
+          background: #fff;
+          width: 54px;
+          display: flex;
+          justify-content: center;
+          padding: 7px 0;
+        }
+      }
+
+      &--addToCartBtn {
+        background-color: #f2a347;
+        color: black;
+
+        border: none;
+        border-radius: 5px;
+        padding: 10px 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          // background-color: #1818a3;
+        }
+
+        &--addToCartText {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

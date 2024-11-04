@@ -9,13 +9,14 @@ body {
 }
 
 body {
-  background: #eee;
+  background: #fff;
   font-family: "ICPangeaText";
   font-size: 14px;
   color: #000;
   margin: 0;
   padding: 0;
   transition: background-color 0.3s ease-in-out;
+  direction: rtl;
 }
 body.body--menu-open {
   position: relative;

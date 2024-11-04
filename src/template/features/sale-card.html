@@ -1,0 +1,99 @@
+<div class="sale-card">
+  <div class="imgWrap">
+    <a href="#" class="imgWrap--favBtn" id="favIcon">
+      <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="0.533203"
+          y="0.0654297"
+          width="48.6885"
+          height="48.6885"
+          rx="24.3443"
+          fill="white"
+        />
+        <path
+          id="heartPath"
+          d="M25.089 16.2866C24.9828 16.4242 24.7716 16.4242 24.6654 16.2866C21.8683 12.6602 17.5085 12.284 14.7935 15.1578C12.0089 18.1053 12.0089 22.8841 14.7935 25.8316L23.3647 34.9043C24.2 35.7886 25.5544 35.7886 26.3898 34.9043L34.9609 25.8316C37.7455 22.8841 37.7455 18.1053 34.9609 15.1578C32.2459 12.284 27.8861 12.6602 25.089 16.2866Z"
+          stroke="black"
+          stroke-width="2.02869"
+        />
+      </svg>
+    </a>
+    <img src="../../img/sale-card/@@bgimg" alt="iphone" class="imgWrap--img" />
+
+    <svg
+      data-isStampShown="@@isStampShown"
+      class="img-stamp"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 119 25"
+      fill="none"
+    >
+      <path d="M-48.25 0L118.75 0L108.082 12.5L118.75 25L-48.25 25V0Z" fill="#@@stampfill" />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        @@stampText
+      </text>
+    </svg>
+
+    <!-- <svg
+      data-isStampShown="@@isStampShown"
+      class="img-stamp desktop"
+      xmlns="http://www.w3.org/2000/svg"
+      width="124"
+      height="48"
+      viewBox="0 0 124 48"
+      fill="none"
+    >
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M0.0708338 51.7698L123.925 51.7698C118.465 22.3037 92.8158 0.000291359 61.9981 0.000284641C31.1803 0.000277922 5.5307 22.3037 0.0708338 51.7698Z"
+        fill="#@@stampfill"
+      />
+
+      <text
+        class="img-stamp--text"
+        x="50%"
+        y="50%"
+        dominant-baseline="middle"
+        text-anchor="middle"
+        fill="#ffffff"
+        font-size="16"
+        font-weight="700"
+      >
+        @@stampText
+      </text>
+    </svg> -->
+  </div>
+
+  <div class="description">
+    <img src="../../img/sale-card/@@logoimg" alt="" class="description--logo" />
+    <span class="description--device">@@subtext</span>
+    <!-- <span class="description--desc">Flip 6 | יבואן רשמי</span> -->
+    <div class="priceWrap">
+      <span class="priceWrap--priceText">@@discountText</span>
+      <!-- <del class="priceWrap--priceDel">₪3,600</del> -->
+      <span class="priceWrap--pricesubtextText">@@discountSubtext</span>
+    </div>
+  </div>
+
+  <div class="counter" data-isShown="@@isCounterShown">
+    <div class="counter--counterWrap">
+      <button class="counter--counterWrap--minBtn">-</button>
+      <span class="counter--counterWrap--indicatorText">יח׳</span>
+      <span class="counter--counterWrap--countDigit">1</span>
+      <button class="counter--counterWrap--maxBtn">+</button>
+    </div>
+    <button class="counter--addToCartBtn" id="addToCartBtn">
+      <span class="counter--addToCartText">הוספה</span>
+    </button>
+  </div>
+</div>

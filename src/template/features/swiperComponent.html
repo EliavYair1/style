@@ -1,0 +1,107 @@
+<!-- @@include('../features/section-header.html', { 'placeholder-text':
+'{{placeholder-text}}' })
+<div #swiperRef="" class="swiper productSwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      @@include('../header/product-image-container/product.html')
+    </div>
+    <div class="swiper-slide">
+      @@include('../header/product-image-container/product.html')
+    </div>
+    <div class="swiper-slide">
+      @@include('../header/product-image-container/product.html')
+    </div>
+    <div class="swiper-slide">
+      @@include('../header/product-image-container/product.html')
+    </div>
+    <div class="swiper-slide">
+      @@include('../header/product-image-container/product.html')
+    </div>
+  </div>
+  <div class="static-slide">
+    <a href="#" class="link">
+      <h2 class="title">{{static-slide-title}}</h2>
+      <svg
+        class="icon"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 36 35"
+        fill="none"
+      >
+        <rect
+          x="1"
+          y="1"
+          width="34"
+          height="33"
+          rx="16.5"
+          stroke="white"
+          stroke-width="2"
+        />
+        <path
+          d="M25.0827 18.01H10.916M10.916 18.01L17.9993 24.885M10.916 18.01L17.9993 11.135"
+          stroke="white"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </a>
+  </div>
+  <div class="pagination-wrapper">
+    <div class="swiper-pagination"></div>
+    @@include('../features/slider-pagination.html', { swiperId: '{{swiperId}}'
+    })
+  </div>
+</div>
+
+<!-- Mobile version -->
+<div class="swiper mobileSwiper" dir="rtl">
+  <div class="swiper-wrapper" style="max-height: 1200px">
+    <div class="swiper-slide">
+      @@include('../header/product-image-container/product.html')
+    </div>
+    <div class="swiper-slide">
+      @@include('../header/product-image-container/product.html')
+    </div>
+    <div class="swiper-slide">
+      @@include('../header/product-image-container/product.html')
+    </div>
+    <div class="swiper-slide static">
+      <a href="#" class="link">
+        <h2 class="title">{{static-slide-title}}</h2>
+        <svg
+          class="icon"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 36 35"
+          fill="none"
+        >
+          <rect
+            x="1"
+            y="1"
+            width="34"
+            height="33"
+            rx="16.5"
+            stroke="white"
+            stroke-width="2"
+          />
+          <path
+            d="M25.0827 18.01H10.916M10.916 18.01L17.9993 24.885M10.916 18.01L17.9993 11.135"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </a>
+    </div>
+  </div>
+  <div class="pagination-wrapper">
+    <div class="swiper-pagination"></div>
+    @@include('../features/slider-pagination.html', { swiperId:
+    '{{mobileSwiperId}}' })
+  </div>
+  -->
+</div>
+
+<!--   @@include('./features/swiperComponent.html', { 'placeholder-text': 'מומלצים',
+  'slideCount': 5, 'static-slide-title': 'להטבות נוספות בקטגוריה', 'swiperId':
+  2, 'mobileSlideCount': 8, 'mobileSwiperId': 3 }) -->

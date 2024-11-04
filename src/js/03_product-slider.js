@@ -4,26 +4,27 @@ var productSwiper = new Swiper(".productSwiper", {
   spaceBetween: 30,
   pagination: {
     el: ".swiper-pagination",
-    type: "fraction",
   },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
 });
-
-var appendNumber = 5;
-var prependNumber = 1;
+initCustomPagination(productSwiper, 2);
 
 // * mobile swiper
 var mobileSwiper = new Swiper(".mobileSwiper", {
-  slidesPerView: 3,
-  grid: {
-    rows: 2,
-  },
-  spaceBetween: 30,
+  slidesPerView: 1,
+  spaceBetween: 12,
+
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
   },
+  breakpoints: {
+    360: {},
+    1600: {},
+  },
+  direction: "horizontal",
 });
+initCustomPagination(mobileSwiper, 3);

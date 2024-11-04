@@ -10,7 +10,7 @@ const subcategoryLinks = document.querySelectorAll(
 const dynamicImageWindow = document.querySelector(".image-window");
 const productContainer = document.querySelector(".product");
 const backgroundSubMenus = document.querySelector(".product-image-container");
-// let closeTimeout;
+const categoriesContainer = document.querySelector(".header__menu--categories");
 
 document.addEventListener("DOMContentLoaded", () => {
   const applyHoverOnCategories = () => {
@@ -18,6 +18,23 @@ document.addEventListener("DOMContentLoaded", () => {
       categoryItems.forEach((category) => {
         category.querySelector("a").addEventListener("mouseenter", (e) => {
           // clearTimeout(closeTimeout);
+          e.stopPropagation();
+          e.preventDefault();
+          const parentCategoryItem = category.closest(
+            ".header__menu-item--category"
+          );
+          const categoryText =
+            parentCategoryItem.querySelector(".image-text span").textContent;
+          const dynamicContent = `
+              <div class="wrapper">
+                <h2 class="title">${categoryText}</h2>
+                <p class="subtext">${categoryText}</p>
+                <a href="${categoryText}" class="link">
+                  <span class="link-text">לפרטים נוספים</span>
+                </a>
+              </div>
+            `;
+          loadProductContent(dynamicContent);
           toggleSubCategory(e, true);
         });
       });
@@ -41,6 +58,15 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   applyHoverOnCategories();
+
+  // closing subcategory when clicking outside
+  if (categoriesContainer) {
+    categoriesContainer.addEventListener("mouseout", (e) => {
+      if (!categoriesContainer.contains(e.relatedTarget)) {
+        closeAllSubCategories();
+      }
+    });
+  }
 });
 
 // function to toggle subcategory on click/hover
@@ -102,13 +128,18 @@ const openSubCategory = (elementTarget, subCategoriesWrapper, isDesktop) => {
     backgroundSubMenus.style.transition = "max-width 0.3s ease;";
     backgroundSubMenus.style.display = "flex";
     backgroundSubMenus.style.height = "565px";
-    backgroundSubMenus.style.width = "386px";
+    // backgroundSubMenus.style.width = "386px";
+    backgroundSubMenus.style.width = parentHeader[0].clientWidth - 300 + "px";
     backgroundSubMenus.style.position = "absolute";
     backgroundSubMenus.style.top = "11px";
     backgroundSubMenus.style.zIndex = -1;
     backgroundSubMenus.style.right = "300px";
-    dynamicImageWindow.style.display = "none";
-    productContainer.style.display = "none";
+    backgroundSubMenus.style.justifyContent = "flex-end";
+    backgroundSubMenus.style.flexDirection = "row";
+    // dynamicImageWindow.style.display = "none";
+    // productContainer.style.display = "none";
+    dynamicImageWindow.style.display = "block";
+    productContainer.style.display = "block";
   } else {
     backgroundSubMenus.style.display = "none";
     dynamicImageWindow.style.display = "block";
@@ -126,24 +157,25 @@ subcategoryLinks.forEach((link) => {
     dynamicImageWindow.style.display = "flex";
     productContainer.style.display = "flex";
 
-    const subcategoryText = link.querySelector(
-      ".header__menu-subcategory-text"
-    ).textContent;
-    const linkRef = link.getAttribute("href");
-    const parentCategoryItem = link.closest(".header__menu-item--category");
-    const categoryText =
-      parentCategoryItem.querySelector(".image-text span").textContent;
-    const dynamicContent = `
-      <div class="wrapper">
-        <h2 class="title">${categoryText}</h2>
-        <p class="subtext">${categoryText}</p>
-        <a href="${categoryText}" class="link">
-          <span class="link-text">לפרטים נוספים</span>
-        </a>
-      </div>
-    `;
+    // const subcategoryText = link.querySelector(
+    //   ".header__menu-subcategory-text"
+    // ).textContent;
+    // const linkRef = link.getAttribute("href");
 
-    loadProductContent(dynamicContent);
+    // const parentCategoryItem = link.closest(".header__menu-item--category");
+    // const categoryText =
+    //   parentCategoryItem.querySelector(".image-text span").textContent;
+    // const dynamicContent = `
+    //   <div class="wrapper">
+    //     <h2 class="title">${categoryText}</h2>
+    //     <p class="subtext">${categoryText}</p>
+    //     <a href="${categoryText}" class="link">
+    //       <span class="link-text">לפרטים נוספים</span>
+    //     </a>
+    //   </div>
+    // `;
+
+    // loadProductContent(dynamicContent);
   });
 });
 
@@ -171,10 +203,3 @@ const closeSubCategoryOnHoverOut = (categoryElement) => {
   const arrow = categoryElement.querySelector(".header__menu-arrow");
   arrow.classList.remove("rotate");
 };
-
-// closing subcategory when clicking outside
-document.addEventListener("mouseleave", (e) => {
-  if (!e.target.closest(".header__menu--categories")) {
-    closeAllSubCategories();
-  }
-});

@@ -1,6 +1,6 @@
 var VoucherSwiper = new Swiper(".VoucherSwiper", {
   slidesPerView: 4,
-  centeredSlides: true,
+  centeredSlides: false,
   spaceBetween: 30,
   pagination: {
     el: ".swiper-pagination",

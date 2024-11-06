@@ -7,6 +7,33 @@ document.addEventListener("DOMContentLoaded", () => {
   categoryButton.addEventListener("click", toggleCorporateMenu);
   menuButton.addEventListener("click", toggleCategories);
 });
+const cartCountElement = document.getElementById("cart-count");
+const productCardObj = {};
+const voucherCardObj = {};
+
+// cart counter
+function updateCartCount(productCardObj, voucherCardObj) {
+  let totalCount = 0;
+  // *logping over the product that iss added to the cart and injecting the number of items
+  for (let itemId in productCardObj) {
+    if (productCardObj[itemId].isAddToCart) {
+      totalCount += productCardObj[itemId].numberOfItems;
+    }
+  }
+  for (let itemId in voucherCardObj) {
+    if (voucherCardObj[itemId].isAddToCart) {
+      totalCount += voucherCardObj[itemId].numberOfItems;
+    }
+  }
+
+  //* show if above 0
+  if (totalCount > 0) {
+    cartCountElement.textContent = totalCount;
+    cartCountElement.style.display = "flex";
+  } else {
+    cartCountElement.style.display = "none";
+  }
+}
 
 // * make one open each time by closing the current opened menu
 const closeAllMenus = () => {
@@ -18,9 +45,7 @@ const closeAllMenus = () => {
     menu.classList.remove("show");
   });
 
-  const buttons = document.querySelectorAll(
-    ".header__button--corprate, .header__button--menuItem"
-  );
+  const buttons = document.querySelectorAll(".header__button--corprate, .header__button--menuItem");
   buttons.forEach((button) => {
     button.classList.remove("active-button");
     button.classList.remove("header--open-menu");
@@ -87,9 +112,7 @@ const toggleCorporateMenu = () => {
   const corporateMenu = document.getElementById("corprate-menu");
   const categoryButton = document.querySelector(".header__button--corprate");
   const categoryArrow = categoryButton.querySelector(".header__button-arrow");
-  const categoryArrowPath = categoryButton.querySelector(
-    ".header__button-arrow path"
-  );
+  const categoryArrowPath = categoryButton.querySelector(".header__button-arrow path");
 
   if (corporateMenu.classList.contains("show")) {
     corporateMenu.classList.remove("show");
@@ -142,18 +165,15 @@ function updateHeader(userData) {
   const profileLinkElement = document.querySelector(".header__profile");
   if (profileLinkElement) {
     profileLinkElement.setAttribute("href", `#${userData.profileLink}`);
-    const profileTextElement = profileLinkElement.querySelector(
-      ".header__profile-text"
-    );
+    const profileTextElement = profileLinkElement.querySelector(".header__profile-text");
     if (profileTextElement) {
       profileTextElement.textContent = userData.profileText;
     }
   }
 }
 const params = new URLSearchParams(window.location.search);
-
-const isLoggedIn = params.has("LoggedIn");
+const keys = Array.from(params.keys());
+const isLoggedIn = keys.some((key) => key.toLowerCase() === "loggedin");
 // console.log("params", params);
 
-// const isLoggedIn = false;
 updateHeader(isLoggedIn ? connectedUser : newUser);

@@ -4,7 +4,7 @@
   align-items: flex-end;
   width: 100%;
   border: 1px solid #eaeaea;
-  border-radius: 8px;
+  // border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
@@ -178,7 +178,7 @@
       border: none;
       border-radius: 5px;
       padding: 2px 16px;
-      width: 100px;
+      width: 100%;
       cursor: pointer;
       transition: background-color 0.3s ease;
 
@@ -195,11 +195,12 @@
   @media (min-width: 1600px) {
     height: 100%;
     width: 100%;
-    min-height: 459px;
+    min-height: 444px;
     max-width: 328px;
     width: 328px;
     height: 100%;
     padding-bottom: 20px;
+    border-radius: 8px;
     .imgWrap {
       display: flex;
       position: relative;
@@ -278,7 +279,7 @@
       }
 
       &--device {
-        font-size: 24px;
+        font-size: 23px;
         font-weight: 500;
         // align-self: end;
         height: 30px;
@@ -294,7 +295,7 @@
     }
     .voucher-card__counter {
       padding: 0 21px 0px;
-      display: flex;
+      display: none;
       justify-content: space-between;
       align-items: center;
       flex-direction: row;
@@ -309,18 +310,18 @@
           background-color: #fff;
           border: none;
           border-radius: 5px;
-          width: 30px;
-          height: 30px;
+          width: 24px;
+          height: 24px;
           cursor: pointer;
           font-size: 20px;
           border: 1px solid #ddd;
           border-radius: 50%;
         }
         &--maxBtn {
-          margin-left: 20px;
+          margin-left: 18px;
         }
         &--minBtn {
-          margin-right: 20px;
+          margin-right: 18px;
         }
 
         &--indicatorText {
@@ -329,7 +330,7 @@
         }
 
         &--countDigit {
-          font-size: 21px;
+          font-size: 14px;
           font-weight: 500;
           border-radius: 2.164px;
           border: 1.082px solid #ddd;
@@ -337,17 +338,18 @@
           width: 54px;
           display: flex;
           justify-content: center;
-          padding: 7px 0;
+          padding: 0px 0;
         }
       }
 
       &--addToCartBtn {
         background-color: #f2a347;
         color: black;
-
+        font-size: 16px;
         border: none;
         border-radius: 5px;
-        padding: 10px 16px;
+        padding: 6px 12px;
+        width: 74px;
         cursor: pointer;
         transition: background-color 0.3s ease;
 
@@ -359,6 +361,9 @@
           font-size: 16px;
         }
       }
+    }
+    &:hover .voucher-card__counter {
+      display: flex;
     }
   }
 }

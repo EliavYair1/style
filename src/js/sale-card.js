@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const imgStamps = document.querySelectorAll(".img-stamp");
   imgStamps.forEach((stamp) => {
-    let svgStampShown = JSON.parse(stamp.getAttribute("data-isstampshown"));
+    let svgStampShown = stamp.getAttribute("data-isstampshown") === "true";
     stamp.style.display = svgStampShown ? "flex" : "none";
   });
 

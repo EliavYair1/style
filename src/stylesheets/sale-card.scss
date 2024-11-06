@@ -4,7 +4,7 @@
   align-items: flex-end;
   width: 100%;
   border: 1px solid #eaeaea;
-  border-radius: 8px;
+  // border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   background-color: #ffffff;
@@ -195,6 +195,7 @@
   }
 
   @media (min-width: 1600px) {
+    border-radius: 8px;
     height: 100%;
     width: 100%;
     min-height: 488px;

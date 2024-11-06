@@ -8,7 +8,7 @@ var heroswiper = new Swiper(".heroSlider", {
     360: {
       slidesPerView: 1.1,
       centeredSlides: true,
-      spaceBetween: 20,
+      spaceBetween: 30,
       pagination: true,
     },
     1600: {

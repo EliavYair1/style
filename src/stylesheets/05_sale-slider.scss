@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #dddddd;
+  background-color: #fff;
   position: relative;
 
   .section-header {
@@ -56,10 +56,23 @@
     padding: 12px 0 40px;
     // max-height: 993px;
     max-width: 375px;
+    overflow: visible;
 
     .pagination-wrapper {
       display: flex;
       .swiper-pagination {
+        display: flex;
+        width: 122px;
+        padding: 10px;
+        background: #fff;
+        border-radius: 6px;
+        background: #fff;
+        margin: 0 auto;
+        transform: translate(-50%, -50%);
+        left: 108px;
+        right: 0;
+        bottom: -22px;
+        z-index: 0;
         .swiper-pagination-bullet-active {
           background: #000;
         }
@@ -72,6 +85,8 @@
         bottom: 6px;
         align-items: center;
         gap: 2px;
+        left: calc(50% - 55px);
+        bottom: -5px;
         .pagination-swiper-current {
           font-size: 18px;
           font-style: normal;
@@ -93,41 +108,6 @@
       }
     }
 
-    // .swiper-slide {
-    //   // width: 131px;
-    //   width: auto;
-    //   text-align: center;
-    //   font-size: 18px;
-    //   background: #fff;
-
-    //   display: flex;
-    //   justify-content: center;
-    //   align-items: center;
-    //   height: 391px !important;
-    // }
-
-    // .swiper-slide.static {
-    //   display: flex;
-    //   background-color: #2020b3;
-    //   padding: 0 80px;
-    //   flex-direction: column;
-    //   .link {
-    //     display: flex;
-    //     flex-direction: column;
-    //     text-decoration: none;
-    //     .title {
-    //       color: #fff;
-    //       font-size: 24px;
-    //       font-style: normal;
-    //       font-weight: 700;
-    //       text-align: right;
-    //     }
-    //     .icon {
-    //       width: 35px;
-    //       height: auto;
-    //     }
-    //   }
-    // }
     .swiper-wrapper {
       .swiper-slide {
         display: flex;
@@ -157,12 +137,16 @@
         align-items: center;
         // height: 180px;
         height: 283px;
+        box-shadow: 0px 10px 56px 0px rgba(0, 0, 0, 0.08);
       }
       .single-slide.static {
         display: flex;
         background-color: #2020b3;
         // padding: 0 80px;
         flex-direction: column;
+        background-image: url("../img/product-slider/cat-static-link.jpg");
+        background-position: center;
+        background-size: cover;
         .link {
           display: flex;
           flex-direction: column;
@@ -208,6 +192,11 @@
   }
 
   @media (min-width: 1600px) {
+    .static-slide {
+      width: 122px;
+      background-size: cover;
+      background-position: center;
+    }
     .section-header {
       display: flex;
     }
@@ -227,17 +216,18 @@
         display: flex;
         .swiper-pagination {
           display: flex;
-          width: 182px;
+          // width: 205px;
           padding: 10px;
           background: #fff;
           border-radius: 6px;
           background: #fff;
           margin: 0 auto;
-          transform: translate(-50%, -50%);
-          left: calc(50% - 689px);
-          right: 0;
+          // transform: translate(-50%, -50%);
+          // left: calc(50% - 689px);
+          // right: 0;
           bottom: 0;
           z-index: 0;
+          justify-content: center;
           .swiper-pagination-bullet-active {
             background: #000;
           }
@@ -246,8 +236,8 @@
           display: flex;
           position: absolute;
           z-index: 2;
-          left: calc(50% - 103px);
-          bottom: 17px;
+          left: calc(50% - 132px);
+          bottom: 5px;
           align-items: center;
           gap: 2px;
           .pagination-swiper-current {
@@ -270,15 +260,18 @@
           }
         }
       }
-      .swiper-slide {
-        flex-shrink: unset;
-        text-align: center;
-        font-size: 18px;
-        background: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-width: 328px;
+      .swiper-wrapper {
+        padding-right: 60px;
+        .swiper-slide {
+          flex-shrink: unset;
+          text-align: center;
+          font-size: 18px;
+          background: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          max-width: 328px;
+        }
       }
     }
 

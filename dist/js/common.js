@@ -7,6 +7,33 @@ document.addEventListener("DOMContentLoaded", () => {
   categoryButton.addEventListener("click", toggleCorporateMenu);
   menuButton.addEventListener("click", toggleCategories);
 });
+const cartCountElement = document.getElementById("cart-count");
+const productCardObj = {};
+const voucherCardObj = {};
+
+// cart counter
+function updateCartCount(productCardObj, voucherCardObj) {
+  let totalCount = 0;
+  // *logping over the product that iss added to the cart and injecting the number of items
+  for (let itemId in productCardObj) {
+    if (productCardObj[itemId].isAddToCart) {
+      totalCount += productCardObj[itemId].numberOfItems;
+    }
+  }
+  for (let itemId in voucherCardObj) {
+    if (voucherCardObj[itemId].isAddToCart) {
+      totalCount += voucherCardObj[itemId].numberOfItems;
+    }
+  }
+
+  //* show if above 0
+  if (totalCount > 0) {
+    cartCountElement.textContent = totalCount;
+    cartCountElement.style.display = "flex";
+  } else {
+    cartCountElement.style.display = "none";
+  }
+}
 
 // * make one open each time by closing the current opened menu
 const closeAllMenus = () => {
@@ -18,9 +45,7 @@ const closeAllMenus = () => {
     menu.classList.remove("show");
   });
 
-  const buttons = document.querySelectorAll(
-    ".header__button--corprate, .header__button--menuItem"
-  );
+  const buttons = document.querySelectorAll(".header__button--corprate, .header__button--menuItem");
   buttons.forEach((button) => {
     button.classList.remove("active-button");
     button.classList.remove("header--open-menu");
@@ -87,9 +112,7 @@ const toggleCorporateMenu = () => {
   const corporateMenu = document.getElementById("corprate-menu");
   const categoryButton = document.querySelector(".header__button--corprate");
   const categoryArrow = categoryButton.querySelector(".header__button-arrow");
-  const categoryArrowPath = categoryButton.querySelector(
-    ".header__button-arrow path"
-  );
+  const categoryArrowPath = categoryButton.querySelector(".header__button-arrow path");
 
   if (corporateMenu.classList.contains("show")) {
     corporateMenu.classList.remove("show");
@@ -142,20 +165,17 @@ function updateHeader(userData) {
   const profileLinkElement = document.querySelector(".header__profile");
   if (profileLinkElement) {
     profileLinkElement.setAttribute("href", `#${userData.profileLink}`);
-    const profileTextElement = profileLinkElement.querySelector(
-      ".header__profile-text"
-    );
+    const profileTextElement = profileLinkElement.querySelector(".header__profile-text");
     if (profileTextElement) {
       profileTextElement.textContent = userData.profileText;
     }
   }
 }
 const params = new URLSearchParams(window.location.search);
-
-const isLoggedIn = params.has("LoggedIn");
+const keys = Array.from(params.keys());
+const isLoggedIn = keys.some((key) => key.toLowerCase() === "loggedin");
 // console.log("params", params);
 
-// const isLoggedIn = false;
 updateHeader(isLoggedIn ? connectedUser : newUser);
 
 var heroswiper = new Swiper(".heroSlider", {
@@ -168,7 +188,7 @@ var heroswiper = new Swiper(".heroSlider", {
     360: {
       slidesPerView: 1.1,
       centeredSlides: true,
-      spaceBetween: 20,
+      spaceBetween: 30,
       pagination: true,
     },
     1600: {
@@ -186,7 +206,7 @@ initCustomPagination(heroswiper, 1);
 
 var productSwiper = new Swiper(".productSwiper", {
   slidesPerView: 4,
-  centeredSlides: true,
+  centeredSlides: false,
   spaceBetween: 30,
   pagination: {
     el: ".swiper-pagination",
@@ -227,7 +247,7 @@ initCustomPagination(showcaseSwiper, 8);
 
 var productSwiper = new Swiper(".SaleSwiper", {
   slidesPerView: 4,
-  centeredSlides: true,
+  centeredSlides: false,
   spaceBetween: 30,
   pagination: {
     el: ".swiper-pagination",
@@ -292,7 +312,7 @@ initCustomPagination(lifestyleSwiper, 9);
 
 var VoucherSwiper = new Swiper(".VoucherSwiper", {
   slidesPerView: 4,
-  centeredSlides: true,
+  centeredSlides: false,
   spaceBetween: 30,
   pagination: {
     el: ".swiper-pagination",
@@ -323,94 +343,14 @@ initCustomPagination(vouchermobileSwiper, 7);
 
 
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   const products = document.querySelectorAll(".product");
-//   const likedProducts = [];
-//   products.forEach(function (product, cardIndex) {
-//     // * fav button
-//     const favIcon = product.querySelector("#favIcon");
-//     const heartPath = product.querySelector("#heartPath");
-//     let isLiked = false;
-//     const productId = cardIndex;
-//     favIcon.addEventListener("click", function (e) {
-//       e.preventDefault();
-//       isLiked = !isLiked;
-//       console.log("isLiked", isLiked);
-
-//       if (isLiked) {
-//         heartPath.setAttribute("stroke", "red");
-//         heartPath.setAttribute("fill", "red");
-//         // pushing the likes into an array
-//         if (!likedProducts.includes(productId)) {
-//           likedProducts.push(productId);
-//         }
-//       } else {
-//         heartPath.setAttribute("stroke", "black");
-//         heartPath.setAttribute("fill", "none");
-
-//         const index = likedProducts.indexOf(productId);
-//         if (index > -1) {
-//           likedProducts.splice(index, 1);
-//         }
-//       }
-//       console.log("Liked Products:", likedProducts);
-//     });
-
-//     // ? fav button
-
-//     // * counter min max buttons
-//     const countDigit = product.querySelector(".product__counter--counterWrap--countDigit");
-//     const addButton = product.querySelector(".product__counter--counterWrap--maxBtn");
-//     const subtractButton = product.querySelector(".product__counter--counterWrap--minBtn");
-
-//     let count = parseInt(countDigit.textContent);
-
-//     addButton.addEventListener("click", function () {
-//       count++;
-//       updateCounter();
-//     });
-
-//     subtractButton.addEventListener("click", function () {
-//       if (count > 1) {
-//         count--;
-//         updateCounter();
-//       }
-//     });
-
-//     function updateCounter() {
-//       countDigit.textContent = count;
-//     }
-//     // ? counter min max buttons
-
-//     // * add to cart button
-//     const addToCartBtn = product.querySelector("#addToCartBtn");
-//     const addToCartText = product.querySelector(".product__counter--addToCartText");
-
-//     let isAddToCart = false;
-
-//     addToCartBtn.addEventListener("click", function (e) {
-//       e.preventDefault();
-//       isAddToCart = !isAddToCart;
-//       console.log("isAddToCart", isAddToCart);
-
-//       if (isAddToCart) {
-//         addToCartText.textContent = "הסר";
-//       } else {
-//         addToCartText.textContent = "הוספה";
-//       }
-//     });
-//     // ? add to cart button
-//   });
-// });
-
 document.addEventListener("DOMContentLoaded", function () {
   const products = document.querySelectorAll(".product");
-  const productCardObj = {};
+  // const cartCountElement = document.getElementById("cart-count");
 
   products.forEach(function (product, index) {
-    const productId = index; // Customize to use a unique ID if available
+    const productCounter = product.querySelector(".product__counter");
+    const productId = index;
 
-    // Initialize the object for this product
     productCardObj[productId] = {
       liked: false,
       numberOfItems: 1,
@@ -428,14 +368,12 @@ document.addEventListener("DOMContentLoaded", function () {
       // console.log("Liked status for product", productId, ":", productCardObj[productId].liked);
 
       if (productCardObj[productId].liked) {
-        heartPath.setAttribute("stroke", "red");
-        heartPath.setAttribute("fill", "red");
+        heartPath.setAttribute("stroke", "#FF324B");
+        heartPath.setAttribute("fill", "#FF324B");
       } else {
         heartPath.setAttribute("stroke", "black");
         heartPath.setAttribute("fill", "none");
       }
-
-      // console.log("Product Card Object:", productCardObj);
     });
     // ? fav button
 
@@ -462,7 +400,9 @@ document.addEventListener("DOMContentLoaded", function () {
       countDigit.textContent = count;
       // toggling the button of add to counter
       productCardObj[productId].numberOfItems = count;
-      // console.log("Updated item count for product", productId, ":", count);
+      if (productCardObj[productId].isAddToCart) {
+        updateCartCount(productCardObj, voucherCardObj);
+      }
     }
     // ? counter min max buttons
 
@@ -474,22 +414,29 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
       // toggling the button of add to cart
       productCardObj[productId].isAddToCart = !productCardObj[productId].isAddToCart;
-      // console.log(
-      //   "Add to Cart status for product",
-      //   productId,
-      //   ":",
-      //   productCardObj[productId].isAddToCart
-      // );
 
       if (productCardObj[productId].isAddToCart) {
         addToCartText.textContent = "הסר";
       } else {
         addToCartText.textContent = "הוספה";
+
+        count = 1;
+        countDigit.textContent = count;
+        productCardObj[productId].numberOfItems = count;
       }
 
-      console.log("Product Card Object:", productCardObj);
+      updateCartCount(productCardObj, voucherCardObj);
     });
     // ? add to cart button
+    if (window.innerWidth > 1600) {
+      product.addEventListener("mouseover", function () {
+        productCounter.style.display = "flex";
+      });
+
+      product.addEventListener("mouseout", function () {
+        productCounter.style.display = "none";
+      });
+    }
   });
 });
 
@@ -587,7 +534,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const imgStamps = document.querySelectorAll(".img-stamp");
   imgStamps.forEach((stamp) => {
-    let svgStampShown = JSON.parse(stamp.getAttribute("data-isstampshown"));
+    let svgStampShown = stamp.getAttribute("data-isstampshown") === "true";
     stamp.style.display = svgStampShown ? "flex" : "none";
   });
 
@@ -668,15 +615,11 @@ function initCustomPagination(swiperInstance, swiperId) {
 // * 3. js: in the js !! of your slider settings !! call the function in this like so
 // example: initCustomPagination(productSwiper, 1);
 
-// todo to check why the mobile menu dosent open
-// todo to cancel the mouse leave on the desktop
 const categoryItems = document.querySelectorAll(".header__menu-item--category");
 const categoryLink = document.querySelectorAll(".category-link");
 const categoriesMenu = document.getElementById("categories-menu");
 const parentHeader = document.querySelectorAll(".header");
-const subcategoryLinks = document.querySelectorAll(
-  ".header__menu-subcategory-link"
-);
+const subcategoryLinks = document.querySelectorAll(".header__menu-subcategory-link");
 const dynamicImageWindow = document.querySelector(".image-window");
 const productContainer = document.querySelector(".product");
 const backgroundSubMenus = document.querySelector(".product-image-container");
@@ -690,11 +633,8 @@ document.addEventListener("DOMContentLoaded", () => {
           // clearTimeout(closeTimeout);
           e.stopPropagation();
           e.preventDefault();
-          const parentCategoryItem = category.closest(
-            ".header__menu-item--category"
-          );
-          const categoryText =
-            parentCategoryItem.querySelector(".image-text span").textContent;
+          const parentCategoryItem = category.closest(".header__menu-item--category");
+          const categoryText = parentCategoryItem.querySelector(".image-text span").textContent;
           const dynamicContent = `
               <div class="wrapper">
                 <h2 class="title">${categoryText}</h2>
@@ -715,7 +655,34 @@ document.addEventListener("DOMContentLoaded", () => {
         // category.addEventListener("click", toggleSubCategory);
         category.addEventListener("click", (e) => {
           e.stopPropagation();
-          toggleSubCategory(e);
+          if (window.innerWidth >= 1600) {
+            toggleSubCategory(e);
+          }
+        });
+
+        //
+        const aLink = category.querySelector(".category-link");
+        aLink.addEventListener("click", function (event) {
+          const arrow = this.querySelector(".header__menu-arrow");
+
+          if (window.innerWidth < 1600) {
+            event.preventDefault();
+            const siblings = this.nextElementSibling;
+            if (this.classList.contains("activeToggle")) {
+              this.classList.remove("activeToggle");
+              // this.parentNode.style.background = "unset";
+              siblings.style.display = "none";
+              siblings.style.maxHeight = "0";
+              arrow.classList.remove("rotate");
+            } else {
+              arrow.classList.add("rotate");
+              this.classList.add("activeToggle");
+              // this.parentNode.style.background = "rgba(242, 163, 71, 0.14)";
+
+              siblings.style.display = "block";
+              siblings.style.maxHeight = "unset";
+            }
+          }
         });
       });
     }
@@ -747,24 +714,28 @@ const toggleSubCategory = (e) => {
   const subCategoriesWrapper = document.querySelector(
     `.header__menu-subcategories[data-subcatid="${dataId}"]`
   );
+
   const isCurrentlyOpen =
-    subCategoriesWrapper.style.maxHeight !== "0px" &&
-    subCategoriesWrapper.style.maxHeight !== "";
+    subCategoriesWrapper.style.maxHeight !== "0px" && subCategoriesWrapper.style.maxHeight !== "";
 
   if (isDesktop) {
     closeAllSubCategories();
   }
 
   if (!isCurrentlyOpen) {
-    openSubCategory(elementTarget, subCategoriesWrapper, isDesktop);
+    if (isDesktop) {
+      console.log("desktop");
+      openSubCategory(subCategoriesWrapper, isDesktop);
+    } else {
+      console.log("mobile");
+      openSubCategory(subCategoriesWrapper, false);
+    }
   }
 };
 
 // Helper function to close all subcategories and reset UI elements
 const closeAllSubCategories = (excludeTarget = null) => {
-  const allSubcategories = document.querySelectorAll(
-    ".header__menu-subcategories"
-  );
+  const allSubcategories = document.querySelectorAll(".header__menu-subcategories");
 
   const allArrows = document.querySelectorAll(".header__menu-arrow");
   allArrows.forEach((arrow) => {
@@ -784,30 +755,30 @@ const closeAllSubCategories = (excludeTarget = null) => {
 };
 
 // open the subcategory
-const openSubCategory = (elementTarget, subCategoriesWrapper, isDesktop) => {
-  const arrow = elementTarget.querySelector(".header__menu-arrow");
+const openSubCategory = (subCategoriesWrapper, isDesktop) => {
+  // const arrow = elementTarget.querySelector(".header__menu-arrow");
   subCategoriesWrapper.style.display = "flex";
   subCategoriesWrapper.style.flexDirection = "column";
   subCategoriesWrapper.style.maxHeight = "100vh";
   subCategoriesWrapper.style.top = "39px";
   subCategoriesWrapper.style.right = "307px";
 
-  arrow.classList.add("rotate");
-
+  // arrow.classList.add("rotate");
+  // console.log(isDesktop);
   if (isDesktop) {
     backgroundSubMenus.style.transition = "max-width 0.3s ease;";
     backgroundSubMenus.style.display = "flex";
     backgroundSubMenus.style.height = "565px";
-    // backgroundSubMenus.style.width = "386px";
     backgroundSubMenus.style.width = parentHeader[0].clientWidth - 300 + "px";
     backgroundSubMenus.style.position = "absolute";
-    backgroundSubMenus.style.top = "11px";
-    backgroundSubMenus.style.zIndex = -1;
-    backgroundSubMenus.style.right = "300px";
+    backgroundSubMenus.style.top = "178px";
+    backgroundSubMenus.style.zIndex = 10;
+    backgroundSubMenus.style.right = "unset";
+    backgroundSubMenus.style.left = "0";
     backgroundSubMenus.style.justifyContent = "flex-end";
     backgroundSubMenus.style.flexDirection = "row";
-    // dynamicImageWindow.style.display = "none";
-    // productContainer.style.display = "none";
+    backgroundSubMenus.style.boxShadow = "0px 20px 26px 0px rgba(0, 0, 0, 0.15)";
+    backgroundSubMenus.style.borderTop = " 2px solid #E9E1FD";
     dynamicImageWindow.style.display = "block";
     productContainer.style.display = "block";
   } else {
@@ -826,26 +797,6 @@ subcategoryLinks.forEach((link) => {
     backgroundSubMenus.style.height = "565px";
     dynamicImageWindow.style.display = "flex";
     productContainer.style.display = "flex";
-
-    // const subcategoryText = link.querySelector(
-    //   ".header__menu-subcategory-text"
-    // ).textContent;
-    // const linkRef = link.getAttribute("href");
-
-    // const parentCategoryItem = link.closest(".header__menu-item--category");
-    // const categoryText =
-    //   parentCategoryItem.querySelector(".image-text span").textContent;
-    // const dynamicContent = `
-    //   <div class="wrapper">
-    //     <h2 class="title">${categoryText}</h2>
-    //     <p class="subtext">${categoryText}</p>
-    //     <a href="${categoryText}" class="link">
-    //       <span class="link-text">לפרטים נוספים</span>
-    //     </a>
-    //   </div>
-    // `;
-
-    // loadProductContent(dynamicContent);
   });
 });
 
@@ -876,19 +827,29 @@ const closeSubCategoryOnHoverOut = (categoryElement) => {
 
 document.addEventListener("DOMContentLoaded", function () {
   const vouchers = document.querySelectorAll(".voucher-card");
+  // const cartCountElement = document.getElementById("cart-count");
+  // console.log("cartCountElement", cartCountElement);
 
-  vouchers.forEach(function (voucher) {
+  vouchers.forEach(function (voucher, index) {
+    const voucherCounter = voucher.querySelector(".voucher-card__counter");
+    const voucherId = index;
+
+    voucherCardObj[voucherId] = {
+      liked: false,
+      numberOfItems: 1,
+      isAddToCart: false,
+    };
     // * fav button
     const favIcon = voucher.querySelector("#favIcon");
     const heartPath = voucher.querySelector("#heartPath");
-    let isLiked = false;
+    // let isLiked = false;
 
     favIcon.addEventListener("click", function (e) {
       e.preventDefault();
-      isLiked = !isLiked;
-      console.log("isLiked", isLiked);
-
-      if (isLiked) {
+      // isLiked = !isLiked;
+      // console.log("isLiked", isLiked);
+      voucherCardObj[voucherId].liked = !voucherCardObj[voucherId].liked;
+      if (voucherCardObj[voucherId].liked) {
         heartPath.setAttribute("stroke", "red");
         heartPath.setAttribute("fill", "red");
       } else {
@@ -920,6 +881,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function updateCounter() {
       countDigit.textContent = count;
+      voucherCardObj[voucherId].numberOfItems = count;
+
+      if (voucherCardObj[voucherId].isAddToCart) {
+        updateCartCount(productCardObj, voucherCardObj);
+      }
+      console.log("voucher Card Object:", voucherCardObj);
+      console.log("Product Card Object:", productCardObj);
     }
     // ? counter min max buttons
 
@@ -927,44 +895,35 @@ document.addEventListener("DOMContentLoaded", function () {
     const addToCartBtn = voucher.querySelector("#addToCartBtn");
     const addToCartText = voucher.querySelector(".voucher-card__counter--addToCartText");
 
-    let isAddToCart = false;
+    // let isAddToCart = false;
 
     addToCartBtn.addEventListener("click", function (e) {
       e.preventDefault();
-      isAddToCart = !isAddToCart;
-      console.log("isAddToCart", isAddToCart);
 
-      if (isAddToCart) {
+      // isAddToCart = !isAddToCart;
+      // console.log("isAddToCart", isAddToCart);
+      voucherCardObj[voucherId].isAddToCart = !voucherCardObj[voucherId].isAddToCart;
+
+      if (voucherCardObj[voucherId].isAddToCart) {
         addToCartText.textContent = "הסר";
       } else {
         addToCartText.textContent = "הוספה";
       }
+
+      updateCartCount(productCardObj, voucherCardObj);
     });
     // ? add to cart button
 
     // *   show hide  elements
-    const saleCardCounters = document.querySelectorAll(".voucher-card__counter");
-    // *looping over the counter data attr
-    saleCardCounters.forEach((counter) => {
-      let isCounterShown = counter.getAttribute("data-isShown") === "true";
-      function toggleCounterVisibility() {
-        if (isCounterShown) {
-          counter.style.display = "flex";
-          counter.style.opacity = "1";
-          // counter.style.visibility = "visible";
-        } else {
-          counter.style.display = "none";
-          counter.style.opacity = "0";
-          // counter.style.visibility = "hidden";
-        }
-      }
-      toggleCounterVisibility();
-      counter.addEventListener("click", function () {
-        // isCounterShown = !isCounterShown;
-        counter.setAttribute("data-isShown", isCounterShown);
-        toggleCounterVisibility();
+    if (window.innerWidth > 1600) {
+      voucher.addEventListener("mouseover", function () {
+        voucherCounter.style.display = "flex";
       });
-    });
+
+      voucher.addEventListener("mouseout", function () {
+        voucherCounter.style.display = "none";
+      });
+    }
   });
 
   // ?  show hide elements

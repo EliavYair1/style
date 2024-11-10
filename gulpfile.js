@@ -38,7 +38,7 @@ var paths = {
   },
   js: {
     src: {
-      js: ["src/js/*.*", "!src/js/jquery-3.4.1.min.js"],
+      js: ["src/js/*.*", "src/js/functions/**/*.js", "!src/js/jquery-3.4.1.min.js"],
       all: "src/js/**/*.*",
       libs: "src/js/libs/**/*.*",
     },
@@ -49,13 +49,22 @@ var paths = {
     dist: "dist/fonts/",
   },
   watch: {
-    html: ["src/template/*.html", "src/template/**.html", "src/*.html"],
-    scss: "src/stylesheets/**/*.scss",
+    html: [
+      "src/template/*.html",
+      "src/template/*/*.html",
+      "src/template/*/*/*.html",
+      "src/template/*/*/*/*.html",
+      "src/template/**.html",
+      "src/template/pages/*.html",
+      "src/*.html",
+    ],
+    scss: ["src/stylesheets/**/*.scss", "src/stylesheets/*/*.scss"],
     css: "src/stylesheets/**/*.css",
     less: "src/stylesheets/**/*.less",
-    js: "src/js/*.js",
+    js: ["src/js/*.js", "src/js/functions/**/*.js"],
     img: "src/img/**",
     fonts: "src/fonts/**",
+    copyHtml: "src/template/pages/*.html",
   },
 };
 
@@ -71,7 +80,7 @@ gulp.task("browser-sync", function () {
 // html
 gulp.task("html", function () {
   return gulp
-    .src(paths.html.src)
+    .src([paths.html.src, "src/*.html"])
     .pipe(
       fileInclude({
         prefix: "@@",
@@ -109,10 +118,7 @@ gulp.task("css", function () {
 
 // img
 gulp.task("img", function () {
-  return gulp
-    .src(paths.img.src)
-    .pipe(gulp.dest(paths.img.dist))
-    .pipe(browserSync.stream());
+  return gulp.src(paths.img.src).pipe(gulp.dest(paths.img.dist)).pipe(browserSync.stream());
 });
 
 gulp.task("svg", function () {
@@ -167,10 +173,7 @@ gulp.task("jsLibs", function () {
 
 // fonts
 gulp.task("fonts", function () {
-  return gulp
-    .src(paths.fonts.src)
-    .pipe(gulp.dest(paths.fonts.dist))
-    .pipe(browserSync.stream());
+  return gulp.src(paths.fonts.src).pipe(gulp.dest(paths.fonts.dist)).pipe(browserSync.stream());
 });
 
 // clean
@@ -178,6 +181,18 @@ gulp.task("clean", function () {
   return del(paths.dist);
 });
 
+gulp.task("copy-html", function () {
+  return gulp
+    .src("src/template/pages/{category,coupon,my-orders}.html")
+    .pipe(
+      fileInclude({
+        prefix: "@@",
+        basepath: "@file",
+      })
+    )
+    .pipe(gulp.dest(paths.html.dist))
+    .pipe(browserSync.stream());
+});
 // watch
 gulp.task("watch", function () {
   // gulp.watch(paths.watch.html, gulp.series("html"));
@@ -190,6 +205,7 @@ gulp.task("watch", function () {
   gulp.watch(paths.watch.js, gulp.series("js"));
   gulp.watch(paths.watch.img, gulp.series("img"));
   gulp.watch(paths.watch.fonts, gulp.series("fonts"));
+  gulp.watch(paths.watch.copyHtml, gulp.series("copy-html"));
 });
 
 //default
@@ -204,6 +220,7 @@ gulp.task(
     "img",
     "svg",
     "fonts",
+    "copy-html",
     "watch"
   )
 );

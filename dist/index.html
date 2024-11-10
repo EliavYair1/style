@@ -475,7 +475,7 @@
   </li>
 </ul>
 <!-- <div class="product-image-container">
-  <div class="product">
+  <div class="product @@isSliderCard">
   <div class="imgWrap">
     <a href="#" class="imgWrap-favBtn" id="favIcon">
       <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -585,7 +585,7 @@
   </nav>
 
   <div class="product-image-container">
-    <div class="product">
+    <div class="product @@isSliderCard">
   <div class="imgWrap">
     <a href="#" class="imgWrap-favBtn" id="favIcon">
       <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -822,9 +822,8 @@
 </div>
 
       <!-- ? swiper  -->
-
-      <!-- * product-slider  -->
-      <div class="product-slider">
+      <div id="dynamic-page-content"><!-- * product-slider  -->
+<div class="product-slider">
   <h2 class="section-header">
   <svg
     class="section-header__icon"
@@ -842,7 +841,8 @@
 
   <div #swiperRef="" class="swiper productSwiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><div class="product">
+      <div class="swiper-slide">
+        <div class="product sliderCard">
   <div class="imgWrap">
     <a href="#" class="imgWrap-favBtn" id="favIcon">
       <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -887,8 +887,10 @@
     </button>
   </div>
 </div>
-</div>
-      <div class="swiper-slide"><div class="product">
+
+      </div>
+      <div class="swiper-slide">
+        <div class="product sliderCard">
   <div class="imgWrap">
     <a href="#" class="imgWrap-favBtn" id="favIcon">
       <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -933,8 +935,10 @@
     </button>
   </div>
 </div>
-</div>
-      <div class="swiper-slide"><div class="product">
+
+      </div>
+      <div class="swiper-slide">
+        <div class="product sliderCard">
   <div class="imgWrap">
     <a href="#" class="imgWrap-favBtn" id="favIcon">
       <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -979,8 +983,10 @@
     </button>
   </div>
 </div>
-</div>
-      <div class="swiper-slide"><div class="product">
+
+      </div>
+      <div class="swiper-slide">
+        <div class="product sliderCard">
   <div class="imgWrap">
     <a href="#" class="imgWrap-favBtn" id="favIcon">
       <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1025,8 +1031,10 @@
     </button>
   </div>
 </div>
-</div>
-      <div class="swiper-slide"><div class="product">
+
+      </div>
+      <div class="swiper-slide">
+        <div class="product sliderCard">
   <div class="imgWrap">
     <a href="#" class="imgWrap-favBtn" id="favIcon">
       <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1071,8 +1079,10 @@
     </button>
   </div>
 </div>
-</div>
-      <div class="swiper-slide"><div class="product">
+
+      </div>
+      <div class="swiper-slide">
+        <div class="product sliderCard">
   <div class="imgWrap">
     <a href="#" class="imgWrap-favBtn" id="favIcon">
       <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1117,8 +1127,10 @@
     </button>
   </div>
 </div>
-</div>
-      <div class="swiper-slide"><div class="product">
+
+      </div>
+      <div class="swiper-slide">
+        <div class="product sliderCard">
   <div class="imgWrap">
     <a href="#" class="imgWrap-favBtn" id="favIcon">
       <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1163,8 +1175,10 @@
     </button>
   </div>
 </div>
-</div>
-      <div class="swiper-slide"><div class="product">
+
+      </div>
+      <div class="swiper-slide">
+        <div class="product sliderCard">
   <div class="imgWrap">
     <a href="#" class="imgWrap-favBtn" id="favIcon">
       <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1209,8 +1223,10 @@
     </button>
   </div>
 </div>
-</div>
-      <div class="swiper-slide"><div class="product">
+
+      </div>
+      <div class="swiper-slide">
+        <div class="product sliderCard">
   <div class="imgWrap">
     <a href="#" class="imgWrap-favBtn" id="favIcon">
       <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1255,8 +1271,10 @@
     </button>
   </div>
 </div>
-</div>
-      <div class="swiper-slide"><div class="product">
+
+      </div>
+      <div class="swiper-slide">
+        <div class="product sliderCard">
   <div class="imgWrap">
     <a href="#" class="imgWrap-favBtn" id="favIcon">
       <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1301,7 +1319,8 @@
     </button>
   </div>
 </div>
-</div>
+
+      </div>
     </div>
     <div class="static-slide">
       <a href="#" class="link">
@@ -1370,7 +1389,7 @@
     </a>
         .static-slide.static {
       width: 235px;
-      background-image: url("../img/product-slider/cat-static-link.jpg");
+      background-image: url("../../img/product-slider/cat-static-link.jpg");
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -1383,7 +1402,7 @@
       <div class="swiper-slide">
         <div class="slide-group">
           <div class="single-slide">
-            <div class="product">
+            <div class="product sliderCard">
   <div class="imgWrap">
     <a href="#" class="imgWrap-favBtn" id="favIcon">
       <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1431,7 +1450,7 @@
 
           </div>
           <div class="single-slide">
-            <div class="product">
+            <div class="product sliderCard">
   <div class="imgWrap">
     <a href="#" class="imgWrap-favBtn" id="favIcon">
       <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1479,7 +1498,7 @@
 
           </div>
           <div class="single-slide">
-            <div class="product">
+            <div class="product sliderCard">
   <div class="imgWrap">
     <a href="#" class="imgWrap-favBtn" id="favIcon">
       <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1555,7 +1574,7 @@
       <div class="swiper-slide">
         <div class="slide-group">
           <div class="single-slide">
-            <div class="product">
+            <div class="product sliderCard">
   <div class="imgWrap">
     <a href="#" class="imgWrap-favBtn" id="favIcon">
       <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1603,7 +1622,7 @@
 
           </div>
           <div class="single-slide">
-            <div class="product">
+            <div class="product sliderCard">
   <div class="imgWrap">
     <a href="#" class="imgWrap-favBtn" id="favIcon">
       <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1651,7 +1670,7 @@
 
           </div>
           <div class="single-slide">
-            <div class="product">
+            <div class="product sliderCard">
   <div class="imgWrap">
     <a href="#" class="imgWrap-favBtn" id="favIcon">
       <svg height="49" viewBox="0 0 50 49" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1736,10 +1755,10 @@
   </div>
 </div>
 
-      <!-- ? product-slider  -->
+<!-- ? product-slider  -->
 
-      <!-- * showcase-slider  -->
-      <div class="showcase-slider">
+<!-- * showcase-slider  -->
+<div class="showcase-slider">
   <div class="swiper showcaseSwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
@@ -1850,10 +1869,10 @@
   </div>
 </div>
 
-      <!-- ? showcase-slider  -->
+<!-- ? showcase-slider  -->
 
-      <!-- * sale-slider  -->
-      <div class="sale-slider">
+<!-- * sale-slider  -->
+<div class="sale-slider">
   <h2 class="section-header">
   <svg
     class="section-header__icon"
@@ -4057,10 +4076,10 @@
   </div>
 </div>
 
-      <!-- ? sale-slider  -->
+<!-- ? sale-slider  -->
 
-      <!-- * lifestyle-slider  -->
-      <div class="lifestyle-slider">
+<!-- * lifestyle-slider  -->
+<div class="lifestyle-slider">
   <div class="swiper lifestyleSwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
@@ -4127,10 +4146,10 @@
   </div>
 </div>
 
-      <!-- ? lifestyle-slider  -->
+<!-- ? lifestyle-slider  -->
 
-      <!-- * voucher-slider  -->
-      <div class="voucher-slider">
+<!-- * voucher-slider  -->
+<div class="voucher-slider">
   <h2 class="section-header">
   <svg
     class="section-header__icon"
@@ -5693,10 +5712,10 @@
   </div>
 </div>
 
-      <!-- ? voucher-slider  -->
+<!-- ? voucher-slider  -->
 
-      <!-- *category search -->
-      <div class="category-navigator">
+<!-- *category navigator -->
+<div class="category-navigator">
   <h1 class="category-navigator--title">חיפוש לפי קטגוריה</h1>
 
   <div class="category-navigator--items">
@@ -5783,8 +5802,8 @@
   </div>
 </div>
 
-      <!-- ?category search -->
-
+<!-- ?category navigator -->
+</div>
       <!-- * footer  -->
       <div class="footer">
   <div class="footer_row first">
@@ -5941,6 +5960,6 @@
     <!-- ! scripts -->
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/common.js"></script>
+    <script src="js/common.js" defer type="module"></script>
   </body>
 </html>

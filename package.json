@@ -30,6 +30,7 @@
     "gulp-babel-minify": "^0.5.2",
     "gulp-clean-css": "^4.3.0",
     "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.7.0",
     "gulp-file-include": "^2.3.0",
     "gulp-nunjucks-render": "^2.2.3",
     "gulp-sass": "^5.1.0",

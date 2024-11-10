@@ -342,6 +342,293 @@ var vouchermobileSwiper = new Swiper(".vouchermobileSwiper", {
 initCustomPagination(vouchermobileSwiper, 7);
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  const urlParams = new URLSearchParams(window.location.search);
+  const pageParam = urlParams.get("page");
+  if (pageParam === "category") {
+    fetch("/category.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("dynamic-page-content").innerHTML = data;
+        loadCategoryContentJs();
+      })
+      .catch((err) => console.error("Error loading content:", err));
+  }
+  if (pageParam === "coupon") {
+    fetch("/coupon.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("dynamic-page-content").innerHTML = data;
+      })
+      .catch((err) => console.error("Error loading content:", err));
+  }
+  if (pageParam === "my-orders") {
+    fetch("/my-orders.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("dynamic-page-content").innerHTML = data;
+      })
+      .catch((err) => console.error("Error loading content:", err));
+  }
+  if (pageParam === "points") {
+    fetch("/points.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("dynamic-page-content").innerHTML = data;
+      })
+      .catch((err) => console.error("Error loading content:", err));
+  }
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const infoCards = document.querySelectorAll(".information-card");
+
+  infoCards.forEach(function (infoCard, index) {
+    const infoCardCounter = infoCard.querySelector(".information-card__counter");
+    const infoCardId = index;
+
+    informationCardObj[infoCardId] = {
+      liked: false,
+      numberOfItems: 1,
+      isAddToCart: false,
+    };
+    // * fav button
+    const favIcon = infoCard.querySelector("#favIcon");
+    const heartPath = infoCard.querySelector("#heartPath");
+
+    favIcon.addEventListener("click", function (e) {
+      e.preventDefault();
+      informationCardObj[infoCardId].liked = !informationCardObj[infoCardId].liked;
+      if (informationCardObj[infoCardId].liked) {
+        heartPath.setAttribute("stroke", "red");
+        heartPath.setAttribute("fill", "red");
+      } else {
+        heartPath.setAttribute("stroke", "black");
+        heartPath.setAttribute("fill", "white");
+      }
+    });
+
+    // ? fav button
+
+    // * counter min max buttons
+    const countDigit = infoCard.querySelector(
+      ".information-card__counter--counterWrap--countDigit"
+    );
+    const addButton = infoCard.querySelector(".information-card__counter--counterWrap--maxBtn");
+    const subtractButton = infoCard.querySelector(
+      ".information-card__counter--counterWrap--minBtn"
+    );
+
+    let count = parseInt(countDigit.textContent);
+
+    addButton.addEventListener("click", function () {
+      count++;
+      updateCounter();
+    });
+
+    subtractButton.addEventListener("click", function () {
+      if (count > 1) {
+        count--;
+        updateCounter();
+      }
+    });
+
+    function updateCounter() {
+      countDigit.textContent = count;
+      informationCardObj[infoCardId].numberOfItems = count;
+
+      if (informationCardObj[infoCardId].isAddToCart) {
+        updateCartCount(productCardObj, informationCardObj);
+      }
+      console.log("information Card Object:", informationCardObj);
+      console.log("Product Card Object:", productCardObj);
+    }
+    // ? counter min max buttons
+
+    // * add to cart button
+    const addToCartBtn = infoCard.querySelector("#addToCartBtn");
+    const addToCartText = infoCard.querySelector(".information-card__counter--addToCartText");
+
+    addToCartBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      informationCardObj[infoCardId].isAddToCart = !informationCardObj[infoCardId].isAddToCart;
+
+      if (informationCardObj[infoCardId].isAddToCart) {
+        addToCartText.textContent = "הסר";
+      } else {
+        addToCartText.textContent = "הוספה";
+      }
+
+      updateCartCount(productCardObj, informationCardObj);
+    });
+    // ? add to cart button
+
+    // *   show hide  elements
+    if (window.innerWidth > 1600) {
+      infoCard.addEventListener("mouseover", function () {
+        infoCardCounter.style.display = "flex";
+      });
+
+      infoCard.addEventListener("mouseout", function () {
+        infoCardCounter.style.display = "none";
+      });
+    }
+  });
+
+  // ?  show hide elements
+});
+
+function swiperSettings(swiperClass, swiperId) {
+  const swiperInstance = new Swiper(`.${swiperClass}`, {
+    slidesPerView: 4,
+    centeredSlides: false,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    on: {
+      init: function () {
+        initCustomPagination(this, swiperId);
+      },
+    },
+  });
+}
+
+function loadCategoryContentJs() {
+  // * filtering card result on the category page
+  const customSelect = document.getElementById("customSelect");
+  const customSelectOptions = document.querySelector(".custom-select-options");
+  const customSelectText = document.querySelector(".custom-select-text");
+  const customSelectArrow = document.querySelector(".custom-select-arrow");
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const contentItems = document.querySelectorAll(".content-item");
+
+  if (customSelect && customSelectOptions && customSelectText) {
+    customSelect.addEventListener("click", () => {
+      const isDropdownOpen = customSelectOptions.style.display === "block";
+
+      customSelectOptions.style.display = isDropdownOpen ? "none" : "block";
+
+      if (!isDropdownOpen) {
+        customSelect.style.borderBottomLeftRadius = "0px";
+        customSelect.style.borderBottomRightRadius = "0px";
+        customSelect.style.borderBottomWidth = "0px";
+
+        customSelectOptions.style.borderTopLeftRadius = "0px";
+        customSelectOptions.style.borderTopRightRadius = "0px";
+        customSelectOptions.style.borderTopWidth = "0px";
+        customSelectArrow.style.rotate = "-90deg";
+      } else {
+        customSelect.style.borderBottomLeftRadius = "6px";
+        customSelect.style.borderBottomRightRadius = "6px";
+        customSelect.style.borderBottomWidth = "1px";
+
+        customSelectOptions.style.borderTopLeftRadius = "6px";
+        customSelectOptions.style.borderTopRightRadius = "6px";
+        customSelectOptions.style.borderTopWidth = "1px";
+        customSelectArrow.style.rotate = "0deg";
+      }
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!customSelect.contains(e.target)) {
+        customSelectOptions.style.display = "none";
+
+        customSelect.style.borderBottomLeftRadius = "6px";
+        customSelect.style.borderBottomRightRadius = "6px";
+        customSelect.style.borderBottomWidth = "1px";
+
+        customSelectOptions.style.borderTopLeftRadius = "6px";
+        customSelectOptions.style.borderTopRightRadius = "6px";
+        customSelectOptions.style.borderTopWidth = "1px";
+      }
+    });
+
+    // * mobile selector
+    customSelectOptions.addEventListener("click", (e) => {
+      const option = e.target.closest("[data-value]");
+      if (option) {
+        customSelectText.textContent = option.textContent;
+        customSelectOptions.style.display = "none";
+
+        customSelect.style.borderBottomLeftRadius = "6px";
+        customSelect.style.borderBottomRightRadius = "6px";
+        customSelect.style.borderBottomWidth = "1px";
+
+        customSelectOptions.style.borderTopLeftRadius = "6px";
+        customSelectOptions.style.borderTopRightRadius = "6px";
+        customSelectOptions.style.borderTopWidth = "1px";
+
+        const selectedValue = option.getAttribute("data-value");
+        showContentForFilter(selectedValue);
+      }
+    });
+
+    // * desktop selector
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", (e) => {
+        const filterValue = e.target.getAttribute("data-filter");
+
+        const filterText = e.target.textContent;
+        customSelectText.textContent = filterText;
+        customSelectOptions.style.display = "none";
+
+        customSelect.style.borderBottomLeftRadius = "6px";
+        customSelect.style.borderBottomRightRadius = "6px";
+        customSelect.style.borderBottomWidth = "1px";
+
+        customSelectOptions.style.borderTopLeftRadius = "6px";
+        customSelectOptions.style.borderTopRightRadius = "6px";
+        customSelectOptions.style.borderTopWidth = "1px";
+
+        showContentForFilter(filterValue);
+      });
+    });
+
+    function showContentForFilter(filterValue) {
+      contentItems.forEach((item) => {
+        item.classList.remove("active");
+      });
+
+      const selectedContent = document.querySelector(`.content-item[data-filter="${filterValue}"]`);
+      // console.log("selectedContent", selectedContent);
+
+      if (selectedContent) {
+        selectedContent.classList.add("active");
+      }
+    }
+  }
+  // ? end filtering card result
+
+  // * category sliders settings
+  swiperSettings("VacationBenefitsSwiper", 10);
+  swiperSettings("discountClubOwnerSwiper", 11);
+  // ?  category sliders settings
+
+  // * mobile layout card logic
+  const showMoreButtons = document.querySelectorAll(".show-more-button");
+  const hiddenCardSets = document.querySelectorAll(".hidden-cards");
+  showMoreButtons.forEach((button, index) => {
+    button.addEventListener("click", function () {
+      const hiddenCards = hiddenCardSets[index];
+      if (hiddenCards.style.display === "none" || hiddenCards.style.display === "") {
+        hiddenCards.style.display = "flex";
+        hiddenCards.style.flexDirection = "column";
+        button.textContent = "הצג פחות";
+      } else {
+        hiddenCards.style.display = "none";
+        button.textContent = "הטבות נוספות";
+      }
+    });
+  });
+  // ? mobile layout card logic
+}
 
 document.addEventListener("DOMContentLoaded", function () {
   const products = document.querySelectorAll(".product");
@@ -545,22 +832,26 @@ function initCustomPagination(swiperInstance, swiperId) {
   const paginationElement = document.querySelector(
     `.pagination-swiper-location[data-swiperId="${swiperId}"]`
   );
-  const currentElement = paginationElement.querySelector(
-    ".pagination-swiper-current"
-  );
-  const lengthElement = paginationElement.querySelector(
-    ".pagination-swiper-length"
-  );
+  if (!paginationElement) {
+    console.error(`Pagination element not found for swiperId: ${swiperId}`);
+    return;
+  }
+
+  const activeEl = paginationElement.querySelector(".pagination-swiper-current");
+  const lengthElement = paginationElement.querySelector(".pagination-swiper-length");
+
+  if (!activeEl || !lengthElement) {
+    console.error("Required pagination elements are missing.");
+    return;
+  }
 
   let swiperLength = swiperInstance.snapGrid.length;
   lengthElement.textContent = swiperLength;
 
   function updateCustomPagination() {
     let currentSlide =
-      Math.floor(
-        swiperInstance.realIndex / swiperInstance.params.slidesPerGroup
-      ) + 1;
-    currentElement.textContent = currentSlide;
+      Math.floor(swiperInstance.realIndex / swiperInstance.params.slidesPerGroup) + 1;
+    activeEl.textContent = currentSlide;
   }
 
   swiperInstance.on("slideChange", function () {
@@ -569,6 +860,7 @@ function initCustomPagination(swiperInstance, swiperId) {
 
   updateCustomPagination();
 }
+
 // * installations instructions
 //! 1.  html to import that  slider-pagination and send a uniqe swiperId
 // example:  @@include('../features/slider-pagination.html',{ swiperId:2 })
@@ -699,7 +991,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // closing subcategory when clicking outside
   if (categoriesContainer) {
     categoriesContainer.addEventListener("mouseout", (e) => {
-      if (!categoriesContainer.contains(e.relatedTarget)) {
+      if (
+        !categoriesContainer.contains(e.relatedTarget) &&
+        !backgroundSubMenus.contains(e.relatedTarget)
+      ) {
         closeAllSubCategories();
       }
     });
@@ -827,8 +1122,6 @@ const closeSubCategoryOnHoverOut = (categoryElement) => {
 
 document.addEventListener("DOMContentLoaded", function () {
   const vouchers = document.querySelectorAll(".voucher-card");
-  // const cartCountElement = document.getElementById("cart-count");
-  // console.log("cartCountElement", cartCountElement);
 
   vouchers.forEach(function (voucher, index) {
     const voucherCounter = voucher.querySelector(".voucher-card__counter");
@@ -842,12 +1135,9 @@ document.addEventListener("DOMContentLoaded", function () {
     // * fav button
     const favIcon = voucher.querySelector("#favIcon");
     const heartPath = voucher.querySelector("#heartPath");
-    // let isLiked = false;
 
     favIcon.addEventListener("click", function (e) {
       e.preventDefault();
-      // isLiked = !isLiked;
-      // console.log("isLiked", isLiked);
       voucherCardObj[voucherId].liked = !voucherCardObj[voucherId].liked;
       if (voucherCardObj[voucherId].liked) {
         heartPath.setAttribute("stroke", "red");
@@ -895,13 +1185,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const addToCartBtn = voucher.querySelector("#addToCartBtn");
     const addToCartText = voucher.querySelector(".voucher-card__counter--addToCartText");
 
-    // let isAddToCart = false;
-
     addToCartBtn.addEventListener("click", function (e) {
       e.preventDefault();
 
-      // isAddToCart = !isAddToCart;
-      // console.log("isAddToCart", isAddToCart);
       voucherCardObj[voucherId].isAddToCart = !voucherCardObj[voucherId].isAddToCart;
 
       if (voucherCardObj[voucherId].isAddToCart) {

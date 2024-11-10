@@ -1,0 +1,18 @@
+.coupon-page {
+  .coupon-img.mobile {
+    display: none;
+  }
+  .coupon-card {
+  }
+  .coupon.info-card {
+  }
+
+  @media (min-width: 1600px) {
+    .coupon-img {
+    }
+    .coupon-card {
+    }
+    .coupon.info-card {
+    }
+  }
+}

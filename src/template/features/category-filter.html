@@ -1,0 +1,55 @@
+<div class="category-filter">
+  <div class="mobile-selector">
+    <span class="selector-text">סנן לפי:</span>
+    <div class="custom-select-wrapper">
+      <div class="custom-select" id="customSelect">
+        <span class="custom-select-text">תיירות פנים</span>
+        <div class="custom-select-arrow"></div>
+      </div>
+      <ul class="custom-select-options">
+        <li data-value="inner-tourism">תיירות פנים</li>
+        <li data-value="outer-tourism">תיירות חוץ</li>
+        <li data-value="sport-events">אירועי ספורט</li>
+        <li data-value="last-min">הרגע האחרון</li>
+        <li data-value="shows">הופעות</li>
+        <li data-value="camping">קמפינג</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="filter-buttons">
+    <button class="filter-btn" data-filter="inner-tourism">תיירות פנים</button>
+    <button class="filter-btn" data-filter="outer-tourism">תיירות חוץ</button>
+    <button class="filter-btn" data-filter="sport-events">אירועי ספורט</button>
+    <button class="filter-btn" data-filter="last-min">הרגע האחרון</button>
+    <button class="filter-btn" data-filter="shows">הופעות</button>
+    <button class="filter-btn" data-filter="camping">קמפינג</button>
+  </div>
+
+  <div class="content">
+    <div class="content-item active" data-filter="inner-tourism">
+      @@include('../category/vacation-benefits-slider.html',{ "swiperPassedId":"10" })
+      @@include('../category/discount-club-owner-slider.html',{ "swiperPassedId":"11" })
+    </div>
+    <div class="content-item" data-filter="outer-tourism">
+      @@include('../category/discount-club-owner-slider.html',{ "swiperPassedId":"11" })
+      @@include('../category/vacation-benefits-slider.html',{ "swiperPassedId":"10" })
+    </div>
+    <div class="content-item" data-filter="sport-events">
+      @@include('../category/vacation-benefits-slider.html',{ "swiperPassedId":"10" })
+      @@include('../category/discount-club-owner-slider.html',{ "swiperPassedId":"11" })
+    </div>
+    <div class="content-item" data-filter="last-min">
+      @@include('../category/discount-club-owner-slider.html',{ "swiperPassedId":"11" })
+      @@include('../category/vacation-benefits-slider.html',{ "swiperPassedId":"10" })
+    </div>
+    <div class="content-item" data-filter="shows">
+      @@include('../category/vacation-benefits-slider.html',{ "swiperPassedId":"10" })
+      @@include('../category/discount-club-owner-slider.html',{ "swiperPassedId":"11" })
+    </div>
+    <div class="content-item" data-filter="camping">
+      @@include('../category/discount-club-owner-slider.html',{ "swiperPassedId":"11" })
+      @@include('../category/vacation-benefits-slider.html',{ "swiperPassedId":"10" })
+    </div>
+  </div>
+</div>

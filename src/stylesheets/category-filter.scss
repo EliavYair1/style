@@ -1,0 +1,127 @@
+.category-filter {
+  display: flex;
+  padding: 20px 0px;
+  flex-direction: column;
+  .mobile-selector {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    position: relative;
+
+    .selector-text {
+      font-size: 17.143px;
+      font-weight: 600;
+      color: #000000;
+    }
+
+    .custom-select-wrapper {
+      position: relative;
+      width: 237px;
+    }
+
+    .custom-select {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 10px;
+      width: 100%;
+      border-radius: 6px;
+      box-shadow: 0px 2.286px 7.429px rgba(0, 0, 0, 0.16);
+      border: 1px solid #000;
+      cursor: pointer;
+    }
+
+    .custom-select-text {
+      font-size: 17.143px;
+      font-weight: 600;
+      color: #46494f;
+    }
+
+    .custom-select-arrow {
+      width: 10px;
+      height: 10px;
+      border-left: 2px solid #46494f;
+      border-bottom: 2px solid #46494f;
+      transform: rotate(45deg);
+    }
+
+    .custom-select-options {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      border-radius: 6px;
+      box-shadow: 0px 2.286px 7.429px rgba(0, 0, 0, 0.16);
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      z-index: 10;
+      border-top-width: 0;
+      border-bottom-width: 1px;
+      border-right-width: 1px;
+      border-left-width: 1px;
+      border-style: solid;
+      border-color: #000;
+      li {
+        padding: 12px 10px;
+        cursor: pointer;
+        font-size: 17.143px;
+        font-weight: 600;
+        color: #46494f;
+
+        &:hover {
+          background-color: #f0f0f0;
+        }
+      }
+    }
+  }
+
+  .filter-buttons {
+    display: none;
+  }
+  .content-item {
+    display: none;
+  }
+
+  .content-item.active {
+    display: block;
+    padding: 0;
+  }
+
+  @media (min-width: 1600px) {
+    padding: 20px 0px;
+    .mobile-selector {
+      .selector-text {
+        display: none;
+      }
+      .custom-select-wrapper {
+        display: none;
+      }
+    }
+    .filter-buttons {
+      display: flex;
+      gap: 10px;
+      padding-right: 60px;
+      .filter-btn {
+        font-size: 23px;
+        font-style: normal;
+        font-weight: 400;
+        color: #101820;
+        background: #e8e8ff;
+        padding: 4px 16px;
+        max-width: max-content;
+        min-width: 95px;
+        border-radius: 60px;
+        border: none;
+        font-weight: 400;
+      }
+      .filter-btn:focus {
+        background: #2020b3;
+        color: #ffffff;
+        font-weight: 500;
+      }
+    }
+  }
+}

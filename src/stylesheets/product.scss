@@ -174,8 +174,9 @@
     border-radius: 8px;
     height: 100%;
     max-width: 100%;
-    width: 335px;
-    height: 444px;
+    width: auto;
+    // width: 335px;
+    // height: 444px;
     .imgWrap {
       display: flex;
       position: relative;
@@ -328,5 +329,11 @@
     &:hover .product__counter {
       display: flex;
     }
+  }
+}
+.product.sliderCard {
+  @media (min-width: 1600px) {
+    width: 335px;
+    height: 444px;
   }
 }

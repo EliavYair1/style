@@ -1,0 +1,130 @@
+<div class="vacation-benefits-slider">
+  @@include('../features/section-header.html',{ 'placeholder-text':'הטבות תיירות ונופש' })
+  <div #swiperRef="" class="swiper VacationBenefitsSwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        @@include('../features/information-card.html', {"bgimg": "information-card1.jpg", "logoimg":
+        "tickethouse.png", "stampfill": "2020b3","stampText": "הטבת פרימיום", "isCounterShown":
+        "true", "subtext":"","discountText": "הופעות באירופה", "discountSubtext":"שובר בשווי 100 ₪",
+        "isStampShown":"false" ,"validate":"15/10/2024"})
+      </div>
+      <div class="swiper-slide">
+        @@include('../features/information-card.html', { "bgimg": "information-card2.jpg",
+        "logoimg": "eshettour.png", "discountText": "4% הנחה", "discountSubtext":"בשווי 83 ₪",
+        "isStampShown":"false" ,"validate":"15/07/2024"})
+      </div>
+      <div class="swiper-slide">
+        @@include('../features/information-card.html', {"bgimg": "information-card1.jpg", "logoimg":
+        "tickethouse.png", "stampfill": "2020b3","stampText": "הטבת פרימיום", "isCounterShown":
+        "true", "subtext":"","discountText": "הופעות באירופה", "discountSubtext":"שובר בשווי 100 ₪",
+        "isStampShown":"false" ,"validate":"15/10/2024"})
+      </div>
+      <div class="swiper-slide">
+        @@include('../features/information-card.html', { "bgimg": "information-card2.jpg",
+        "logoimg": "eshettour.png", "stampfill": "2020b3", "stampText": "הטבת פרימיום",
+        "isCounterShown": "false", "discountText": "4% הנחה", "discountSubtext":"בשווי 83 ₪",
+        "isStampShown":"false" ,"validate":"15/07/2024"})
+      </div>
+      <div class="swiper-slide">
+        @@include('../features/information-card.html', {"bgimg": "information-card1.jpg", "logoimg":
+        "tickethouse.png", "stampfill": "2020b3","stampText": "הטבת פרימיום", "isCounterShown":
+        "true", "subtext":"","discountText": "הופעות באירופה", "discountSubtext":"שובר בשווי 100 ₪",
+        "isStampShown":"false" ,"validate":"15/10/2024"})
+      </div>
+      <div class="swiper-slide">
+        @@include('../features/information-card.html', {"bgimg": "information-card2.jpg", "logoimg":
+        "eshettour.png", "stampfill": "2020b3", "stampText": "הטבת פרימיום", "isCounterShown":
+        "true", "subtext": "", "discountText": "4% הנחה", "discountSubtext": "שובר בשווי 100 ₪",
+        "isStampShown":"false" ,"validate":"07/04/2024"})
+      </div>
+      <div class="swiper-slide">
+        @@include('../features/information-card.html', {"bgimg": "information-card1.jpg", "logoimg":
+        "tickethouse.png", "stampfill": "2020b3","stampText": "הטבת פרימיום", "isCounterShown":
+        "true", "subtext":"","discountText": "הופעות באירופה", "discountSubtext":"שובר בשווי 100 ₪",
+        "isStampShown":"false" ,"validate":"15/10/2024"})
+      </div>
+      <div class="swiper-slide">
+        @@include('../features/information-card.html', { 'bgimg': 'information-card2.jpg',
+        'logoimg': 'eshettour.png', 'stampfill': '000000', 'stampText': '5% הנחה בחיוב',
+        'isCounterShown': 'false', 'subtext': '', 'discountText': '4% הנחה', 'discountSubtext':
+        'שובר בשווי 200 ₪' ,'isStampShown':'false',"validate":"04/06/2024"})
+      </div>
+      <div class="swiper-slide">
+        @@include('../features/information-card.html', {"bgimg": "information-card1.jpg", "logoimg":
+        "tickethouse.png", "stampfill": "2020b3","stampText": "הטבת פרימיום", "isCounterShown":
+        "true", "subtext":"","discountText": "הופעות באירופה", "discountSubtext":"שובר בשווי 100 ₪",
+        "isStampShown":"false" ,"validate":"15/10/2024"})
+      </div>
+      <div class="swiper-slide">
+        @@include('../features/information-card.html', { "bgimg": "information-card2.jpg","logoimg":
+        "eshettour.png","stampfill":"2020b3","stampText": "הטבת פרימיום","isCounterShown": "false",
+        "subtext":"שובר למאפה נאמן","discountText": "4% הנחה","discountSubtext":"בשווי 100 ₪",
+        "isStampShown":"false" ,"validate":"04/04/2024"})
+      </div>
+    </div>
+
+    <div class="static-slide">
+      <a href="#" class="link">
+        <h2 class="title">
+          להטבות
+          <br />
+          נוספות
+          <br />
+          בקטגוריה
+        </h2>
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 35" fill="none">
+          <rect x="1" y="1" width="34" height="33" rx="16.5" stroke="white" stroke-width="2" />
+          <path
+            d="M25.0827 18.01H10.916M10.916 18.01L17.9993 24.885M10.916 18.01L17.9993 11.135"
+            stroke="white"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </a>
+    </div>
+    <div class="pagination-wrapper">
+      <div class="swiper-pagination"></div>
+      @@include('../features/slider-pagination.html',{ swiperId:@@swiperPassedId })
+    </div>
+  </div>
+
+  <div class="mobile-layout">
+    <div class="cards-container">
+      <div class="card-wrap">
+        @@include('../features/information-card.html', { "bgimg": "information-card1.jpg",
+        "logoimg": "tickethouse.png", "isCounterShown": "true", "subtext": "", "discountText":
+        "הופעות באירופה", "discountSubtext": "שובר בשווי 100 ₪", "isStampShown": "false",
+        "validate": "15/10/2024" })
+      </div>
+      <div class="card-wrap">
+        @@include('../features/information-card.html', { "bgimg": "information-card2.jpg",
+        "logoimg": "eshettour.png", "isCounterShown": "true", "discountText": "הופעות באירופה",
+        "discountSubtext": "שובר בשווי 100 ₪", "isStampShown": "false", "validate": "15/10/2024" })
+      </div>
+      <div class="card-wrap">
+        @@include('../features/information-card.html', { "bgimg": "information-card1.jpg",
+        "logoimg": "tickethouse.png", "isCounterShown": "true", "subtext": "", "discountText":
+        "הופעות באירופה", "discountSubtext": "שובר בשווי 100 ₪", "isStampShown": "false",
+        "validate": "15/10/2024" })
+      </div>
+
+      <div class="hidden-cards">
+        <div class="card-wrap">
+          @@include('../features/information-card.html', { "bgimg": "information-card2.jpg",
+          "logoimg": "eshettour.png", "isCounterShown": "true", "subtext": "", "discountText":
+          "הופעות באירופה", "discountSubtext": "שובר בשווי 100 ₪", "isStampShown": "false",
+          "validate": "15/10/2024" })
+        </div>
+        <div class="card-wrap">
+          @@include('../features/information-card.html', { "bgimg": "information-card1.jpg",
+          "logoimg": "tickethouse.png", "isCounterShown": "true", "subtext": "", "discountText":
+          "הופעות באירופה", "discountSubtext": "שובר בשווי 100 ₪", "isStampShown": "false",
+          "validate": "15/10/2024" })
+        </div>
+      </div>
+    </div>
+    <button class="show-more-button">הטבות נוספות</button>
+  </div>
+</div>

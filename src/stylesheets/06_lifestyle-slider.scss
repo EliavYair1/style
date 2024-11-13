@@ -126,8 +126,102 @@
     }
   }
 
+  @media (min-width: 1200px) {
+    padding: 18px 0px 18px 0px;
+    height: unset;
+    // margin-bottom: 47px;
+    .swiper {
+      width: 100%;
+      //   height: 100%;
+      // max-width: 1445px;
+      padding: 50px 0;
+    }
+    .pagination-wrapper {
+      display: flex;
+      .swiper-pagination {
+        display: none;
+        .swiper-pagination-bullet-active {
+          background: #000;
+        }
+      }
+      .pagination-swiper-location {
+        display: none;
+        position: absolute;
+        z-index: 2;
+        left: calc(50% - 122px);
+        bottom: 6px;
+        align-items: center;
+        gap: 2px;
+        .pagination-swiper-current {
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          color: #000;
+        }
+        .pagination-swiper-of {
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          color: rgba(0, 0, 0, 0.2);
+        }
+        .pagination-swiper-length {
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          color: rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+    .swiper-wrapper {
+      justify-content: center;
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        // background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 359px;
+        .text-wrapper {
+          //   left: 196px;
+          //   transform: translate(-50%, -50%);
+          bottom: 26px;
+          // width: 365px;
+          padding: 0 12px;
+          border-radius: 4px 0px 0px 4px;
+          .slide-text {
+            font-size: 25px;
+          }
+          .slide-subtext {
+            font-size: 27.538px;
+          }
+          .slide-link {
+            font-size: 41.622px;
+          }
+        }
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 358px;
+        // height: 100%;
+        object-fit: cover;
+        // height: 328px;
+        border-radius: 12px;
+        max-width: unset;
+        height: 292px;
+
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+        &:hover {
+          transform: perspective(1000px) rotateY(5deg) rotateX(5deg);
+          box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
+  }
   @media (min-width: 1600px) {
-    padding: 68px 0px 18px 0px;
+    padding: 18px 0px 18px 0px;
     height: unset;
     // margin-bottom: 47px;
     .swiper {

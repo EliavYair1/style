@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // ? add to cart button
-    if (window.innerWidth > 1600) {
+    if (window.innerWidth > 1200) {
       console.log("addToCartBtn", addToCartBtn);
       console.log("addToCartText", addToCartText);
 

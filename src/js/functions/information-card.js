@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // ? add to cart button
 
     // *   show hide  elements
-    if (window.innerWidth > 1600) {
+    if (window.innerWidth > 1200) {
       infoCard.addEventListener("mouseover", function () {
         infoCardCounter.style.display = "flex";
       });

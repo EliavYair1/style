@@ -472,7 +472,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // ? add to cart button
 
     // *   show hide  elements
-    if (window.innerWidth > 1600) {
+    if (window.innerWidth > 1200) {
       infoCard.addEventListener("mouseover", function () {
         infoCardCounter.style.display = "flex";
       });
@@ -722,7 +722,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // ? add to cart button
-    if (window.innerWidth > 1600) {
+    if (window.innerWidth > 1200) {
       console.log("addToCartBtn", addToCartBtn);
       console.log("addToCartText", addToCartText);
 
@@ -936,7 +936,7 @@ const categoriesContainer = document.querySelector(".header__menu--categories");
 
 document.addEventListener("DOMContentLoaded", () => {
   const applyHoverOnCategories = () => {
-    if (window.innerWidth > 1600) {
+    if (window.innerWidth > 1200) {
       categoryItems.forEach((category) => {
         category.querySelector("a").addEventListener("mouseenter", (e) => {
           // clearTimeout(closeTimeout);
@@ -964,7 +964,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // category.addEventListener("click", toggleSubCategory);
         category.addEventListener("click", (e) => {
           e.stopPropagation();
-          if (window.innerWidth >= 1600) {
+          if (window.innerWidth >= 1200) {
             toggleSubCategory(e);
           }
         });
@@ -974,7 +974,7 @@ document.addEventListener("DOMContentLoaded", () => {
         aLink.addEventListener("click", function (event) {
           const arrow = this.querySelector(".header__menu-arrow");
 
-          if (window.innerWidth < 1600) {
+          if (window.innerWidth < 1200) {
             event.preventDefault();
             const siblings = this.nextElementSibling;
             if (this.classList.contains("activeToggle")) {
@@ -1020,7 +1020,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // function to toggle subcategory on click/hover
 const toggleSubCategory = (e) => {
-  const isDesktop = window.innerWidth >= 1600;
+  const isDesktop = window.innerWidth >= 1200;
   const elementTarget = e.currentTarget.closest(".header__menu-item--category");
   const dataId = elementTarget.getAttribute("data-id");
   const subCategoriesWrapper = document.querySelector(
@@ -1121,7 +1121,7 @@ function loadProductContent(content) {
 
 // clos0ing subcategory on hover out (for desktop only)
 const closeSubCategoryOnHoverOut = (categoryElement) => {
-  if (window.innerWidth <= 1600) return;
+  if (window.innerWidth <= 1200) return;
   const dataId = categoryElement.getAttribute("data-id");
   const subCategoriesWrapper = document.querySelector(
     `.header__menu-subcategories[data-subcatId="${dataId}"]`

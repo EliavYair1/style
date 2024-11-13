@@ -185,7 +185,7 @@
     }
   }
 
-  @media (min-width: 1600px) {
+  @media (min-width: 1200px) {
     .static-slide {
       width: 122px;
       background-size: cover;
@@ -264,6 +264,7 @@
           display: flex;
           justify-content: center;
           align-items: center;
+          min-width: 327px;
         }
       }
     }

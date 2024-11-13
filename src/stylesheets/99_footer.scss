@@ -116,9 +116,8 @@
 
   @media (min-width: 992px) {
   }
+
   @media (min-width: 1200px) {
-  }
-  @media (min-width: 1600px) {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -139,6 +138,11 @@
       .text-logo {
         width: 70px;
         height: auto;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        &:hover {
+          transform: scale(1.2);
+        }
       }
 
       .corprate-text {
@@ -163,7 +167,13 @@
       order: 1;
       justify-content: space-around;
       .link {
+        transition: all 0.2s ease-in-out;
         font-size: 22px;
+        &:hover {
+          text-decoration: none;
+          text-shadow: 0 0 8px rgba(255, 255, 255, 0.5), 0 0 15px rgba(200, 200, 200, 0.4),
+            0 0 30px rgba(200, 200, 200, 0.6), 0 0 40px rgba(255, 255, 255, 0.8);
+        }
       }
     }
     &_row.third {
@@ -183,6 +193,20 @@
         svg {
           width: 31px;
           height: auto;
+          transition: all 0.3s ease-in-out;
+
+          &:hover {
+            transform: scale(1.2) rotate(360deg);
+            rect {
+              fill: #1877f2;
+            }
+            path {
+              fill: white;
+            }
+          }
+          &:active {
+            transform: scale(1);
+          }
         }
       }
       .footer-contact.white {
@@ -190,6 +214,9 @@
         font-weight: 600;
         text-decoration: none;
         cursor: pointer;
+        &:hover {
+          color: #3f3fea;
+        }
       }
       .footer-contact.first {
       }
@@ -206,6 +233,10 @@
         font-size: 18px;
         text-decoration: none;
         cursor: pointer;
+        &:hover {
+          text-shadow: 0 0 8px rgba(255, 255, 255, 0.5), 0 0 15px rgba(200, 200, 200, 0.4),
+            0 0 30px rgba(200, 200, 200, 0.6), 0 0 40px rgba(255, 255, 255, 0.8);
+        }
       }
       .footer-contact-third {
         display: flex;
@@ -220,4 +251,6 @@
       }
     }
   }
+  // @media (min-width: 1600px) {
+  // }
 }

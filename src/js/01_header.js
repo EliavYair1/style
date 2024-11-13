@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   categoryButton.addEventListener("click", toggleCorporateMenu);
   menuButton.addEventListener("click", toggleCategories);
 });
+const productImgContainer = document.querySelector(".product-image-container");
 const cartCountElement = document.getElementById("cart-count");
 const productCardObj = {};
 const voucherCardObj = {};
@@ -104,6 +105,7 @@ const toggleCategories = () => {
     menuArrow.classList.add("rotate");
     menuArrowPath.setAttribute("stroke", "white");
   }
+  productImgContainer.style.display = "none";
 };
 // ? toggleCategories
 
@@ -122,6 +124,7 @@ const toggleCorporateMenu = () => {
     categoryArrowPath.setAttribute("stroke", "black");
   } else {
     closeAllMenus();
+
     corporateMenu.classList.add("show");
     categoryButton.classList.add("active-button");
     categoryButton.classList.add("header--open-menu");

@@ -240,9 +240,62 @@
         right: -7px;
         top: 11px;
       }
+      &-icon {
+        &:hover {
+          animation: giggle 0.4s ease forwards;
+        }
+      }
+      @keyframes giggle {
+        0% {
+          transform: rotate(0deg);
+        }
+        25% {
+          transform: rotate(-5deg);
+        }
+        50% {
+          transform: rotate(5deg);
+        }
+        75% {
+          transform: rotate(-5deg);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+      }
     }
     .header__profile {
       flex-direction: column;
+      // &-icon {
+      //   transition: transform 0.4s ease;
+
+      //   &:hover {
+      //     animation: bounce 0.4s ease forwards;
+      //   }
+      // }
+      &:hover .header__profile-icon {
+        animation: bounce 0.4s ease forwards;
+      }
+
+      .header__profile-icon {
+        transition: transform 0.4s ease;
+      }
+      @keyframes bounce {
+        0% {
+          transform: translateY(0);
+        }
+        25% {
+          transform: translateY(5px);
+        }
+        50% {
+          transform: translateY(10px);
+        }
+        75% {
+          transform: translateY(5px);
+        }
+        100% {
+          transform: translateY(0);
+        }
+      }
     }
     .header__hamburger {
     }
@@ -277,6 +330,10 @@
       }
       &-cards {
         display: flex;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          transform: scale(1.05) rotate(2deg);
+        }
       }
       &-text {
         font-size: 30px;

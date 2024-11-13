@@ -18,7 +18,17 @@
         />
       </svg>
     </a>
-    <img src="../../img/product-card/iphone-product.png" alt="iphone" class="imgWrap-img" />
+    <a href="">
+      <picture>
+        <source srcset="../../img/product-card/@@mobileProductImg" media="(max-width: 1199px)" />
+        <img
+          src="../../img/product-card/@@productImg"
+          alt="iphone"
+          class="imgWrap-img"
+          loading="lazy"
+        />
+      </picture>
+    </a>
   </div>
 
   <div class="description">
@@ -33,10 +43,35 @@
 
   <div class="product__counter">
     <div class="product__counter--counterWrap">
-      <button class="product__counter--counterWrap--minBtn">-</button>
+      <button class="product__counter--counterWrap--minBtn">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0.501953" y="0.5" width="23" height="23" rx="11.5" fill="white" />
+          <rect x="0.501953" y="0.5" width="23" height="23" rx="11.5" stroke="#DDDDDD" />
+          <path
+            d="M7.00195 12H17.002"
+            stroke="black"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+
       <span class="product__counter--counterWrap--indicatorText">יח׳</span>
       <span class="product__counter--counterWrap--countDigit">1</span>
-      <button class="product__counter--counterWrap--maxBtn">+</button>
+      <button class="product__counter--counterWrap--maxBtn">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0.501953" y="0.5" width="23" height="23" rx="11.5" fill="white" />
+          <rect x="0.501953" y="0.5" width="23" height="23" rx="11.5" stroke="#DDDDDD" />
+          <path
+            d="M12.002 7V17M7.00195 12H17.002"
+            stroke="black"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
     </div>
     <button class="product__counter--addToCartBtn" id="addToCartBtn">
       <span class="product__counter--addToCartText">הוספה</span>

@@ -126,6 +126,93 @@
     }
   }
 
+  @media (min-width: 1200px) {
+    padding: 0px 0px 47px 0px;
+    height: 533px;
+    // margin-bottom: 47px;
+    .swiper {
+      width: 100%;
+      //   height: 100%;
+      max-width: 1445px;
+      height: 510px;
+    }
+    .pagination-wrapper {
+      display: flex;
+      .swiper-pagination {
+        // left: calc(50% - 557px);
+        z-index: 0;
+        bottom: -11px;
+        width: 182px;
+        .swiper-pagination-bullet-active {
+          background: #000;
+        }
+        // background: #fff;
+        z-index: 0;
+      }
+      .pagination-swiper-location {
+        display: flex;
+        position: absolute;
+        z-index: 2;
+        left: calc(50% - 82px);
+        bottom: 18px;
+        align-items: center;
+        gap: 2px;
+        z-index: 1;
+        .pagination-swiper-current {
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          color: #000;
+        }
+        .pagination-swiper-of {
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          color: rgba(0, 0, 0, 0.2);
+        }
+        .pagination-swiper-length {
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          color: rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+    .swiper-wrapper {
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        // background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .text-wrapper {
+          left: calc(50% - 465px);
+          transform: translate(-50%, -50%);
+          bottom: 123px;
+          .slide-text {
+            font-size: 50px;
+          }
+          .slide-subtext {
+            font-size: 17.538px;
+          }
+          .slide-link {
+            font-size: 31.622px;
+          }
+        }
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        // height: 100%;
+        object-fit: cover;
+        height: 328px;
+        border-radius: 12px;
+        max-width: 1200px;
+      }
+    }
+  }
   @media (min-width: 1600px) {
     padding: 0px 0px 47px 0px;
     height: 533px;

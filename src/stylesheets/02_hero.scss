@@ -134,6 +134,32 @@
         }
       }
     }
+
+    .swiper-text-wrapper.second {
+      top: 270px;
+      .title {
+        font-size: 30px;
+        font-weight: 600;
+        color: #101820;
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+
+      .subtext {
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        display: inline;
+        gap: 5px;
+        width: 280px;
+        // flex-direction: column;
+        span {
+          font-weight: 500;
+          font-size: 20px;
+          margin-right: 5px;
+        }
+      }
+    }
   }
   @media (min-width: 1600px) {
     height: 822px;
@@ -228,6 +254,8 @@
         .slider-bg-svg.first {
         }
         .slider-bg-svg.second {
+          top: 350px;
+          max-width: 440px;
         }
         .swiper-text-wrapper {
           position: absolute;
@@ -263,18 +291,7 @@
               color: #101820;
             }
           }
-          .subtext.second {
-            font-size: 49.98px;
-            font-style: normal;
-            font-weight: 400;
-            display: flex;
-            gap: 5px;
-            flex-direction: row;
-            span {
-              font-weight: 500;
-              font-size: 49.98px;
-            }
-          }
+
           .link {
             display: flex;
             width: 295px;
@@ -299,6 +316,31 @@
             line-height: 12px;
             color: #101820;
             margin: 0;
+          }
+        }
+        .swiper-text-wrapper.second {
+          top: 470px;
+          .title {
+            font-size: 60px;
+            font-weight: 600;
+            color: #101820;
+            margin-bottom: 0;
+            margin-top: 0;
+          }
+
+          .subtext {
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 400;
+            display: flex;
+            gap: 5px;
+            flex-direction: row;
+            width: unset;
+            span {
+              font-weight: 500;
+              font-size: 40px;
+              margin-right: 0;
+            }
           }
         }
       }

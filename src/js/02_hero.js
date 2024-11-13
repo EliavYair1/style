@@ -1,4 +1,8 @@
 var heroswiper = new Swiper(".heroSlider", {
+  // autoplay: {
+  //   delay: 5000,
+  //   disableOnInteraction: false,
+  // },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -16,10 +20,5 @@ var heroswiper = new Swiper(".heroSlider", {
       spaceBetween: 20,
     },
   },
-  // on: {
-  //   slideChange: function () {
-  //     initCustomPagination(heroSlider, 2);
-  //   },
-  // },
 });
 initCustomPagination(heroswiper, 1);

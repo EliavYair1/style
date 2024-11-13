@@ -1,6 +1,13 @@
 .coupon-page {
-  .coupon-img.mobile {
-    display: none;
+  .coupon-img-wrapper {
+    .img {
+    }
+    .img-text {
+      .icon {
+      }
+      span {
+      }
+    }
   }
   .coupon-card {
   }
@@ -8,6 +15,9 @@
   }
 
   @media (min-width: 1600px) {
+    .coupon-img-wrapper {
+      display: none;
+    }
     .coupon-img {
     }
     .coupon-card {

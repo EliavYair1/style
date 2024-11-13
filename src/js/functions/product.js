@@ -82,8 +82,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
       updateCartCount(productCardObj, voucherCardObj);
     });
+
     // ? add to cart button
     if (window.innerWidth > 1600) {
+      console.log("addToCartBtn", addToCartBtn);
+      console.log("addToCartText", addToCartText);
+
+      product.addEventListener("mouseenter", function (e) {
+        const parentOffset = addToCartBtn.getBoundingClientRect(),
+          relX = e.pageX - parentOffset.left,
+          relY = e.pageY - parentOffset.top;
+        addToCartText.style.top = relY + "px";
+        addToCartText.style.left = relX + "px";
+      });
       product.addEventListener("mouseover", function () {
         productCounter.style.display = "flex";
       });

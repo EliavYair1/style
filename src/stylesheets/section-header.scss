@@ -16,7 +16,7 @@
     font-style: normal;
     font-weight: 500;
   }
-  @media (min-width: 1600px) {
+  @media (min-width: 1200px) {
     display: flex;
     width: 100%;
     justify-content: flex-start;
@@ -29,12 +29,43 @@
     &__icon {
       width: 42px;
       height: 32px;
+      transition: transform 0.3s ease-in-out;
     }
+
     &__text {
       color: #0b0427;
       font-size: 54px;
       font-style: normal;
       font-weight: 500;
+
+      transition: transform 0.3s ease;
+    }
+
+    @keyframes floatRotate {
+      0% {
+        transform: translateY(0) rotate(0);
+      }
+      50% {
+        transform: translateY(-5px) rotate(10deg);
+      }
+      100% {
+        transform: translateY(0) rotate(0);
+      }
+    }
+    @keyframes bounce {
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+      30% {
+        transform: translateY(-10px);
+      }
+      50% {
+        transform: translateY(5px);
+      }
+      70% {
+        transform: translateY(-5px);
+      }
     }
   }
 }

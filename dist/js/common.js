@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   categoryButton.addEventListener("click", toggleCorporateMenu);
   menuButton.addEventListener("click", toggleCategories);
 });
+const productImgContainer = document.querySelector(".product-image-container");
 const cartCountElement = document.getElementById("cart-count");
 const productCardObj = {};
 const voucherCardObj = {};
@@ -104,6 +105,7 @@ const toggleCategories = () => {
     menuArrow.classList.add("rotate");
     menuArrowPath.setAttribute("stroke", "white");
   }
+  productImgContainer.style.display = "none";
 };
 // ? toggleCategories
 
@@ -122,6 +124,7 @@ const toggleCorporateMenu = () => {
     categoryArrowPath.setAttribute("stroke", "black");
   } else {
     closeAllMenus();
+
     corporateMenu.classList.add("show");
     categoryButton.classList.add("active-button");
     categoryButton.classList.add("header--open-menu");
@@ -179,6 +182,10 @@ const isLoggedIn = keys.some((key) => key.toLowerCase() === "loggedin");
 updateHeader(isLoggedIn ? connectedUser : newUser);
 
 var heroswiper = new Swiper(".heroSlider", {
+  // autoplay: {
+  //   delay: 5000,
+  //   disableOnInteraction: false,
+  // },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -196,11 +203,6 @@ var heroswiper = new Swiper(".heroSlider", {
       spaceBetween: 20,
     },
   },
-  // on: {
-  //   slideChange: function () {
-  //     initCustomPagination(heroSlider, 2);
-  //   },
-  // },
 });
 initCustomPagination(heroswiper, 1);
 
@@ -236,6 +238,10 @@ var mobileSwiper = new Swiper(".mobileSwiper", {
 initCustomPagination(mobileSwiper, 3);
 
 var showcaseSwiper = new Swiper(".showcaseSwiper", {
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
   spaceBetween: 30,
   pagination: {
     el: ".swiper-pagination",
@@ -714,8 +720,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
       updateCartCount(productCardObj, voucherCardObj);
     });
+
     // ? add to cart button
     if (window.innerWidth > 1600) {
+      console.log("addToCartBtn", addToCartBtn);
+      console.log("addToCartText", addToCartText);
+
+      product.addEventListener("mouseenter", function (e) {
+        const parentOffset = addToCartBtn.getBoundingClientRect(),
+          relX = e.pageX - parentOffset.left,
+          relY = e.pageY - parentOffset.top;
+        addToCartText.style.top = relY + "px";
+        addToCartText.style.left = relX + "px";
+      });
       product.addEventListener("mouseover", function () {
         productCounter.style.display = "flex";
       });

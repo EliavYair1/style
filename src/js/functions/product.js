@@ -85,8 +85,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // ? add to cart button
     if (window.innerWidth > 1200) {
-      console.log("addToCartBtn", addToCartBtn);
-      console.log("addToCartText", addToCartText);
+      // console.log("addToCartBtn", addToCartBtn);
+      // console.log("addToCartText", addToCartText);
 
       product.addEventListener("mouseenter", function (e) {
         const parentOffset = addToCartBtn.getBoundingClientRect(),

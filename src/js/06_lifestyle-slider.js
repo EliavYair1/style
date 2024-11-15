@@ -8,7 +8,13 @@ var lifestyleSwiper = new Swiper(".lifestyleSwiper", {
     clickable: true,
   },
   breakpoints: {
-    1600: {
+    0: {
+      slidesPerView: 1,
+      centeredSlides: true,
+      spaceBetween: 12,
+      initialSlide: 1,
+    },
+    1200: {
       slidesPerView: 3,
       pagination: false,
       allowSlideNext: false,
@@ -16,16 +22,13 @@ var lifestyleSwiper = new Swiper(".lifestyleSwiper", {
       centeredSlides: false,
       spaceBetween: 30,
     },
-    // 450: {
-    //   slidesPerView: 1.25,
-    //   spaceBetween: 12,
-    // },
-
-    0: {
-      slidesPerView: 1,
-      centeredSlides: true,
-      spaceBetween: 12,
-      initialSlide: 1,
+    1600: {
+      slidesPerView: 3,
+      pagination: false,
+      allowSlideNext: false,
+      allowSlidePrev: false,
+      centeredSlides: false,
+      spaceBetween: 30,
     },
   },
   // loop: true,

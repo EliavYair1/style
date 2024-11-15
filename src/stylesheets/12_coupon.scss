@@ -1,26 +1,445 @@
 .coupon-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   .coupon-img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    border-radius: 20px 20px 0 0;
+    border: 2px solid #fff;
+    box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.08);
+    width: 335px;
+
     .img {
+      width: 335px;
+      height: auto;
+      border-radius: 20px 20px 0 0;
     }
     .img-text {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      position: absolute;
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 600;
+      gap: 10px;
+      color: #fff;
+      margin: 0 auto 24px;
+
       .icon {
+        width: 26.966px;
+        height: auto;
       }
       span {
       }
     }
   }
   .coupon-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0px 0px 20px 20px;
+    border: 2px solid #fff;
+    background: #fff;
+    box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.08);
+    width: 335px;
+    padding: 0 24px 28px;
+    .logo {
+      width: 277px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    .price-wrapper {
+      display: flex;
+      justify-content: center;
+      border-radius: 6px;
+      border: 1px solid #fff;
+      background: radial-gradient(173.35% 566.74% at 86.58% 221.84%, #fff 0%, #e8e8ff 100%);
+      box-shadow: 0px 4px 12px 0px rgba(65, 56, 242, 0.08);
+      max-width: 287px;
+      .Benefit-value-box {
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .title {
+          margin: 0 auto 4px;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          color: #46494f;
+        }
+        .text {
+          margin-bottom: 4px;
+          color: #46494f;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 600;
+        }
+      }
+      .discount-price-box {
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .title {
+          margin: 0 auto 4px;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          color: #46494f;
+        }
+
+        .text {
+          margin-bottom: 4px;
+          color: #46494f;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 600;
+        }
+        .subtext {
+          color: #46494f;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+        }
+      }
+      .club-price-box {
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .title {
+          margin: 0 auto 4px;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          color: #46494f;
+        }
+        .text {
+          margin-bottom: 4px;
+          color: #2020b3;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+        }
+        .subtext {
+          color: #2020b3;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+        }
+      }
+    }
+
+    //  * progress bar
+    .progress-container {
+      width: 100%;
+      max-width: 300px;
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 10px;
+
+      .range-labels {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        font-size: 16px;
+        font-weight: 700;
+        color: #46494f;
+        margin-bottom: 5px;
+      }
+
+      .price-range-slider {
+        width: 100%;
+        height: 8px;
+        background: #d1d4fe;
+        border-radius: 5px;
+        outline: none;
+        -webkit-appearance: none;
+        appearance: none;
+        cursor: pointer;
+
+        &::-webkit-slider-thumb {
+          -webkit-appearance: none;
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background: #2020b3;
+        }
+
+        &::-moz-range-thumb {
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          background: #2020b3;
+        }
+      }
+    }
+
+    // * coupon counter
+
+    .quantity-selector {
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .label {
+        color: #46494f;
+        margin-left: 15px;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+      }
+      .counter-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 6px;
+        border: 1px solid #46494f;
+        background: #fff;
+        box-shadow: 0px 2.286px 7.429px 0px rgba(0, 0, 0, 0.16);
+        x .button {
+          background-color: #f0f0f0;
+          border: 1px solid #ccc;
+          padding: 5px 10px;
+          cursor: pointer;
+          font-size: 16px;
+          transition: background-color 0.3s ease;
+
+          &:hover {
+            background-color: #ddd;
+          }
+
+          &.minus {
+            background-color: #ffffff;
+            border-radius: 6px;
+            border: unset;
+            &:hover {
+              background-color: #ff9999;
+            }
+          }
+
+          &.plus {
+            background-color: #ffffff;
+            border-radius: 6px;
+            border: unset;
+            &:hover {
+              background-color: #99ccff;
+            }
+          }
+        }
+
+        .quantity {
+          font-size: 20px;
+          font-weight: bold;
+          margin: 0 10px;
+        }
+      }
+    }
+
+    // * addtocardBtn
+    .addtocardBtn-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 12px 16px;
+      gap: 6px;
+      border-radius: 6px;
+      border: 1px solid #46494f;
+      background: #fff;
+      box-shadow: 0px 2.286px 7.429px 0px rgba(0, 0, 0, 0.16);
+      flex-direction: row-reverse;
+      margin-bottom: 10px;
+      width: 100%;
+      text-decoration: none;
+      cursor: pointer;
+
+      .text {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        color: #46494f;
+      }
+      .addtocardBtn-logo {
+        width: 16px;
+        height: auto;
+        svg {
+        }
+      }
+    }
+    // * quick purchase
+    .quick-purchase-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 6px;
+      background: #2020b3;
+      box-shadow: 0px 2.286px 7.429px 0px rgba(0, 0, 0, 0.16);
+      padding: 12px 16px;
+      gap: 3px;
+      width: 100%;
+      margin-bottom: 30px;
+      text-decoration: none;
+      cursor: pointer;
+      &:hover {
+        background: #ffffff;
+        .text {
+          color: #2020b3;
+        }
+        .arrow {
+          svg {
+            path {
+              stroke: #2020b3;
+            }
+          }
+        }
+      }
+      .text {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        color: #ffffff;
+      }
+      .arrow {
+        svg {
+          path {
+          }
+        }
+      }
+    }
+    // * expiration date
+    .expiration-date-wrap {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 10px;
+      width: 100%;
+      gap: 5px;
+      .expiration-date {
+        color: #46494f;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+      }
+      .expiration-date-sidetext {
+        color: #46494f;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+      }
+    }
+    // * clubPrice declaimer
+    .clubPrice-declaimer-wrapper {
+      display: flex;
+      line-height: 22px;
+      margin-bottom: 10px;
+      .declaimer-text {
+        color: #46494f;
+        font-weight: 400;
+        font-size: 15px;
+        margin: 0;
+        .declaimer-bold {
+          color: #46494f;
+          font-weight: 700;
+          font-size: 15px;
+          margin: 0;
+        }
+      }
+    }
+    // * discountPrice declaimer
+    .discountPrice-declaimer-wrapper {
+      line-height: 22px;
+      .declaimer-text {
+        color: #46494f;
+        font-weight: 400;
+        font-size: 15px;
+        margin: 0;
+        .declaimer-bold {
+          color: #46494f;
+          font-weight: 700;
+          font-size: 15px;
+        }
+      }
+    }
   }
   .coupon.info-card {
   }
 
-  @media (min-width: 1600px) {
+  @media (min-width: 1200px) {
     .coupon-img-wrapper {
-      display: none;
     }
     .coupon-img {
     }
     .coupon-card {
+      .logo {
+      }
+      .price-wrapper {
+        .Benefit-value-box {
+          .title {
+          }
+          .text {
+          }
+        }
+        .discount-price-box {
+          .title {
+          }
+          .text {
+          }
+          .subtext {
+          }
+        }
+        .club-price-box {
+          .title {
+          }
+          .text {
+          }
+          .subtext {
+          }
+        }
+      }
+    }
+    .coupon.info-card {
+    }
+  }
+  @media (min-width: 1600px) {
+    .coupon-img-wrapper {
+    }
+    .coupon-img {
+    }
+    .coupon-card {
+      .logo {
+      }
+      .price-wrapper {
+        .Benefit-value-box {
+          .title {
+          }
+          .text {
+          }
+        }
+        .discount-price-box {
+          .title {
+          }
+          .text {
+          }
+          .subtext {
+          }
+        }
+        .club-price-box {
+          .title {
+          }
+          .text {
+          }
+          .subtext {
+          }
+        }
+      }
     }
     .coupon.info-card {
     }

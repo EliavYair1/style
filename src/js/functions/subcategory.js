@@ -7,10 +7,15 @@ const dynamicImageWindow = document.querySelector(".image-window");
 const productContainer = document.querySelector(".product");
 const backgroundSubMenus = document.querySelector(".product-image-container");
 const categoriesContainer = document.querySelector(".header__menu--categories");
+const isBiggerThenLaptop = window.innerWidth >= 1200;
+const isDesktop = window.innerWidth >= 1600;
 
 document.addEventListener("DOMContentLoaded", () => {
   const applyHoverOnCategories = () => {
-    if (window.innerWidth > 1200) {
+    const screenWidth = window.innerWidth;
+    // const isBiggerThenLaptop = screenWidth >= 1200 && screenWidth < 1600;
+    const isDesktop = screenWidth >= 1600;
+    if (isDesktop) {
       categoryItems.forEach((category) => {
         category.querySelector("a").addEventListener("mouseenter", (e) => {
           // clearTimeout(closeTimeout);
@@ -94,7 +99,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // function to toggle subcategory on click/hover
 const toggleSubCategory = (e) => {
-  const isDesktop = window.innerWidth >= 1200;
   const elementTarget = e.currentTarget.closest(".header__menu-item--category");
   const dataId = elementTarget.getAttribute("data-id");
   const subCategoriesWrapper = document.querySelector(
@@ -104,14 +108,14 @@ const toggleSubCategory = (e) => {
   const isCurrentlyOpen =
     subCategoriesWrapper.style.maxHeight !== "0px" && subCategoriesWrapper.style.maxHeight !== "";
 
-  if (isDesktop) {
+  if (isBiggerThenLaptop) {
     closeAllSubCategories();
   }
 
   if (!isCurrentlyOpen) {
-    if (isDesktop) {
+    if (isBiggerThenLaptop) {
       console.log("desktop");
-      openSubCategory(subCategoriesWrapper, isDesktop);
+      openSubCategory(subCategoriesWrapper, isBiggerThenLaptop);
     } else {
       console.log("mobile");
       openSubCategory(subCategoriesWrapper, false);
@@ -141,7 +145,7 @@ const closeAllSubCategories = (excludeTarget = null) => {
 };
 
 // open the subcategory
-const openSubCategory = (subCategoriesWrapper, isDesktop) => {
+const openSubCategory = (subCategoriesWrapper, isBiggerThenLaptop) => {
   // const arrow = elementTarget.querySelector(".header__menu-arrow");
   subCategoriesWrapper.style.display = "flex";
   subCategoriesWrapper.style.flexDirection = "column";
@@ -150,8 +154,8 @@ const openSubCategory = (subCategoriesWrapper, isDesktop) => {
   subCategoriesWrapper.style.right = "307px";
 
   // arrow.classList.add("rotate");
-  // console.log(isDesktop);
-  if (isDesktop) {
+  console.log("isBiggerThenLaptop", isBiggerThenLaptop);
+  if (isBiggerThenLaptop) {
     backgroundSubMenus.style.transition = "max-width 0.3s ease;";
     backgroundSubMenus.style.display = "flex";
     backgroundSubMenus.style.height = "565px";
@@ -160,13 +164,14 @@ const openSubCategory = (subCategoriesWrapper, isDesktop) => {
     backgroundSubMenus.style.top = "178px";
     backgroundSubMenus.style.zIndex = 10;
     backgroundSubMenus.style.right = "unset";
-    backgroundSubMenus.style.left = "0";
+    backgroundSubMenus.style.left = isDesktop ? "0" : "calc(50% - 575px)";
     backgroundSubMenus.style.justifyContent = "flex-end";
     backgroundSubMenus.style.flexDirection = "row";
     backgroundSubMenus.style.boxShadow = "0px 20px 26px 0px rgba(0, 0, 0, 0.15)";
     backgroundSubMenus.style.borderTop = " 2px solid #E9E1FD";
     dynamicImageWindow.style.display = "block";
-    productContainer.style.display = "block";
+    dynamicImageWindow.style.width = isDesktop ? "575px" : "458px";
+    productContainer.style.display = isDesktop ? "block" : "none";
   } else {
     backgroundSubMenus.style.display = "none";
     dynamicImageWindow.style.display = "block";
@@ -182,7 +187,7 @@ subcategoryLinks.forEach((link) => {
     backgroundSubMenus.style.width = parentHeader[0].clientWidth - 300 + "px";
     backgroundSubMenus.style.height = "565px";
     dynamicImageWindow.style.display = "flex";
-    productContainer.style.display = "flex";
+    productContainer.style.display = isDesktop ? "flex" : "none";
   });
 });
 
@@ -191,11 +196,12 @@ function loadProductContent(content) {
   dynamicImageWindow.innerHTML = content;
   dynamicImageWindow.style.background = "#fff";
   dynamicImageWindow.style.width = "575px";
+  console.log("width:", dynamicImageWindow.style.width);
 }
 
 // clos0ing subcategory on hover out (for desktop only)
 const closeSubCategoryOnHoverOut = (categoryElement) => {
-  if (window.innerWidth <= 1200) return;
+  if (isBiggerThenLaptop) return;
   const dataId = categoryElement.getAttribute("data-id");
   const subCategoriesWrapper = document.querySelector(
     `.header__menu-subcategories[data-subcatId="${dataId}"]`

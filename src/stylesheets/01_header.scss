@@ -168,7 +168,7 @@
   @media (min-width: 992px) {
   }
   @media (min-width: 1200px) {
-    max-width: 1200px;
+    max-width: 1150px;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -191,12 +191,12 @@
         flex-basis: 4%;
         // justify-content: space-evenly;
         justify-content: flex-start;
-        gap: 28px;
+        gap: 21px;
       }
 
       &--search {
         order: 0;
-        flex-basis: 21%;
+        flex-basis: 20%;
         .icon {
           top: 50%;
           transform: translate(0px, -50%);
@@ -216,6 +216,11 @@
         &--secondary {
           width: 70px;
           height: auto;
+          // transition: all 0.4s ease-in-out;
+          &:hover {
+            // transform: scale(1.2);
+            animation: giggle 0.4s ease forwards;
+          }
         }
         &--tertiary {
         }
@@ -224,10 +229,31 @@
     .header__hamburger {
       display: none;
       position: absolute;
-      left: calc(50% - 568px);
+      left: calc(50% - 557px);
       // left: 0;
       top: 50%;
       transform: translateY(-50%);
+      &-icon {
+        &:hover {
+          animation: shake 0.3s ease-in-out;
+        }
+
+        @keyframes shake {
+          0%,
+          100% {
+            transform: translateX(0);
+          }
+          25% {
+            transform: translateX(-5px);
+          }
+          50% {
+            transform: translateX(5px);
+          }
+          75% {
+            transform: translateX(-5px);
+          }
+        }
+      }
     }
     .header__cart {
       &-text {
@@ -340,7 +366,7 @@
         font-size: 30px;
       }
       &-text.corprate {
-        font-size: 18px;
+        font-size: 16px;
       }
       &-arrow {
         width: 36px;
@@ -351,6 +377,20 @@
       }
       &-arrow.desktop {
         display: block;
+        transition: all 0.2s ease-in-out;
+        &:hover {
+          transform: rotate(360deg);
+        }
+        svg {
+          rect {
+            fill: #f3f3f3;
+            transition: fill 0.2s ease-in-out;
+          }
+          path {
+            stroke: #2020b3;
+            transition: stroke 0.2s ease-in-out;
+          }
+        }
       }
     }
   }
@@ -375,7 +415,7 @@
       }
       &--middle {
         order: 2;
-        flex-basis: 9%;
+        flex-basis: 10%;
         // justify-content: space-evenly;
         justify-content: flex-start;
         gap: 44px;
@@ -660,7 +700,6 @@
   }
   @media (min-width: 1200px) {
     display: none;
-
     &-item {
       z-index: 9;
       position: relative;
@@ -704,23 +743,18 @@
       display: block;
       position: absolute;
       top: -22px;
-      left: 101px;
+      left: 46px;
     }
     &-subcategories {
       position: absolute;
-      // top: 0;
 
-      //
-      // left: 0;
-      // width: 100%;
       display: none;
       z-index: 10;
       max-height: 100vh;
       overflow-y: auto;
-      /* left: -303px; */
-      // background: #fff;
+
       border-radius: 8px;
-      width: 364px;
+      width: 307px;
       padding: 0;
       right: 289px;
       list-style: none;

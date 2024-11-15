@@ -15,6 +15,10 @@ var heroswiper = new Swiper(".heroSlider", {
       spaceBetween: 30,
       pagination: true,
     },
+    1200: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
     1600: {
       slidesPerView: 1,
       spaceBetween: 20,

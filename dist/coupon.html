@@ -1,8 +1,136 @@
 <div class="coupon-page">
   <h1 style="font-size: 40px; color: #000; text-align: center">hello from coupon page!</h1>
+  <!-- * coupon-img  -->
+  <div class="coupon-img-wrapper">
+  <picture>
+    <source srcset="../../img/coupon/coupon-img-mobile.jpg" media="(min-width: 1200px)" />
+    <img src="../../img/coupon/coupon-img-desktop.jpg" alt="" class="img" />
+  </picture>
+  <h4 class="img-text">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="27"
+      height="23"
+      viewBox="0 0 27 23"
+      fill="none"
+      class="icon"
+    >
+      <path
+        d="M0.0396865 23C0.376194 18.3243 3.29015 14.1565 7.42268 12.1496C4.95985 12.135 2.49701 12.1204 0.0341797 12.1059C0.497221 5.31125 6.40582 -0.0425246 13.5944 0.000254585C20.783 0.043944 26.6238 5.4678 26.9997 12.267C24.5827 12.2533 22.1648 12.2388 19.7478 12.2242C23.8611 14.2831 26.7283 18.3125 26.9979 23H0.0396865Z"
+        fill="white"
+      />
+    </svg>
+    <span>שובר לרשת GOLF</span>
+  </h4>
+</div>
+
+  <!-- ? coupon-img  -->
   <!-- * coupon-card  -->
   <div class="coupon-card">
-  <h2>coupon card</h2>
+  <img src="../../img/coupon/castro-log.png" class="logo" alt="" />
+  <!-- * prices box -->
+  <div class="price-wrapper">
+    <div class="Benefit-value-box">
+      <h2 class="title">שווי הטבה</h2>
+      <span class="text">₪100 </span>
+    </div>
+    <div class="discount-price-box">
+      <h2 class="title">מחיר מוזל</h2>
+      <span class="text">₪85</span>
+      <span class="subtext">חסכת 15%</span>
+    </div>
+    <div class="club-price-box">
+      <h2 class="title">מחיר מועדון</h2>
+      <span class="text">₪59</span>
+      <span class="subtext">חסכת 41%</span>
+    </div>
+  </div>
+
+  <!-- * progress bar -->
+  <div class="progress-container">
+    <h2 class="title">שימוש בנקודות</h2>
+    <span class="points">₪46 + 20 נק׳</span>
+    <div class="range-labels">
+      <span>0</span>
+      <span>45</span>
+    </div>
+    <input type="range" id="priceRange" min="0" max="45" value="0" class="price-range-slider" />
+  </div>
+
+  <!-- * coupon counter -->
+  <div class="quantity-selector">
+    <span class="label">בחר כמות הטבות</span>
+    <div class="counter-wrapper">
+      <button class="button minus">−</button>
+      <span class="quantity">2</span>
+      <button class="button plus">+</button>
+    </div>
+  </div>
+
+  <!-- * addtocardBtn -->
+  <a href="#addtocart" class="addtocardBtn-wrapper">
+    <span class="text">הוספה לעגלה</span>
+    <div class="addtocardBtn-logo">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="19"
+        height="19"
+        viewBox="0 0 19 19"
+        fill="none"
+      >
+        <path
+          d="M3.69445 11.3381H14.6409C15.4849 11.3381 15.9069 11.3381 16.2429 11.1808C16.5388 11.0422 16.7875 10.8196 16.9579 10.5408C17.1514 10.2242 17.198 9.8048 17.2912 8.96595L17.7787 4.57842C17.8072 4.3222 17.8215 4.19409 17.7803 4.09493C17.7441 4.00785 17.6794 3.93561 17.5969 3.89003C17.5029 3.83813 17.374 3.83813 17.1162 3.83813H3.27779M1.19434 1.33813H2.2347C2.45522 1.33813 2.56548 1.33813 2.65174 1.38007C2.72768 1.41699 2.79062 1.47611 2.8322 1.5496C2.87944 1.63308 2.88631 1.74313 2.90007 1.96322L3.65527 14.0464C3.66902 14.2665 3.6759 14.3765 3.72314 14.46C3.76472 14.5335 3.82765 14.5926 3.9036 14.6295C3.98986 14.6715 4.10012 14.6715 4.32064 14.6715H15.361M5.77767 17.5881H5.786M13.2777 17.5881H13.286M6.19434 17.5881C6.19434 17.8183 6.00779 18.0048 5.77767 18.0048C5.54755 18.0048 5.361 17.8183 5.361 17.5881C5.361 17.358 5.54755 17.1715 5.77767 17.1715C6.00779 17.1715 6.19434 17.358 6.19434 17.5881ZM13.6943 17.5881C13.6943 17.8183 13.5078 18.0048 13.2777 18.0048C13.0476 18.0048 12.861 17.8183 12.861 17.5881C12.861 17.358 13.0476 17.1715 13.2777 17.1715C13.5078 17.1715 13.6943 17.358 13.6943 17.5881Z"
+          stroke="black"
+          stroke-width="1.66667"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </div>
+  </a>
+
+  <!-- * quick purchase -->
+  <a href="#quickpurchase" class="quick-purchase-wrapper">
+    <span class="text">קניה מהירה</span>
+    <div class="arrow">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="22"
+        height="21"
+        viewBox="0 0 22 21"
+        fill="none"
+      >
+        <path
+          d="M13.4287 5.52856L8.28585 10.6714L13.4287 15.8143"
+          stroke="white"
+          stroke-width="1.37143"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </div>
+  </a>
+
+  <!-- * expiration date -->
+  <div class="expiration-date-wrap">
+    <span class="expiration-date-sidetext">תוקף ההטבה</span>
+    <span class="expiration-date">31.05.2024</span>
+  </div>
+
+  <!-- * club price declaimer -->
+  <div class="clubPrice-declaimer-wrapper">
+    <h3 class="declaimer-text">
+      <b class="declaimer-bold">מחיר מועדון</b>- מחיר מסובסד, זכאות עד 1 שוברים לחודש קלנדרי
+    </h3>
+  </div>
+
+  <!-- * discount price declaimer -->
+  <div class="discountPrice-declaimer-wrapper">
+    <h3 class="declaimer-text">
+      <b class="declaimer-bold">מחיר מוזל</b>- מחיר לאחר ניצול זכאות מחיר מועדון, עד 5 שוברים לחודש
+      קלנדרי
+    </h3>
+  </div>
 </div>
 
   <!-- ? coupon-card  -->

@@ -5234,7 +5234,7 @@
             transform: translateY(0) rotate(0);
   }
 }
-.my-orders {
+.my-account {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5249,7 +5249,7 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
-.my-orders .card-container {
+.my-account .card-container {
   width: 335px;
   padding: 28px 24px;
   gap: 12px;
@@ -5261,7 +5261,7 @@
   margin: 12px 0;
   padding: 28px 24px;
 }
-.my-orders .card-container .title {
+.my-account .card-container .title {
   font-size: 26px;
   font-style: normal;
   font-weight: 600;
@@ -5269,7 +5269,7 @@
   margin-top: 0;
   margin-bottom: 12px;
 }
-.my-orders .card-container .box-wrapper {
+.my-account .card-container .box-wrapper {
   margin-bottom: 43px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5282,7 +5282,7 @@
           align-items: center;
   gap: 12px;
 }
-.my-orders .card-container .box-wrapper .box {
+.my-account .card-container .box-wrapper .box {
   width: 88px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5306,280 +5306,29 @@
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.my-orders .card-container .box-wrapper .box .text {
+.my-account .card-container .box-wrapper .box .text {
   color: #000;
   text-align: center;
 }
-.my-orders .card-container .box-wrapper .box.active {
+.my-account .card-container .box-wrapper .box.active {
   background: #2020b3;
 }
-.my-orders .card-container .box-wrapper .box.active .icon path {
+.my-account .card-container .box-wrapper .box.active .icon path {
   stroke: #fff;
 }
-.my-orders .card-container .box-wrapper .box.active .text {
+.my-account .card-container .box-wrapper .box.active .text {
   color: #fff;
 }
-.my-orders .card-container .details-header {
-  color: #0b0427;
-  font-size: 22px;
-  font-style: normal;
-  font-weight: 600;
-  margin-bottom: 12px;
-  margin-top: 0;
+.my-account .card-container #points-content {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-.my-orders .card-container .form {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-row-gap: 1rem;
-}
-.my-orders .card-container .form .row {
-  margin-bottom: 12px;
-}
-.my-orders .card-container .form .row .input {
-  width: 100%;
-  border: 0;
-  padding-right: 4px;
-  border: 0;
-  padding-bottom: 8px;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-}
-.my-orders .card-container .form .row .input:focus {
-  outline: unset;
-}
-.my-orders .card-container .form .row .input::-webkit-input-placeholder {
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  text-align: right;
-  color: #000;
-}
-.my-orders .card-container .form .row .input::-moz-placeholder {
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  text-align: right;
-  color: #000;
-}
-.my-orders .card-container .form .row .input:-ms-input-placeholder {
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  text-align: right;
-  color: #000;
-}
-.my-orders .card-container .form .row .input::-ms-input-placeholder {
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  text-align: right;
-  color: #000;
-}
-.my-orders .card-container .form .row .input::placeholder {
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  text-align: right;
-  color: #000;
-}
-.my-orders .card-container .form .row .input:focus + .graphic--nao {
-  -webkit-transform: translate3d(-66.6%, 0, 0);
-          transform: translate3d(-66.6%, 0, 0);
-}
-.my-orders .card-container .form .row .graphic {
-  position: absolute;
-  top: 0;
-  left: 0;
-  fill: none;
-  stroke: #000000;
-}
-.my-orders .card-container .form .row .graphic--nao {
-  pointer-events: none;
-  -webkit-transition: stroke 0.7s, -webkit-transform 0.7s;
-  transition: stroke 0.7s, -webkit-transform 0.7s;
-  transition: transform 0.7s, stroke 0.7s;
-  transition: transform 0.7s, stroke 0.7s, -webkit-transform 0.7s;
-  -webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
-          transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
-}
-.my-orders .card-container .form .row .text-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 6.5px;
-  gap: 8px;
-}
-.my-orders .card-container .form .row .text-wrapper .text {
-  color: #000;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-}
-.my-orders .card-container .form .row.email {
-  position: relative;
-  overflow: hidden;
-}
-.my-orders .card-container .form .row.phone {
-  position: relative;
-  overflow: hidden;
-}
-.my-orders .card-container .form .row.id {
-  position: relative;
-  overflow: hidden;
-}
-.my-orders .card-container .form .row.first {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 12px;
-}
-.my-orders .card-container .form .row.first .column {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: relative;
-  overflow: hidden;
-}
-.my-orders .card-container .form .row.first .column .input {
-  width: 132px;
-  padding-bottom: 8px;
-  border: 0;
-}
-.my-orders .card-container .form .row.first .column .input::-webkit-input-placeholder {
-  text-align: right;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  color: #000;
-}
-.my-orders .card-container .form .row.first .column .input::-moz-placeholder {
-  text-align: right;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  color: #000;
-}
-.my-orders .card-container .form .row.first .column .input:-ms-input-placeholder {
-  text-align: right;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  color: #000;
-}
-.my-orders .card-container .form .row.first .column .input::-ms-input-placeholder {
-  text-align: right;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  color: #000;
-}
-.my-orders .card-container .form .row.first .column .input::placeholder {
-  text-align: right;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  color: #000;
-}
-.my-orders .card-container .form .row.first .column .input:focus {
-  outline: unset;
-}
-.my-orders .card-container .form .row.first .column .input:focus + .graphic--nao {
-  -webkit-transform: translate3d(-66.6%, 0, 0);
-          transform: translate3d(-66.6%, 0, 0);
-}
-.my-orders .card-container .form .row.first .column .text-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 8px;
-  width: 100%;
-}
-.my-orders .card-container .form .row.first .column .text-wrapper .text {
-  color: #000;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-}
-.my-orders .card-container .form .row.name {
-  display: none;
-}
-.my-orders .card-container .form .row.lastname {
-  display: none;
-}
-.my-orders .card-container .form .confirmation-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 12px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 16px 0;
-  gap: 8px;
-}
-.my-orders .card-container .form .confirmation-wrap .confirmation-toggle {
-  display: none;
-}
-.my-orders .card-container .form .confirmation-wrap .confirmation-toggle {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  border-radius: 4px;
-  background: #f3f3ff;
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-  background-size: cover;
-  cursor: pointer;
-}
-.my-orders .card-container .form .confirmation-wrap .confirmation-toggle:checked {
-  background-image: url("../img/svg/CheckBox.svg");
-}
-.my-orders .card-container .form .confirmation-wrap .confirmation-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  color: #000;
-}
-.my-orders .card-container .form .button {
-  width: 100%;
-  padding: 12px 16px;
-  border-radius: 6px;
-  background: #2020b3;
-  -webkit-box-shadow: 0px 2.286px 7.429px 0px rgba(0, 0, 0, 0.16);
-          box-shadow: 0px 2.286px 7.429px 0px rgba(0, 0, 0, 0.16);
-}
-.my-orders .card-container .form .button .button-text {
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 600;
-  color: #fff;
-}
-.my-orders .card-container .mobile-br {
+.my-account .card-container .mobile-br {
   display: block;
 }
 @media (min-width: 1200px) {
-  .my-orders .card-container {
+  .my-account .card-container {
     border-radius: 8px;
     background: #fff;
     -webkit-box-shadow: 0px 445px 125px 0px rgba(27, 22, 90, 0), 0px 285px 114px 0px rgba(27, 22, 90, 0.01), 0px 160px 96px 0px rgba(27, 22, 90, 0.05), 0px 71px 71px 0px rgba(27, 22, 90, 0.09), 0px 18px 39px 0px rgba(27, 22, 90, 0.1);
@@ -5596,19 +5345,19 @@
     gap: 60px;
     margin-top: 272px;
   }
-  .my-orders .card-container .title {
+  .my-account .card-container .title {
     text-align: right;
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
     margin-bottom: 30px;
   }
-  .my-orders .card-container .box-wrapper {
+  .my-account .card-container .box-wrapper {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
-  .my-orders .card-container .box-wrapper .box {
+  .my-account .card-container .box-wrapper .box {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -5619,279 +5368,27 @@
     line-height: 1;
     border-radius: 38px;
   }
-  .my-orders .card-container .box-wrapper .box .text {
+  .my-account .card-container .box-wrapper .box .text {
     font-size: 18px;
   }
-  .my-orders .card-container .box-wrapper .box.active {
+  .my-account .card-container .box-wrapper .box.active {
     background: #2020b3;
   }
-  .my-orders .card-container .box-wrapper .box.active .icon path {
+  .my-account .card-container .box-wrapper .box.active .icon path {
     stroke: #fff;
   }
-  .my-orders .card-container .box-wrapper .box.active .text {
+  .my-account .card-container .box-wrapper .box.active .text {
     color: #fff;
   }
-  .my-orders .card-container .details-header {
-    color: #0b0427;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 600;
-    margin-bottom: 60px;
-    margin-top: 0;
-  }
-  .my-orders .card-container .form {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: auto auto auto auto;
-    gap: 2rem 3rem;
-    position: relative;
-  }
-  .my-orders .card-container .form .row {
-    margin-bottom: 0;
-  }
-  .my-orders .card-container .form .row .input {
-    width: 100%;
-    border: 0;
-    padding-right: 4px;
-    border: 0;
-    padding-bottom: 8px;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-  }
-  .my-orders .card-container .form .row .input:focus {
-    outline: unset;
-  }
-  .my-orders .card-container .form .row .input::-webkit-input-placeholder {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    text-align: right;
-    color: #000;
-  }
-  .my-orders .card-container .form .row .input::-moz-placeholder {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    text-align: right;
-    color: #000;
-  }
-  .my-orders .card-container .form .row .input:-ms-input-placeholder {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    text-align: right;
-    color: #000;
-  }
-  .my-orders .card-container .form .row .input::-ms-input-placeholder {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    text-align: right;
-    color: #000;
-  }
-  .my-orders .card-container .form .row .input::placeholder {
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    text-align: right;
-    color: #000;
-  }
-  .my-orders .card-container .form .row .input:focus + .graphic--nao {
-    -webkit-transform: translate3d(-66.6%, 0, 0);
-            transform: translate3d(-66.6%, 0, 0);
-  }
-  .my-orders .card-container .form .row .graphic {
-    position: absolute;
-    top: 0;
-    left: 0;
-    fill: none;
-    stroke: none;
-  }
-  .my-orders .card-container .form .row .graphic--nao {
-    pointer-events: none;
-    -webkit-transition: stroke 0.7s, -webkit-transform 0.7s;
-    transition: stroke 0.7s, -webkit-transform 0.7s;
-    transition: transform 0.7s, stroke 0.7s;
-    transition: transform 0.7s, stroke 0.7s, -webkit-transform 0.7s;
-    -webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
-            transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
-  }
-  .my-orders .card-container .form .row .text-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-bottom: 12px;
-    gap: 8px;
-  }
-  .my-orders .card-container .form .row .text-wrapper .text {
-    color: #000;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-  }
-  .my-orders .card-container .form .row.email {
-    grid-column: 2;
-    grid-row: 1;
-  }
-  .my-orders .card-container .form .row.phone {
-    grid-column: 2;
-  }
-  .my-orders .card-container .form .row.id {
-    grid-column: 1;
-    grid-row: 3;
-  }
-  .my-orders .card-container .form .row.first {
-    display: none;
-  }
-  .my-orders .card-container .form .row.first .column {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
-  .my-orders .card-container .form .row.first .column .input {
-    width: 132px;
-    padding-bottom: 8px;
-    border: 0;
-  }
-  .my-orders .card-container .form .row.first .column .input::-webkit-input-placeholder {
-    text-align: right;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    color: #000;
-  }
-  .my-orders .card-container .form .row.first .column .input::-moz-placeholder {
-    text-align: right;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    color: #000;
-  }
-  .my-orders .card-container .form .row.first .column .input:-ms-input-placeholder {
-    text-align: right;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    color: #000;
-  }
-  .my-orders .card-container .form .row.first .column .input::-ms-input-placeholder {
-    text-align: right;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    color: #000;
-  }
-  .my-orders .card-container .form .row.first .column .input::placeholder {
-    text-align: right;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    color: #000;
-  }
-  .my-orders .card-container .form .row.first .column .input:focus {
-    outline: unset;
-  }
-  .my-orders .card-container .form .row.first .column .input:focus + .graphic--nao {
-    -webkit-transform: translate3d(-66.6%, 0, 0);
-            transform: translate3d(-66.6%, 0, 0);
-  }
-  .my-orders .card-container .form .row.first .column .text-wrapper {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    gap: 8px;
+  .my-account .card-container .orders-vouchers {
     width: 100%;
   }
-  .my-orders .card-container .form .row.first .column .text-wrapper .text {
-    color: #000;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-  }
-  .my-orders .card-container .form .row.name {
-    display: grid;
-    grid-column: 1;
-    border-bottom: 1px solid #000;
-  }
-  .my-orders .card-container .form .row.lastname {
-    display: grid;
-    grid-column: 1;
-    border-bottom: 1px solid #000;
-  }
-  .my-orders .card-container .form .confirmation-wrap {
-    grid-column: span 2;
-    grid-row: 3;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    grid-column: 2;
-    padding-bottom: 0;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    margin-bottom: 0;
-    gap: 6px;
-  }
-  .my-orders .card-container .form .confirmation-wrap .confirmation-toggle {
-    display: none;
-  }
-  .my-orders .card-container .form .confirmation-wrap .confirmation-toggle {
-    -webkit-appearance: none;
-       -moz-appearance: none;
-            appearance: none;
-    border-radius: 4px;
-    background: #f3f3ff;
-    width: 20px;
-    height: 20px;
-    display: inline-block;
-    background-size: cover;
-    cursor: pointer;
-    grid-column: 2;
-  }
-  .my-orders .card-container .form .confirmation-wrap .confirmation-toggle:checked {
-    background-image: url("../img/svg/CheckBox.svg");
-  }
-  .my-orders .card-container .form .confirmation-wrap .confirmation-text {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    color: #000;
-    margin-bottom: 3px;
-  }
-  .my-orders .card-container .form .button {
-    grid-column: 3;
-    justify-self: end;
-    grid-row: 5;
-    width: 200px;
-    margin-left: 0;
-  }
-  .my-orders .card-container .form .button .button-text {
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 600;
-    color: #fff;
-  }
-  .my-orders .card-container .orders-vouchers {
-    width: 100%;
-  }
-  .my-orders .card-container .mobile-br {
+  .my-account .card-container .mobile-br {
     display: none;
   }
 }
 @media (min-width: 1600px) {
-  .my-orders .card-container {
+  .my-account .card-container {
     width: 1200px;
   }
 }
@@ -9337,7 +8834,516 @@ body.body--menu-open {
     height: 850px;
   }
 }
-
+.form-wrapper .details-header {
+  color: #0b0427;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  margin-bottom: 12px;
+  margin-top: 0;
+}
+.form-wrapper .form {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 1rem;
+}
+.form-wrapper .form .row {
+  margin-bottom: 12px;
+}
+.form-wrapper .form .row .input {
+  width: 100%;
+  border: 0;
+  padding-right: 4px;
+  border: 0;
+  padding-bottom: 8px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+.form-wrapper .form .row .input:focus {
+  outline: unset;
+}
+.form-wrapper .form .row .input::-webkit-input-placeholder {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  text-align: right;
+  color: #000;
+}
+.form-wrapper .form .row .input::-moz-placeholder {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  text-align: right;
+  color: #000;
+}
+.form-wrapper .form .row .input:-ms-input-placeholder {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  text-align: right;
+  color: #000;
+}
+.form-wrapper .form .row .input::-ms-input-placeholder {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  text-align: right;
+  color: #000;
+}
+.form-wrapper .form .row .input::placeholder {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  text-align: right;
+  color: #000;
+}
+.form-wrapper .form .row .input:focus + .graphic--nao {
+  -webkit-transform: translate3d(-66.6%, 0, 0);
+          transform: translate3d(-66.6%, 0, 0);
+}
+.form-wrapper .form .row .graphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: none;
+  stroke: #000000;
+}
+.form-wrapper .form .row .graphic--nao {
+  pointer-events: none;
+  -webkit-transition: stroke 0.7s, -webkit-transform 0.7s;
+  transition: stroke 0.7s, -webkit-transform 0.7s;
+  transition: transform 0.7s, stroke 0.7s;
+  transition: transform 0.7s, stroke 0.7s, -webkit-transform 0.7s;
+  -webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+          transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+}
+.form-wrapper .form .row .text-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 6.5px;
+  gap: 8px;
+}
+.form-wrapper .form .row .text-wrapper .text {
+  color: #000;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+}
+.form-wrapper .form .row.email {
+  position: relative;
+  overflow: hidden;
+}
+.form-wrapper .form .row.phone {
+  position: relative;
+  overflow: hidden;
+}
+.form-wrapper .form .row.id {
+  position: relative;
+  overflow: hidden;
+}
+.form-wrapper .form .row.first {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 12px;
+}
+.form-wrapper .form .row.first .column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.form-wrapper .form .row.first .column .input {
+  width: 132px;
+  padding-bottom: 8px;
+  border: 0;
+}
+.form-wrapper .form .row.first .column .input::-webkit-input-placeholder {
+  text-align: right;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  color: #000;
+}
+.form-wrapper .form .row.first .column .input::-moz-placeholder {
+  text-align: right;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  color: #000;
+}
+.form-wrapper .form .row.first .column .input:-ms-input-placeholder {
+  text-align: right;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  color: #000;
+}
+.form-wrapper .form .row.first .column .input::-ms-input-placeholder {
+  text-align: right;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  color: #000;
+}
+.form-wrapper .form .row.first .column .input::placeholder {
+  text-align: right;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  color: #000;
+}
+.form-wrapper .form .row.first .column .input:focus {
+  outline: unset;
+}
+.form-wrapper .form .row.first .column .input:focus + .graphic--nao {
+  -webkit-transform: translate3d(-66.6%, 0, 0);
+          transform: translate3d(-66.6%, 0, 0);
+}
+.form-wrapper .form .row.first .column .text-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+.form-wrapper .form .row.first .column .text-wrapper .text {
+  color: #000;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+}
+.form-wrapper .form .row.name {
+  display: none;
+}
+.form-wrapper .form .row.lastname {
+  display: none;
+}
+.form-wrapper .form .confirmation-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 12px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 16px 0;
+  gap: 8px;
+}
+.form-wrapper .form .confirmation-wrap .confirmation-toggle {
+  display: none;
+}
+.form-wrapper .form .confirmation-wrap .confirmation-toggle {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 4px;
+  background: #f3f3ff;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background-size: cover;
+  cursor: pointer;
+}
+.form-wrapper .form .confirmation-wrap .confirmation-toggle:checked {
+  background-image: url("../img/svg/CheckBox.svg");
+}
+.form-wrapper .form .confirmation-wrap .confirmation-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  color: #000;
+}
+.form-wrapper .form .button {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 6px;
+  background: #2020b3;
+  -webkit-box-shadow: 0px 2.286px 7.429px 0px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 2.286px 7.429px 0px rgba(0, 0, 0, 0.16);
+}
+.form-wrapper .form .button .button-text {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  color: #fff;
+}
+@media (min-width: 1200px) {
+  .form-wrapper .details-header {
+    color: #0b0427;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 60px;
+    margin-top: 0;
+  }
+  .form-wrapper .form {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto auto;
+    gap: 2rem 3rem;
+    position: relative;
+  }
+  .form-wrapper .form .row {
+    margin-bottom: 0;
+  }
+  .form-wrapper .form .row .input {
+    width: 100%;
+    border: 0;
+    padding-right: 4px;
+    border: 0;
+    padding-bottom: 8px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+  }
+  .form-wrapper .form .row .input:focus {
+    outline: unset;
+  }
+  .form-wrapper .form .row .input::-webkit-input-placeholder {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: right;
+    color: #000;
+  }
+  .form-wrapper .form .row .input::-moz-placeholder {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: right;
+    color: #000;
+  }
+  .form-wrapper .form .row .input:-ms-input-placeholder {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: right;
+    color: #000;
+  }
+  .form-wrapper .form .row .input::-ms-input-placeholder {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: right;
+    color: #000;
+  }
+  .form-wrapper .form .row .input::placeholder {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: right;
+    color: #000;
+  }
+  .form-wrapper .form .row .input:focus + .graphic--nao {
+    -webkit-transform: translate3d(-66.6%, 0, 0);
+            transform: translate3d(-66.6%, 0, 0);
+  }
+  .form-wrapper .form .row .graphic {
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: none;
+    stroke: none;
+  }
+  .form-wrapper .form .row .graphic--nao {
+    pointer-events: none;
+    -webkit-transition: stroke 0.7s, -webkit-transform 0.7s;
+    transition: stroke 0.7s, -webkit-transform 0.7s;
+    transition: transform 0.7s, stroke 0.7s;
+    transition: transform 0.7s, stroke 0.7s, -webkit-transform 0.7s;
+    -webkit-transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+            transition-timing-function: cubic-bezier(0, 0.25, 0.5, 1);
+  }
+  .form-wrapper .form .row .text-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 12px;
+    gap: 8px;
+  }
+  .form-wrapper .form .row .text-wrapper .text {
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+  }
+  .form-wrapper .form .row.email {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .form-wrapper .form .row.phone {
+    grid-column: 2;
+  }
+  .form-wrapper .form .row.id {
+    grid-column: 1;
+    grid-row: 3;
+  }
+  .form-wrapper .form .row.first {
+    display: none;
+  }
+  .form-wrapper .form .row.first .column {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .form-wrapper .form .row.first .column .input {
+    width: 132px;
+    padding-bottom: 8px;
+    border: 0;
+  }
+  .form-wrapper .form .row.first .column .input::-webkit-input-placeholder {
+    text-align: right;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    color: #000;
+  }
+  .form-wrapper .form .row.first .column .input::-moz-placeholder {
+    text-align: right;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    color: #000;
+  }
+  .form-wrapper .form .row.first .column .input:-ms-input-placeholder {
+    text-align: right;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    color: #000;
+  }
+  .form-wrapper .form .row.first .column .input::-ms-input-placeholder {
+    text-align: right;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    color: #000;
+  }
+  .form-wrapper .form .row.first .column .input::placeholder {
+    text-align: right;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    color: #000;
+  }
+  .form-wrapper .form .row.first .column .input:focus {
+    outline: unset;
+  }
+  .form-wrapper .form .row.first .column .input:focus + .graphic--nao {
+    -webkit-transform: translate3d(-66.6%, 0, 0);
+            transform: translate3d(-66.6%, 0, 0);
+  }
+  .form-wrapper .form .row.first .column .text-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 8px;
+    width: 100%;
+  }
+  .form-wrapper .form .row.first .column .text-wrapper .text {
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+  }
+  .form-wrapper .form .row.name {
+    display: grid;
+    grid-column: 1;
+    border-bottom: 1px solid #000;
+  }
+  .form-wrapper .form .row.lastname {
+    display: grid;
+    grid-column: 1;
+    border-bottom: 1px solid #000;
+  }
+  .form-wrapper .form .confirmation-wrap {
+    grid-column: span 2;
+    grid-row: 3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    grid-column: 2;
+    padding-bottom: 0;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    margin-bottom: 0;
+    gap: 6px;
+  }
+  .form-wrapper .form .confirmation-wrap .confirmation-toggle {
+    display: none;
+  }
+  .form-wrapper .form .confirmation-wrap .confirmation-toggle {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+    border-radius: 4px;
+    background: #f3f3ff;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-size: cover;
+    cursor: pointer;
+    grid-column: 2;
+  }
+  .form-wrapper .form .confirmation-wrap .confirmation-toggle:checked {
+    background-image: url("../img/svg/CheckBox.svg");
+  }
+  .form-wrapper .form .confirmation-wrap .confirmation-text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 3px;
+  }
+  .form-wrapper .form .button {
+    grid-column: 3;
+    justify-self: end;
+    grid-row: 5;
+    width: 200px;
+    margin-left: 0;
+  }
+  .form-wrapper .form .button .button-text {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    color: #fff;
+  }
+}
 .order-wrapper {
   border-radius: 4px;
   background: #fff;
@@ -9513,5 +9519,171 @@ body.body--menu-open {
   .info-strip .fifth-header {
     -ms-flex-preferred-size: 13%;
         flex-basis: 13%;
+  }
+}
+.points-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+.points-wrapper .collapsible-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.points-wrapper .collapsible-container .collapsible {
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  direction: rtl;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+.points-wrapper .collapsible-container .collapsible-header {
+  cursor: pointer;
+  padding: 6px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.points-wrapper .collapsible-container .collapsible-header .icon-point-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 16px;
+}
+.points-wrapper .collapsible-container .collapsible-header .collapse-icon {
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  width: 12px;
+  height: 7px;
+}
+.points-wrapper .collapsible-container .collapsible-header .collapsible-title {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  color: #000;
+}
+.points-wrapper .collapsible-container .collapsible-header .points-received {
+  font-weight: bold;
+  border-radius: 19px;
+  background: rgba(63, 63, 234, 0.1);
+  padding: 2px 20px;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  color: #2020b3;
+}
+.points-wrapper .collapsible-container .collapsible-header .points-left {
+  font-weight: bold;
+  background: rgba(63, 63, 234, 0.1);
+  border-radius: 19px;
+  padding: 2px 20px;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  color: #2020b3;
+}
+.points-wrapper .collapsible-container .collapsible-header span {
+  font-size: 16px;
+  color: #2020b3;
+}
+.points-wrapper .collapsible-container .collapsible-content {
+  padding: 10px;
+  background: #fff;
+  display: none;
+}
+.points-wrapper .collapsible-container .collapsible-content .option {
+  border-radius: 4px;
+  border: 1px solid #c3c3c3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 6px 8px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 3px;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  margin-bottom: 6px;
+}
+.points-wrapper .points-balance-btn {
+  border-radius: 8px;
+  border: 1px solid #2020b3;
+  background: rgba(63, 63, 234, 0.1);
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 6px;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+  text-decoration: none;
+  cursor: pointer;
+}
+.points-wrapper .points-balance-btn .points-balance-icon {
+  width: 21px;
+  height: 20px;
+}
+.points-wrapper .points-balance-btn .points-balance-text {
+  font-size: 18px;
+  font-weight: 400;
+}
+.points-wrapper .points-balance-btn .points-balance-points {
+  font-size: 18px;
+  font-weight: 700;
+}
+@media (min-width: 1200px) {
+  .points-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 120px;
+  }
+  .points-wrapper .collapsible-container {
+    width: 100%;
+    max-width: 537px;
+  }
+  .points-wrapper .points-balance-btn {
+    width: 463px;
+    max-height: 68px;
   }
 }

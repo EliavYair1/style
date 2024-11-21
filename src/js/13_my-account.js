@@ -1,8 +1,9 @@
-function loadMyOrdersContentJs() {
+function loadMyAccountContentJs() {
   const heroContainer = document.querySelector(".hero-container");
   heroContainer.hidden = true;
-  console.log("my order logic!");
-  // * dynamic content to display
+  // console.log("my acount logic!");
+
+  // * my account toggle
   const boxes = document.querySelectorAll(".box");
   const dynamicContents = document.querySelectorAll(".dynamic-order-content");
 
@@ -110,4 +111,23 @@ function loadMyOrdersContentJs() {
   //     alert("הטופס הוגש בהצלחה!");
   //   }
   // });
+
+  // * points collapse
+  const collapsibleHeaders = document.querySelectorAll(".collapsible-header");
+
+  collapsibleHeaders.forEach((header) => {
+    header.addEventListener("click", () => {
+      const content = header.nextElementSibling;
+      const parent = header.parentElement;
+      const icon = header.querySelector(".collapse-icon");
+      parent.style.transition = "transform 0.3s ease";
+      if (content.style.display === "block") {
+        content.style.display = "none";
+        icon.style.transform = "rotate(0deg)";
+      } else {
+        icon.style.transform = "rotate(180deg)";
+        content.style.display = "block";
+      }
+    });
+  });
 }

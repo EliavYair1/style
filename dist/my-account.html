@@ -1,4 +1,4 @@
-<div class="my-orders">
+<div class="my-account">
   <div class="card-container">
     <h1 class="title">החשבון שלי</h1>
     <div class="box-wrapper">
@@ -77,11 +77,96 @@
       id="form-content"
       style="display: flex; flex-direction: column"
     >
-      <h2 class="details-header">עדכון פרטים אישיים</h2>
-<form action="" id="myForm" class="form">
-  <!-- * name && lastname -->
-  <div class="row first">
-    <div class="column">
+      <div class="form-wrapper">
+  <h2 class="details-header">עדכון פרטים אישיים</h2>
+  <form action="" id="myForm" class="form">
+    <!-- * name && lastname -->
+    <div class="row first">
+      <div class="column">
+        <div class="text-wrapper">
+          <svg
+            class="icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+          >
+            <path
+              d="M2.5 16.6667C4.44649 14.6021 7.08918 13.3333 10 13.3333C12.9108 13.3333 15.5535 14.6021 17.5 16.6667M13.75 6.25C13.75 8.32107 12.0711 10 10 10C7.92893 10 6.25 8.32107 6.25 6.25C6.25 4.17893 7.92893 2.5 10 2.5C12.0711 2.5 13.75 4.17893 13.75 6.25Z"
+              stroke="black"
+              stroke-width="1.66667"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <label for="name" class="text">שם פרטי</label>
+        </div>
+        <input
+          type="text"
+          class="input"
+          id="name"
+          placeholder="שם פרטי"
+          data-error="Please enter your private name"
+        />
+        <span class="error-message" id="name-error"></span>
+        <svg
+          class="graphic graphic--nao"
+          width="300%"
+          height="100%"
+          viewBox="0 0 1200 60"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"
+          ></path>
+        </svg>
+      </div>
+      <br />
+      <div class="column">
+        <div class="text-wrapper">
+          <svg
+            class="icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+          >
+            <path
+              d="M2.5 16.6667C4.44649 14.6021 7.08918 13.3333 10 13.3333C12.9108 13.3333 15.5535 14.6021 17.5 16.6667M13.75 6.25C13.75 8.32107 12.0711 10 10 10C7.92893 10 6.25 8.32107 6.25 6.25C6.25 4.17893 7.92893 2.5 10 2.5C12.0711 2.5 13.75 4.17893 13.75 6.25Z"
+              stroke="black"
+              stroke-width="1.66667"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <label for="family-name" class="text">שם משפחה</label>
+        </div>
+        <input
+          type="text"
+          class="input"
+          id="family-name"
+          placeholder="שם משפחה"
+          ata-error="Please enter your family name"
+        />
+        <span class="error-message" id="family-name-error"></span>
+        <svg
+          class="graphic graphic--nao"
+          width="300%"
+          height="100%"
+          viewBox="0 0 1200 60"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"
+          ></path>
+        </svg>
+      </div>
+    </div>
+
+    <!-- * name -->
+    <div class="row name">
       <div class="text-wrapper">
         <svg
           class="icon"
@@ -121,8 +206,8 @@
         ></path>
       </svg>
     </div>
-    <br />
-    <div class="column">
+    <!-- * lastname -->
+    <div class="row lastname">
       <div class="text-wrapper">
         <svg
           class="icon"
@@ -162,228 +247,145 @@
         ></path>
       </svg>
     </div>
-  </div>
+    <!-- * email -->
+    <div class="row email">
+      <div class="text-wrapper">
+        <svg
+          class="icon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+        >
+          <path
+            d="M1.66699 5.83325L8.47109 10.5961C9.02207 10.9818 9.29756 11.1746 9.59721 11.2493C9.8619 11.3153 10.1387 11.3153 10.4034 11.2493C10.7031 11.1746 10.9786 10.9818 11.5296 10.5961L18.3337 5.83325M5.66699 16.6666H14.3337C15.7338 16.6666 16.4339 16.6666 16.9686 16.3941C17.439 16.1544 17.8215 15.772 18.0612 15.3016C18.3337 14.7668 18.3337 14.0667 18.3337 12.6666V7.33325C18.3337 5.93312 18.3337 5.23306 18.0612 4.69828C17.8215 4.22787 17.439 3.84542 16.9686 3.60574C16.4339 3.33325 15.7338 3.33325 14.3337 3.33325H5.66699C4.26686 3.33325 3.5668 3.33325 3.03202 3.60574C2.56161 3.84542 2.17916 4.22787 1.93948 4.69828C1.66699 5.23306 1.66699 5.93312 1.66699 7.33325V12.6666C1.66699 14.0667 1.66699 14.7668 1.93948 15.3016C2.17916 15.772 2.56161 16.1544 3.03202 16.3941C3.5668 16.6666 4.26686 16.6666 5.66699 16.6666Z"
+            stroke="black"
+            stroke-width="1.66667"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <label for="email" class="text">דואר אלקטרוני</label>
+      </div>
 
-  <!-- * name -->
-  <div class="row name">
-    <div class="text-wrapper">
+      <input
+        type="email"
+        class="input"
+        id="email"
+        placeholder="אימייל"
+        data-error="Please enter a valid email address"
+      />
+      <span class="error-message" id="email-error"></span>
+
       <svg
-        class="icon"
-        xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
-        viewBox="0 0 20 20"
-        fill="none"
+        class="graphic graphic--nao"
+        width="300%"
+        height="100%"
+        viewBox="0 0 1200 60"
+        preserveAspectRatio="none"
       >
         <path
-          d="M2.5 16.6667C4.44649 14.6021 7.08918 13.3333 10 13.3333C12.9108 13.3333 15.5535 14.6021 17.5 16.6667M13.75 6.25C13.75 8.32107 12.0711 10 10 10C7.92893 10 6.25 8.32107 6.25 6.25C6.25 4.17893 7.92893 2.5 10 2.5C12.0711 2.5 13.75 4.17893 13.75 6.25Z"
+          d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"
           stroke="black"
-          stroke-width="1.66667"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
+        ></path>
       </svg>
-      <label for="name" class="text">שם פרטי</label>
     </div>
-    <input
-      type="text"
-      class="input"
-      id="name"
-      placeholder="שם פרטי"
-      data-error="Please enter your private name"
-    />
-    <span class="error-message" id="name-error"></span>
-    <svg
-      class="graphic graphic--nao"
-      width="300%"
-      height="100%"
-      viewBox="0 0 1200 60"
-      preserveAspectRatio="none"
-    >
-      <path
-        d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"
-      ></path>
-    </svg>
-  </div>
-  <!-- * lastname -->
-  <div class="row lastname">
-    <div class="text-wrapper">
+    <!-- * phone -->
+    <div class="row phone">
+      <div class="text-wrapper">
+        <svg
+          class="icon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+        >
+          <path
+            d="M6.98356 7.37779C7.56356 8.58581 8.35422 9.71801 9.35553 10.7193C10.3568 11.7206 11.4891 12.5113 12.6971 13.0913C12.801 13.1412 12.8529 13.1661 12.9187 13.1853C13.1523 13.2534 13.4392 13.2045 13.637 13.0628C13.6927 13.0229 13.7403 12.9753 13.8356 12.88C14.1269 12.5887 14.2726 12.443 14.4191 12.3478C14.9715 11.9886 15.6837 11.9886 16.2361 12.3478C16.3825 12.443 16.5282 12.5887 16.8196 12.88L16.9819 13.0424C17.4248 13.4853 17.6462 13.7067 17.7665 13.9446C18.0058 14.4175 18.0058 14.9761 17.7665 15.449C17.6462 15.6869 17.4248 15.9083 16.9819 16.3512L16.8506 16.4825C16.4092 16.9239 16.1886 17.1446 15.8885 17.3131C15.5556 17.5001 15.0385 17.6346 14.6567 17.6334C14.3126 17.6324 14.0774 17.5657 13.607 17.4322C11.0792 16.7147 8.69387 15.361 6.70388 13.371C4.7139 11.381 3.36017 8.99569 2.6427 6.46786C2.50919 5.99749 2.44244 5.7623 2.44141 5.41818C2.44028 5.03633 2.57475 4.51925 2.76176 4.18633C2.9303 3.88631 3.15098 3.66563 3.59233 3.22428L3.72369 3.09292C4.16656 2.65005 4.388 2.42861 4.62581 2.30833C5.09878 2.0691 5.65734 2.0691 6.1303 2.30832C6.36812 2.42861 6.58955 2.65005 7.03242 3.09291L7.19481 3.25531C7.48615 3.54665 7.63182 3.69231 7.72706 3.8388C8.08622 4.3912 8.08622 5.10336 7.72706 5.65576C7.63182 5.80225 7.48615 5.94791 7.19482 6.23925C7.09955 6.33451 7.05193 6.38214 7.01206 6.43782C6.87038 6.63568 6.82146 6.92256 6.88957 7.15619C6.90873 7.22193 6.93368 7.27389 6.98356 7.37779Z"
+            stroke="black"
+            stroke-width="1.66667"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <label for="phone" class="text">נייד</label>
+      </div>
+      <input
+        type="tel"
+        class="input"
+        id="phone"
+        dir="rtl"
+        placeholder="נייד"
+        data-error="Please enter your phone number"
+      />
+      <span class="error-message" id="phone-error"></span>
       <svg
-        class="icon"
-        xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
-        viewBox="0 0 20 20"
-        fill="none"
+        class="graphic graphic--nao"
+        width="300%"
+        height="100%"
+        viewBox="0 0 1200 60"
+        preserveAspectRatio="none"
       >
         <path
-          d="M2.5 16.6667C4.44649 14.6021 7.08918 13.3333 10 13.3333C12.9108 13.3333 15.5535 14.6021 17.5 16.6667M13.75 6.25C13.75 8.32107 12.0711 10 10 10C7.92893 10 6.25 8.32107 6.25 6.25C6.25 4.17893 7.92893 2.5 10 2.5C12.0711 2.5 13.75 4.17893 13.75 6.25Z"
+          d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"
           stroke="black"
-          stroke-width="1.66667"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
+        ></path>
       </svg>
-      <label for="family-name" class="text">שם משפחה</label>
     </div>
-    <input
-      type="text"
-      class="input"
-      id="family-name"
-      placeholder="שם משפחה"
-      ata-error="Please enter your family name"
-    />
-    <span class="error-message" id="family-name-error"></span>
-    <svg
-      class="graphic graphic--nao"
-      width="300%"
-      height="100%"
-      viewBox="0 0 1200 60"
-      preserveAspectRatio="none"
-    >
-      <path
-        d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"
-      ></path>
-    </svg>
-  </div>
-  <!-- * email -->
-  <div class="row email">
-    <div class="text-wrapper">
+    <!-- * id -->
+    <div class="row id">
+      <div class="text-wrapper">
+        <svg
+          class="icon"
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+        >
+          <path
+            d="M4.83907 15.442C4.85382 15.4171 4.86894 15.3924 4.88442 15.3678C6.01316 13.5734 6.66659 11.4515 6.66659 9.16667C6.66659 7.32572 8.15897 5.83333 9.99992 5.83333C11.8409 5.83333 13.3333 7.32572 13.3333 9.16667C13.3333 10.0142 13.2756 10.8488 13.1639 11.6667M11.3993 17.3697C11.9091 16.3522 12.327 15.2807 12.6423 14.1667M15.8414 15.11C16.3789 13.2214 16.6667 11.2276 16.6667 9.16667C16.6667 5.48477 13.6819 2.5 10 2.5C8.78571 2.5 7.64724 2.82465 6.66667 3.39188M2.5 12.8034C3.03388 11.7045 3.33333 10.4705 3.33333 9.16667C3.33333 7.95238 3.65798 6.81391 4.22521 5.83333M9.99989 9.16667C9.99989 12.0977 9.15924 14.8323 7.70589 17.1427"
+            stroke="black"
+            stroke-width="1.66667"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <label for="id" class="text">מספר תעודת זהות</label>
+      </div>
+      <input
+        type="text"
+        class="input"
+        id="id"
+        placeholder="תעודת זהות"
+        data-error="Please enter your id number"
+      />
+      <span class="error-message" id="id-error"></span>
       <svg
-        class="icon"
-        xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
-        viewBox="0 0 20 20"
-        fill="none"
+        class="graphic graphic--nao"
+        width="300%"
+        height="100%"
+        viewBox="0 0 1200 60"
+        preserveAspectRatio="none"
       >
         <path
-          d="M1.66699 5.83325L8.47109 10.5961C9.02207 10.9818 9.29756 11.1746 9.59721 11.2493C9.8619 11.3153 10.1387 11.3153 10.4034 11.2493C10.7031 11.1746 10.9786 10.9818 11.5296 10.5961L18.3337 5.83325M5.66699 16.6666H14.3337C15.7338 16.6666 16.4339 16.6666 16.9686 16.3941C17.439 16.1544 17.8215 15.772 18.0612 15.3016C18.3337 14.7668 18.3337 14.0667 18.3337 12.6666V7.33325C18.3337 5.93312 18.3337 5.23306 18.0612 4.69828C17.8215 4.22787 17.439 3.84542 16.9686 3.60574C16.4339 3.33325 15.7338 3.33325 14.3337 3.33325H5.66699C4.26686 3.33325 3.5668 3.33325 3.03202 3.60574C2.56161 3.84542 2.17916 4.22787 1.93948 4.69828C1.66699 5.23306 1.66699 5.93312 1.66699 7.33325V12.6666C1.66699 14.0667 1.66699 14.7668 1.93948 15.3016C2.17916 15.772 2.56161 16.1544 3.03202 16.3941C3.5668 16.6666 4.26686 16.6666 5.66699 16.6666Z"
+          d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"
           stroke="black"
-          stroke-width="1.66667"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
+        ></path>
       </svg>
-      <label for="email" class="text">דואר אלקטרוני</label>
     </div>
 
-    <input
-      type="email"
-      class="input"
-      id="email"
-      placeholder="אימייל"
-      data-error="Please enter a valid email address"
-    />
-    <span class="error-message" id="email-error"></span>
-
-    <svg
-      class="graphic graphic--nao"
-      width="300%"
-      height="100%"
-      viewBox="0 0 1200 60"
-      preserveAspectRatio="none"
-    >
-      <path
-        d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"
-        stroke="black"
-      ></path>
-    </svg>
-  </div>
-  <!-- * phone -->
-  <div class="row phone">
-    <div class="text-wrapper">
-      <svg
-        class="icon"
-        xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
-        viewBox="0 0 20 20"
-        fill="none"
-      >
-        <path
-          d="M6.98356 7.37779C7.56356 8.58581 8.35422 9.71801 9.35553 10.7193C10.3568 11.7206 11.4891 12.5113 12.6971 13.0913C12.801 13.1412 12.8529 13.1661 12.9187 13.1853C13.1523 13.2534 13.4392 13.2045 13.637 13.0628C13.6927 13.0229 13.7403 12.9753 13.8356 12.88C14.1269 12.5887 14.2726 12.443 14.4191 12.3478C14.9715 11.9886 15.6837 11.9886 16.2361 12.3478C16.3825 12.443 16.5282 12.5887 16.8196 12.88L16.9819 13.0424C17.4248 13.4853 17.6462 13.7067 17.7665 13.9446C18.0058 14.4175 18.0058 14.9761 17.7665 15.449C17.6462 15.6869 17.4248 15.9083 16.9819 16.3512L16.8506 16.4825C16.4092 16.9239 16.1886 17.1446 15.8885 17.3131C15.5556 17.5001 15.0385 17.6346 14.6567 17.6334C14.3126 17.6324 14.0774 17.5657 13.607 17.4322C11.0792 16.7147 8.69387 15.361 6.70388 13.371C4.7139 11.381 3.36017 8.99569 2.6427 6.46786C2.50919 5.99749 2.44244 5.7623 2.44141 5.41818C2.44028 5.03633 2.57475 4.51925 2.76176 4.18633C2.9303 3.88631 3.15098 3.66563 3.59233 3.22428L3.72369 3.09292C4.16656 2.65005 4.388 2.42861 4.62581 2.30833C5.09878 2.0691 5.65734 2.0691 6.1303 2.30832C6.36812 2.42861 6.58955 2.65005 7.03242 3.09291L7.19481 3.25531C7.48615 3.54665 7.63182 3.69231 7.72706 3.8388C8.08622 4.3912 8.08622 5.10336 7.72706 5.65576C7.63182 5.80225 7.48615 5.94791 7.19482 6.23925C7.09955 6.33451 7.05193 6.38214 7.01206 6.43782C6.87038 6.63568 6.82146 6.92256 6.88957 7.15619C6.90873 7.22193 6.93368 7.27389 6.98356 7.37779Z"
-          stroke="black"
-          stroke-width="1.66667"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-      <label for="phone" class="text">נייד</label>
+    <div class="confirmation-wrap">
+      <input type="checkbox" class="confirmation-toggle" />
+      <span class="confirmation-text">אני מאשר.ת קבלת דיוור ומידע פרסומי</span>
     </div>
-    <input
-      type="tel"
-      class="input"
-      id="phone"
-      dir="rtl"
-      placeholder="נייד"
-      data-error="Please enter your phone number"
-    />
-    <span class="error-message" id="phone-error"></span>
-    <svg
-      class="graphic graphic--nao"
-      width="300%"
-      height="100%"
-      viewBox="0 0 1200 60"
-      preserveAspectRatio="none"
-    >
-      <path
-        d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"
-        stroke="black"
-      ></path>
-    </svg>
-  </div>
-  <!-- * id -->
-  <div class="row id">
-    <div class="text-wrapper">
-      <svg
-        class="icon"
-        xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
-        viewBox="0 0 20 20"
-        fill="none"
-      >
-        <path
-          d="M4.83907 15.442C4.85382 15.4171 4.86894 15.3924 4.88442 15.3678C6.01316 13.5734 6.66659 11.4515 6.66659 9.16667C6.66659 7.32572 8.15897 5.83333 9.99992 5.83333C11.8409 5.83333 13.3333 7.32572 13.3333 9.16667C13.3333 10.0142 13.2756 10.8488 13.1639 11.6667M11.3993 17.3697C11.9091 16.3522 12.327 15.2807 12.6423 14.1667M15.8414 15.11C16.3789 13.2214 16.6667 11.2276 16.6667 9.16667C16.6667 5.48477 13.6819 2.5 10 2.5C8.78571 2.5 7.64724 2.82465 6.66667 3.39188M2.5 12.8034C3.03388 11.7045 3.33333 10.4705 3.33333 9.16667C3.33333 7.95238 3.65798 6.81391 4.22521 5.83333M9.99989 9.16667C9.99989 12.0977 9.15924 14.8323 7.70589 17.1427"
-          stroke="black"
-          stroke-width="1.66667"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-      <label for="id" class="text">מספר תעודת זהות</label>
-    </div>
-    <input
-      type="text"
-      class="input"
-      id="id"
-      placeholder="תעודת זהות"
-      data-error="Please enter your id number"
-    />
-    <span class="error-message" id="id-error"></span>
-    <svg
-      class="graphic graphic--nao"
-      width="300%"
-      height="100%"
-      viewBox="0 0 1200 60"
-      preserveAspectRatio="none"
-    >
-      <path
-        d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"
-        stroke="black"
-      ></path>
-    </svg>
-  </div>
-
-  <div class="confirmation-wrap">
-    <input type="checkbox" class="confirmation-toggle" />
-    <span class="confirmation-text">אני מאשר.ת קבלת דיוור ומידע פרסומי</span>
-  </div>
-  <button type="submit" class="button">
-    <span class="button-text">אישור</span>
-  </button>
-</form>
+    <button type="submit" class="button">
+      <span class="button-text">אישור</span>
+    </button>
+  </form>
+</div>
 
     </div>
     <div class="dynamic-order-content" id="orders-content" style="display: none">
@@ -916,7 +918,98 @@
 
     </div>
     <div class="dynamic-order-content" id="points-content" style="display: none">
-      <h2>points</h2>
+      <div class="points-wrapper">
+  <div class="collapsible-container">
+    <div class="collapsible">
+      <div class="collapsible-header">
+        <span class="collapsible-title">נקודות שהתקבלו</span>
+        <div class="icon-point-wrapper">
+          <span class="points-received">18</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="collapse-icon"
+            viewBox="0 0 12 7"
+            fill="none"
+          >
+            <path
+              d="M1 1L6 6L11 0.999998"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="collapsible-content">
+        <div class="option">
+          <span>מתנת הצטרפות:</span>
+          <span>10</span>
+        </div>
+        <div class="option">
+          <span>הטבת שיור:</span>
+          <span>8</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="collapsible">
+      <div class="collapsible-header">
+        <span class="collapsible-title">נקודות שהומשו</span>
+        <div class="icon-point-wrapper">
+          <span class="points-left">12</span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="collapse-icon"
+            viewBox="0 0 12 7"
+            fill="none"
+          >
+            <path
+              d="M1 1L6 6L11 0.999998"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="collapsible-content">
+        <div class="option">
+          <span>תאריך הזמנה:</span>
+          <span>30.12.24 12:30</span>
+        </div>
+        <div class="option">
+          <span>מספר הזמנה:</span>
+          <span>4786411654</span>
+        </div>
+        <div class="option">
+          <span>הערות:</span>
+          <span>לקוח רפי</span>
+        </div>
+        <div class="option">
+          <span>כמות נקודות שהומשו:</span>
+          <span>12</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="#point-balance" class="points-balance-btn">
+    <span class="points-balance-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 20" fill="none">
+        <path
+          d="M11.3274 4.20882C11.3274 5.12264 9.29015 5.86344 6.77714 5.86344C4.26413 5.86344 2.22693 5.12264 2.22693 4.20882M11.3274 4.20882C11.3274 3.295 9.29015 2.5542 6.77714 2.5542C4.26413 2.5542 2.22693 3.295 2.22693 4.20882M11.3274 4.20882V7.89627C10.3168 8.19976 9.67273 8.65887 9.67273 9.17269M2.22693 4.20882V14.1366C2.22693 15.0504 4.26413 15.7912 6.77714 15.7912C7.87716 15.7912 8.88601 15.6492 9.67273 15.413V9.17269M2.22693 7.51807C2.22693 8.43189 4.26413 9.17269 6.77714 9.17269C7.87716 9.17269 8.88601 9.03075 9.67273 8.79448M2.22693 10.8273C2.22693 11.7411 4.26413 12.4819 6.77714 12.4819C7.87716 12.4819 8.88601 12.34 9.67273 12.1037M18.7732 9.17269C18.7732 10.0865 16.736 10.8273 14.2229 10.8273C11.7099 10.8273 9.67273 10.0865 9.67273 9.17269M18.7732 9.17269C18.7732 8.25887 16.736 7.51807 14.2229 7.51807C11.7099 7.51807 9.67273 8.25887 9.67273 9.17269M18.7732 9.17269V15.7912C18.7732 16.705 16.736 17.4458 14.2229 17.4458C11.7099 17.4458 9.67273 16.705 9.67273 15.7912V9.17269M18.7732 12.4819C18.7732 13.3958 16.736 14.1366 14.2229 14.1366C11.7099 14.1366 9.67273 13.3958 9.67273 12.4819"
+          stroke="#2020B3"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </span>
+    <span class="points-balance-text">יתרה למימוש</span>
+    <span class="points-balance-points">6 נק׳</span>
+  </a>
+</div>
 
     </div>
   </div>

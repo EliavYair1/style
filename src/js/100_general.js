@@ -19,12 +19,12 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .catch((err) => console.error("Error loading content:", err));
   }
-  if (pageParam === "my-orders") {
-    fetch("/my-orders.html")
+  if (pageParam === "my-account") {
+    fetch("/my-account.html")
       .then((response) => response.text())
       .then((data) => {
         document.getElementById("dynamic-page-content").innerHTML = data;
-        loadMyOrdersContentJs();
+        loadMyAccountContentJs();
       })
       .catch((err) => console.error("Error loading content:", err));
   }

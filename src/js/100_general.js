@@ -24,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((response) => response.text())
       .then((data) => {
         document.getElementById("dynamic-page-content").innerHTML = data;
+        loadMyOrdersContentJs();
       })
       .catch((err) => console.error("Error loading content:", err));
   }

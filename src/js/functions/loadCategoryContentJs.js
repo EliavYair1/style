@@ -115,7 +115,6 @@ function loadCategoryContentJs() {
       });
 
       const selectedContent = document.querySelector(`.content-item[data-filter="${filterValue}"]`);
-      // console.log("selectedContent", selectedContent);
 
       if (selectedContent) {
         selectedContent.classList.add("active");

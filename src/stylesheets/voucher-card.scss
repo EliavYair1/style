@@ -243,29 +243,6 @@
           &:active {
             transform: scale(1);
           }
-
-          // todo to make this animation work
-          // --color: #ef6eae;
-          // --hover: #ef8f6e;
-          // &:hover,
-          // &:focus {
-          //   -webkit-animation: pulse 1s;
-          //   animation: pulse 1s;
-          //   box-shadow: 0 0 0 2em transparent;
-          //   fill: #ff324b;
-          // }
-
-          // @-webkit-keyframes pulse {
-          //   0% {
-          //     box-shadow: 0 0 0 0 var(--hover);
-          //   }
-          // }
-
-          // @keyframes pulse {
-          //   0% {
-          //     box-shadow: 0 0 0 0 var(--hover);
-          //   }
-          // }
         }
       }
 

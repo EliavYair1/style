@@ -5,6 +5,7 @@
   align-items: center;
   flex-direction: column;
   background: #f5f5f5;
+  padding-top: 12px;
   // * coupon-img-wrapper
   .coupon-img-wrapper {
     display: flex;
@@ -225,6 +226,7 @@
         background: #fff;
         box-shadow: 0px 2.286px 7.429px 0px rgba(0, 0, 0, 0.16);
         padding: 6px 16px;
+        line-height: 1;
         .seperator {
           margin: 0 16px;
         }
@@ -246,18 +248,14 @@
             background-color: #ffffff;
             border-radius: 6px;
             border: unset;
-            &:hover {
-              // background-color: #ff9999;
-            }
+            font-weight: 900;
           }
 
           &.plus {
             background-color: #ffffff;
             border-radius: 6px;
             border: unset;
-            &:hover {
-              // background-color: #99ccff;
-            }
+            font-weight: 900;
           }
         }
 
@@ -313,19 +311,8 @@
       margin-bottom: 30px;
       text-decoration: none;
       cursor: pointer;
-      &:hover {
-        background: #ffffff;
-        .text {
-          color: #2020b3;
-        }
-        .arrow {
-          svg {
-            path {
-              stroke: #2020b3;
-            }
-          }
-        }
-      }
+      transition: all 0.2s ease-in-out;
+
       .text {
         font-size: 18px;
         font-style: normal;
@@ -429,11 +416,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        svg {
-          path {
-            stroke: #46494f;
-          }
-        }
+        transition: all 0.2s;
         &.active {
           background-color: #2020b3;
           color: #fff;
@@ -442,10 +425,6 @@
               stroke: #ffffff;
             }
           }
-        }
-
-        &:hover {
-          // background-color: #e8e8ff;
         }
       }
     }
@@ -487,14 +466,57 @@
   // ?coupon-info-card
 
   @media (min-width: 1200px) {
+    padding-top: 264px;
+    // display: flex;
+    display: flex;
+    position: relative;
+    padding-right: 360px;
     // * coupon-img-wrapper
     .coupon-img-wrapper {
+      width: 850px;
+      background: #ffffff;
+      border-radius: unset;
+      flex-direction: column-reverse;
+      align-items: center;
+      padding: 40px 20px;
+      margin-bottom: 59px;
+
+      grid-column: 2;
+      grid-row: 1;
+      .img {
+        width: 770px;
+        border-radius: unset;
+      }
+      .img-text {
+        color: #0b0427;
+        font-size: 40px;
+        position: relative;
+        margin-right: 34px;
+        margin-bottom: 20px;
+        .icon {
+          width: 34px;
+          path {
+            fill: #2020b3;
+          }
+        }
+        span {
+        }
+      }
     }
     // ? coupon-img-wrapper
 
     // * coupon-card
     .coupon-card {
+      position: absolute;
+      top: 264px;
+      right: calc(50% - 598px);
+      box-shadow: 0px 445px 125px 0px rgba(27, 22, 90, 0),
+        0px 285px 114px 0px rgba(27, 22, 90, 0.01), 0px 160px 96px 0px rgba(27, 22, 90, 0.05),
+        0px 71px 71px 0px rgba(27, 22, 90, 0.09), 0px 18px 39px 0px rgba(27, 22, 90, 0.1);
+      padding: 0 20px 40px;
+      margin-bottom: 0;
       .logo {
+        width: 290px;
       }
       .price-wrapper {
         .Benefit-value-box {
@@ -506,6 +528,7 @@
         .discount-price-box {
           .title {
           }
+
           .text {
           }
           .subtext {
@@ -520,17 +543,207 @@
           }
         }
       }
+
+      //  * progress bar
+      .progress-container {
+        .title {
+        }
+        .points {
+        }
+        .range-labels {
+        }
+
+        .price-range-slider {
+          &::-webkit-slider-thumb {
+          }
+
+          &::-moz-range-thumb {
+          }
+        }
+      }
+
+      // * coupon counter
+
+      .quantity-selector {
+        .label {
+          font-size: 17px;
+        }
+        .counter-wrapper {
+          .seperator {
+          }
+          .button {
+            &:hover {
+            }
+
+            &.minus {
+              &:hover {
+                transform: scale(1.8);
+                color: red;
+                line-height: 1;
+              }
+              &:active {
+                transform: scale(1);
+              }
+            }
+
+            &.plus {
+              &:hover {
+                transform: scale(1.8);
+                color: green;
+                line-height: 1;
+              }
+              &:active {
+                transform: scale(1);
+              }
+            }
+          }
+
+          .quantity {
+            font-size: 18px;
+          }
+        }
+      }
+
+      // * addtocardBtn
+      .addtocardBtn-wrapper {
+        .text {
+        }
+        .addtocardBtn-logo {
+          svg {
+          }
+        }
+        &:hover {
+          .addtocardBtn-logo {
+            animation: giggle 0.3s ease forwards;
+          }
+        }
+      }
+      // * quick purchase
+      .quick-purchase-wrapper {
+        &:hover {
+          background: #ffffff;
+          .text {
+            color: #2020b3;
+          }
+          .arrow {
+            svg {
+              path {
+                stroke: #2020b3;
+              }
+            }
+          }
+        }
+        &:hover {
+          .text {
+          }
+          .arrow {
+            svg {
+              path {
+              }
+            }
+          }
+        }
+        .text {
+        }
+        .arrow {
+          svg {
+            path {
+            }
+          }
+        }
+      }
+      // * expiration date
+      .expiration-date-wrap {
+        .expiration-date {
+        }
+        .expiration-date-sidetext {
+        }
+      }
+      // * clubPrice declaimer
+      .clubPrice-declaimer-wrapper {
+        .declaimer-text {
+          .declaimer-bold {
+          }
+        }
+      }
+      // * discountPrice declaimer
+      .discountPrice-declaimer-wrapper {
+        .declaimer-text {
+          .declaimer-bold {
+          }
+        }
+      }
     }
     // ? coupon-card
 
     // * coupon-info-card
     .coupon-info-card {
+      display: flex;
+      align-items: flex-start;
+      .toggles {
+        margin-right: 40px;
+        gap: 12px;
+        .toggle {
+          width: 161px;
+          font-size: 18px;
+          &:hover {
+            background-color: #d0d0ef;
+            // color: #fff;
+            svg {
+              path {
+              }
+            }
+          }
+          svg {
+            path {
+              stroke: #46494f;
+            }
+          }
+          &.active {
+            background-color: #2020b3;
+            color: #fff;
+            svg {
+              path {
+                stroke: #ffffff;
+              }
+            }
+          }
+        }
+      }
+
+      .info-container {
+        width: 850px;
+        padding: 40px;
+        .info {
+          .title {
+            margin-top: 0;
+          }
+          .details {
+          }
+          .second-title {
+            margin-top: 0;
+          }
+          .note {
+          }
+        }
+
+        .info.active {
+        }
+      }
     }
     // ?coupon-info-card
   }
   @media (min-width: 1600px) {
     // * coupon-img-wrapper
     .coupon-img-wrapper {
+      .img {
+      }
+      .img-text {
+        .icon {
+        }
+        span {
+        }
+      }
     }
     // ? coupon-img-wrapper
 
@@ -548,6 +761,7 @@
         .discount-price-box {
           .title {
           }
+
           .text {
           }
           .subtext {
@@ -562,11 +776,145 @@
           }
         }
       }
+
+      //  * progress bar
+      .progress-container {
+        .title {
+        }
+        .points {
+        }
+        .range-labels {
+        }
+
+        .price-range-slider {
+          &::-webkit-slider-thumb {
+          }
+
+          &::-moz-range-thumb {
+          }
+        }
+      }
+
+      // * coupon counter
+
+      .quantity-selector {
+        .label {
+        }
+        .counter-wrapper {
+          .seperator {
+          }
+          .button {
+            &:hover {
+            }
+
+            &.minus {
+              &:hover {
+                // background-color: #ff9999;
+              }
+            }
+
+            &.plus {
+              &:hover {
+                // background-color: #99ccff;
+              }
+            }
+          }
+
+          .quantity {
+          }
+        }
+      }
+
+      // * addtocardBtn
+      .addtocardBtn-wrapper {
+        .text {
+        }
+        .addtocardBtn-logo {
+          svg {
+          }
+        }
+      }
+      // * quick purchase
+      .quick-purchase-wrapper {
+        &:hover {
+          .text {
+          }
+          .arrow {
+            svg {
+              path {
+              }
+            }
+          }
+        }
+        .text {
+        }
+        .arrow {
+          svg {
+            path {
+            }
+          }
+        }
+      }
+      // * expiration date
+      .expiration-date-wrap {
+        .expiration-date {
+        }
+        .expiration-date-sidetext {
+        }
+      }
+      // * clubPrice declaimer
+      .clubPrice-declaimer-wrapper {
+        .declaimer-text {
+          .declaimer-bold {
+          }
+        }
+      }
+      // * discountPrice declaimer
+      .discountPrice-declaimer-wrapper {
+        .declaimer-text {
+          .declaimer-bold {
+          }
+        }
+      }
     }
     // ? coupon-card
 
     // * coupon-info-card
     .coupon-info-card {
+      .toggles {
+        .toggle {
+          svg {
+            path {
+            }
+          }
+          &.active {
+            svg {
+              path {
+              }
+            }
+          }
+
+          &:hover {
+            // background-color: #e8e8ff;
+          }
+        }
+      }
+
+      .info-container {
+        .info {
+          .title {
+          }
+          .details {
+          }
+          .second-title {
+          }
+          .note {
+          }
+        }
+
+        .info.active {
+        }
+      }
     }
     // ?coupon-info-card
   }

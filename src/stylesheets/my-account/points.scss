@@ -67,10 +67,6 @@
       background: #fff;
       display: none;
 
-      //   max-height: 0;
-      //   overflow: hidden;
-      //   opacity: 0;
-      //   transition: max-height 0.3s ease, opacity 0.3s ease;
       .option {
         border-radius: 4px;
         border: 1px solid #c3c3c3;
@@ -117,6 +113,7 @@
   @media (min-width: 1200px) {
     flex-direction: row;
     gap: 120px;
+
     .collapsible-container {
       width: 100%;
       max-width: 537px;
@@ -124,6 +121,13 @@
     .points-balance-btn {
       width: 463px;
       max-height: 68px;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        background-color: #d0d0ef;
+        .points-balance-icon {
+          animation: pendulumSwing 0.2s ease-in-out 3;
+        }
+      }
     }
   }
   @media (min-width: 1600px) {

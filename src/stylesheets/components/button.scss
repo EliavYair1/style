@@ -1,0 +1,78 @@
+.payment-button {
+  display: flex;
+  border-radius: 6px;
+  box-shadow: 0px 2.286px 7.429px 0px rgba(0, 0, 0, 0.16);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 16px;
+  gap: 9px;
+  text-decoration: none;
+
+  .button-icon {
+    width: 17px;
+    height: auto;
+  }
+  .button-text {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    // color: #ffffff;
+  }
+  @media (min-width: 1200px) {
+    width: 175px;
+    &:hover {
+      .button-icon {
+        animation: drivingCart 1.25s ease-in-out forwards;
+      }
+    }
+    .button-icon {
+    }
+    .button-text {
+      font-size: 16px;
+    }
+  }
+}
+
+.payment-button.outline {
+  background: #ffffff;
+  border: 2px solid #000;
+  color: #000000;
+  margin-bottom: 0;
+  box-shadow: 0px 2.286px 7.429px 0px rgba(0, 0, 0, 0.16);
+  .button-icon {
+    display: none;
+  }
+  .button-text {
+    transition: all 0.2s ease-in-out;
+  }
+  &:hover {
+    .button-text {
+      transform: scale(1.1);
+    }
+  }
+  &:active {
+    .button-text {
+      transform: scale(1);
+    }
+  }
+  @media (min-width: 1200px) {
+  }
+}
+
+.payment-button.regular {
+  background: #2020b3;
+  border: 2px solid #fff;
+  color: #ffffff;
+  margin-bottom: 10px;
+  box-shadow: 0px 2.286px 7.429px 0px rgba(0, 0, 0, 0.16);
+  &:hover {
+    .button-icon {
+      animation: drivingCart 1.25s ease-in-out forwards;
+    }
+  }
+  @media (min-width: 1200px) {
+    margin-bottom: 0px;
+  }
+}

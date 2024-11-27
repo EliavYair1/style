@@ -5,6 +5,7 @@ function swiperSettings(swiperClass, swiperId) {
     spaceBetween: 30,
     pagination: {
       el: ".swiper-pagination",
+      clickable: true,
     },
     navigation: {
       nextEl: ".swiper-button-next",
@@ -108,24 +109,22 @@ function loadCategoryContentJs() {
         showContentForFilter(filterValue);
       });
     });
-
+    // * displaying the filtered content and adding class active
     function showContentForFilter(filterValue) {
-      contentItems.forEach((item) => {
-        item.classList.remove("active");
-      });
-
-      const selectedContent = document.querySelector(`.content-item[data-filter="${filterValue}"]`);
-
-      if (selectedContent) {
-        selectedContent.classList.add("active");
-      }
+      // contentItems.forEach((item) => {
+      //   item.classList.remove("active");
+      // });
+      // const selectedContent = document.querySelector(`.content-item[data-filter="${filterValue}"]`);
+      // if (selectedContent) {
+      //   selectedContent.classList.add("active");
+      // }
     }
   }
   // ? end filtering card result
 
   // * category sliders settings
-  swiperSettings("VacationBenefitsSwiper", 10);
-  swiperSettings("discountClubOwnerSwiper", 11);
+  swiperSettings("VacationBenefitsSwiper", "10");
+  swiperSettings("discountClubOwnerSwiper", "11");
   // ?  category sliders settings
 
   // * mobile layout card logic

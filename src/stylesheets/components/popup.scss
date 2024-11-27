@@ -1,0 +1,130 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.68);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  display: none;
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
+
+  .popup__content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 335px;
+    padding: 28px 24px;
+  }
+
+  &__image-container {
+    display: flex;
+    // justify-content: space-between;
+    gap: 81px;
+  }
+
+  &__image {
+    width: 80px;
+    height: 60px;
+  }
+
+  &__text-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__image-text {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  &__image-subtext {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+  }
+
+  .popup__close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  &__payment-conclution {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__payment-text {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    color: #0b0427;
+  }
+  &__payment-price {
+    border-radius: 38px;
+    background: #f8f8f8;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    color: #0b0427;
+    padding-inline: 16px;
+    span {
+      margin-right: 2px;
+    }
+    .button-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .button-wrapper {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 12px;
+      justify-content: space-between;
+    }
+    &__payment-conclution {
+      margin-bottom: 20px;
+    }
+    &__image {
+      width: 135px;
+      height: auto;
+    }
+    &__image-text {
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    &__image-container {
+      justify-content: unset;
+      gap: 23px;
+    }
+    &__image-subtext {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      font-size: 24px;
+      font-weight: 400;
+      margin-right: 15px;
+    }
+    .popup__content {
+      min-width: 450px;
+      padding: 40px;
+    }
+
+    .popup__close {
+    }
+  }
+}

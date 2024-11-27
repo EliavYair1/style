@@ -2,21 +2,26 @@ function loadCouponContentJs() {
   const heroContainer = document.querySelector(".hero-container");
   heroContainer.hidden = true;
   const priceRange = document.getElementById("priceRange");
+  const dynamicPoints = document.querySelector(".dynamic-points");
 
-  if (priceRange) {
-    function updateSliderBackground() {
-      const max = priceRange.max;
-      const value = priceRange.value;
+  if (priceRange && dynamicPoints) {
+    function updateSliderBackgroundAndPoints() {
+      const max = parseInt(priceRange.max, 10);
+      const value = parseInt(priceRange.value, 10);
 
+      // Update slider background
       const percentage = (value / max) * 100;
       priceRange.style.background = `linear-gradient(to left, #2020b3 ${percentage}%, #d1d4fe ${percentage}%)`;
+
+      // Update the dynamic points text
+      dynamicPoints.innerText = value; // Adjust as needed
     }
 
-    updateSliderBackground();
+    updateSliderBackgroundAndPoints();
 
-    priceRange.addEventListener("input", updateSliderBackground);
+    priceRange.addEventListener("input", updateSliderBackgroundAndPoints);
   } else {
-    console.error("Slider element with ID 'priceRange' not found.");
+    console.error("Slider element or points element not found.");
   }
 
   // * coupon card

@@ -381,15 +381,25 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((response) => response.text())
       .then((data) => {
         document.getElementById("dynamic-page-content").innerHTML = data;
-        loadMyAccountContentJs();
+        loadMyAccountContentJs(); // file: 13_my-account.js
       })
       .catch((err) => console.error("Error loading content:", err));
   }
-  if (pageParam === "points") {
-    fetch("/points.html")
+  if (pageParam === "cart") {
+    fetch("/cart.html")
       .then((response) => response.text())
       .then((data) => {
         document.getElementById("dynamic-page-content").innerHTML = data;
+        loadCartContent(); // file : 14_cart.js
+      })
+      .catch((err) => console.error("Error loading content:", err));
+  }
+  if (pageParam === "payment") {
+    fetch("/payment.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("dynamic-page-content").innerHTML = data;
+        loadPaymentContent(); // file : 15_payment.js
       })
       .catch((err) => console.error("Error loading content:", err));
   }
@@ -399,21 +409,26 @@ function loadCouponContentJs() {
   const heroContainer = document.querySelector(".hero-container");
   heroContainer.hidden = true;
   const priceRange = document.getElementById("priceRange");
+  const dynamicPoints = document.querySelector(".dynamic-points");
 
-  if (priceRange) {
-    function updateSliderBackground() {
-      const max = priceRange.max;
-      const value = priceRange.value;
+  if (priceRange && dynamicPoints) {
+    function updateSliderBackgroundAndPoints() {
+      const max = parseInt(priceRange.max, 10);
+      const value = parseInt(priceRange.value, 10);
 
+      // Update slider background
       const percentage = (value / max) * 100;
       priceRange.style.background = `linear-gradient(to left, #2020b3 ${percentage}%, #d1d4fe ${percentage}%)`;
+
+      // Update the dynamic points text
+      dynamicPoints.innerText = value; // Adjust as needed
     }
 
-    updateSliderBackground();
+    updateSliderBackgroundAndPoints();
 
-    priceRange.addEventListener("input", updateSliderBackground);
+    priceRange.addEventListener("input", updateSliderBackgroundAndPoints);
   } else {
-    console.error("Slider element with ID 'priceRange' not found.");
+    console.error("Slider element or points element not found.");
   }
 
   // * coupon card
@@ -583,7 +598,6 @@ function loadMyAccountContentJs() {
       const content = header.nextElementSibling;
       const parent = header.parentElement;
       const icon = header.querySelector(".collapse-icon");
-      parent.style.transition = "transform 0.3s ease";
       if (content.style.display === "block") {
         content.style.display = "none";
         icon.style.transform = "rotate(0deg)";
@@ -593,6 +607,44 @@ function loadMyAccountContentJs() {
       }
     });
   });
+}
+
+function loadCartContent() {
+  const heroContainer = document.querySelector(".hero-container");
+  heroContainer.hidden = true;
+  console.log("cart content");
+
+  const popup = document.getElementById("popup");
+  const paymentButton = document.querySelector(".cart-page__payment-button");
+  const popupClose = document.getElementById("popupClose");
+
+  paymentButton.addEventListener("click", (event) => {
+    event.preventDefault();
+    popup.style.display = "flex";
+    popup.style.opacity = "1";
+  });
+
+  popup.addEventListener("click", (event) => {
+    if (event.target === popup) {
+      popup.style.display = "none";
+      popup.style.opacity = "0";
+    }
+  });
+
+  popupClose.addEventListener("click", () => {
+    popup.style.display = "none";
+    popup.style.opacity = "0";
+  });
+  document.addEventListener("keydown", (e) => {
+    if (e.key == "Escape") {
+      popup.style.display = "none";
+      popup.style.opacity = "0";
+    }
+  });
+}
+
+function loadPaymentContent() {
+  console.log("payment function!");
 }
 
 
@@ -702,6 +754,7 @@ function swiperSettings(swiperClass, swiperId) {
     spaceBetween: 30,
     pagination: {
       el: ".swiper-pagination",
+      clickable: true,
     },
     navigation: {
       nextEl: ".swiper-button-next",
@@ -805,24 +858,22 @@ function loadCategoryContentJs() {
         showContentForFilter(filterValue);
       });
     });
-
+    // * displaying the filtered content and adding class active
     function showContentForFilter(filterValue) {
-      contentItems.forEach((item) => {
-        item.classList.remove("active");
-      });
-
-      const selectedContent = document.querySelector(`.content-item[data-filter="${filterValue}"]`);
-
-      if (selectedContent) {
-        selectedContent.classList.add("active");
-      }
+      // contentItems.forEach((item) => {
+      //   item.classList.remove("active");
+      // });
+      // const selectedContent = document.querySelector(`.content-item[data-filter="${filterValue}"]`);
+      // if (selectedContent) {
+      //   selectedContent.classList.add("active");
+      // }
     }
   }
   // ? end filtering card result
 
   // * category sliders settings
-  swiperSettings("VacationBenefitsSwiper", 10);
-  swiperSettings("discountClubOwnerSwiper", 11);
+  swiperSettings("VacationBenefitsSwiper", "10");
+  swiperSettings("discountClubOwnerSwiper", "11");
   // ?  category sliders settings
 
   // * mobile layout card logic

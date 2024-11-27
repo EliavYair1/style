@@ -52,6 +52,9 @@
           text-align: center;
         }
       }
+      .box:hover {
+        background-color: #d0d0ef;
+      }
       .box.active {
         background: #2020b3;
         .icon {

@@ -249,8 +249,10 @@
         }
       }
       .row.email {
-        grid-column: 2;
-        grid-row: 1;
+        // grid-column: 2;
+        // grid-row: 1;
+        grid-column: 1;
+        grid-row: 2;
       }
       .row.phone {
         grid-column: 2;
@@ -302,11 +304,15 @@
       .row.name {
         display: grid;
         grid-column: 1;
+        grid-row: 1;
         border-bottom: 1px solid #000;
       }
       .row.lastname {
         display: grid;
-        grid-column: 1;
+        // grid-column: 1;
+
+        grid-column: 2;
+        grid-row: 1;
         border-bottom: 1px solid #000;
       }
       .confirmation-wrap {

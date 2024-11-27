@@ -213,7 +213,7 @@
       .label {
         color: #46494f;
         margin-left: 15px;
-        font-size: 18px;
+        font-size: 16px;
         font-style: normal;
         font-weight: 600;
       }
@@ -451,10 +451,17 @@
         }
         .details {
           margin-bottom: 37.5px;
+          line-height: 19px;
+          font-size: 16px;
+          a {
+            color: #000;
+          }
         }
         .second-title {
         }
         .note {
+          line-height: 18px;
+          font-size: 15px;
         }
       }
 
@@ -704,7 +711,7 @@
             color: #fff;
             svg {
               path {
-                stroke: #ffffff;
+                // stroke: #ffffff;
               }
             }
           }
@@ -719,11 +726,13 @@
             margin-top: 0;
           }
           .details {
+            line-height: 1.77;
           }
           .second-title {
             margin-top: 0;
           }
           .note {
+            line-height: 1.77;
           }
         }
 

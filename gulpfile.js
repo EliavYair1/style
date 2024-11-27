@@ -183,7 +183,7 @@ gulp.task("clean", function () {
 
 gulp.task("copy-html", function () {
   return gulp
-    .src("src/template/pages/{category,coupon,my-account}.html")
+    .src("src/template/pages/{category,coupon,my-account,cart,payment}.html")
     .pipe(
       fileInclude({
         prefix: "@@",

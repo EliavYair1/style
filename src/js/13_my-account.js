@@ -120,7 +120,6 @@ function loadMyAccountContentJs() {
       const content = header.nextElementSibling;
       const parent = header.parentElement;
       const icon = header.querySelector(".collapse-icon");
-      parent.style.transition = "transform 0.3s ease";
       if (content.style.display === "block") {
         content.style.display = "none";
         icon.style.transform = "rotate(0deg)";

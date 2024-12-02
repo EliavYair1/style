@@ -11,7 +11,6 @@
         שם הספק: <span class="payment__item-supplier">קסטרו</span>
       </h4>
     </div>
-    <!-- todo to finish price desktop -->
     <div class="payment__item-price desktop"><span class="payment__total-note">₪</span>200</div>
   </div>
   <div class="payment__separator"></div>
@@ -38,13 +37,7 @@
       <label for="card-number" class="payment__form-label"
         ><span style="color: #f00">*</span> מספר כרטיס</label
       >
-      <input
-        type="number"
-        id="card-number"
-        class="payment__form-input"
-        placeholder="1234 5678 9012 3456"
-        required
-      />
+      <input type="number" id="card-number" class="payment__form-input" placeholder="" required />
     </div>
 
     <div class="payment__expiration-date">
@@ -110,7 +103,7 @@
 
     <div class="payment__field-wrapper">
       <label for="id" class="payment__form-label">תעודת זהות</label>
-      <input type="number" id="id" class="payment__form-input" placeholder="123456789" />
+      <input type="number" id="id" class="payment__form-input" placeholder="" />
     </div>
     <div class="payment__field-wrapper cvv">
       <label for="cvv" class="payment__form-label last-child">
@@ -136,7 +129,7 @@
         maxlength="3"
         autocomplete="false"
         class="payment__form-input cvv"
-        placeholder="123"
+        placeholder=""
         required
       />
     </div>

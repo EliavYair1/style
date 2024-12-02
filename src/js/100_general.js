@@ -46,4 +46,13 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .catch((err) => console.error("Error loading content:", err));
   }
+  if (pageParam === "thanks") {
+    fetch("/thanks.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("dynamic-page-content").innerHTML = data;
+        loadThanksContent(); // file : 16_thanks.js
+      })
+      .catch((err) => console.error("Error loading content:", err));
+  }
 });

@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function () {
     favIcon.addEventListener("click", function (e) {
       e.preventDefault();
       isLiked = !isLiked;
-      console.log("isLiked", isLiked);
 
       if (isLiked) {
         heartPath.setAttribute("stroke", "red");
@@ -55,7 +54,6 @@ document.addEventListener("DOMContentLoaded", function () {
     addToCartBtn.addEventListener("click", function (e) {
       e.preventDefault();
       isAddToCart = !isAddToCart;
-      console.log("isAddToCart", isAddToCart);
 
       if (isAddToCart) {
         addToCartText.textContent = "הסר";

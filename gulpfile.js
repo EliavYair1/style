@@ -197,7 +197,7 @@ gulp.task("copy-html", function () {
 gulp.task("watch", function () {
   // gulp.watch(paths.watch.html, gulp.series("html"));
   gulp.watch(paths.watch.html, function (done) {
-    console.log("HTML file changed, reloading...");
+    // console.log("HTML file changed, reloading...");
     gulp.series("html")(done);
   });
   gulp.watch(paths.watch.scss, gulp.series("css"));

@@ -1,4 +1,350 @@
 .payment {
-  .payment-details {
+  padding: 12px 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  &__items {
+    border-radius: 20px;
+    border: 2px solid #fff;
+    background: #fff;
+    box-shadow: 0px 445px 125px 0px rgba(27, 22, 90, 0), 0px 285px 114px 0px rgba(27, 22, 90, 0.01),
+      0px 160px 96px 0px rgba(27, 22, 90, 0.05), 0px 71px 71px 0px rgba(27, 22, 90, 0.09),
+      0px 18px 39px 0px rgba(27, 22, 90, 0.1);
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    max-width: 335px;
+    width: 100%;
+    &-title {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__separator {
+    height: 1px;
+    background-color: #ccc;
+    margin: 10px 0;
+    opacity: 0.1;
+    &--desktop {
+      display: none;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: space-between;
+
+    &-image {
+      width: 80px;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    &-details {
+    }
+
+    &-title {
+      font-size: 14px;
+      font-weight: 700;
+      margin: 0;
+      margin-bottom: 8px;
+    }
+
+    &-subtitle {
+      font-size: 16px;
+      color: #000;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    &-supplier {
+      font-weight: 400;
+      color: #2020b3;
+    }
+    &-price {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      color: #000;
+      margin-bottom: 8px;
+      .note {
+        font-size: 16px;
+        font-style: normal;
+        color: #000;
+        font-weight: 500;
+      }
+    }
+  }
+
+  &__total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    margin-top: 0;
+
+    &-label {
+      font-weight: 400;
+      font-size: 16px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &-price {
+      font-size: 16px;
+      font-weight: 400;
+      border-radius: 38px;
+      background: #f8f8f8;
+      padding: 0 16px;
+
+      &-note {
+        font-size: 16px;
+      }
+    }
+    &-price.desktop {
+      display: none;
+      .note {
+      }
+    }
+  }
+
+  // Details Section
+  &__details {
+    padding: 28px 24px;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    background: #fff;
+    box-shadow: 0px 445px 125px 0px rgba(27, 22, 90, 0), 0px 285px 114px 0px rgba(27, 22, 90, 0.01),
+      0px 160px 96px 0px rgba(27, 22, 90, 0.05), 0px 71px 71px 0px rgba(27, 22, 90, 0.09),
+      0px 18px 39px 0px rgba(27, 22, 90, 0.1);
+    max-width: 335px;
+    width: 100%;
+    &-title {
+      font-size: 20px;
+      margin-top: 0;
+      margin-bottom: 14px;
+    }
+  }
+
+  &__form {
+    margin-top: 10px;
+
+    &-label {
+      display: flex;
+      font-weight: 500;
+      width: 100%;
+      max-width: 135px;
+      flex-basis: 36%;
+      span {
+      }
+    }
+
+    &-label.last-child {
+      flex-basis: 80%;
+      svg {
+        margin-right: 6px;
+      }
+    }
+    &-icon {
+      width: 14px;
+      height: auto;
+      cursor: pointer;
+    }
+
+    &-input {
+      width: 100%;
+      // padding: 10px;
+      // margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      border-top: 0;
+      border-right: 0;
+      border-left: 0;
+      appearance: none;
+      background-color: white;
+      flex-basis: 75%;
+      cursor: pointer;
+      &:focus-visible {
+        border-top: 0;
+        border-right: 0;
+        border-left: 0;
+        border: 1px solid #ccc;
+      }
+    }
+  }
+  &__selector-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex: 1;
+    svg {
+      position: absolute;
+      left: 0px;
+      pointer-events: none;
+    }
+  }
+  &__field-wrapper {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 27px;
+  }
+  &__field-wrapper.cvv {
+    margin-bottom: 14px;
+  }
+  &__expiration-date {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 27px;
+  }
+  &__date-wrapper {
+    display: flex;
+    gap: 45px;
+    flex: 1;
+  }
+  &__img-wrapper {
+    display: flex;
+    justify-content: center;
+    border-radius: 6px;
+    background: #eee;
+    padding: 12px 0;
+  }
+  &__ssh {
+    width: 258.439px;
+    height: 52.334px;
+  }
+
+  @media (min-width: 1200px) {
+    padding-top: 272px;
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 40px;
+    // margin-block: 163px;
+    align-items: flex-start;
+
+    &__items {
+      max-width: 660px;
+      padding: 40px;
+      &-title {
+        margin-bottom: 40px;
+      }
+    }
+
+    &__separator {
+      margin-block: 40px;
+      opacity: 0.1;
+      &--desktop {
+      }
+    }
+
+    &__item {
+      margin-bottom: 0;
+      gap: 12px;
+      justify-content: flex-start;
+      position: relative;
+      &-image {
+        width: 178px;
+      }
+
+      &-details {
+      }
+
+      &-title {
+        font-size: 30px;
+      }
+
+      &-subtitle {
+        font-size: 24px;
+      }
+
+      &-supplier {
+      }
+      &-price {
+        font-size: 24px;
+        display: none;
+        .note {
+        }
+      }
+      &-price.desktop {
+        font-size: 24px;
+        display: flex;
+        left: 0;
+        position: absolute;
+        flex-direction: row-reverse;
+        padding-left: 20px;
+        .note {
+        }
+      }
+    }
+
+    &__total {
+      margin-bottom: 40px;
+      &-label {
+      }
+
+      &:last-child {
+      }
+      &-price {
+        &-note {
+        }
+      }
+    }
+
+    // Details Section
+    &__details {
+      max-width: 500px;
+      &-title {
+        margin-bottom: 40px;
+        font-size: 30px;
+      }
+    }
+
+    &__form {
+      &-label {
+        font-size: 18px;
+        flex-basis: 43%;
+        span {
+        }
+      }
+
+      &-label.last-child {
+        max-width: 175px;
+        svg {
+        }
+      }
+      &-icon {
+      }
+
+      &-input {
+        cursor: pointer;
+        flex-basis: initial;
+        &:focus-visible {
+        }
+      }
+      &-input.cvv {
+      }
+    }
+    &__selector-wrapper {
+      svg {
+      }
+    }
+    &__field-wrapper {
+      margin-bottom: 52px;
+    }
+    &__field-wrapper.cvv {
+      margin-bottom: 60px;
+    }
+    &__expiration-date {
+      margin-bottom: 52px;
+    }
+    &__date-wrapper {
+    }
+    &__img-wrapper {
+    }
+    &__ssh {
+    }
   }
 }

@@ -58,8 +58,6 @@ document.addEventListener("DOMContentLoaded", function () {
       if (informationCardObj[infoCardId].isAddToCart) {
         updateCartCount(productCardObj, informationCardObj);
       }
-      console.log("information Card Object:", informationCardObj);
-      console.log("Product Card Object:", productCardObj);
     }
     // ? counter min max buttons
 

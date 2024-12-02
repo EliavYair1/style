@@ -76,3 +76,24 @@
     margin-bottom: 0px;
   }
 }
+
+.payment-button.payment {
+  display: flex;
+  flex-direction: row;
+  background: #2020b3;
+  border: 2px solid #fff;
+  color: #ffffff;
+  margin-bottom: 10px;
+  box-shadow: 0px 2.286px 7.429px 0px rgba(0, 0, 0, 0.16);
+  margin-bottom: 14px;
+  &:hover {
+    .button-icon {
+      animation: drivingCart 1.25s ease-in-out forwards;
+    }
+  }
+  @media (min-width: 1200px) {
+    width: 100%;
+    margin-bottom: 40px;
+    margin-top: 0;
+  }
+}

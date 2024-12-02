@@ -2,13 +2,14 @@ function initCustomPagination(swiperInstance, swiperId) {
   const paginationElement = document.querySelector(
     `.pagination-swiper-location[data-swiperId="${swiperId}"]`
   );
+
+  const activeEl = paginationElement.querySelector(".pagination-swiper-current");
+  const lengthElement = paginationElement.querySelector(".pagination-swiper-length");
+
   if (!paginationElement) {
     console.error(`Pagination element not found for swiperId: ${swiperId}`);
     return;
   }
-
-  const activeEl = paginationElement.querySelector(".pagination-swiper-current");
-  const lengthElement = paginationElement.querySelector(".pagination-swiper-length");
 
   if (!activeEl || !lengthElement) {
     console.error("Required pagination elements are missing.");

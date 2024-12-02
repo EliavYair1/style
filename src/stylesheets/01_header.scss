@@ -166,8 +166,6 @@
     }
   }
 
-  @media (min-width: 992px) {
-  }
   @media (min-width: 1200px) {
     max-width: 1150px;
     margin: 0 auto;
@@ -288,7 +286,22 @@
         gap: 14.4px;
         border-radius: 12px;
         border: 3px solid #fff;
+        cursor: pointer;
+        &:hover {
+          background-color: #2020b3;
+          color: #fff;
+          svg {
+            animation: spin-fast 0.1s ease-in-out 5;
+
+            path {
+              stroke: #f3f3f3;
+              // animation: spin-fast 0.3s linear;
+              // transform: rotate(90deg);
+            }
+          }
+        }
       }
+
       &--corprate {
         border: unset;
         width: 100%;
@@ -303,6 +316,7 @@
         display: flex;
         gap: 13px;
       }
+
       &-cards {
         display: flex;
         transition: all 0.3s ease-in-out;
@@ -329,6 +343,7 @@
       &-arrow.desktop {
         display: block;
         transition: all 0.2s ease-in-out;
+        cursor: pointer;
         &:hover {
           transform: rotate(360deg);
         }
@@ -613,8 +628,7 @@
       color: #46494f;
     }
   }
-  @media (min-width: 992px) {
-  }
+
   @media (min-width: 1200px) {
     display: none;
     &-item {
@@ -656,6 +670,9 @@
         background-color: unset;
       }
     }
+    &-item.corprate {
+      height: 49px;
+    }
     .icon {
       display: block;
       position: absolute;
@@ -664,12 +681,10 @@
     }
     &-subcategories {
       position: absolute;
-
       display: none;
       z-index: 10;
       max-height: 100vh;
       overflow-y: auto;
-
       border-radius: 8px;
       width: 307px;
       padding: 0;
@@ -837,8 +852,7 @@
     font-weight: 600;
     font-size: 18px;
   }
-  @media (min-width: 992px) {
-  }
+
   @media (min-width: 1200px) {
     height: 55px;
   }

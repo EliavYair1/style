@@ -1,46 +1,244 @@
 <div class="payment">
-  <h2>hello from payment page!</h2>
   <div class="payment__items">
-  <h2 class="payment__items-title">הפריטים שלי</h2>
-  <div class="payment__separator-dekstop"></div>
+  <h2 class="payment__items-title">סיכום הזמנה</h2>
+  <div class="payment__separator payment__separator--desktop"></div>
   <div class="payment__item">
     <img src="../../img/cart/cart-img.jpg" alt="" class="payment__item-image" />
     <div class="payment__item-details">
       <h3 class="payment__item-title">שובר ל- CASTRO</h3>
-      <h4 class="payment__item-subtitle">שם הספק: <span>קסטרו</span></h4>
+      <div class="payment__item-price"><span class="payment__total-note">₪</span>200</div>
+      <h4 class="payment__item-subtitle">
+        שם הספק: <span class="payment__item-supplier">קסטרו</span>
+      </h4>
     </div>
+    <!-- todo to finish price desktop -->
+    <div class="payment__item-price desktop"><span class="payment__total-note">₪</span>200</div>
   </div>
   <div class="payment__separator"></div>
 
   <div class="payment__total">
-    <span class="payment__total-label">סה״כ</span>
-    <span class="payment__total-price"><span class="note">₪</span>200</span>
+    <span class="payment__total-label">סה״כ לתשלום</span>
+    <span class="payment__total-price"> <span class="payment__total-note">₪</span>200 </span>
+  </div>
+  <div class="payment__total">
+    <span class="payment__total-label">סה"כ תשלום בנקודות</span>
+    <span class="payment__total-price"> <span class="payment__total-note">₪</span>200 </span>
+  </div>
+  <div class="payment__total">
+    <span class="payment__total-label">סה"כ (אשראי + נקודות)</span>
+    <span class="payment__total-price"> <span class="payment__total-note">₪</span>200 </span>
   </div>
 </div>
 
   <!--  -->
   <section class="payment__details">
-  <h2>Payment Details</h2>
+  <h2 class="payment__details-title">תשלום</h2>
   <form class="payment__form">
-    <label for="card-number">Card Number</label>
-    <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required />
+    <div class="payment__field-wrapper">
+      <label for="card-number" class="payment__form-label"
+        ><span style="color: #f00">*</span> מספר כרטיס</label
+      >
+      <input
+        type="number"
+        id="card-number"
+        class="payment__form-input"
+        placeholder="1234 5678 9012 3456"
+        required
+      />
+    </div>
 
-    <label for="expiry-date">Expiry Date</label>
-    <input type="text" id="expiry-date" placeholder="MM/YY" required />
+    <div class="payment__expiration-date">
+      <label for="expiry-date" class="payment__form-label">
+        <span style="color: #f00">*</span> תוקף כרטיס</label
+      >
+      <div class="payment__date-wrapper">
+        <div class="payment__selector-wrapper">
+          <select id="expiry-year" class="payment__form-input" required>
+            YY
+          </select>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="25"
+            viewBox="0 0 24 25"
+            fill="none"
+          >
+            <path
+              d="M6 9.8728L12 15.8728L18 9.8728"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
 
-    <label for="id">id</label>
-    <input type="password" id="id" placeholder="123456789" />
+        <div class="payment__selector-wrapper">
+          <select id="expiry-month" class="payment__form-input" required>
+            <option value="" disabled selected>MM</option>
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+            <option value="05">05</option>
+            <option value="06">06</option>
+            <option value="07">07</option>
+            <option value="08">08</option>
+            <option value="09">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+          </select>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="25"
+            viewBox="0 0 24 25"
+            fill="none"
+          >
+            <path
+              d="M6 9.8728L12 15.8728L18 9.8728"
+              stroke="black"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
 
-    <label for="cvv">CVV</label>
-    <input type="password" id="cvv" placeholder="123" required />
+    <div class="payment__field-wrapper">
+      <label for="id" class="payment__form-label">תעודת זהות</label>
+      <input type="number" id="id" class="payment__form-input" placeholder="123456789" />
+    </div>
+    <div class="payment__field-wrapper cvv">
+      <label for="cvv" class="payment__form-label last-child">
+        <span style="color: #f00">*</span>
 
-    <a href="#button-link" class="payment-button regular">
+        קוד אימות כרטיס
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="payment__form-icon"
+          viewBox="0 0 14 15"
+          fill="none"
+        >
+          <path
+            d="M7 0.372803C5.61553 0.372803 4.26216 0.783346 3.11101 1.55252C1.95987 2.32168 1.06266 3.41494 0.532846 4.69402C0.00303299 5.9731 -0.13559 7.38057 0.134506 8.73843C0.404603 10.0963 1.07129 11.3436 2.05026 12.3225C3.02922 13.3015 4.2765 13.9682 5.63437 14.2383C6.99224 14.5084 8.3997 14.3698 9.67879 13.84C10.9579 13.3101 12.0511 12.4129 12.8203 11.2618C13.5895 10.1106 14 8.75727 14 7.3728C13.998 5.51689 13.2599 3.73755 11.9476 2.42522C10.6353 1.11289 8.85592 0.374763 7 0.372803ZM6.73077 3.60357C6.89052 3.60357 7.04668 3.65094 7.1795 3.73969C7.31233 3.82844 7.41585 3.95459 7.47698 4.10217C7.53811 4.24976 7.55411 4.41216 7.52294 4.56884C7.49178 4.72551 7.41485 4.86943 7.3019 4.98239C7.18894 5.09535 7.04502 5.17227 6.88834 5.20344C6.73167 5.2346 6.56927 5.21861 6.42168 5.15747C6.27409 5.09634 6.14795 4.99282 6.0592 4.85999C5.97045 4.72717 5.92308 4.57101 5.92308 4.41126C5.92308 4.19705 6.00817 3.99161 6.15965 3.84014C6.31112 3.68867 6.51656 3.60357 6.73077 3.60357ZM7.53846 11.142C7.25285 11.142 6.97893 11.0286 6.77696 10.8266C6.575 10.6246 6.46154 10.3507 6.46154 10.0651V7.3728C6.31873 7.3728 6.18177 7.31607 6.08079 7.21509C5.97981 7.11411 5.92308 6.97715 5.92308 6.83434C5.92308 6.69153 5.97981 6.55457 6.08079 6.45359C6.18177 6.35261 6.31873 6.29588 6.46154 6.29588C6.74716 6.29588 7.02108 6.40934 7.22304 6.6113C7.425 6.81326 7.53846 7.08718 7.53846 7.3728V10.0651C7.68127 10.0651 7.81823 10.1218 7.91921 10.2228C8.0202 10.3238 8.07692 10.4608 8.07692 10.6036C8.07692 10.7464 8.0202 10.8833 7.91921 10.9843C7.81823 11.0853 7.68127 11.142 7.53846 11.142Z"
+            fill="#2020B3"
+          />
+        </svg>
+      </label>
+      <input
+        type="password"
+        id="cvv"
+        maxlength="3"
+        autocomplete="false"
+        class="payment__form-input cvv"
+        placeholder="123"
+        required
+      />
+    </div>
+    <a href="#button-link" class="payment-button payment">
   <img src="../../img/svg/payment.svg" alt="" class="button-icon" />
 
   <span class="button-text">לתשלום כעת</span>
 </a>
 
   </form>
+  <div class="payment__img-wrapper">
+    <img src="../../img/payment/ssh.jpg" class="payment__ssh" alt="corporate payment" />
+  </div>
 </section>
 
 </div>
+<!-- *category navigator -->
+<div class="category-navigator">
+  <h1 class="category-navigator--title">חיפוש לפי קטגוריה</h1>
+
+  <div class="category-navigator--items">
+    <a href="#" class="item">
+      <img
+        src="../../img/category-navigator/catItem1.png"
+        alt=""
+        class="item-img"
+      />
+      <h4 class="item-text">רכב</h4>
+    </a>
+    <a href="#" class="item">
+      <img
+        src="../../img/category-navigator/catItem2.png"
+        alt=""
+        class="item-img"
+      />
+      <h4 class="item-text">לבית</h4>
+    </a>
+    <a href="#" class="item">
+      <img
+        src="../../img/category-navigator/catItem3.png"
+        alt=""
+        class="item-img"
+      />
+      <h4 class="item-text">חשמל ואלקטרוניקה</h4>
+    </a>
+    <a href="#" class="item">
+      <img
+        src="../../img/category-navigator/catItem4.png"
+        alt=""
+        class="item-img"
+      />
+      <h4 class="item-text">אטרקציות</h4>
+    </a>
+    <a href="#" class="item">
+      <img
+        src="../../img/category-navigator/catItem5.png"
+        alt=""
+        class="item-img"
+      />
+      <h4 class="item-text">תיירות ונופש</h4>
+    </a>
+    <a href="#" class="item">
+      <img
+        src="../../img/category-navigator/catItem6.png"
+        alt=""
+        class="item-img"
+      />
+      <h4 class="item-text">תרבות ובידור</h4>
+    </a>
+    <a href="#" class="item">
+      <img
+        src="../../img/category-navigator/catItem7.png"
+        alt=""
+        class="item-img"
+      />
+      <h4 class="item-text">מסעדות</h4>
+    </a>
+    <a href="#" class="item">
+      <img
+        src="../../img/category-navigator/catItem8.png"
+        alt=""
+        class="item-img"
+      />
+      <h4 class="item-text">אורח חיים בריא</h4>
+    </a>
+    <a href="#" class="item">
+      <img
+        src="../../img/category-navigator/catItem9.png"
+        alt=""
+        class="item-img"
+      />
+      <h4 class="item-text">עד הבית ONLINE</h4>
+    </a>
+    <a href="#" class="item">
+      <img
+        src="../../img/category-navigator/catItem10.png"
+        alt=""
+        class="item-img"
+      />
+      <h4 class="item-text">צרכנות</h4>
+    </a>
+  </div>
+</div>
+
+<!-- ?category navigator -->

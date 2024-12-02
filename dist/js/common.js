@@ -612,7 +612,6 @@ function loadMyAccountContentJs() {
 function loadCartContent() {
   const heroContainer = document.querySelector(".hero-container");
   heroContainer.hidden = true;
-  console.log("cart content");
 
   const popup = document.getElementById("popup");
   const paymentButton = document.querySelector(".cart-page__payment-button");
@@ -644,7 +643,18 @@ function loadCartContent() {
 }
 
 function loadPaymentContent() {
-  console.log("payment function!");
+  const heroContainer = document.querySelector(".hero-container");
+  heroContainer.hidden = true;
+  const currentYear = new Date().getFullYear();
+  const yearDropdown = document.getElementById("expiry-year");
+
+  for (let i = 0; i < 10; i++) {
+    const year = currentYear + i;
+    const option = document.createElement("option");
+    option.value = year.toString().slice(-2);
+    option.textContent = year;
+    yearDropdown.appendChild(option);
+  }
 }
 
 
@@ -708,8 +718,6 @@ document.addEventListener("DOMContentLoaded", function () {
       if (informationCardObj[infoCardId].isAddToCart) {
         updateCartCount(productCardObj, informationCardObj);
       }
-      console.log("information Card Object:", informationCardObj);
-      console.log("Product Card Object:", productCardObj);
     }
     // ? counter min max buttons
 
@@ -753,19 +761,21 @@ function swiperSettings(swiperClass, swiperId) {
     centeredSlides: false,
     spaceBetween: 30,
     pagination: {
-      el: ".swiper-pagination",
+      el: `.${swiperClass} .swiper-pagination`,
       clickable: true,
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: `.${swiperClass} .swiper-button-next`,
+      prevEl: `.${swiperClass} .swiper-button-prev`,
     },
     on: {
       init: function () {
+        // console.log("class:", this.el);
         initCustomPagination(this, swiperId);
       },
     },
   });
+  return swiperInstance;
 }
 
 function loadCategoryContentJs() {
@@ -872,8 +882,8 @@ function loadCategoryContentJs() {
   // ? end filtering card result
 
   // * category sliders settings
-  swiperSettings("VacationBenefitsSwiper", "10");
-  swiperSettings("discountClubOwnerSwiper", "11");
+  swiperSettings("VacationBenefitsSwiper", 10);
+  swiperSettings("discountClubOwnerSwiper", 11);
   // ?  category sliders settings
 
   // * mobile layout card logic
@@ -1014,7 +1024,6 @@ document.addEventListener("DOMContentLoaded", function () {
     favIcon.addEventListener("click", function (e) {
       e.preventDefault();
       isLiked = !isLiked;
-      console.log("isLiked", isLiked);
 
       if (isLiked) {
         heartPath.setAttribute("stroke", "red");
@@ -1060,7 +1069,6 @@ document.addEventListener("DOMContentLoaded", function () {
     addToCartBtn.addEventListener("click", function (e) {
       e.preventDefault();
       isAddToCart = !isAddToCart;
-      console.log("isAddToCart", isAddToCart);
 
       if (isAddToCart) {
         addToCartText.textContent = "הסר";
@@ -1108,13 +1116,14 @@ function initCustomPagination(swiperInstance, swiperId) {
   const paginationElement = document.querySelector(
     `.pagination-swiper-location[data-swiperId="${swiperId}"]`
   );
+
+  const activeEl = paginationElement.querySelector(".pagination-swiper-current");
+  const lengthElement = paginationElement.querySelector(".pagination-swiper-length");
+
   if (!paginationElement) {
     console.error(`Pagination element not found for swiperId: ${swiperId}`);
     return;
   }
-
-  const activeEl = paginationElement.querySelector(".pagination-swiper-current");
-  const lengthElement = paginationElement.querySelector(".pagination-swiper-length");
 
   if (!activeEl || !lengthElement) {
     console.error("Required pagination elements are missing.");
@@ -1299,10 +1308,8 @@ const toggleSubCategory = (e) => {
 
   if (!isCurrentlyOpen) {
     if (isBiggerThenLaptop) {
-      console.log("desktop");
       openSubCategory(subCategoriesWrapper, isBiggerThenLaptop);
     } else {
-      console.log("mobile");
       openSubCategory(subCategoriesWrapper, false);
     }
   }
@@ -1339,7 +1346,7 @@ const openSubCategory = (subCategoriesWrapper, isBiggerThenLaptop) => {
   subCategoriesWrapper.style.right = "307px";
 
   // arrow.classList.add("rotate");
-  console.log("isBiggerThenLaptop", isBiggerThenLaptop);
+  // console.log("isBiggerThenLaptop", isBiggerThenLaptop);
   if (isBiggerThenLaptop) {
     backgroundSubMenus.style.transition = "max-width 0.3s ease;";
     backgroundSubMenus.style.display = "flex";
@@ -1381,7 +1388,7 @@ function loadProductContent(content) {
   dynamicImageWindow.innerHTML = content;
   dynamicImageWindow.style.background = "#fff";
   dynamicImageWindow.style.width = "575px";
-  console.log("width:", dynamicImageWindow.style.width);
+  // console.log("width:", dynamicImageWindow.style.width);
 }
 
 // clos0ing subcategory on hover out (for desktop only)
@@ -1458,8 +1465,8 @@ document.addEventListener("DOMContentLoaded", function () {
       if (voucherCardObj[voucherId].isAddToCart) {
         updateCartCount(productCardObj, voucherCardObj);
       }
-      console.log("voucher Card Object:", voucherCardObj);
-      console.log("Product Card Object:", productCardObj);
+      // console.log("voucher Card Object:", voucherCardObj);
+      // console.log("Product Card Object:", productCardObj);
     }
     // ? counter min max buttons
 

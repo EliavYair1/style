@@ -114,10 +114,8 @@ const toggleSubCategory = (e) => {
 
   if (!isCurrentlyOpen) {
     if (isBiggerThenLaptop) {
-      console.log("desktop");
       openSubCategory(subCategoriesWrapper, isBiggerThenLaptop);
     } else {
-      console.log("mobile");
       openSubCategory(subCategoriesWrapper, false);
     }
   }
@@ -154,7 +152,7 @@ const openSubCategory = (subCategoriesWrapper, isBiggerThenLaptop) => {
   subCategoriesWrapper.style.right = "307px";
 
   // arrow.classList.add("rotate");
-  console.log("isBiggerThenLaptop", isBiggerThenLaptop);
+  // console.log("isBiggerThenLaptop", isBiggerThenLaptop);
   if (isBiggerThenLaptop) {
     backgroundSubMenus.style.transition = "max-width 0.3s ease;";
     backgroundSubMenus.style.display = "flex";
@@ -196,7 +194,7 @@ function loadProductContent(content) {
   dynamicImageWindow.innerHTML = content;
   dynamicImageWindow.style.background = "#fff";
   dynamicImageWindow.style.width = "575px";
-  console.log("width:", dynamicImageWindow.style.width);
+  // console.log("width:", dynamicImageWindow.style.width);
 }
 
 // clos0ing subcategory on hover out (for desktop only)

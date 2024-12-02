@@ -54,8 +54,8 @@ document.addEventListener("DOMContentLoaded", function () {
       if (voucherCardObj[voucherId].isAddToCart) {
         updateCartCount(productCardObj, voucherCardObj);
       }
-      console.log("voucher Card Object:", voucherCardObj);
-      console.log("Product Card Object:", productCardObj);
+      // console.log("voucher Card Object:", voucherCardObj);
+      // console.log("Product Card Object:", productCardObj);
     }
     // ? counter min max buttons
 

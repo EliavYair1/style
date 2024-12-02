@@ -4,19 +4,21 @@ function swiperSettings(swiperClass, swiperId) {
     centeredSlides: false,
     spaceBetween: 30,
     pagination: {
-      el: ".swiper-pagination",
+      el: `.${swiperClass} .swiper-pagination`,
       clickable: true,
     },
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: `.${swiperClass} .swiper-button-next`,
+      prevEl: `.${swiperClass} .swiper-button-prev`,
     },
     on: {
       init: function () {
+        // console.log("class:", this.el);
         initCustomPagination(this, swiperId);
       },
     },
   });
+  return swiperInstance;
 }
 
 function loadCategoryContentJs() {
@@ -123,8 +125,8 @@ function loadCategoryContentJs() {
   // ? end filtering card result
 
   // * category sliders settings
-  swiperSettings("VacationBenefitsSwiper", "10");
-  swiperSettings("discountClubOwnerSwiper", "11");
+  swiperSettings("VacationBenefitsSwiper", 10);
+  swiperSettings("discountClubOwnerSwiper", 11);
   // ?  category sliders settings
 
   // * mobile layout card logic

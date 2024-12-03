@@ -138,7 +138,7 @@ const toggleCorporateMenu = () => {
 const newUser = {
   hamburgerShown: "none",
   centeredOrBetween: "center",
-  profileLink: "sign-up",
+  profileLink: "/?page=registration",
   profileText: "התחברות",
   closeEdgeSpace: "space-around",
 };
@@ -146,7 +146,7 @@ const newUser = {
 const connectedUser = {
   hamburgerShown: "flex",
   centeredOrBetween: "space-between",
-  profileLink: "user-profile",
+  profileLink: "/?page=login",
   profileText: "איזור אישי",
 };
 
@@ -167,7 +167,7 @@ function updateHeader(userData) {
 
   const profileLinkElement = document.querySelector(".header__profile");
   if (profileLinkElement) {
-    profileLinkElement.setAttribute("href", `#${userData.profileLink}`);
+    profileLinkElement.setAttribute("href", `${userData.profileLink}`);
     const profileTextElement = profileLinkElement.querySelector(".header__profile-text");
     if (profileTextElement) {
       profileTextElement.textContent = userData.profileText;
@@ -409,6 +409,24 @@ document.addEventListener("DOMContentLoaded", function () {
       .then((data) => {
         document.getElementById("dynamic-page-content").innerHTML = data;
         loadThanksContent(); // file : 16_thanks.js
+      })
+      .catch((err) => console.error("Error loading content:", err));
+  }
+  if (pageParam === "login") {
+    fetch("/login.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("dynamic-page-content").innerHTML = data;
+        loadLoginsContent(); // file : 17_login.js
+      })
+      .catch((err) => console.error("Error loading content:", err));
+  }
+  if (pageParam === "registration") {
+    fetch("/registration.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("dynamic-page-content").innerHTML = data;
+        loadRegistrationContent(); // file : 18_registration.js
       })
       .catch((err) => console.error("Error loading content:", err));
   }
@@ -670,6 +688,18 @@ function loadThanksContent() {
   const heroContainer = document.querySelector(".hero-container");
   heroContainer.hidden = true;
   console.log("load thanks logic");
+}
+
+function loadLoginsContent() {
+  const heroContainer = document.querySelector(".hero-container");
+  heroContainer.hidden = true;
+  console.log("login logic");
+}
+
+function loadRegistrationContent() {
+  const heroContainer = document.querySelector(".hero-container");
+  heroContainer.hidden = true;
+  console.log("registration logic");
 }
 
 

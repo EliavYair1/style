@@ -1,0 +1,11 @@
+@import "./login/login-container.scss";
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0;
+
+  @media (min-width: 1200px) {
+    padding-top: 272px;
+  }
+}

@@ -138,7 +138,7 @@ const toggleCorporateMenu = () => {
 const newUser = {
   hamburgerShown: "none",
   centeredOrBetween: "center",
-  profileLink: "sign-up",
+  profileLink: "/?page=registration",
   profileText: "התחברות",
   closeEdgeSpace: "space-around",
 };
@@ -146,7 +146,7 @@ const newUser = {
 const connectedUser = {
   hamburgerShown: "flex",
   centeredOrBetween: "space-between",
-  profileLink: "user-profile",
+  profileLink: "/?page=login",
   profileText: "איזור אישי",
 };
 
@@ -167,7 +167,7 @@ function updateHeader(userData) {
 
   const profileLinkElement = document.querySelector(".header__profile");
   if (profileLinkElement) {
-    profileLinkElement.setAttribute("href", `#${userData.profileLink}`);
+    profileLinkElement.setAttribute("href", `${userData.profileLink}`);
     const profileTextElement = profileLinkElement.querySelector(".header__profile-text");
     if (profileTextElement) {
       profileTextElement.textContent = userData.profileText;

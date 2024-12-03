@@ -55,4 +55,22 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .catch((err) => console.error("Error loading content:", err));
   }
+  if (pageParam === "login") {
+    fetch("/login.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("dynamic-page-content").innerHTML = data;
+        loadLoginsContent(); // file : 17_login.js
+      })
+      .catch((err) => console.error("Error loading content:", err));
+  }
+  if (pageParam === "registration") {
+    fetch("/registration.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("dynamic-page-content").innerHTML = data;
+        loadRegistrationContent(); // file : 18_registration.js
+      })
+      .catch((err) => console.error("Error loading content:", err));
+  }
 });

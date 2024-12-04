@@ -682,6 +682,18 @@ function loadPaymentContent() {
     option.textContent = year;
     yearDropdown.appendChild(option);
   }
+
+  const fieldIcon = document.querySelector(".payment__field-wrapper.cvv");
+  const svgIcon = document.querySelector(".payment__form-icon");
+  const popup = document.querySelector(".payment__hovered-popup");
+
+  fieldIcon.addEventListener("mouseenter", function () {
+    popup.style.display = "block";
+  });
+
+  fieldIcon.addEventListener("mouseleave", function () {
+    popup.style.display = "none";
+  });
 }
 
 function loadThanksContent() {

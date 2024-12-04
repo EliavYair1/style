@@ -91,6 +91,7 @@
           />
         </svg>
       </label>
+
       <input
         type="password"
         id="cvv"
@@ -100,6 +101,10 @@
         placeholder=""
         required
       />
+
+      <div class="payment__hovered-popup" style="display: none">
+        @@include("../../img/svg/hoverpop.svg")
+      </div>
     </div>
     @@include('../features/button.html',{"button-icon":"../../img/svg/payment.svg","backgroundColor":"payment",
     "button-text":"לתשלום כעת" })

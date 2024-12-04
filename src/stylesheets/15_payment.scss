@@ -6,6 +6,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+
   &__items {
     border-radius: 20px;
     border: 2px solid $color-white;
@@ -143,6 +144,7 @@
 
     &-label.last-child {
       flex-basis: 80%;
+
       svg {
         margin-right: 6px;
       }
@@ -175,6 +177,11 @@
     &-input.selector {
       flex-basis: 100%;
     }
+  }
+  &__hovered-popup {
+    display: none;
+    position: absolute;
+    left: calc(50% - -273px);
   }
   &__selector-wrapper {
     display: flex;
@@ -313,7 +320,15 @@
 
       &-label.last-child {
         max-width: 175px;
+        cursor: pointer;
+
         svg {
+          &:hover {
+            background-color: #eee;
+            &__hovered-popup {
+              display: flex;
+            }
+          }
         }
       }
       &-icon {
@@ -326,6 +341,15 @@
         }
       }
       &-input.cvv {
+      }
+    }
+    &__hovered-popup {
+      display: none;
+      position: relative;
+      z-index: 10;
+      position: absolute;
+      left: calc(50% + 671px);
+      img {
       }
     }
     &__selector-wrapper {

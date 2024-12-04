@@ -1,6 +1,6 @@
 
         <svg
-          class="hover-svg"
+          class="hover-popup"
           xmlns="http://www.w3.org/2000/svg"
           width="294"
           height="134"
@@ -19,21 +19,14 @@
           <foreignObject x="0" y="25" width="100%" height="100">
             <div
               xmlns="http://www.w3.org/1999/xhtml"
-              style="display: flex; justify-content: center; width: 100%; height: 100%"
+              class="content-wrapper"
             >
               <ul
-                style="
-                  padding: 0;
-                  font-size: 18px;
-                  text-align: right;
-                  margin: 0;
-                  margin-top: 7px;
-                  margin-right: 10px;
-                "
+              class="list-wrapper"
+          
               >
-                <li id="svgText">במקום 89 ₪ לחודש לחודשים 1-2</li>
-                <li id="svgText2">139 ₪ לחודש לחודשים 3-12</li>
-                <li id="svgText3">שכירות נתב בתוספת 19.90 ₪ לחודש</li>
+                <li id="svgText">plain text</li>
+                <li id="svgText2">plain text</li>
               </ul>
             </div>
           </foreignObject>

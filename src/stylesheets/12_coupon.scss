@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 .coupon-page {
   width: 100%;
   display: flex;
@@ -12,7 +14,7 @@
     justify-content: center;
     align-items: flex-end;
     border-radius: 20px 20px 0 0;
-    border: 2px solid #fff;
+    border: 2px solid $color-white;
     box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.08);
     width: 335px;
 
@@ -30,7 +32,7 @@
       font-style: normal;
       font-weight: 600;
       gap: 10px;
-      color: #fff;
+      color: $color-white;
       margin: 0 auto 24px;
 
       .icon {
@@ -50,8 +52,8 @@
     align-items: center;
     flex-direction: column;
     border-radius: 0px 0px 20px 20px;
-    border: 2px solid #fff;
-    background: #fff;
+    border: 2px solid $color-white;
+    background: $color-white;
     box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.08);
     width: 335px;
     padding: 0 24px 28px;
@@ -65,8 +67,12 @@
       display: flex;
       justify-content: center;
       border-radius: 6px;
-      border: 1px solid #fff;
-      background: radial-gradient(173.35% 566.74% at 86.58% 221.84%, #fff 0%, #e8e8ff 100%);
+      border: 1px solid $color-white;
+      background: radial-gradient(
+        173.35% 566.74% at 86.58% 221.84%,
+        $color-white 0%,
+        $btn-default 100%
+      );
       box-shadow: 0px 4px 12px 0px rgba(65, 56, 242, 0.08);
       max-width: 287px;
       .Benefit-value-box {
@@ -79,11 +85,11 @@
           font-size: 14px;
           font-style: normal;
           font-weight: 500;
-          color: #46494f;
+          color: $color-grey;
         }
         .text {
           margin-bottom: 4px;
-          color: #46494f;
+          color: $color-grey;
           font-size: 24px;
           font-style: normal;
           font-weight: 600;
@@ -99,18 +105,18 @@
           font-size: 14px;
           font-style: normal;
           font-weight: 500;
-          color: #46494f;
+          color: $color-grey;
         }
 
         .text {
           margin-bottom: 4px;
-          color: #46494f;
+          color: $color-grey;
           font-size: 24px;
           font-style: normal;
           font-weight: 600;
         }
         .subtext {
-          color: #46494f;
+          color: $color-grey;
           font-size: 14px;
           font-style: normal;
           font-weight: 500;
@@ -126,17 +132,17 @@
           font-size: 14px;
           font-style: normal;
           font-weight: 500;
-          color: #46494f;
+          color: $color-grey;
         }
         .text {
           margin-bottom: 4px;
-          color: #2020b3;
+          color: $color-primary;
           font-size: 24px;
           font-style: normal;
           font-weight: 700;
         }
         .subtext {
-          color: #2020b3;
+          color: $color-primary;
           font-size: 14px;
           font-style: normal;
           font-weight: 500;
@@ -157,14 +163,14 @@
         font-size: 18px;
         font-style: normal;
         font-weight: 600;
-        color: #46494f;
+        color: $color-grey;
         margin: 0 auto;
       }
       .points {
         font-size: 15px;
         font-style: normal;
         font-weight: 600;
-        color: #4138f2;
+        color: $color-royal-blue;
       }
       .range-labels {
         display: flex;
@@ -172,7 +178,7 @@
         width: 100%;
         font-size: 16px;
         font-weight: 700;
-        color: #46494f;
+        color: $color-grey;
         margin-bottom: 5px;
       }
 
@@ -191,14 +197,14 @@
           width: 16px;
           height: 16px;
           border-radius: 50%;
-          background: #2020b3;
+          background: $color-primary;
         }
 
         &::-moz-range-thumb {
           width: 16px;
           height: 16px;
           border-radius: 50%;
-          background: #2020b3;
+          background: $color-primary;
         }
       }
     }
@@ -211,7 +217,7 @@
       align-items: center;
       gap: 10px;
       .label {
-        color: #46494f;
+        color: $color-grey;
         margin-left: 15px;
         font-size: 15px;
         font-style: normal;
@@ -222,8 +228,8 @@
         align-items: center;
         justify-content: center;
         border-radius: 6px;
-        border: 1px solid #46494f;
-        background: #fff;
+        border: 1px solid $color-grey;
+        background: $color-white;
         box-shadow: 0px 2.286px 7.429px 0px rgba(0, 0, 0, 0.16);
         padding: 6px 16px;
         line-height: 1;
@@ -245,14 +251,14 @@
           }
 
           &.minus {
-            background-color: #ffffff;
+            background-color: $color-white;
             border-radius: 6px;
             border: unset;
             font-weight: 900;
           }
 
           &.plus {
-            background-color: #ffffff;
+            background-color: $color-white;
             border-radius: 6px;
             border: unset;
             font-weight: 900;
@@ -275,8 +281,8 @@
       padding: 12px 16px;
       gap: 6px;
       border-radius: 6px;
-      border: 1px solid #46494f;
-      background: #fff;
+      border: 1px solid $color-grey;
+      background: $color-white;
       box-shadow: 0px 2.286px 7.429px 0px rgba(0, 0, 0, 0.16);
       flex-direction: row-reverse;
       margin-bottom: 10px;
@@ -288,7 +294,7 @@
         font-size: 18px;
         font-style: normal;
         font-weight: 600;
-        color: #46494f;
+        color: $color-grey;
       }
       .addtocardBtn-logo {
         width: 16px;
@@ -303,7 +309,7 @@
       justify-content: center;
       align-items: center;
       border-radius: 6px;
-      background: #2020b3;
+      background: $color-primary;
       box-shadow: 0px 2.286px 7.429px 0px rgba(0, 0, 0, 0.16);
       padding: 12px 16px;
       gap: 3px;
@@ -317,7 +323,7 @@
         font-size: 18px;
         font-style: normal;
         font-weight: 600;
-        color: #ffffff;
+        color: $color-white;
       }
       .arrow {
         svg {
@@ -334,13 +340,13 @@
       width: 100%;
       gap: 5px;
       .expiration-date {
-        color: #46494f;
+        color: $color-grey;
         font-size: 16px;
         font-style: normal;
         font-weight: 500;
       }
       .expiration-date-sidetext {
-        color: #46494f;
+        color: $color-grey;
         font-size: 16px;
         font-style: normal;
         font-weight: 500;
@@ -352,12 +358,12 @@
       line-height: 22px;
       margin-bottom: 10px;
       .declaimer-text {
-        color: #46494f;
+        color: $color-grey;
         font-weight: 400;
         font-size: 15px;
         margin: 0;
         .declaimer-bold {
-          color: #46494f;
+          color: $color-grey;
           font-weight: 700;
           font-size: 15px;
           margin: 0;
@@ -368,12 +374,12 @@
     .discountPrice-declaimer-wrapper {
       line-height: 22px;
       .declaimer-text {
-        color: #46494f;
+        color: $color-grey;
         font-weight: 400;
         font-size: 15px;
         margin: 0;
         .declaimer-bold {
-          color: #46494f;
+          color: $color-grey;
           font-weight: 700;
           font-size: 15px;
         }
@@ -406,8 +412,8 @@
 
       .toggle {
         padding: 10px 20px;
-        border: 2px solid #fff;
-        background-color: #f3f3ff;
+        border: 2px solid $color-white;
+        background-color: $color-background;
         cursor: pointer;
         font-size: 14px;
         border-radius: 4px;
@@ -418,11 +424,11 @@
         align-items: center;
         transition: all 0.2s;
         &.active {
-          background-color: #2020b3;
-          color: #fff;
+          background-color: $color-primary;
+          color: $color-white;
           svg {
             path {
-              stroke: #ffffff;
+              stroke: $color-white;
             }
           }
         }
@@ -436,8 +442,8 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-end;
-      border: 2px solid #fff;
-      background: #fff;
+      border: 2px solid $color-white;
+      background: $color-white;
       box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.08);
       border-radius: 20px;
       .info {
@@ -446,7 +452,7 @@
           font-size: 22px;
           font-style: normal;
           font-weight: 600;
-          color: #0b0427;
+          color: $color-style-black;
           margin-bottom: 18px;
         }
         .details {
@@ -454,7 +460,7 @@
           line-height: 19px;
           font-size: 16px;
           a {
-            color: #000;
+            color: $color-black;
           }
         }
         .second-title {
@@ -481,7 +487,7 @@
     // * coupon-img-wrapper
     .coupon-img-wrapper {
       width: 850px;
-      background: #ffffff;
+      background: $color-white;
       border-radius: unset;
       flex-direction: column-reverse;
       align-items: center;
@@ -495,7 +501,7 @@
         border-radius: unset;
       }
       .img-text {
-        color: #0b0427;
+        color: $color-style-black;
         font-size: 40px;
         position: relative;
         margin-right: 34px;
@@ -503,7 +509,7 @@
         .icon {
           width: 34px;
           path {
-            fill: #2020b3;
+            fill: $color-primary;
           }
         }
         span {
@@ -585,7 +591,7 @@
             &.minus {
               &:hover {
                 transform: scale(1.8);
-                color: red;
+                color: $color-red;
                 line-height: 1;
               }
               &:active {
@@ -628,14 +634,14 @@
       // * quick purchase
       .quick-purchase-wrapper {
         &:hover {
-          background: #ffffff;
+          background: $color-white;
           .text {
-            color: #2020b3;
+            color: $color-primary;
           }
           .arrow {
             svg {
               path {
-                stroke: #2020b3;
+                stroke: $color-primary;
               }
             }
           }
@@ -695,7 +701,7 @@
           font-size: 18px;
           &:hover {
             background-color: #d0d0ef;
-            // color: #fff;
+            // color: $color-white;
             svg {
               path {
               }
@@ -703,15 +709,15 @@
           }
           svg {
             path {
-              stroke: #46494f;
+              stroke: $color-grey;
             }
           }
           &.active {
-            background-color: #2020b3;
-            color: #fff;
+            background-color: $color-primary;
+            color: $color-white;
             svg {
               path {
-                // stroke: #ffffff;
+                // stroke: $color-white;
               }
             }
           }
@@ -904,7 +910,7 @@
           }
 
           &:hover {
-            // background-color: #e8e8ff;
+            // background-color: $btn-default;
           }
         }
       }

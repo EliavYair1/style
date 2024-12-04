@@ -1,15 +1,28 @@
+$color-white: #ffffff;
+$color-red: #e40404;
 $color-primary: #2020b3;
-$color-black: #000;
+$color-royal-blue: #4138f2;
+$color-azure: #007aff;
+$color-orange: #f2a347;
+$color-background: #f3f3ff;
+$color-black: #000000;
 $color-style-black: #0b0427;
-$color-white: #fff;
-$box-shadow-default: 0px 2.286px 7.429px rgba(0, 0, 0, 0.16);
-$box-shadow-search: 0px 7px 20px rgba(0, 0, 0, 0.12);
-$border-radius: 6px;
-$transition-default: 0.3s ease;
-$transition-menu: 0.4s ease-in-out;
+$color-blackish: #101820;
+$color-grey: #46494f;
 
 $header-bg: #ffffff;
-$black: #000;
-$blue: #2020b3;
+$btn-default: #e8e8ff;
+$color-pagination: rgba(0, 0, 0, 0.2);
+$border-radius: 6px;
 $box-shadow: 0px 2.286px 7.429px rgba(0, 0, 0, 0.16);
 $box-shadow-search: 0px 7px 20px rgba(0, 0, 0, 0.12);
+$box-shadow-default: 0px 2.286px 7.429px rgba(0, 0, 0, 0.16);
+$box-shadow-search: 0px 7px 20px rgba(0, 0, 0, 0.12);
+$popup-box-shadow: 0px 445px 125px 0px rgba(27, 22, 90, 0),
+  0px 285px 114px 0px rgba(27, 22, 90, 0.01), 0px 160px 96px 0px rgba(27, 22, 90, 0.05),
+  0px 71px 71px 0px rgba(27, 22, 90, 0.09), 0px 18px 39px 0px rgba(27, 22, 90, 0.1);
+$popup-box-shadow2: 0px 445px 125px 0px rgba(27, 22, 90, 0),
+  0px 285px 114px 0px rgba(27, 22, 90, 0.01), 0px 160px 96px 0px rgba(27, 22, 90, 0.05),
+  0px 71px 71px 0px rgba(27, 22, 90, 0.09), 0px 18px 39px 0px rgba(27, 22, 90, 0.1);
+$transition-default: 0.3s ease;
+$transition-menu: 0.4s ease-in-out;

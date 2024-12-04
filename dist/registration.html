@@ -1,4 +1,354 @@
-<div class="registration"></div>
+<div class="registration"><div class="registration-container">
+  <h2 class="registration-container__title">הרשמה לאתר</h2>
+  <form action="" class="registration-container__form">
+    <div class="registration-container__fieldWrapper">
+      <!-- first name -->
+      <div class="registration-container__field">
+        <label for="reg_firstname" class="registration-container__label">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+          >
+            <path
+              d="M2.5 16.6667C4.44649 14.6021 7.08918 13.3333 10 13.3333C12.9108 13.3333 15.5535 14.6021 17.5 16.6667M13.75 6.25C13.75 8.32107 12.0711 10 10 10C7.92893 10 6.25 8.32107 6.25 6.25C6.25 4.17893 7.92893 2.5 10 2.5C12.0711 2.5 13.75 4.17893 13.75 6.25Z"
+              stroke="black"
+              stroke-width="1.66667"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span>שם פרטי</span>
+        </label>
+        <input
+          placeholder="יש להקליד"
+          type="text"
+          id="reg_firstname"
+          class="registration-container__input"
+        />
+        <div
+          id="reg_firstname-error-msg"
+          class="registration-container__error-msg"
+          style="display: none"
+        >
+          Please enter a valid first name.
+        </div>
+      </div>
+      <div class="registration-container__field">
+        <!-- last name -->
+        <label for="reg_lastname" class="registration-container__label"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+          >
+            <path
+              d="M2.5 16.6667C4.44649 14.6021 7.08918 13.3333 10 13.3333C12.9108 13.3333 15.5535 14.6021 17.5 16.6667M13.75 6.25C13.75 8.32107 12.0711 10 10 10C7.92893 10 6.25 8.32107 6.25 6.25C6.25 4.17893 7.92893 2.5 10 2.5C12.0711 2.5 13.75 4.17893 13.75 6.25Z"
+              stroke="black"
+              stroke-width="1.66667"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span>שם משפחה</span>
+        </label>
+        <input
+          placeholder="יש להקליד"
+          type="text"
+          id="reg_lastname"
+          class="registration-container__input"
+        />
+
+        <div
+          id="reg_lastname-error-msg"
+          class="registration-container__error-msg"
+          style="display: none"
+        >
+          Please enter a valid last name.
+        </div>
+      </div>
+    </div>
+
+    <div class="registration-container__fieldWrapper">
+      <div class="registration-container__field">
+        <!-- email -->
+        <label for="reg_email" class="registration-container__label"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+          >
+            <path
+              d="M1.66602 5.83325L8.47011 10.5961C9.02109 10.9818 9.29658 11.1746 9.59624 11.2493C9.86093 11.3153 10.1378 11.3153 10.4025 11.2493C10.7021 11.1746 10.9776 10.9818 11.5286 10.5961L18.3327 5.83325M5.66602 16.6666H14.3327C15.7328 16.6666 16.4329 16.6666 16.9677 16.3941C17.4381 16.1544 17.8205 15.772 18.0602 15.3016C18.3327 14.7668 18.3327 14.0667 18.3327 12.6666V7.33325C18.3327 5.93312 18.3327 5.23306 18.0602 4.69828C17.8205 4.22787 17.4381 3.84542 16.9677 3.60574C16.4329 3.33325 15.7328 3.33325 14.3327 3.33325H5.66602C4.26588 3.33325 3.56582 3.33325 3.03104 3.60574C2.56063 3.84542 2.17818 4.22787 1.9385 4.69828C1.66602 5.23306 1.66602 5.93312 1.66602 7.33325V12.6666C1.66602 14.0667 1.66602 14.7668 1.9385 15.3016C2.17818 15.772 2.56063 16.1544 3.03104 16.3941C3.56582 16.6666 4.26588 16.6666 5.66602 16.6666Z"
+              stroke="black"
+              stroke-width="1.66667"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span>דואר אלקטרוני</span>
+        </label>
+        <input
+          placeholder="יש להקליד"
+          type="email"
+          id="reg_email"
+          class="registration-container__input"
+        />
+        <div
+          id="reg_email-error-msg"
+          class="registration-container__error-msg"
+          style="display: none"
+        >
+          Please enter a valid email.
+        </div>
+      </div>
+      <div class="registration-container__field">
+        <!-- gender picker -->
+        <div class="registration-container__gender-picker">
+          <h3 class="registration-container__gender-text">מגדר</h3>
+          <div class="registration-container__gender-wrapper">
+            <div class="registration-container__gender" role="button" aria-label="Female">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+              >
+                <path
+                  d="M13.0044 16.1681C16.0132 17.7938 17.3705 16.5361 17.3705 16.5361C14.8839 11.4977 15.5311 8.64363 15.4288 7.43113C15.4288 3.94749 12.6587 1.05702 9.18533 1C5.71178 1.05702 2.94169 3.94769 2.94169 7.43113C2.83914 8.64363 3.48637 11.4977 1 16.5361C1 16.5361 2.35723 17.7938 5.36609 16.1681"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M13.7376 8.15647V11.6136C13.7376 14.1283 11.7001 16.168 9.18677 16.168C6.67348 16.168 4.63477 14.1283 4.63477 11.6136V8.44376C10.0482 7.16415 10.5854 5.44994 10.6161 4.92725C10.722 6.34466 12.2489 7.45559 13.7376 8.15647Z"
+                  stroke="black"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M6.23828 9.73437C6.23828 9.36484 6.56078 9.0625 6.95494 9.0625C7.34911 9.0625 7.67161 9.36484 7.67161 9.73437C7.67161 10.1039 7.34911 10.4062 6.95494 10.4062C6.56078 10.4062 6.23828 10.1039 6.23828 9.73437Z"
+                  fill="black"
+                />
+                <path
+                  d="M10.5383 9.73437C10.5383 9.36484 10.8608 9.0625 11.2549 9.0625C11.6491 9.0625 11.9716 9.36484 11.9716 9.73437C11.9716 10.1039 11.6491 10.4062 11.2549 10.4062C10.8608 10.4062 10.5383 10.1039 10.5383 9.73437Z"
+                  fill="black"
+                />
+              </svg>
+              <span>נקבה</span>
+            </div>
+            <div class="registration-container__gender" role="button" aria-label="Male">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="18"
+                viewBox="0 0 16 18"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_1_2175)">
+                  <path
+                    d="M9.6 0C6.672 0 4.44 0.645 2.952 1.965C1.456 3.285 0.8 5.2125 0.8 7.5V8.1825C0.344 8.5875 0 9.1125 0 9.75C0 10.695 0.712 11.37 1.6 11.6925C1.896 12.57 2.216 13.485 2.576 14.2725C2.968 15.1275 3.32 15.81 3.8 16.29C6.096 18.57 9.904 18.57 12.2 16.29C12.688 15.81 13.008 15.1275 13.4 14.2725C13.76 13.4925 14.104 12.57 14.4 11.6925C15.288 11.3625 16 10.6875 16 9.75C16 9.1125 15.656 8.5875 15.2 8.1825V7.5C15.2 5.385 14.688 3.87 13.776 2.88C13.008 2.04 11.976 1.695 10.952 1.59L10.104 0H9.608L9.6 0ZM9.128 1.545L9.68 2.58C9.944 3.0825 10.048 3.435 10.056 3.585C10.064 3.735 10.064 3.675 10.032 3.705C9.96 3.7575 9.288 3.9225 8.456 3.96C7.624 3.9975 6.64 3.9825 5.728 4.3125C4.816 4.6425 4.016 5.535 4 6.75H5.6C5.6 6.015 5.792 5.9025 6.304 5.715C6.816 5.5275 7.696 5.475 8.552 5.43C9.408 5.3925 10.296 5.4375 11.048 4.845C11.424 4.5525 11.664 4.035 11.648 3.5325C11.648 3.42 11.616 3.315 11.6 3.2025C11.944 3.3375 12.272 3.5475 12.552 3.8625C13.136 4.4925 13.6 5.6025 13.6 7.4925V8.8725L14 9.0825C14.24 9.2175 14.4 9.4575 14.4 9.7425C14.4 10.1475 14.096 10.4625 13.672 10.4925L13.12 10.515L12.968 11.01C12.672 11.91 12.304 12.8625 11.944 13.6575C11.584 14.4525 11.176 15.1275 11.048 15.2475C9.344 16.935 6.648 16.935 4.952 15.2475C4.824 15.12 4.408 14.445 4.056 13.6575C3.704 12.87 3.328 11.91 3.032 11.01L2.88 10.515L2.328 10.4925C1.912 10.4625 1.6 10.1475 1.6 9.7425C1.6 9.4575 1.752 9.2175 2 9.0825L2.4 8.8725V7.4925C2.4 5.4675 2.944 4.0125 4.048 3.0375C5.072 2.13 6.744 1.6125 9.12 1.5375L9.128 1.545ZM5.6 9C5.16 9 4.8 9.3375 4.8 9.75C4.8 10.1625 5.16 10.5 5.6 10.5C6.04 10.5 6.4 10.1625 6.4 9.75C6.4 9.3375 6.04 9 5.6 9ZM10.4 9C9.96 9 9.6 9.3375 9.6 9.75C9.6 10.1625 9.96 10.5 10.4 10.5C10.84 10.5 11.2 10.1625 11.2 9.75C11.2 9.3375 10.84 9 10.4 9Z"
+                    fill="black"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_2175">
+                    <rect width="16" height="18" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+              <span>זכר</span>
+            </div>
+          </div>
+          <span
+            id="gender-error-msg"
+            class="registration-container__error-msg"
+            style="display: none"
+            >אנא בחר מגדר</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <div class="registration-container__fieldWrapper">
+      <div class="registration-container__field">
+        <!-- id -->
+        <label for="reg_id" class="registration-container__label">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+          >
+            <path
+              d="M4.83907 15.442C4.85382 15.4171 4.86894 15.3924 4.88442 15.3678C6.01316 13.5734 6.66659 11.4515 6.66659 9.16667C6.66659 7.32572 8.15897 5.83333 9.99992 5.83333C11.8409 5.83333 13.3333 7.32572 13.3333 9.16667C13.3333 10.0142 13.2756 10.8488 13.1639 11.6667M11.3993 17.3697C11.9091 16.3522 12.327 15.2807 12.6423 14.1667M15.8414 15.11C16.3789 13.2214 16.6667 11.2276 16.6667 9.16667C16.6667 5.48477 13.6819 2.5 10 2.5C8.78571 2.5 7.64724 2.82465 6.66667 3.39188M2.5 12.8034C3.03388 11.7045 3.33333 10.4705 3.33333 9.16667C3.33333 7.95238 3.65798 6.81391 4.22521 5.83333M9.99989 9.16667C9.99989 12.0977 9.15924 14.8323 7.70589 17.1427"
+              stroke="black"
+              stroke-width="1.66667"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span>מספר תעודת זהות</span></label
+        >
+        <input
+          placeholder="יש להקליד"
+          type="number"
+          id="reg_id"
+          class="registration-container__input"
+        />
+
+        <div id="reg_id-error-msg" class="registration-container__error-msg" style="display: none">
+          Please enter a valid id.
+        </div>
+      </div>
+      <div class="registration-container__field">
+        <!-- date -->
+        <label for="reg_date" class="registration-container__label">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+          >
+            <path
+              d="M17.5 8.33341H2.5M13.3333 1.66675V5.00008M6.66667 1.66675V5.00008M6.5 18.3334H13.5C14.9001 18.3334 15.6002 18.3334 16.135 18.0609C16.6054 17.8212 16.9878 17.4388 17.2275 16.9684C17.5 16.4336 17.5 15.7335 17.5 14.3334V7.33341C17.5 5.93328 17.5 5.23322 17.2275 4.69844C16.9878 4.22803 16.6054 3.84558 16.135 3.6059C15.6002 3.33341 14.9001 3.33341 13.5 3.33341H6.5C5.09987 3.33341 4.3998 3.33341 3.86502 3.6059C3.39462 3.84558 3.01217 4.22803 2.77248 4.69844C2.5 5.23322 2.5 5.93328 2.5 7.33341V14.3334C2.5 15.7335 2.5 16.4336 2.77248 16.9684C3.01217 17.4388 3.39462 17.8212 3.86502 18.0609C4.3998 18.3334 5.09987 18.3334 6.5 18.3334Z"
+              stroke="black"
+              stroke-width="1.66667"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span>תאריך לידה</span></label
+        >
+        <input
+          placeholder="יש להקליד"
+          type="date"
+          dir="rtl"
+          id="reg_date"
+          class="registration-container__input"
+        />
+        <span class="registration-container__error-msg" style="display: none"
+          >אנא אשר את תקנון האתר</span
+        >
+        <div
+          id="reg_date-error-msg"
+          class="registration-container__error-msg"
+          style="display: none"
+        >
+          Please enter a valid date.
+        </div>
+      </div>
+    </div>
+    <div class="registration-container__fieldWrapper">
+      <div class="registration-container__field">
+        <!-- cell phone -->
+        <label for="reg_phone" class="registration-container__label">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+          >
+            <path
+              d="M6.98356 7.37779C7.56356 8.58581 8.35422 9.71801 9.35553 10.7193C10.3568 11.7206 11.4891 12.5113 12.6971 13.0913C12.801 13.1412 12.8529 13.1661 12.9187 13.1853C13.1523 13.2534 13.4392 13.2045 13.637 13.0628C13.6927 13.0229 13.7403 12.9753 13.8356 12.88C14.1269 12.5887 14.2726 12.443 14.4191 12.3478C14.9715 11.9886 15.6837 11.9886 16.2361 12.3478C16.3825 12.443 16.5282 12.5887 16.8196 12.88L16.9819 13.0424C17.4248 13.4853 17.6462 13.7067 17.7665 13.9446C18.0058 14.4175 18.0058 14.9761 17.7665 15.449C17.6462 15.6869 17.4248 15.9083 16.9819 16.3512L16.8506 16.4825C16.4092 16.9239 16.1886 17.1446 15.8885 17.3131C15.5556 17.5001 15.0385 17.6346 14.6567 17.6334C14.3126 17.6324 14.0774 17.5657 13.607 17.4322C11.0792 16.7147 8.69387 15.361 6.70388 13.371C4.7139 11.381 3.36017 8.99569 2.6427 6.46786C2.50919 5.99749 2.44244 5.7623 2.44141 5.41818C2.44028 5.03633 2.57475 4.51925 2.76176 4.18633C2.9303 3.88631 3.15098 3.66563 3.59233 3.22428L3.72369 3.09292C4.16656 2.65005 4.388 2.42861 4.62581 2.30833C5.09878 2.0691 5.65734 2.0691 6.1303 2.30832C6.36812 2.42861 6.58955 2.65005 7.03242 3.09291L7.19481 3.25531C7.48615 3.54665 7.63182 3.69231 7.72706 3.8388C8.08622 4.3912 8.08622 5.10336 7.72706 5.65576C7.63182 5.80225 7.48615 5.94791 7.19482 6.23925C7.09955 6.33451 7.05193 6.38214 7.01206 6.43782C6.87038 6.63568 6.82146 6.92256 6.88957 7.15619C6.90873 7.22193 6.93368 7.27389 6.98356 7.37779Z"
+              stroke="black"
+              stroke-width="1.66667"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span>נייד</span></label
+        >
+
+        <input
+          placeholder="יש להקליד"
+          type="tel"
+          id="reg_phone"
+          class="registration-container__input"
+        />
+        <div
+          id="reg_phone-error-msg"
+          class="registration-container__error-msg"
+          style="display: none"
+        >
+          Please enter a valid phone.
+        </div>
+      </div>
+      <div class="registration-container__field">
+        <!-- credit card -->
+        <label for="reg_credit" class="registration-container__label">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+          >
+            <path
+              d="M18.3327 8.33341H1.66602M1.66602 6.83341L1.66602 13.1667C1.66602 14.1002 1.66602 14.5669 1.84767 14.9234C2.00746 15.237 2.26243 15.492 2.57603 15.6518C2.93255 15.8334 3.39926 15.8334 4.33268 15.8334L15.666 15.8334C16.5994 15.8334 17.0661 15.8334 17.4227 15.6518C17.7363 15.492 17.9912 15.237 18.151 14.9234C18.3327 14.5669 18.3327 14.1002 18.3327 13.1667V6.83342C18.3327 5.89999 18.3327 5.43328 18.151 5.07677C17.9912 4.76316 17.7363 4.50819 17.4227 4.34841C17.0661 4.16675 16.5994 4.16675 15.666 4.16675L4.33268 4.16675C3.39926 4.16675 2.93255 4.16675 2.57603 4.3484C2.26243 4.50819 2.00746 4.76316 1.84767 5.07676C1.66602 5.43328 1.66602 5.89999 1.66602 6.83341Z"
+              stroke="black"
+              stroke-width="1.66667"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <span>6 ספרות אחרונות של כרטיס אשראי</span>
+        </label>
+        <input
+          placeholder="יש להקליד"
+          type="number"
+          maxlength="16"
+          id="reg_credit"
+          class="registration-container__input"
+        />
+        <div
+          id="reg_credit-error-msg"
+          class="registration-container__error-msg"
+          style="display: none"
+        >
+          Please enter a valid credit card number.
+        </div>
+      </div>
+    </div>
+    <div class="registration-container__submition-wrapper">
+      <div class="registration-container__fieldWrapper checkbox">
+        <div class="registration-container__checkbox-wrapper">
+          <input type="checkbox" id="reg__checkbox" class="registration-container__checkbox" />
+          <label for="reg__checkbox" class="registration-container__checkbox-text"
+            >אני מאשר/ת את תקנון האתר
+          </label>
+        </div>
+        <div class="registration-container__checkbox-wrapper">
+          <input type="checkbox" id="reg__checkbox2" class="registration-container__checkbox" />
+          <label for="reg__checkbox2" class="registration-container__checkbox-text">
+            אני מאשר/ת קבלת דיוור ומידע פרסומי
+          </label>
+        </div>
+        <div
+          id="reg__checkbox-error-msg"
+          class="registration-container__error-msg"
+          style="display: none"
+        >
+          אנא אשר את תקנון האתר
+        </div>
+      </div>
+      <button class="registration-container__button">הרשמה</button>
+    </div>
+  </form>
+</div>
+</div>
 
 <!-- *category navigator -->
 <div class="category-navigator">

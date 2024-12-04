@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 .payment {
   padding: 12px 0;
   display: flex;
@@ -6,11 +8,9 @@
   align-items: center;
   &__items {
     border-radius: 20px;
-    border: 2px solid #fff;
-    background: #fff;
-    box-shadow: 0px 445px 125px 0px rgba(27, 22, 90, 0), 0px 285px 114px 0px rgba(27, 22, 90, 0.01),
-      0px 160px 96px 0px rgba(27, 22, 90, 0.05), 0px 71px 71px 0px rgba(27, 22, 90, 0.09),
-      0px 18px 39px 0px rgba(27, 22, 90, 0.1);
+    border: 2px solid $color-white;
+    background: $color-white;
+    box-shadow: $popup-box-shadow2;
     padding: 28px 24px;
     margin-bottom: 20px;
     max-width: 335px;
@@ -55,25 +55,25 @@
 
     &-subtitle {
       font-size: 16px;
-      color: #000;
+      color: $color-black;
       font-weight: 400;
       margin: 0;
     }
 
     &-supplier {
       font-weight: 400;
-      color: #2020b3;
+      color: $color-primary;
     }
     &-price {
       font-size: 16px;
       font-style: normal;
       font-weight: 500;
-      color: #000;
+      color: $color-black;
       margin-bottom: 8px;
       .note {
         font-size: 16px;
         font-style: normal;
-        color: #000;
+        color: $color-black;
         font-weight: 500;
       }
     }
@@ -116,11 +116,9 @@
   &__details {
     padding: 28px 24px;
     border-radius: 20px;
-    border: 2px solid #fff;
-    background: #fff;
-    box-shadow: 0px 445px 125px 0px rgba(27, 22, 90, 0), 0px 285px 114px 0px rgba(27, 22, 90, 0.01),
-      0px 160px 96px 0px rgba(27, 22, 90, 0.05), 0px 71px 71px 0px rgba(27, 22, 90, 0.09),
-      0px 18px 39px 0px rgba(27, 22, 90, 0.1);
+    border: 2px solid $color-white;
+    background: $color-white;
+    box-shadow: $popup-box-shadow2;
     max-width: 335px;
     width: 100%;
     &-title {
@@ -157,8 +155,6 @@
 
     &-input {
       width: 100%;
-      // padding: 10px;
-      // margin-bottom: 15px;
       border: 1px solid #ccc;
       border-radius: 5px;
       border-top: 0;
@@ -168,12 +164,16 @@
       background-color: white;
       flex-basis: 75%;
       cursor: pointer;
+      padding: 4px;
       &:focus-visible {
         border-top: 0;
         border-right: 0;
         border-left: 0;
         border: 1px solid #ccc;
       }
+    }
+    &-input.selector {
+      flex-basis: 100%;
     }
   }
   &__selector-wrapper {
@@ -191,13 +191,14 @@
     display: flex;
     gap: 12px;
     margin-bottom: 27px;
+    align-items: flex-end;
   }
   &__field-wrapper.cvv {
     margin-bottom: 14px;
   }
   &__expiration-date {
     display: flex;
-    gap: 16px;
+    // gap: 16px;
     margin-bottom: 27px;
   }
   &__date-wrapper {

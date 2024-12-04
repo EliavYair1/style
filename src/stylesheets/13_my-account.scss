@@ -1,4 +1,6 @@
 @import "./animations.scss";
+@import "./variables.scss";
+
 .my-account {
   display: flex;
   flex-direction: column;
@@ -9,18 +11,16 @@
     padding: 28px 24px;
     gap: 12px;
     border-radius: 20px;
-    border: 2px solid #fff;
-    background: #fff;
-    box-shadow: 0px 445px 125px 0px rgba(27, 22, 90, 0), 0px 285px 114px 0px rgba(27, 22, 90, 0.01),
-      0px 160px 96px 0px rgba(27, 22, 90, 0.05), 0px 71px 71px 0px rgba(27, 22, 90, 0.09),
-      0px 18px 39px 0px rgba(27, 22, 90, 0.1);
+    border: 2px solid $color-white;
+    background: $color-white;
+    box-shadow: $popup-box-shadow2;
     margin: 12px 0;
     padding: 28px 24px;
     .title {
       font-size: 26px;
       font-style: normal;
       font-weight: 600;
-      color: #0b0427;
+      color: $color-style-black;
       margin-top: 0;
       margin-bottom: 12px;
     }
@@ -38,7 +38,7 @@
         align-items: center;
         height: 84px;
         border-radius: 12px;
-        background: #f3f3ff;
+        background: $color-background;
         cursor: pointer;
         text-decoration: none;
         gap: 4px;
@@ -48,7 +48,7 @@
           }
         }
         .text {
-          color: #000;
+          color: $color-black;
           text-align: center;
         }
       }
@@ -56,14 +56,14 @@
         background-color: #d0d0ef;
       }
       .box.active {
-        background: #2020b3;
+        background: $color-primary;
         .icon {
           path {
-            stroke: #fff;
+            stroke: $color-white;
           }
         }
         .text {
-          color: #fff;
+          color: $color-white;
         }
       }
     }
@@ -86,7 +86,7 @@
   @media (min-width: 1200px) {
     .card-container {
       border-radius: 8px;
-      background: #fff;
+      background: $color-white;
       box-shadow: 0px 445px 125px 0px rgba(27, 22, 90, 0),
         0px 285px 114px 0px rgba(27, 22, 90, 0.01), 0px 160px 96px 0px rgba(27, 22, 90, 0.05),
         0px 71px 71px 0px rgba(27, 22, 90, 0.09), 0px 18px 39px 0px rgba(27, 22, 90, 0.1);
@@ -121,14 +121,14 @@
           }
         }
         .box.active {
-          background: #2020b3;
+          background: $color-primary;
           .icon {
             path {
-              stroke: #fff;
+              stroke: $color-white;
             }
           }
           .text {
-            color: #fff;
+            color: $color-white;
           }
         }
       }

@@ -1,3 +1,4 @@
+@import "../variables.scss";
 .popup {
   position: fixed;
   top: 0;
@@ -67,7 +68,7 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    color: #0b0427;
+    color: $color-style-black;
   }
   &__payment-price {
     border-radius: 38px;
@@ -75,7 +76,7 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    color: #0b0427;
+    color: $color-style-black;
     padding-inline: 16px;
     span {
       margin-right: 2px;

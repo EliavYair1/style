@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 .voucher-card {
   display: flex;
   flex-direction: column;
@@ -7,7 +9,7 @@
   // border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
+  background-color: $color-white;
   max-width: 161px;
   // position: absolute;
   top: 0;
@@ -42,14 +44,14 @@
       }
     }
     .img-stamp {
-      //   background: #2020b3;
+      //   background: $color-primary;
       height: 25px;
       position: absolute;
       bottom: 12px;
       left: 0;
       &--text {
         font-size: 15px;
-        color: #ffffff;
+        color: $color-white;
         font-style: normal;
         font-weight: 700;
       }
@@ -71,7 +73,7 @@
     gap: 6px;
     &--priceText {
       font-size: 18px;
-      color: #46494f;
+      color: $color-grey;
       font-weight: 700;
     }
     &--pricesubtextText {
@@ -131,7 +133,7 @@
       flex-direction: row-reverse;
       &--maxBtn,
       &--minBtn {
-        background-color: #fff;
+        background-color: $color-white;
         border: none;
         border-radius: 5px;
         width: 24px;
@@ -162,7 +164,7 @@
         font-weight: 500;
         border-radius: 2.164px;
         border: 1.082px solid #ddd;
-        background: #fff;
+        background: $color-white;
         width: 50px;
         display: flex;
         justify-content: center;
@@ -171,7 +173,7 @@
     }
 
     &--addToCartBtn {
-      background-color: #f2a347;
+      background-color: $color-orange;
       color: black;
       font-size: 18px;
       font-style: normal;
@@ -212,7 +214,7 @@
         width: 161px;
         &--text {
           font-size: 15px;
-          color: #ffffff;
+          color: $color-white;
           font-style: normal;
           font-weight: 700;
           transform: translate(-8px, 2px);
@@ -270,7 +272,7 @@
       // width: 100px;
       &--priceText {
         font-size: 32px;
-        color: #46494f;
+        color: $color-grey;
         font-weight: 700;
       }
       &--pricesubtextText {
@@ -324,7 +326,7 @@
         flex-direction: row-reverse;
         &--maxBtn,
         &--minBtn {
-          background-color: #fff;
+          background-color: $color-white;
           border: none;
           border-radius: 5px;
           width: 24px;
@@ -355,7 +357,7 @@
           font-weight: 500;
           border-radius: 2.164px;
           border: 1.082px solid #ddd;
-          background: #fff;
+          background: $color-white;
           width: 54px;
           display: flex;
           justify-content: center;
@@ -364,7 +366,7 @@
       }
 
       &--addToCartBtn {
-        // background-color: #f2a347;
+        // background-color: $color-orange;
         // color: black;
         // font-size: 16px;
         // border: none;
@@ -373,21 +375,21 @@
         // width: 74px;
         // cursor: pointer;
         // transition: background-color 0.3s ease;
-        // color: #f2a347;
+        // color: $color-orange;
         // color: var(--color);
-        color: #f2a347;
+        color: $color-orange;
         transition: 0.25s;
         background: none;
-        border: 2px solid #f2a347;
+        border: 2px solid $color-orange;
         line-height: 1;
         // width: auto;
         // min-width: 77px;
         padding: 2px 12px;
         &:hover,
         &:focus {
-          box-shadow: inset 0 0 0 2em #f2a347;
-          border-color: #f2a347;
-          color: #000;
+          box-shadow: inset 0 0 0 2em $color-orange;
+          border-color: $color-orange;
+          color: $color-black;
         }
 
         &--addToCartText {

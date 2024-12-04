@@ -1,0 +1,12 @@
+@import "../stylesheets/registration/registration-container.scss";
+@import "./variables.scss";
+
+.registration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  @media (min-width: 1200px) {
+    padding-top: 272px;
+  }
+}

@@ -1,3 +1,4 @@
+@import "../variables.scss";
 .points-wrapper {
   display: flex;
   flex-direction: column;
@@ -39,7 +40,7 @@
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
-      color: #000;
+      color: $color-black;
     }
     .collapsible-header .points-received {
       font-weight: bold;
@@ -47,7 +48,7 @@
       background: rgba(63, 63, 234, 0.1);
       padding: 2px 20px;
       align-self: stretch;
-      color: #2020b3;
+      color: $color-primary;
     }
     .collapsible-header .points-left {
       font-weight: bold;
@@ -55,16 +56,16 @@
       border-radius: 19px;
       padding: 2px 20px;
       align-self: stretch;
-      color: #2020b3;
+      color: $color-primary;
     }
     .collapsible-header span {
       font-size: 16px;
-      color: #2020b3;
+      color: $color-primary;
     }
 
     .collapsible-content {
       padding: 10px;
-      background: #fff;
+      background: $color-white;
       display: none;
 
       .option {
@@ -87,7 +88,7 @@
 
   .points-balance-btn {
     border-radius: 8px;
-    border: 1px solid #2020b3;
+    border: 1px solid $color-primary;
     background: rgba(63, 63, 234, 0.1);
     padding: 10px 20px;
     display: flex;

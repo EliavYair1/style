@@ -1,3 +1,4 @@
+@import "./variables.scss";
 .showcase-slider {
   display: flex;
   // padding: 47px 237px;
@@ -30,9 +31,9 @@
       width: 192px;
       height: 40px;
       padding: 0 12px;
-      background: #fff;
+      background: $color-white;
       border-radius: 6px;
-      background: #fff;
+      background: $color-white;
       margin: 0 auto;
       transform: translate(-50%, -50%);
       left: calc(50% - 4px);
@@ -44,7 +45,7 @@
         // background: #d6d6d6;
       }
       .swiper-pagination-bullet-active {
-        background: #000;
+        background: $color-black;
       }
     }
     .pagination-swiper-location {
@@ -60,19 +61,19 @@
         font-size: 18px;
         font-style: normal;
         font-weight: 500;
-        color: #000;
+        color: $color-black;
       }
       .pagination-swiper-of {
         font-size: 18px;
         font-style: normal;
         font-weight: 500;
-        color: rgba(0, 0, 0, 0.2);
+        color: $color-pagination;
       }
       .pagination-swiper-length {
         font-size: 18px;
         font-style: normal;
         font-weight: 500;
-        color: rgba(0, 0, 0, 0.2);
+        color: $color-pagination;
       }
     }
   }
@@ -95,18 +96,18 @@
           font-size: 28px;
           font-style: normal;
           font-weight: 700;
-          color: #fff;
+          color: $color-white;
           margin: 0;
         }
         .slide-subtext {
           font-size: 14px;
           font-style: normal;
           font-weight: 500;
-          color: #fff;
+          color: $color-white;
           margin: 0;
         }
         .slide-link {
-          color: #fff;
+          color: $color-white;
           font-size: 17px;
           font-style: normal;
           font-weight: 700;
@@ -144,9 +145,9 @@
         bottom: -11px;
         width: 182px;
         .swiper-pagination-bullet-active {
-          background: #000;
+          background: $color-black;
         }
-        // background: #fff;
+        // background: $color-white;
         z-index: 0;
       }
       .pagination-swiper-location {
@@ -162,19 +163,19 @@
           font-size: 18px;
           font-style: normal;
           font-weight: 500;
-          color: #000;
+          color: $color-black;
         }
         .pagination-swiper-of {
           font-size: 18px;
           font-style: normal;
           font-weight: 500;
-          color: rgba(0, 0, 0, 0.2);
+          color: $color-pagination;
         }
         .pagination-swiper-length {
           font-size: 18px;
           font-style: normal;
           font-weight: 500;
-          color: rgba(0, 0, 0, 0.2);
+          color: $color-pagination;
         }
       }
     }
@@ -182,7 +183,7 @@
       .swiper-slide {
         text-align: center;
         font-size: 18px;
-        // background: #fff;
+        // background: $color-white;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -231,9 +232,9 @@
         bottom: -11px;
         width: 182px;
         .swiper-pagination-bullet-active {
-          background: #000;
+          background: $color-black;
         }
-        // background: #fff;
+        // background: $color-white;
         z-index: 0;
       }
       .pagination-swiper-location {
@@ -249,19 +250,19 @@
           font-size: 18px;
           font-style: normal;
           font-weight: 500;
-          color: #000;
+          color: $color-black;
         }
         .pagination-swiper-of {
           font-size: 18px;
           font-style: normal;
           font-weight: 500;
-          color: rgba(0, 0, 0, 0.2);
+          color: $color-pagination;
         }
         .pagination-swiper-length {
           font-size: 18px;
           font-style: normal;
           font-weight: 500;
-          color: rgba(0, 0, 0, 0.2);
+          color: $color-pagination;
         }
       }
     }
@@ -269,7 +270,7 @@
       .swiper-slide {
         text-align: center;
         font-size: 18px;
-        // background: #fff;
+        // background: $color-white;
         display: flex;
         justify-content: center;
         align-items: center;

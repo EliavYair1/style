@@ -1,3 +1,4 @@
+@import "./variables.scss";
 * {
   box-sizing: border-box;
   font-family: "ICPangeaText";
@@ -13,7 +14,7 @@ body {
   background: #fff;
   font-family: "ICPangeaText";
   font-size: 14px;
-  color: #000;
+  color: $color-black;
   margin: 0;
   padding: 0;
   transition: background-color 0.3s ease-in-out;

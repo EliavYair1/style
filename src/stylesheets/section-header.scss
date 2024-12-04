@@ -1,3 +1,5 @@
+@import "./variables.scss";
+
 .section-header {
   display: flex;
   width: 100%;
@@ -12,7 +14,7 @@
     height: 32px;
   }
   &__text {
-    color: #0b0427;
+    color: $color-style-black;
     font-size: 28px;
     font-style: normal;
     font-weight: 500;
@@ -34,7 +36,7 @@
     }
 
     &__text {
-      color: #0b0427;
+      color: $color-style-black;
       font-size: 54px;
       font-style: normal;
       font-weight: 500;

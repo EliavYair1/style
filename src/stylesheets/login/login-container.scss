@@ -1,12 +1,11 @@
+@import "../variables.scss";
 .login-container {
   max-width: 335px;
   width: 100%;
   border-radius: 20px;
-  border: 2px solid #fff;
-  background: #fff;
-  box-shadow: 0px 445px 125px 0px rgba(27, 22, 90, 0), 0px 285px 114px 0px rgba(27, 22, 90, 0.01),
-    0px 160px 96px 0px rgba(27, 22, 90, 0.05), 0px 71px 71px 0px rgba(27, 22, 90, 0.09),
-    0px 18px 39px 0px rgba(27, 22, 90, 0.1);
+  border: 2px solid $color-white;
+  background: $color-white;
+  box-shadow: $popup-box-shadow;
   display: flex;
   padding: 28px 24px;
   flex-direction: column;
@@ -16,7 +15,7 @@
     font-size: 26px;
     font-style: normal;
     font-weight: 600;
-    color: #0b0427;
+    color: $color-style-black;
     margin-bottom: 14px;
     text-align: right;
     width: 100%;
@@ -31,15 +30,18 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    color: #000;
+    color: $color-black;
     margin-bottom: 4px;
   }
   &__form-input {
-    border: 1px solid #000;
+    border: 1px solid $color-black;
     border-top: 0;
     border-right: 0;
     border-left: 0;
     font-size: 16px;
+  }
+  &__form-input:focus-visible {
+    border: none;
   }
   &__form-input::placeholder {
     font-size: 16px;
@@ -68,7 +70,7 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    color: #000;
+    color: $color-black;
     cursor: pointer;
   }
   &__checkbox-input {
@@ -77,7 +79,7 @@
     cursor: pointer;
     appearance: none;
     -webkit-appearance: none;
-    border: 1px solid #000;
+    border: 1px solid $color-black;
     border-radius: 4px;
   }
   &__checkbox-input:checked {
@@ -89,10 +91,10 @@
   &__form-button {
     margin-bottom: 14px;
     border-radius: 6px;
-    border: 1px solid #fff;
-    background: #2020b3;
+    border: 1px solid $color-white;
+    background: $color-primary;
     box-shadow: 0px 2.286px 7.429px 0px rgba(0, 0, 0, 0.16);
-    color: #fff;
+    color: $color-white;
     padding: 12px 16px;
     font-weight: 700;
     font-size: 18px;
@@ -111,35 +113,15 @@
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
-      color: #000;
+      color: $color-black;
     }
     &-link {
       cursor: pointer;
-      color: #000;
+      color: $color-primary;
       transition: color 0.3s ease, transform 0.3s ease;
-      text-decoration: none;
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
-      &:hover {
-        color: #2020b3;
-        transform: translateY(0px);
-      }
-
-      &::after {
-        content: "";
-        position: absolute;
-        width: 0%;
-        height: 2px;
-        bottom: -5px;
-        left: 0;
-        background-color: #2020b3;
-        transition: width 0.2s ease;
-      }
-
-      &:hover::after {
-        width: 100%;
-      }
     }
   }
   @media (min-width: 1200px) {
@@ -205,11 +187,11 @@
       &-link {
         font-size: 18px;
         cursor: pointer;
-        color: #2020b3;
+        color: $color-primary;
         transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
         text-decoration: none;
         &:hover {
-          color: #2020b3;
+          color: $color-primary;
           transform: translateY(-2px);
           text-shadow: 0 0 12px rgba(32, 32, 179, 1);
         }
@@ -221,7 +203,7 @@
           height: 2px;
           bottom: -5px;
           left: 0;
-          background-color: #2020b3;
+          background-color: $color-primary;
           transition: width 0.2s ease;
         }
 

@@ -46,7 +46,7 @@
         font-style: normal;
         font-weight: 500;
         line-height: 20px;
-        color: #46494f;
+        color: $color-grey;
         text-align: center;
         margin: 8px auto 0;
       }
@@ -71,13 +71,13 @@
       font-size: 54px;
       font-style: normal;
       font-weight: 500;
-      color: #0b0427;
+      color: $color-style-black;
       position: relative;
       display: inline-block;
       transition: color 0.3s ease, transform 0.3s ease;
 
       &:hover {
-        color: #2020b3;
+        color: $color-primary;
         transform: translateY(-5px);
       }
 
@@ -88,7 +88,7 @@
         height: 2px;
         bottom: -5px;
         left: 0;
-        background-color: #2020b3;
+        background-color: $color-primary;
         transition: width 0.2s ease;
       }
 

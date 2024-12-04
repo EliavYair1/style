@@ -1,7 +1,8 @@
+@import "../variables.scss";
 .form-wrapper {
   // * form
   .details-header {
-    color: #0b0427;
+    color: $color-style-black;
     font-size: 22px;
     font-style: normal;
     font-weight: 600;
@@ -32,7 +33,7 @@
           font-style: normal;
           font-weight: 400;
           text-align: right;
-          color: #000;
+          color: $color-black;
         }
         &:focus + .graphic--nao {
           transform: translate3d(-66.6%, 0, 0);
@@ -44,7 +45,7 @@
         top: 0;
         left: 0;
         fill: none;
-        stroke: #000000;
+        stroke: $color-black;
       }
       .graphic--nao {
         pointer-events: none;
@@ -60,7 +61,7 @@
         .icon {
         }
         .text {
-          color: #000;
+          color: $color-black;
           font-size: 18px;
           font-style: normal;
           font-weight: 500;
@@ -98,7 +99,7 @@
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
-            color: #000;
+            color: $color-black;
           }
 
           &:focus {
@@ -117,7 +118,7 @@
           .icon {
           }
           .text {
-            color: #000;
+            color: $color-black;
             font-size: 18px;
             font-style: normal;
             font-weight: 500;
@@ -147,7 +148,7 @@
       .confirmation-toggle {
         appearance: none;
         border-radius: 4px;
-        background: #f3f3ff;
+        background: $color-background;
         width: 20px;
         height: 20px;
         display: inline-block;
@@ -163,27 +164,27 @@
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
-        color: #000;
+        color: $color-black;
       }
     }
     .button {
       width: 100%;
       padding: 12px 16px;
       border-radius: 6px;
-      background: #2020b3;
+      background: $color-primary;
       box-shadow: 0px 2.286px 7.429px 0px rgba(0, 0, 0, 0.16);
       .button-text {
         font-size: 18px;
         font-style: normal;
         font-weight: 600;
-        color: #fff;
+        color: $color-white;
       }
     }
   }
   // ? form
   @media (min-width: 1200px) {
     .details-header {
-      color: #0b0427;
+      color: $color-red;
       font-size: 24px;
       font-style: normal;
       font-weight: 600;
@@ -215,7 +216,7 @@
             font-style: normal;
             font-weight: 400;
             text-align: right;
-            color: #000;
+            color: $color-black;
           }
           &:focus + .graphic--nao {
             transform: translate3d(-66.6%, 0, 0);
@@ -227,7 +228,7 @@
           top: 0;
           left: 0;
           fill: none;
-          // stroke: #000000;
+          // stroke: $color-black;
           stroke: none;
         }
         .graphic--nao {
@@ -244,7 +245,7 @@
           .icon {
           }
           .text {
-            color: #000;
+            color: $color-black;
             font-size: 18px;
             font-style: normal;
             font-weight: 500;
@@ -277,7 +278,7 @@
               font-size: 16px;
               font-style: normal;
               font-weight: 400;
-              color: #000;
+              color: $color-black;
             }
 
             &:focus {
@@ -296,7 +297,7 @@
             .icon {
             }
             .text {
-              color: #000;
+              color: $color-black;
               font-size: 18px;
               font-style: normal;
               font-weight: 500;
@@ -308,7 +309,7 @@
         display: grid;
         grid-column: 1;
         grid-row: 1;
-        border-bottom: 1px solid #000;
+        border-bottom: 1px solid $color-black;
       }
       .row.lastname {
         display: grid;
@@ -316,7 +317,7 @@
 
         grid-column: 2;
         grid-row: 1;
-        border-bottom: 1px solid #000;
+        border-bottom: 1px solid $color-black;
       }
       .confirmation-wrap {
         grid-column: span 2;
@@ -335,7 +336,7 @@
         .confirmation-toggle {
           appearance: none;
           border-radius: 4px;
-          background: #f3f3ff;
+          background: $color-background;
           width: 20px;
           height: 20px;
           display: inline-block;
@@ -352,7 +353,7 @@
           font-size: 16px;
           font-style: normal;
           font-weight: 400;
-          color: #000;
+          color: $color-black;
           margin-bottom: 3px;
         }
       }
@@ -366,7 +367,7 @@
           font-size: 18px;
           font-style: normal;
           font-weight: 600;
-          color: #fff;
+          color: $color-white;
         }
       }
     }

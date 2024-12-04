@@ -1,8 +1,10 @@
+@import "./variables.scss";
+
 .discount-club-owner-slider {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #ffffff;
+  background-color: $color-white;
   position: relative;
   width: 375px;
   .mobile-layout {
@@ -32,10 +34,10 @@
       width: 166px;
       margin-top: 20px;
       padding: 12px 16px;
-      color: #ffffff;
+      color: $color-white;
       border: none;
       border-radius: 38px;
-      background: #2020b3;
+      background: $color-primary;
       cursor: pointer;
       font-size: 14px;
       // margin-bottom: 20px;
@@ -73,7 +75,7 @@
       flex-direction: column;
       text-decoration: none;
       .title {
-        color: #fff;
+        color: $color-white;
         font-size: 24px;
         font-style: normal;
         font-weight: 700;
@@ -118,9 +120,9 @@
           display: flex;
           // width: 205px;
           padding: 10px;
-          background: #fff;
+          background: $color-white;
           border-radius: 6px;
-          background: #fff;
+          background: $color-white;
           margin: 0 auto;
           // transform: translate(-50%, -50%);
           // left: calc(50% - 689px);
@@ -129,7 +131,7 @@
           z-index: 0;
           justify-content: center;
           .swiper-pagination-bullet-active {
-            background: #000;
+            background: $color-black;
           }
         }
         .pagination-swiper-location {
@@ -144,19 +146,19 @@
             font-size: 18px;
             font-style: normal;
             font-weight: 500;
-            color: #000;
+            color: $color-black;
           }
           .pagination-swiper-of {
             font-size: 18px;
             font-style: normal;
             font-weight: 500;
-            color: rgba(0, 0, 0, 0.2);
+            color: $color-pagination;
           }
           .pagination-swiper-length {
             font-size: 18px;
             font-style: normal;
             font-weight: 500;
-            color: rgba(0, 0, 0, 0.2);
+            color: $color-pagination;
           }
         }
       }
@@ -166,7 +168,7 @@
           flex-shrink: unset;
           text-align: center;
           font-size: 18px;
-          background: #fff;
+          background: $color-white;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -184,8 +186,8 @@
     .append-buttons button {
       display: inline-block;
       cursor: pointer;
-      border: 1px solid #007aff;
-      color: #007aff;
+      border: 1px solid $color-azure;
+      color: $color-azure;
       text-decoration: none;
       padding: 4px 10px;
       border-radius: 4px;
@@ -223,9 +225,9 @@
           display: flex;
           // width: 205px;
           padding: 10px;
-          background: #fff;
+          background: $color-white;
           border-radius: 6px;
-          background: #fff;
+          background: $color-white;
           margin: 0 auto;
           // transform: translate(-50%, -50%);
           // left: calc(50% - 689px);
@@ -234,7 +236,7 @@
           z-index: 0;
           justify-content: center;
           .swiper-pagination-bullet-active {
-            background: #000;
+            background: $color-black;
           }
         }
         .pagination-swiper-location {
@@ -249,19 +251,19 @@
             font-size: 18px;
             font-style: normal;
             font-weight: 500;
-            color: #000;
+            color: $color-black;
           }
           .pagination-swiper-of {
             font-size: 18px;
             font-style: normal;
             font-weight: 500;
-            color: rgba(0, 0, 0, 0.2);
+            color: $color-pagination;
           }
           .pagination-swiper-length {
             font-size: 18px;
             font-style: normal;
             font-weight: 500;
-            color: rgba(0, 0, 0, 0.2);
+            color: $color-pagination;
           }
         }
       }
@@ -271,7 +273,7 @@
           flex-shrink: unset;
           text-align: center;
           font-size: 18px;
-          background: #fff;
+          background: $color-white;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -288,8 +290,8 @@
     .append-buttons button {
       display: inline-block;
       cursor: pointer;
-      border: 1px solid #007aff;
-      color: #007aff;
+      border: 1px solid $color-azure;
+      color: $color-azure;
       text-decoration: none;
       padding: 4px 10px;
       border-radius: 4px;

@@ -1,0 +1,78 @@
+
+        <svg
+          class="hover-svg"
+          xmlns="http://www.w3.org/2000/svg"
+          width="294"
+          height="134"
+          viewBox="0 0 294 134"
+          fill="none"
+        >
+          <g filter="url(#filter0_d_1525_5153)">
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M28 24C25.7909 24 24 25.7909 24 28V96C24 98.2091 25.7909 100 28 100H30.2374L34.9772 108.21C35.747 109.543 37.6715 109.543 38.4413 108.21L43.1812 100H266C268.209 100 270 98.2091 270 96V28C270 25.7909 268.209 24 266 24H28Z"
+              fill="white"
+            ></path>
+          </g>
+
+          <foreignObject x="0" y="25" width="100%" height="100">
+            <div
+              xmlns="http://www.w3.org/1999/xhtml"
+              style="display: flex; justify-content: center; width: 100%; height: 100%"
+            >
+              <ul
+                style="
+                  padding: 0;
+                  font-size: 18px;
+                  text-align: right;
+                  margin: 0;
+                  margin-top: 7px;
+                  margin-right: 10px;
+                "
+              >
+                <li id="svgText">במקום 89 ₪ לחודש לחודשים 1-2</li>
+                <li id="svgText2">139 ₪ לחודש לחודשים 3-12</li>
+                <li id="svgText3">שכירות נתב בתוספת 19.90 ₪ לחודש</li>
+              </ul>
+            </div>
+          </foreignObject>
+
+          <defs>
+            <filter
+              id="filter0_d_1525_5153"
+              x="0"
+              y="0"
+              width="294"
+              height="133.21"
+              filterUnits="userSpaceOnUse"
+              color-interpolation-filters="sRGB"
+            >
+              <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+              <feColorMatrix
+                in="SourceAlpha"
+                type="matrix"
+                values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                result="hardAlpha"
+              ></feColorMatrix>
+              <feOffset></feOffset>
+              <feGaussianBlur stdDeviation="12"></feGaussianBlur>
+              <feComposite in2="hardAlpha" operator="out"></feComposite>
+              <feColorMatrix
+                type="matrix"
+                values="0 0 0 0 0.239216 0 0 0 0 0.32549 0 0 0 0 0.870588 0 0 0 0.27 0"
+              ></feColorMatrix>
+              <feBlend
+                mode="normal"
+                in2="BackgroundImageFix"
+                result="effect1_dropShadow_1525_5153"
+              ></feBlend>
+              <feBlend
+                mode="normal"
+                in="SourceGraphic"
+                in2="effect1_dropShadow_1525_5153"
+                result="shape"
+              ></feBlend>
+            </filter>
+          </defs>
+        </svg>

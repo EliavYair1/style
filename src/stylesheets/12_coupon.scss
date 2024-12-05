@@ -230,7 +230,7 @@
         border-radius: 6px;
         border: 1px solid $color-grey;
         background: $color-white;
-        box-shadow: 0px 2.286px 7.429px 0px rgba(0, 0, 0, 0.16);
+        box-shadow: $color-button;
         padding: 6px 16px;
         line-height: 1;
         .seperator {
@@ -283,7 +283,7 @@
       border-radius: 6px;
       border: 1px solid $color-grey;
       background: $color-white;
-      box-shadow: 0px 2.286px 7.429px 0px rgba(0, 0, 0, 0.16);
+      box-shadow: $color-button;
       flex-direction: row-reverse;
       margin-bottom: 10px;
       width: 100%;
@@ -310,7 +310,7 @@
       align-items: center;
       border-radius: 6px;
       background: $color-primary;
-      box-shadow: 0px 2.286px 7.429px 0px rgba(0, 0, 0, 0.16);
+      box-shadow: $color-button;
       padding: 12px 16px;
       gap: 3px;
       width: 100%;
@@ -579,7 +579,7 @@
 
       .quantity-selector {
         .label {
-          font-size: 17px;
+          font-size: 16px;
         }
         .counter-wrapper {
           .seperator {

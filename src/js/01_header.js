@@ -34,6 +34,7 @@ function updateCartCount(productCardObj, voucherCardObj) {
   } else {
     cartCountElement.style.display = "none";
   }
+  // console.log("productCardObj", productCardObj);
 }
 
 // * make one open each time by closing the current opened menu

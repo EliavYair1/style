@@ -1,6 +1,7 @@
 function loadCouponContentJs() {
   const heroContainer = document.querySelector(".hero-container");
   heroContainer.hidden = true;
+
   const priceRange = document.getElementById("priceRange");
   const dynamicPoints = document.querySelector(".dynamic-points");
 
@@ -9,14 +10,13 @@ function loadCouponContentJs() {
       const max = parseInt(priceRange.max, 10);
       const value = parseInt(priceRange.value, 10);
 
-      // Update slider background
       const percentage = (value / max) * 100;
       priceRange.style.background = `linear-gradient(to left, #2020b3 ${percentage}%, #d1d4fe ${percentage}%)`;
 
-      // Update the dynamic points text
-      dynamicPoints.innerText = value; // Adjust as needed
+      dynamicPoints.innerText = value;
+      localStorage.setItem("couponPoints", value);
+      console.log("value", value);
     }
-
     updateSliderBackgroundAndPoints();
 
     priceRange.addEventListener("input", updateSliderBackgroundAndPoints);

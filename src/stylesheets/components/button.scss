@@ -3,7 +3,7 @@
 .payment-button {
   display: flex;
   border-radius: 6px;
-  box-shadow: 0px 2.286px 7.429px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: $color-button;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -42,7 +42,7 @@
   border: 2px solid $color-black;
   color: $color-black;
   margin-bottom: 0;
-  box-shadow: 0px 2.286px 7.429px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: $color-button;
   .button-icon {
     display: none;
   }
@@ -68,7 +68,7 @@
   border: 2px solid $color-white;
   color: $color-white;
   margin-bottom: 10px;
-  box-shadow: 0px 2.286px 7.429px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: $color-button;
   &:hover {
     .button-icon {
       animation: drivingCart 1.25s ease-in-out forwards;
@@ -86,9 +86,9 @@
   border: 2px solid $color-white;
   color: $color-white;
   margin-bottom: 10px;
-  box-shadow: 0px 2.286px 7.429px 0px rgba(0, 0, 0, 0.16);
+  box-shadow: $color-button;
   margin-bottom: 14px;
-  &:hover {
+  &:active {
     .button-icon {
       animation: drivingCart 1.25s ease-in-out forwards;
     }
@@ -97,5 +97,10 @@
     width: 100%;
     margin-bottom: 40px;
     margin-top: 0;
+    &:hover {
+      .button-icon {
+        animation: drivingCart 1.25s ease-in-out forwards;
+      }
+    }
   }
 }

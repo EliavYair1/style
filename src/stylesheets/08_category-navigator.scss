@@ -74,23 +74,23 @@
       color: $color-style-black;
       position: relative;
       display: inline-block;
-      transition: color 0.3s ease, transform 0.3s ease;
+      // transition: color 0.3s ease, transform 0.3s ease;
 
-      &:hover {
-        color: $color-primary;
-        transform: translateY(-5px);
-      }
+      // &:hover {
+      //   color: $color-primary;
+      //   transform: translateY(-5px);
+      // }
 
-      &::after {
-        content: "";
-        position: absolute;
-        width: 0%;
-        height: 2px;
-        bottom: -5px;
-        left: 0;
-        background-color: $color-primary;
-        transition: width 0.2s ease;
-      }
+      // &::after {
+      //   content: "";
+      //   position: absolute;
+      //   width: 0%;
+      //   height: 2px;
+      //   bottom: -5px;
+      //   left: 0;
+      //   background-color: $color-primary;
+      //   transition: width 0.2s ease;
+      // }
 
       &:hover::after {
         width: 100%;

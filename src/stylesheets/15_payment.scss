@@ -1,7 +1,7 @@
 @import "./variables.scss";
 
 .payment {
-  padding: 12px 0;
+  padding-block: 40px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -45,6 +45,8 @@
     }
 
     &-details {
+      display: flex;
+      flex-direction: column;
     }
 
     &-title {
@@ -52,6 +54,7 @@
       font-weight: 700;
       margin: 0;
       margin-bottom: 8px;
+      order: 0;
     }
 
     &-subtitle {
@@ -59,6 +62,7 @@
       color: $color-black;
       font-weight: 400;
       margin: 0;
+      order: 1;
     }
 
     &-supplier {
@@ -71,6 +75,8 @@
       font-weight: 500;
       color: $color-black;
       margin-bottom: 8px;
+      order: 1;
+
       .note {
         font-size: 16px;
         font-style: normal;
@@ -101,6 +107,7 @@
       border-radius: 38px;
       background: #f8f8f8;
       padding: 0 16px;
+      order: 2;
 
       &-note {
         font-size: 16px;
@@ -137,22 +144,23 @@
       font-weight: 500;
       width: 100%;
       max-width: 135px;
-      flex-basis: 36%;
+      flex-basis: 38%;
       span {
       }
     }
 
     &-label.last-child {
-      flex-basis: 80%;
+      flex-basis: 70%;
 
       svg {
         margin-right: 6px;
       }
     }
     &-icon {
-      width: 14px;
+      width: 24px;
       height: auto;
       cursor: pointer;
+      margin-left: 12px;
     }
 
     &-input {
@@ -165,23 +173,28 @@
       appearance: none;
       background-color: white;
       flex-basis: 75%;
-      cursor: pointer;
       padding: 4px;
       &:focus-visible {
-        border-top: 0;
-        border-right: 0;
-        border-left: 0;
-        border: 1px solid #ccc;
+        border-bottom: 1px solid;
+        outline: unset;
+        border-radius: 0;
+      }
+      &:focus {
+      }
+      &:focus::placeholder {
+        color: transparent;
       }
     }
     &-input.selector {
       flex-basis: 100%;
+      cursor: pointer;
     }
   }
   &__hovered-popup {
     display: none;
     position: absolute;
-    left: calc(50% - -273px);
+    left: calc(50% + 5px);
+    bottom: 13px;
   }
   &__selector-wrapper {
     display: flex;
@@ -202,6 +215,7 @@
   }
   &__field-wrapper.cvv {
     margin-bottom: 14px;
+    gap: 0;
   }
   &__expiration-date {
     display: flex;
@@ -224,9 +238,42 @@
     width: 258.439px;
     height: 52.334px;
   }
-
+  &__error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+    font-weight: 700;
+  }
+  &__submit-form {
+    display: flex;
+    width: 100%;
+    background-color: $color-primary;
+    border: 2px solid $color-white;
+    color: $color-white;
+    box-shadow: $color-button;
+    margin-bottom: 14px;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 16px;
+    gap: 4px;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    cursor: pointer;
+    &:visited {
+      .payment__submit-icon {
+        animation: drivingCart 1.25s ease-in-out forwards;
+      }
+    }
+  }
+  &__submit-text {
+  }
+  &__submit-icon {
+  }
   @media (min-width: 1200px) {
     padding-top: 272px;
+    padding-bottom: 142px;
     display: flex;
     flex-direction: row-reverse;
     gap: 40px;
@@ -272,7 +319,8 @@
       }
       &-price {
         font-size: 24px;
-        display: none;
+        // display: none;
+        order: 2;
         .note {
         }
       }
@@ -319,23 +367,19 @@
       }
 
       &-label.last-child {
-        max-width: 175px;
-        cursor: pointer;
+        max-width: 147px;
+        // cursor: pointer;
 
         svg {
-          &:hover {
-            background-color: #eee;
-            &__hovered-popup {
-              display: flex;
-            }
-          }
         }
       }
       &-icon {
+        width: 26px;
+        height: auto;
+        margin-left: 12px;
       }
 
       &-input {
-        cursor: pointer;
         flex-basis: initial;
         &:focus-visible {
         }
@@ -348,7 +392,8 @@
       position: relative;
       z-index: 10;
       position: absolute;
-      left: calc(50% + 671px);
+      left: calc(50% - -414px);
+      bottom: 323px;
       img {
       }
     }
@@ -361,6 +406,8 @@
     }
     &__field-wrapper.cvv {
       margin-bottom: 60px;
+      display: flex;
+      align-items: center;
     }
     &__expiration-date {
       margin-bottom: 52px;
@@ -370,6 +417,31 @@
     &__img-wrapper {
     }
     &__ssh {
+    }
+    &__error {
+      color: red;
+      font-size: 14px;
+      margin-top: 5px;
+      display: block;
+    }
+    &__submit-form {
+      display: flex;
+      width: 100%;
+      background-color: $color-primary;
+      border: 2px solid $color-white;
+      color: $color-white;
+      box-shadow: $color-button;
+      margin-bottom: 40px;
+      margin-top: 0;
+      &:hover {
+        .payment__submit-icon {
+          animation: drivingCart 1.25s ease-in-out forwards;
+        }
+      }
+    }
+    &__submit-text {
+    }
+    &__submit-icon {
     }
   }
 }

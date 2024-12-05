@@ -6,6 +6,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-block: 40px;
   .card-container {
     width: 335px;
     padding: 28px 24px;
@@ -14,7 +15,7 @@
     border: 2px solid $color-white;
     background: $color-white;
     box-shadow: $popup-box-shadow2;
-    margin: 12px 0;
+    // margin: 12px 0;
     padding: 28px 24px;
     .title {
       font-size: 26px;
@@ -84,6 +85,8 @@
   }
 
   @media (min-width: 1200px) {
+    padding-bottom: 100px;
+    padding-top: 272px;
     .card-container {
       border-radius: 8px;
       background: $color-white;
@@ -95,7 +98,8 @@
       flex-direction: column;
       align-items: center;
       gap: 60px;
-      margin-top: 272px;
+      // margin-top: 272px;
+
       .title {
         text-align: right;
         font-size: 30px;

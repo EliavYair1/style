@@ -57,6 +57,7 @@
 
       align-items: center;
       gap: 2px;
+      display: none; //hiding indicator
       .pagination-swiper-current {
         font-size: 18px;
         font-style: normal;
@@ -144,6 +145,10 @@
         z-index: 0;
         bottom: -11px;
         width: 182px;
+        // new
+        background: unset;
+        display: flex;
+        justify-content: center;
         .swiper-pagination-bullet-active {
           background: $color-black;
         }
@@ -159,6 +164,7 @@
         align-items: center;
         gap: 2px;
         z-index: 1;
+        display: none; //hiding indicator
         .pagination-swiper-current {
           font-size: 18px;
           font-style: normal;
@@ -246,6 +252,7 @@
         align-items: center;
         gap: 2px;
         z-index: 1;
+        display: none; //hiding indicator
         .pagination-swiper-current {
           font-size: 18px;
           font-style: normal;

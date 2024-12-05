@@ -21,9 +21,10 @@
             />
           </svg>
           <span>שם פרטי</span>
+          <span class="registration-container__required">*</span>
         </label>
         <input
-          placeholder="יש להקליד"
+          placeholder="יש להקליד שם פרטי"
           type="text"
           id="reg_firstname"
           class="registration-container__input"
@@ -33,7 +34,7 @@
           class="registration-container__error-msg"
           style="display: none"
         >
-          Please enter a valid first name.
+          אנא הזן שם פרטי
         </div>
       </div>
       <div class="registration-container__field">
@@ -55,9 +56,10 @@
             />
           </svg>
           <span>שם משפחה</span>
+          <span class="registration-container__required">*</span>
         </label>
         <input
-          placeholder="יש להקליד"
+          placeholder="יש להקליד שם משפחה"
           type="text"
           id="reg_lastname"
           class="registration-container__input"
@@ -68,7 +70,7 @@
           class="registration-container__error-msg"
           style="display: none"
         >
-          Please enter a valid last name.
+          אנא הזן שם משפחה
         </div>
       </div>
     </div>
@@ -93,9 +95,10 @@
             />
           </svg>
           <span>דואר אלקטרוני</span>
+          <span class="registration-container__required">*</span>
         </label>
         <input
-          placeholder="יש להקליד"
+          placeholder="יש להקליד דואר אלקטרוני"
           type="email"
           id="reg_email"
           class="registration-container__input"
@@ -105,13 +108,16 @@
           class="registration-container__error-msg"
           style="display: none"
         >
-          Please enter a valid email.
+          אנא הזן דואר אלקטרוני
         </div>
       </div>
       <div class="registration-container__field">
         <!-- gender picker -->
         <div class="registration-container__gender-picker">
-          <h3 class="registration-container__gender-text">מגדר</h3>
+          <h3 class="registration-container__gender-text">
+            מגדר<span class="registration-container__required">*</span>
+          </h3>
+
           <div class="registration-container__gender-wrapper">
             <div class="registration-container__gender" role="button" aria-label="Female">
               <svg
@@ -198,17 +204,18 @@
               stroke-linejoin="round"
             />
           </svg>
-          <span>מספר תעודת זהות</span></label
-        >
+          <span>מספר תעודת זהות</span>
+          <span class="registration-container__required">*</span>
+        </label>
         <input
-          placeholder="יש להקליד"
+          placeholder="יש להקליד מס׳ תעודת זהות"
           type="number"
           id="reg_id"
           class="registration-container__input"
         />
 
         <div id="reg_id-error-msg" class="registration-container__error-msg" style="display: none">
-          Please enter a valid id.
+          אנא הזן מספר ת.ז
         </div>
       </div>
       <div class="registration-container__field">
@@ -229,7 +236,8 @@
               stroke-linejoin="round"
             />
           </svg>
-          <span>תאריך לידה</span></label
+          <span>תאריך לידה</span>
+          <span class="registration-container__required">*</span></label
         >
         <input
           placeholder="יש להקליד"
@@ -241,12 +249,13 @@
         <span class="registration-container__error-msg" style="display: none"
           >אנא אשר את תקנון האתר</span
         >
+
         <div
           id="reg_date-error-msg"
           class="registration-container__error-msg"
           style="display: none"
         >
-          Please enter a valid date.
+          אנא הזן תאריך
         </div>
       </div>
     </div>
@@ -269,11 +278,12 @@
               stroke-linejoin="round"
             />
           </svg>
-          <span>נייד</span></label
-        >
+          <span>נייד</span>
+          <span class="registration-container__required">*</span>
+        </label>
 
         <input
-          placeholder="יש להקליד"
+          placeholder="יש להקליד טל׳ נייד"
           type="tel"
           id="reg_phone"
           class="registration-container__input"
@@ -283,7 +293,7 @@
           class="registration-container__error-msg"
           style="display: none"
         >
-          Please enter a valid phone.
+          אנא הזן מס׳ הנייד
         </div>
       </div>
       <div class="registration-container__field">
@@ -305,9 +315,10 @@
             />
           </svg>
           <span>6 ספרות אחרונות של כרטיס אשראי</span>
+          <span class="registration-container__required">*</span>
         </label>
         <input
-          placeholder="יש להקליד"
+          placeholder="יש להקליד 6 ספרות של כרטיס האשראי"
           type="number"
           maxlength="16"
           id="reg_credit"
@@ -318,7 +329,7 @@
           class="registration-container__error-msg"
           style="display: none"
         >
-          Please enter a valid credit card number.
+          אנא הזן 6 ספרות אחרונות של מס׳ האשראי
         </div>
       </div>
     </div>
@@ -329,6 +340,7 @@
           <label for="reg__checkbox" class="registration-container__checkbox-text"
             >אני מאשר/ת את תקנון האתר
           </label>
+          <span class="registration-container__required">*</span>
         </div>
         <div class="registration-container__checkbox-wrapper">
           <input type="checkbox" id="reg__checkbox2" class="registration-container__checkbox" />

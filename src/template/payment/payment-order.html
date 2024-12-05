@@ -10,7 +10,7 @@
         שם הספק: <span class="payment__item-supplier">קסטרו</span>
       </h4>
     </div>
-    <div class="payment__item-price desktop"><span class="payment__total-note">₪</span>200</div>
+    <!-- <div class="payment__item-price desktop"><span class="payment__total-note">₪</span>200</div> -->
   </div>
   <div class="payment__separator"></div>
 
@@ -20,10 +20,14 @@
   </div>
   <div class="payment__total">
     <span class="payment__total-label">סה"כ תשלום בנקודות</span>
-    <span class="payment__total-price"> <span class="payment__total-note">₪</span>200 </span>
+    <span class="payment__total-price">
+      <span class="payment__total-note"></span><span id="couponPoints"></span> נק׳
+    </span>
   </div>
   <div class="payment__total">
     <span class="payment__total-label">סה"כ (אשראי + נקודות)</span>
-    <span class="payment__total-price"> <span class="payment__total-note">₪</span>200 </span>
+    <span class="payment__total-price">
+      <span class="payment__total-note">₪</span>200 + <span id="couponPointsSec"></span> נק׳</span
+    >
   </div>
 </div>

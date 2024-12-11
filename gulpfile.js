@@ -184,7 +184,7 @@ gulp.task("clean", function () {
 gulp.task("copy-html", function () {
   return gulp
     .src(
-      "src/template/pages/{category,coupon,my-account,cart,payment,thanks,login,registration}.html"
+      "src/template/pages/{homepage,category,coupon,my-account,cart,payment,thanks,login,registration}.html"
     )
     .pipe(
       fileInclude({

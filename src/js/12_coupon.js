@@ -1,9 +1,9 @@
 function loadCouponContentJs() {
-  const heroContainer = document.querySelector(".hero-container");
-  heroContainer.hidden = true;
-
   const priceRange = document.getElementById("priceRange");
   const dynamicPoints = document.querySelector(".dynamic-points");
+  const dynamicPrice = document.querySelector(".dynamic-price");
+  const couponPrice = localStorage.getItem("couponPrice");
+  dynamicPrice.innerText = couponPrice;
 
   if (priceRange && dynamicPoints) {
     function updateSliderBackgroundAndPoints() {
@@ -54,7 +54,7 @@ function loadCouponContentJs() {
     let quantity = parseInt(quantityDisplay.textContent, 10);
 
     minusButton.addEventListener("click", () => {
-      if (quantity > 0) {
+      if (quantity > 1) {
         quantity--;
         quantityDisplay.textContent = quantity;
       }

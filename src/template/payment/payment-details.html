@@ -5,26 +5,28 @@
       <label for="card-number" class="payment__form-label"
         ><span style="color: #f00">*</span> מספר כרטיס</label
       >
-      <input
-        type="number"
-        id="card-number"
-        class="payment__form-input"
-        placeholder="1234 5678 91011 1213"
-        required
-      />
-      <span class="payment__error"></span>
+      <div class="payment__input-wrap">
+        <input
+          type="number"
+          id="card-number"
+          class="payment__form-input"
+          placeholder="1234 5678 91011 1213"
+        />
+        <span class="payment__error"></span>
+      </div>
     </div>
 
     <div class="payment__expiration-date">
       <label for="expiry-year" class="payment__form-label">
         <span style="color: #f00">*</span> תוקף כרטיס</label
       >
+
       <div class="payment__date-wrapper">
         <div class="payment__selector-wrapper">
-          <select id="expiry-year" class="payment__form-input selector" required>
+          <select id="expiry-year" class="payment__form-input selector">
             YY
           </select>
-          <span class="payment__error"></span>
+
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -43,7 +45,7 @@
         </div>
 
         <div class="payment__selector-wrapper">
-          <select id="expiry-month" class="payment__form-input selector" required>
+          <select id="expiry-month" class="payment__form-input selector">
             <option value="" disabled selected>MM</option>
             <option value="01">01</option>
             <option value="02">02</option>
@@ -58,7 +60,6 @@
             <option value="11">11</option>
             <option value="12">12</option>
           </select>
-          <span class="payment__error"></span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -74,7 +75,9 @@
               stroke-linejoin="round"
             />
           </svg>
+          <!-- <span class="payment__error"></span> -->
         </div>
+        <span class="payment__error expiry"></span>
       </div>
     </div>
 
@@ -82,9 +85,12 @@
       <label for="id" class="payment__form-label"
         ><span style="color: #f00">*</span>תעודת זהות</label
       >
-      <input type="number" id="id" class="payment__form-input" placeholder="123456789" />
-      <span class="payment__error"></span>
+      <div class="payment__input-wrap">
+        <input type="number" id="id" class="payment__form-input" placeholder="123456789" />
+        <span class="payment__error"></span>
+      </div>
     </div>
+
     <div class="payment__field-wrapper cvv">
       <label for="cvv" class="payment__form-label last-child">
         <span style="color: #f00">*</span>
@@ -101,16 +107,18 @@
           fill="#2020B3"
         />
       </svg>
-      <input
-        type="password"
-        id="cvv"
-        maxlength="3"
-        autocomplete="false"
-        class="payment__form-input cvv"
-        placeholder="xxx"
-        required
-      />
-      <span class="payment__error"></span>
+      <div class="payment__input-wrap">
+        <input
+          type="password"
+          id="cvv"
+          maxlength="3"
+          autocomplete="false"
+          class="payment__form-input cvv"
+          placeholder="xxx"
+        />
+        <span class="payment__error"></span>
+      </div>
+
       <div class="payment__hovered-popup" style="display: none">
         @@include("../../img/svg/hoverpop.svg")
       </div>
@@ -121,6 +129,7 @@
       <span class="payment__submit-text">לתשלום כעת</span>
     </button>
   </form>
+
   <div class="payment__img-wrapper">
     <img src="../../img/payment/ssh.jpg" class="payment__ssh" alt="corporate payment" />
   </div>

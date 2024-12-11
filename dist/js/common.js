@@ -177,7 +177,7 @@ function updateHeader(userData) {
 }
 const params = new URLSearchParams(window.location.search);
 const keys = Array.from(params.keys());
-const isLoggedIn = keys.some((key) => key.toLowerCase() === "loggedin");
+const isLoggedIn = keys.some((key) => key.toLowerCase() == "loggedin");
 // console.log("params", params);
 
 updateHeader(isLoggedIn ? connectedUser : newUser);
@@ -356,89 +356,163 @@ var vouchermobileSwiper = new Swiper(".vouchermobileSwiper", {
 initCustomPagination(vouchermobileSwiper, 7);
 
 
+// document.addEventListener("DOMContentLoaded", function () {
+//   const urlParams = new URLSearchParams(window.location.search);
+//   const pageParam = urlParams.get("page");
+//   const isLoggedIn = urlParams.has("loggedin");
+
+//   // Set the correct layout based on the logged-in status
+//   const userData = isLoggedIn ? connectedUser : newUser;
+//   updateHeader(userData);
+
+//   if (pageParam === "category") {
+//     fetch("/category.html")
+//       .then((response) => response.text())
+//       .then((data) => {
+//         document.getElementById("dynamic-page-content").innerHTML = data;
+//         loadCategoryContentJs();
+//       })
+//       .catch((err) => console.error("Error loading content:", err));
+//   }
+//   if (pageParam === "coupon") {
+//     fetch("/coupon.html")
+//       .then((response) => response.text())
+//       .then((data) => {
+//         document.getElementById("dynamic-page-content").innerHTML = data;
+//         loadCouponContentJs();
+//       })
+//       .catch((err) => console.error("Error loading content:", err));
+//   }
+//   if (pageParam === "my-account") {
+//     fetch("/my-account.html")
+//       .then((response) => response.text())
+//       .then((data) => {
+//         document.getElementById("dynamic-page-content").innerHTML = data;
+//         loadMyAccountContentJs(); // file: 13_my-account.js
+//       })
+//       .catch((err) => console.error("Error loading content:", err));
+//   }
+//   if (pageParam === "cart") {
+//     fetch("/cart.html")
+//       .then((response) => response.text())
+//       .then((data) => {
+//         document.getElementById("dynamic-page-content").innerHTML = data;
+//         loadCartContent(); // file : 14_cart.js
+//       })
+//       .catch((err) => console.error("Error loading content:", err));
+//   }
+//   if (pageParam === "payment") {
+//     fetch("/payment.html")
+//       .then((response) => response.text())
+//       .then((data) => {
+//         document.getElementById("dynamic-page-content").innerHTML = data;
+//         loadPaymentContent(); // file : 15_payment.js
+//       })
+//       .catch((err) => console.error("Error loading content:", err));
+//   }
+//   if (pageParam === "thanks") {
+//     fetch("/thanks.html")
+//       .then((response) => response.text())
+//       .then((data) => {
+//         document.getElementById("dynamic-page-content").innerHTML = data;
+//         loadThanksContent(); // file : 16_thanks.js
+//       })
+//       .catch((err) => console.error("Error loading content:", err));
+//   }
+//   if (pageParam === "login") {
+//     fetch("/login.html")
+//       .then((response) => response.text())
+//       .then((data) => {
+//         document.getElementById("dynamic-page-content").innerHTML = data;
+//         loadLoginsContent(); // file : 17_login.js
+//       })
+//       .catch((err) => console.error("Error loading content:", err));
+//   }
+//   if (pageParam === "registration") {
+//     fetch("/registration.html")
+//       .then((response) => response.text())
+//       .then((data) => {
+//         document.getElementById("dynamic-page-content").innerHTML = data;
+//         loadRegistrationContent(); // file : 18_registration.js
+//       })
+//       .catch((err) => console.error("Error loading content:", err));
+//   }
+// });
+
 document.addEventListener("DOMContentLoaded", function () {
   const urlParams = new URLSearchParams(window.location.search);
   const pageParam = urlParams.get("page");
-  if (pageParam === "category") {
-    fetch("/category.html")
-      .then((response) => response.text())
-      .then((data) => {
-        document.getElementById("dynamic-page-content").innerHTML = data;
-        loadCategoryContentJs();
-      })
-      .catch((err) => console.error("Error loading content:", err));
+  const heroContainer = document.querySelector(".hero-container");
+  const loaderContainer = document.getElementById("loader-container");
+  const loader = document.querySelector(".loading-overlay");
+  const dynamicPageContent = document.getElementById("dynamic-page-content");
+
+  function showLoader() {
+    loaderContainer.style.display = "flex";
+    loader.style.display = "flex";
+    dynamicPageContent.style.display = "none";
   }
-  if (pageParam === "coupon") {
-    fetch("/coupon.html")
-      .then((response) => response.text())
-      .then((data) => {
-        document.getElementById("dynamic-page-content").innerHTML = data;
-        loadCouponContentJs();
-      })
-      .catch((err) => console.error("Error loading content:", err));
+
+  function hideLoader() {
+    loaderContainer.style.display = "none";
+    loader.style.display = "none";
+    dynamicPageContent.style.display = "block";
   }
-  if (pageParam === "my-account") {
-    fetch("/my-account.html")
-      .then((response) => response.text())
-      .then((data) => {
-        document.getElementById("dynamic-page-content").innerHTML = data;
-        loadMyAccountContentJs(); // file: 13_my-account.js
-      })
-      .catch((err) => console.error("Error loading content:", err));
+
+  if (!pageParam || pageParam === "category" || pageParam === "homepage") {
+    showLoader();
+    heroContainer.style.display = "block";
+    hideLoader();
+  } else {
+    heroContainer.style.display = "none";
   }
-  if (pageParam === "cart") {
-    fetch("/cart.html")
+  function loadPageContent(url, loadScriptCallback) {
+    // console.log("url", url);
+
+    showLoader();
+    fetch(url)
       .then((response) => response.text())
       .then((data) => {
-        document.getElementById("dynamic-page-content").innerHTML = data;
-        loadCartContent(); // file : 14_cart.js
+        dynamicPageContent.innerHTML = data;
+        dynamicPageContent.style.display = "block";
+        setTimeout(() => {
+          loadScriptCallback();
+        }, 2000);
       })
-      .catch((err) => console.error("Error loading content:", err));
+      .catch((err) => console.error("Error loading content:", err))
+      .finally(() => {
+        hideLoader();
+      });
   }
-  if (pageParam === "payment") {
-    fetch("/payment.html")
-      .then((response) => response.text())
-      .then((data) => {
-        document.getElementById("dynamic-page-content").innerHTML = data;
-        loadPaymentContent(); // file : 15_payment.js
-      })
-      .catch((err) => console.error("Error loading content:", err));
-  }
-  if (pageParam === "thanks") {
-    fetch("/thanks.html")
-      .then((response) => response.text())
-      .then((data) => {
-        document.getElementById("dynamic-page-content").innerHTML = data;
-        loadThanksContent(); // file : 16_thanks.js
-      })
-      .catch((err) => console.error("Error loading content:", err));
-  }
-  if (pageParam === "login") {
-    fetch("/login.html")
-      .then((response) => response.text())
-      .then((data) => {
-        document.getElementById("dynamic-page-content").innerHTML = data;
-        loadLoginsContent(); // file : 17_login.js
-      })
-      .catch((err) => console.error("Error loading content:", err));
-  }
-  if (pageParam === "registration") {
-    fetch("/registration.html")
-      .then((response) => response.text())
-      .then((data) => {
-        document.getElementById("dynamic-page-content").innerHTML = data;
-        loadRegistrationContent(); // file : 18_registration.js
-      })
-      .catch((err) => console.error("Error loading content:", err));
+  if (pageParam === "homepage") {
+    loadPageContent("/homepage.html", loadCategoryContentJs);
+  } else if (pageParam === "category") {
+    loadPageContent("/category.html", loadCategoryContentJs);
+  } else if (pageParam === "coupon") {
+    loadPageContent("/coupon.html", loadCouponContentJs);
+  } else if (pageParam === "my-account") {
+    loadPageContent("/my-account.html", loadMyAccountContentJs);
+  } else if (pageParam === "cart") {
+    loadPageContent("/cart.html", loadCartContent);
+  } else if (pageParam === "payment") {
+    loadPageContent("/payment.html", loadPaymentContent);
+  } else if (pageParam === "thanks") {
+    loadPageContent("/thanks.html", loadThanksContent);
+  } else if (pageParam === "login") {
+    loadPageContent("/login.html", loadLoginsContent);
+  } else if (pageParam === "registration") {
+    loadPageContent("/registration.html", loadRegistrationContent);
+  } else {
+    hideLoader();
   }
 });
 
 function loadCouponContentJs() {
-  const heroContainer = document.querySelector(".hero-container");
-  heroContainer.hidden = true;
-
   const priceRange = document.getElementById("priceRange");
   const dynamicPoints = document.querySelector(".dynamic-points");
+  const dynamicPrice = document.querySelector(".dynamic-price");
+  const couponPrice = localStorage.getItem("couponPrice");
+  dynamicPrice.innerText = couponPrice;
 
   if (priceRange && dynamicPoints) {
     function updateSliderBackgroundAndPoints() {
@@ -489,7 +563,7 @@ function loadCouponContentJs() {
     let quantity = parseInt(quantityDisplay.textContent, 10);
 
     minusButton.addEventListener("click", () => {
-      if (quantity > 0) {
+      if (quantity > 1) {
         quantity--;
         quantityDisplay.textContent = quantity;
       }
@@ -505,8 +579,6 @@ function loadCouponContentJs() {
 }
 
 function loadMyAccountContentJs() {
-  const heroContainer = document.querySelector(".hero-container");
-  heroContainer.hidden = true;
   // console.log("my acount logic!");
 
   // * my account toggle
@@ -638,9 +710,6 @@ function loadMyAccountContentJs() {
 }
 
 function loadCartContent() {
-  const heroContainer = document.querySelector(".hero-container");
-  heroContainer.hidden = true;
-
   const popup = document.getElementById("popup");
   const paymentButton = document.querySelector(".cart-page__payment-button");
   const popupClose = document.getElementById("popupClose");
@@ -671,8 +740,6 @@ function loadCartContent() {
 }
 
 function loadPaymentContent() {
-  const heroContainer = document.querySelector(".hero-container");
-  heroContainer.hidden = true;
   const couponPoints = localStorage.getItem("couponPoints");
   const pointsElement = document.getElementById("couponPoints");
   const secondPointsElement = document.getElementById("couponPointsSec");
@@ -683,7 +750,7 @@ function loadPaymentContent() {
     pointsElement.innerText = 45;
     secondPointsElement.innerText = 45;
   }
-  console.log("couponPoints", couponPoints);
+  // console.log("couponPoints", couponPoints);
 
   const currentYear = new Date().getFullYear();
   const yearDropdown = document.getElementById("expiry-year");
@@ -722,88 +789,71 @@ function loadPaymentContent() {
       document.removeEventListener("click", hidePopupOnClickOutside);
     }
   }
-  // todo to apply validation
-  // todo to connect the points and price from the coupon
   //* validation for the payment form
+  document.querySelector("form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const form = e.target;
+    let isValid = true;
+    // console.log("form", form);
 
-  // document.getElementById("payment-form").addEventListener("submit", function (e) {
-  //   e.preventDefault();
-  //   const form = e.target;
-  //   let isValid = true;
+    // * card number
+    const cardNumber = form.querySelector("#card-number");
+    const cardNumberError = cardNumber.nextElementSibling;
+    if (!cardNumber.value || cardNumber.value.length < 13 || cardNumber.value.length > 19) {
+      cardNumberError.textContent = "מספר כרטיס לא תקין";
+      isValid = false;
+    } else {
+      cardNumberError.textContent = "";
+    }
 
-  //   // Validate card number
-  //   const cardNumber = form.querySelector("#card-number");
-  //   const cardNumberError = cardNumber.nextElementSibling;
-  //   if (!cardNumber.value || cardNumber.value.length < 13 || cardNumber.value.length > 19) {
-  //     cardNumberError.textContent = "מספר כרטיס לא תקין";
-  //     isValid = false;
-  //   } else {
-  //     cardNumberError.textContent = "";
-  //   }
+    const expiryYear = form.querySelector("#expiry-year");
+    const expiryMonth = form.querySelector("#expiry-month");
+    const errorWrapper = form.querySelector(".payment__date-wrapper .payment__error");
+    if (!expiryYear.value || !expiryMonth.value) {
+      errorWrapper.textContent = "יש לבחור שנה וחודש";
+      isValid = false;
+    } else {
+      errorWrapper.textContent = "";
+    }
 
-  //   // Validate expiry year
-  //   const expiryYear = form.querySelector("#expiry-year");
-  //   const expiryYearError = expiryYear.nextElementSibling;
-  //   if (!expiryYear.value) {
-  //     expiryYearError.textContent = "יש לבחור שנה";
-  //     isValid = false;
-  //   } else {
-  //     expiryYearError.textContent = "";
-  //   }
+    // * id
+    const id = form.querySelector("#id");
+    const idError = id.nextElementSibling;
+    if (!id.value || id.value.length !== 9 || isNaN(id.value)) {
+      idError.textContent = "id לא תקין";
+      isValid = false;
+    } else {
+      idError.textContent = "";
+    }
 
-  //   // Validate expiry month
-  //   const expiryMonth = form.querySelector("#expiry-month");
-  //   const expiryMonthError = expiryMonth.nextElementSibling;
-  //   if (!expiryMonth.value) {
-  //     expiryMonthError.textContent = "יש לבחור חודש";
-  //     isValid = false;
-  //   } else {
-  //     expiryMonthError.textContent = "";
-  //   }
+    // * CVV
+    const cvv = form.querySelector("#cvv");
+    const cvvError = cvv.nextElementSibling;
+    if (!cvv.value || cvv.value.length !== 3 || isNaN(cvv.value)) {
+      cvvError.textContent = "CVV לא תקין";
+      isValid = false;
+    } else {
+      cvvError.textContent = "";
+    }
 
-  //   // Validate id
-  //   const id = form.querySelector("#id");
-  //   const idError = id.nextElementSibling;
-  //   if (!id.value || id.value.length !== 3 || isNaN(id.value)) {
-  //     idError.textContent = "id לא תקין";
-  //     isValid = false;
-  //   } else {
-  //     idError.textContent = "";
-  //   }
-  //   // Validate CVV
-  //   const cvv = form.querySelector("#cvv");
-  //   const cvvError = cvv.nextElementSibling;
-  //   if (!cvv.value || cvv.value.length !== 3 || isNaN(cvv.value)) {
-  //     cvvError.textContent = "CVV לא תקין";
-  //     isValid = false;
-  //   } else {
-  //     cvvError.textContent = "";
-  //   }
-
-  //   if (isValid) {
-  //     alert("הטופס תקין!");
-  //     form.submit();
-  //   }
-  // });
+    if (isValid) {
+      alert("הטופס תקין!");
+      form.submit();
+    }
+  });
 
   // ? end
 }
 
 function loadThanksContent() {
-  const heroContainer = document.querySelector(".hero-container");
-  heroContainer.hidden = true;
   console.log("load thanks logic");
 }
 
 function loadLoginsContent() {
-  const heroContainer = document.querySelector(".hero-container");
-  heroContainer.hidden = true;
   console.log("login logic");
 }
 
 function loadRegistrationContent() {
-  const heroContainer = document.querySelector(".hero-container");
-  heroContainer.hidden = true;
   // console.log("registration logic");
 
   const genders = document.querySelectorAll(".registration-container__gender");

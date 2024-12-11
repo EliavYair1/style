@@ -1,6 +1,4 @@
 function loadRegistrationContent() {
-  const heroContainer = document.querySelector(".hero-container");
-  heroContainer.hidden = true;
   // console.log("registration logic");
 
   const genders = document.querySelectorAll(".registration-container__gender");

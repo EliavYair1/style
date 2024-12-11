@@ -1,7 +1,4 @@
 function loadCartContent() {
-  const heroContainer = document.querySelector(".hero-container");
-  heroContainer.hidden = true;
-
   const popup = document.getElementById("popup");
   const paymentButton = document.querySelector(".cart-page__payment-button");
   const popupClose = document.getElementById("popupClose");

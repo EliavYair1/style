@@ -1,6 +1,4 @@
 function loadPaymentContent() {
-  const heroContainer = document.querySelector(".hero-container");
-  heroContainer.hidden = true;
   const couponPoints = localStorage.getItem("couponPoints");
   const pointsElement = document.getElementById("couponPoints");
   const secondPointsElement = document.getElementById("couponPointsSec");
@@ -11,7 +9,7 @@ function loadPaymentContent() {
     pointsElement.innerText = 45;
     secondPointsElement.innerText = 45;
   }
-  console.log("couponPoints", couponPoints);
+  // console.log("couponPoints", couponPoints);
 
   const currentYear = new Date().getFullYear();
   const yearDropdown = document.getElementById("expiry-year");
@@ -50,69 +48,58 @@ function loadPaymentContent() {
       document.removeEventListener("click", hidePopupOnClickOutside);
     }
   }
-  // todo to apply validation
-  // todo to connect the points and price from the coupon
   //* validation for the payment form
+  document.querySelector("form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const form = e.target;
+    let isValid = true;
+    // console.log("form", form);
 
-  // document.getElementById("payment-form").addEventListener("submit", function (e) {
-  //   e.preventDefault();
-  //   const form = e.target;
-  //   let isValid = true;
+    // * card number
+    const cardNumber = form.querySelector("#card-number");
+    const cardNumberError = cardNumber.nextElementSibling;
+    if (!cardNumber.value || cardNumber.value.length < 13 || cardNumber.value.length > 19) {
+      cardNumberError.textContent = "מספר כרטיס לא תקין";
+      isValid = false;
+    } else {
+      cardNumberError.textContent = "";
+    }
 
-  //   // Validate card number
-  //   const cardNumber = form.querySelector("#card-number");
-  //   const cardNumberError = cardNumber.nextElementSibling;
-  //   if (!cardNumber.value || cardNumber.value.length < 13 || cardNumber.value.length > 19) {
-  //     cardNumberError.textContent = "מספר כרטיס לא תקין";
-  //     isValid = false;
-  //   } else {
-  //     cardNumberError.textContent = "";
-  //   }
+    const expiryYear = form.querySelector("#expiry-year");
+    const expiryMonth = form.querySelector("#expiry-month");
+    const errorWrapper = form.querySelector(".payment__date-wrapper .payment__error");
+    if (!expiryYear.value || !expiryMonth.value) {
+      errorWrapper.textContent = "יש לבחור שנה וחודש";
+      isValid = false;
+    } else {
+      errorWrapper.textContent = "";
+    }
 
-  //   // Validate expiry year
-  //   const expiryYear = form.querySelector("#expiry-year");
-  //   const expiryYearError = expiryYear.nextElementSibling;
-  //   if (!expiryYear.value) {
-  //     expiryYearError.textContent = "יש לבחור שנה";
-  //     isValid = false;
-  //   } else {
-  //     expiryYearError.textContent = "";
-  //   }
+    // * id
+    const id = form.querySelector("#id");
+    const idError = id.nextElementSibling;
+    if (!id.value || id.value.length !== 9 || isNaN(id.value)) {
+      idError.textContent = "id לא תקין";
+      isValid = false;
+    } else {
+      idError.textContent = "";
+    }
 
-  //   // Validate expiry month
-  //   const expiryMonth = form.querySelector("#expiry-month");
-  //   const expiryMonthError = expiryMonth.nextElementSibling;
-  //   if (!expiryMonth.value) {
-  //     expiryMonthError.textContent = "יש לבחור חודש";
-  //     isValid = false;
-  //   } else {
-  //     expiryMonthError.textContent = "";
-  //   }
+    // * CVV
+    const cvv = form.querySelector("#cvv");
+    const cvvError = cvv.nextElementSibling;
+    if (!cvv.value || cvv.value.length !== 3 || isNaN(cvv.value)) {
+      cvvError.textContent = "CVV לא תקין";
+      isValid = false;
+    } else {
+      cvvError.textContent = "";
+    }
 
-  //   // Validate id
-  //   const id = form.querySelector("#id");
-  //   const idError = id.nextElementSibling;
-  //   if (!id.value || id.value.length !== 3 || isNaN(id.value)) {
-  //     idError.textContent = "id לא תקין";
-  //     isValid = false;
-  //   } else {
-  //     idError.textContent = "";
-  //   }
-  //   // Validate CVV
-  //   const cvv = form.querySelector("#cvv");
-  //   const cvvError = cvv.nextElementSibling;
-  //   if (!cvv.value || cvv.value.length !== 3 || isNaN(cvv.value)) {
-  //     cvvError.textContent = "CVV לא תקין";
-  //     isValid = false;
-  //   } else {
-  //     cvvError.textContent = "";
-  //   }
-
-  //   if (isValid) {
-  //     alert("הטופס תקין!");
-  //     form.submit();
-  //   }
-  // });
+    if (isValid) {
+      alert("הטופס תקין!");
+      form.submit();
+    }
+  });
 
   // ? end
 }

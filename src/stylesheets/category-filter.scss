@@ -121,9 +121,11 @@
           text-decoration: none;
           color: $color-blackish;
         }
-        &:focus {
+        &:focus,
+        &:focus-within {
           color: $color-white;
           background: $color-primary;
+          font-weight: 500;
           a {
             color: $color-white;
           }
@@ -191,6 +193,7 @@
           &:hover {
             background: $color-primary;
             color: $color-white;
+            font-weight: 500;
             a {
               color: $color-white;
             }

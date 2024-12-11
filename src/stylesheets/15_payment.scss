@@ -108,7 +108,7 @@
       background: #f8f8f8;
       padding: 0 16px;
       order: 2;
-
+      text-align: center;
       &-note {
         font-size: 16px;
       }
@@ -172,6 +172,8 @@
       border-left: 0;
       appearance: none;
       background-color: white;
+      color: $color-black;
+      font-size: 14px;
       flex-basis: 75%;
       padding: 4px;
       &:focus-visible {
@@ -184,17 +186,28 @@
       &:focus::placeholder {
         color: transparent;
       }
+      &::placeholder {
+        font-size: 14px;
+        color: $color-black;
+        opacity: 0.3;
+      }
     }
     &-input.selector {
       flex-basis: 100%;
+      font-size: 14px;
+      color: $color-black;
       cursor: pointer;
     }
+  }
+  &__input-wrap {
+    // display: flex;
+    // width: 100%;
   }
   &__hovered-popup {
     display: none;
     position: absolute;
-    left: calc(50% + 5px);
-    bottom: 13px;
+    left: calc(50% + -5px);
+    bottom: 23px;
   }
   &__selector-wrapper {
     display: flex;
@@ -212,6 +225,8 @@
     gap: 12px;
     margin-bottom: 27px;
     align-items: flex-end;
+    position: relative;
+    align-items: center;
   }
   &__field-wrapper.cvv {
     margin-bottom: 14px;
@@ -226,6 +241,7 @@
     display: flex;
     gap: 45px;
     flex: 1;
+    position: relative;
   }
   &__img-wrapper {
     display: flex;
@@ -239,11 +255,15 @@
     height: 52.334px;
   }
   &__error {
-    color: red;
-    font-size: 12px;
+    color: $color-red;
+    font-size: 14px;
     margin-top: 5px;
-    display: block;
+    display: flex;
     font-weight: 700;
+  }
+  &__error.expiry {
+    position: absolute;
+    top: 26px;
   }
   &__submit-form {
     display: flex;
@@ -271,6 +291,7 @@
   }
   &__submit-icon {
   }
+
   @media (min-width: 1200px) {
     padding-top: 272px;
     padding-bottom: 142px;
@@ -381,19 +402,35 @@
 
       &-input {
         flex-basis: initial;
+        color: $color-black;
+        font-size: 18px;
         &:focus-visible {
         }
+        &::placeholder {
+          font-size: 18px;
+          color: $color-black;
+        }
+      }
+
+      &-input.selector {
+        font-size: 18px;
+        color: $color-black;
       }
       &-input.cvv {
       }
     }
+    &__input-wrap {
+      display: flex;
+      width: 100%;
+    }
+
     &__hovered-popup {
       display: none;
       position: relative;
       z-index: 10;
       position: absolute;
-      left: calc(50% - -414px);
-      bottom: 323px;
+      left: calc(50% + 64px);
+      bottom: 32323pxpx;
       img {
       }
     }
@@ -419,10 +456,15 @@
     &__ssh {
     }
     &__error {
-      color: red;
-      font-size: 14px;
+      color: $color-red;
+      font-size: 16px;
       margin-top: 5px;
-      display: block;
+      display: flex;
+      position: absolute;
+      top: 26px;
+    }
+    &__error.expiry {
+      position: absolute;
     }
     &__submit-form {
       display: flex;

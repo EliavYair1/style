@@ -21,8 +21,13 @@
     width: 80%;
     max-width: 335px;
     padding: 28px 24px;
+    position: relative;
   }
-
+  &__close-icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
   &__image-container {
     display: flex;
     // justify-content: space-between;

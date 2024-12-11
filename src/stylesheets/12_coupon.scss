@@ -226,15 +226,16 @@
       .counter-wrapper {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-around;
         border-radius: 6px;
         border: 1px solid $color-grey;
         background: $color-white;
         box-shadow: $color-button;
-        padding: 6px 16px;
+        padding: 8px 8px;
+        width: 125px;
         line-height: 1;
         .seperator {
-          margin: 0 16px;
+          // margin: 0 16px;
         }
         .button {
           background-color: #f0f0f0;
@@ -266,7 +267,7 @@
         }
 
         .quantity {
-          font-size: 20px;
+          font-size: 17px;
           font-weight: bold;
           margin: 0;
         }

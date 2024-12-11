@@ -177,7 +177,7 @@ function updateHeader(userData) {
 }
 const params = new URLSearchParams(window.location.search);
 const keys = Array.from(params.keys());
-const isLoggedIn = keys.some((key) => key.toLowerCase() === "loggedin");
+const isLoggedIn = keys.some((key) => key.toLowerCase() == "loggedin");
 // console.log("params", params);
 
 updateHeader(isLoggedIn ? connectedUser : newUser);

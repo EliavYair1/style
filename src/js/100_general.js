@@ -1,86 +1,3 @@
-// document.addEventListener("DOMContentLoaded", function () {
-//   const urlParams = new URLSearchParams(window.location.search);
-//   const pageParam = urlParams.get("page");
-//   const isLoggedIn = urlParams.has("loggedin");
-
-//   // Set the correct layout based on the logged-in status
-//   const userData = isLoggedIn ? connectedUser : newUser;
-//   updateHeader(userData);
-
-//   if (pageParam === "category") {
-//     fetch("/category.html")
-//       .then((response) => response.text())
-//       .then((data) => {
-//         document.getElementById("dynamic-page-content").innerHTML = data;
-//         loadCategoryContentJs();
-//       })
-//       .catch((err) => console.error("Error loading content:", err));
-//   }
-//   if (pageParam === "coupon") {
-//     fetch("/coupon.html")
-//       .then((response) => response.text())
-//       .then((data) => {
-//         document.getElementById("dynamic-page-content").innerHTML = data;
-//         loadCouponContentJs();
-//       })
-//       .catch((err) => console.error("Error loading content:", err));
-//   }
-//   if (pageParam === "my-account") {
-//     fetch("/my-account.html")
-//       .then((response) => response.text())
-//       .then((data) => {
-//         document.getElementById("dynamic-page-content").innerHTML = data;
-//         loadMyAccountContentJs(); // file: 13_my-account.js
-//       })
-//       .catch((err) => console.error("Error loading content:", err));
-//   }
-//   if (pageParam === "cart") {
-//     fetch("/cart.html")
-//       .then((response) => response.text())
-//       .then((data) => {
-//         document.getElementById("dynamic-page-content").innerHTML = data;
-//         loadCartContent(); // file : 14_cart.js
-//       })
-//       .catch((err) => console.error("Error loading content:", err));
-//   }
-//   if (pageParam === "payment") {
-//     fetch("/payment.html")
-//       .then((response) => response.text())
-//       .then((data) => {
-//         document.getElementById("dynamic-page-content").innerHTML = data;
-//         loadPaymentContent(); // file : 15_payment.js
-//       })
-//       .catch((err) => console.error("Error loading content:", err));
-//   }
-//   if (pageParam === "thanks") {
-//     fetch("/thanks.html")
-//       .then((response) => response.text())
-//       .then((data) => {
-//         document.getElementById("dynamic-page-content").innerHTML = data;
-//         loadThanksContent(); // file : 16_thanks.js
-//       })
-//       .catch((err) => console.error("Error loading content:", err));
-//   }
-//   if (pageParam === "login") {
-//     fetch("/login.html")
-//       .then((response) => response.text())
-//       .then((data) => {
-//         document.getElementById("dynamic-page-content").innerHTML = data;
-//         loadLoginsContent(); // file : 17_login.js
-//       })
-//       .catch((err) => console.error("Error loading content:", err));
-//   }
-//   if (pageParam === "registration") {
-//     fetch("/registration.html")
-//       .then((response) => response.text())
-//       .then((data) => {
-//         document.getElementById("dynamic-page-content").innerHTML = data;
-//         loadRegistrationContent(); // file : 18_registration.js
-//       })
-//       .catch((err) => console.error("Error loading content:", err));
-//   }
-// });
-
 document.addEventListener("DOMContentLoaded", function () {
   const urlParams = new URLSearchParams(window.location.search);
   const pageParam = urlParams.get("page");
@@ -96,9 +13,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function hideLoader() {
-    loaderContainer.style.display = "none";
-    loader.style.display = "none";
-    dynamicPageContent.style.display = "block";
+    setTimeout(() => {
+      loaderContainer.style.display = "none";
+      loader.style.display = "none";
+      dynamicPageContent.style.display = "block";
+    }, 500);
   }
 
   if (!pageParam || pageParam === "category" || pageParam === "homepage") {
@@ -109,17 +28,13 @@ document.addEventListener("DOMContentLoaded", function () {
     heroContainer.style.display = "none";
   }
   function loadPageContent(url, loadScriptCallback) {
-    // console.log("url", url);
-
     showLoader();
     fetch(url)
       .then((response) => response.text())
       .then((data) => {
         dynamicPageContent.innerHTML = data;
         dynamicPageContent.style.display = "block";
-        setTimeout(() => {
-          loadScriptCallback();
-        }, 2000);
+        loadScriptCallback();
       })
       .catch((err) => console.error("Error loading content:", err))
       .finally(() => {

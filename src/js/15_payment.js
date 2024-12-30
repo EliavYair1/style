@@ -94,10 +94,14 @@ function loadPaymentContent() {
     } else {
       cvvError.textContent = "";
     }
+    const randomTransactionId = Math.floor(1000000 + Math.random() * 9000000).toString();
+    console.log("randomTransactionId:", randomTransactionId);
 
     if (isValid) {
       alert("הטופס תקין!");
       form.submit();
+      localStorage.setItem("ordernumber", randomTransactionId);
+      window.location.href = "/?page=thanks";
     }
   });
 

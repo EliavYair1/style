@@ -496,6 +496,11 @@
             font-weight: 600;
             color: $color-style-black;
             margin-bottom: 12px;
+            margin-top: 0;
+          }
+          .contact-form-box__description {
+            margin-top: 0;
+            margin-bottom: 12px;
           }
           .note {
             line-height: 18px;
@@ -517,6 +522,7 @@
                 line-height: 19px;
                 font-size: 16px;
                 color: $color-grey;
+                margin-top: 0;
               }
 
               .contact-info {
@@ -524,7 +530,7 @@
 
                 .phone-label {
                   font-size: 16px;
-                  font-weight: 600;
+                  font-weight: 400;
                   color: $color-grey;
                   margin-bottom: 8px;
                 }
@@ -532,7 +538,7 @@
                 .phone-numbers {
                   display: flex;
                   gap: 20px;
-
+                  text-decoration: underline;
                   span {
                     font-size: 16px;
                     font-weight: 500;
@@ -542,26 +548,26 @@
               }
 
               .social-section {
-                margin-bottom: 37.5px;
+                // margin-bottom: 37.5px;
 
                 .follow-label {
                   font-size: 16px;
-                  font-weight: 600;
+                  font-weight: 400;
                   color: $color-grey;
                   margin-bottom: 12px;
                 }
 
                 .social-buttons {
                   display: grid;
-                  grid-template-columns: 1fr 1fr 1fr 1fr;
-                  gap: 8px;
+                  grid-template-columns: 0fr 0fr 0fr 0fr;
+                  gap: 12px;
 
                   .social-btn {
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     gap: 8px;
-                    padding: 12px 16px;
+                    padding: 8px;
                     border: 1px solid #e0e0e0;
                     border-radius: 6px;
                     background: $color-white;
@@ -608,8 +614,8 @@
                     }
 
                     svg {
-                      width: 16px;
-                      height: 16px;
+                      width: 24px;
+                      height: 24px;
                     }
                   }
                 }
@@ -701,11 +707,37 @@
                   min-height: 100px;
                 }
 
+                .form-success-message {
+                  display: none;
+                  align-items: center;
+                  justify-content: center;
+                  gap: 8px;
+                  width: 100%;
+                  padding: 12px 16px;
+                  //   background: #f0fdf4;
+                  //   border: 1px solid #22c55e;
+                  border-radius: 6px;
+                  margin-bottom: 16px;
+                  font-size: 16px;
+                  font-weight: 600;
+                  color: #22c55e;
+
+                  svg {
+                    width: 20px;
+                    height: 20px;
+                    flex-shrink: 0;
+                  }
+
+                  span {
+                    flex: 1;
+                  }
+                }
+
                 .submit-btn {
                   display: flex;
                   align-items: center;
                   justify-content: center;
-                  gap: 8px;
+                  gap: 4px;
                   width: 100%;
                   padding: 12px 16px;
                   background: $color-primary;
@@ -722,9 +754,9 @@
                   }
 
                   svg {
-                    width: 16px;
-                    height: 16px;
-                    transform: rotate(180deg);
+                    width: 20px;
+                    height: 20px;
+                    // transform: rotate(180deg);
                   }
                 }
               }
@@ -793,7 +825,7 @@
 
               .phone-label {
                 font-size: 16px;
-                font-weight: 600;
+                font-weight: 400;
                 color: $color-grey;
                 margin-bottom: 8px;
               }
@@ -815,7 +847,7 @@
 
               .follow-label {
                 font-size: 16px;
-                font-weight: 600;
+                font-weight: 400;
                 color: $color-grey;
                 margin-bottom: 12px;
               }
@@ -971,6 +1003,32 @@
                 min-height: 100px;
               }
 
+              .form-success-message {
+                display: none;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                width: 100%;
+                padding: 12px 16px;
+                background: #f0fdf4;
+                border: 1px solid #22c55e;
+                border-radius: 6px;
+                margin-bottom: 16px;
+                font-size: 16px;
+                font-weight: 600;
+                color: #22c55e;
+
+                svg {
+                  width: 20px;
+                  height: 20px;
+                  flex-shrink: 0;
+                }
+
+                span {
+                  flex: 1;
+                }
+              }
+
               .submit-btn {
                 display: flex;
                 align-items: center;
@@ -992,9 +1050,9 @@
                 }
 
                 svg {
-                  width: 16px;
-                  height: 16px;
-                  transform: rotate(180deg);
+                  // width: 16px;
+                  // height: 16px;
+                  // transform: rotate(180deg);
                 }
               }
             }
@@ -1326,6 +1384,11 @@
             margin-top: 0;
             margin-bottom: 0;
           }
+          .contact-form-box__description {
+            margin-top: 0;
+            margin-bottom: 12px;
+          }
+
           .note {
             line-height: 1.77;
           }
@@ -1354,7 +1417,7 @@
 
               .phone-numbers {
                 gap: 30px;
-
+                text-decoration: underline;
                 span {
                   font-size: 18px;
                 }
@@ -1376,13 +1439,13 @@
                 .social-btn {
                   padding: 16px 20px;
                   font-size: 16px;
-
+                  width: auto !important;
                   span {
                     display: block !important;
                   }
                   svg {
-                    width: 18px;
-                    height: 18px;
+                    width: 20px !important;
+                    height: 20px !important;
                   }
                 }
               }
@@ -1448,6 +1511,17 @@
               .form-textarea {
                 margin-bottom: 30px;
                 min-height: 120px;
+              }
+
+              .form-success-message {
+                padding: 16px 20px;
+                margin-bottom: 20px;
+                font-size: 18px;
+
+                svg {
+                  width: 22px;
+                  height: 22px;
+                }
               }
 
               .submit-btn {
@@ -1652,6 +1726,9 @@
           }
           .second-title {
           }
+          .contact-form-box__description {
+          }
+
           .note {
           }
         }
@@ -1710,8 +1787,8 @@
                   font-size: 16px;
 
                   svg {
-                    width: 18px;
-                    height: 18px;
+                    // width: 18px;
+                    // height: 18px;
                   }
                 }
               }

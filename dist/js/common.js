@@ -504,6 +504,9 @@ function loadCouponContentJs() {
     }
 
     setupToggleBehavior();
+
+    // Setup contact form validation after layout is ready
+    setupContactFormValidation();
   }
 
   function setupToggleBehavior() {
@@ -619,78 +622,155 @@ function loadCouponContentJs() {
   }
 
   // * Contact form validation
-  const contactForm = document.querySelector(".contact-form");
-  if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
-      e.preventDefault();
+  function setupContactFormValidation() {
+    // Get all contact forms (mobile and desktop)
+    const contactForms = document.querySelectorAll(".contact-form");
 
-      const fields = document.querySelectorAll(
-        ".contact-form input, .contact-form select, .contact-form textarea"
-      );
-      let valid = true;
-      const formData = {};
+    contactForms.forEach((contactForm) => {
+      // Add success message element if it doesn't exist
+      let successMessage = contactForm.querySelector(".form-success-message");
+      if (!successMessage) {
+        successMessage = document.createElement("div");
+        successMessage.className = "form-success-message";
+        successMessage.style.display = "none";
+        successMessage.innerHTML = `
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M16.6667 5L7.50004 14.1667L3.33337 10" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span>הטופס נשלח בהצלחה!</span>
+        `;
 
-      // Validate all form fields
+        // Insert before submit button
+        const submitBtn = contactForm.querySelector(".submit-btn");
+        contactForm.insertBefore(successMessage, submitBtn);
+      }
+
+      // Add real-time validation to all form fields
+      const fields = contactForm.querySelectorAll("input, select, textarea");
       fields.forEach((field) => {
-        const errorMsg = document.querySelector(`#${field.id}-error-msg`);
-        let fieldValue = field.value.trim();
-        let isFieldValid = true;
-
-        // Store field value
-        formData[field.id] = fieldValue;
-
-        // Check if field is empty
-        if (!fieldValue) {
-          isFieldValid = false;
-        }
-
-        if (field.type === "email" && fieldValue) {
-          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          if (!emailRegex.test(fieldValue)) {
-            isFieldValid = false;
+        // Add event listeners for real-time validation
+        field.addEventListener("blur", () => validateField(field, contactForm));
+        field.addEventListener("input", () => {
+          // Clear error on input if field has value
+          if (field.value.trim()) {
+            clearFieldError(field);
           }
-        }
-
-        if (field.type === "tel" && fieldValue) {
-          const phoneRegex = /^[\d\-\+\(\)\s]+$/;
-          if (!phoneRegex.test(fieldValue) || fieldValue.length < 9) {
-            isFieldValid = false;
-          }
-        }
-
-        if (!isFieldValid) {
-          valid = false;
-          field.classList.add("error");
-          field.style.marginBottom = "0";
-
-          if (errorMsg) {
-            errorMsg.style.display = "block";
-            // Use responsive margin based on screen size
-            const isDesktop = window.innerWidth >= 1200;
-            errorMsg.style.marginBottom = isDesktop ? "20px" : "16px";
-          }
-        } else {
-          field.classList.remove("error");
-          // Use responsive margin based on screen size
-          const isDesktop = window.innerWidth >= 1200;
-          field.style.marginBottom = isDesktop ? "20px" : "16px";
-
-          if (errorMsg) {
-            errorMsg.style.display = "none";
-          }
-        }
+        });
       });
 
-      console.log("Contact Form Data:", formData);
+      // Handle form submission
+      contactForm.addEventListener("submit", (e) => {
+        e.preventDefault();
 
-      if (valid) {
-        alert("הטופס נשלח בהצלחה!");
-        // Here you would typically send the data to your server
-        // contactForm.reset(); // Uncomment to reset form after successful submission
-      }
+        const fields = contactForm.querySelectorAll("input, select, textarea");
+        let valid = true;
+        const formData = {};
+
+        // Validate all form fields
+        fields.forEach((field) => {
+          const isFieldValid = validateField(field, contactForm);
+          if (!isFieldValid) {
+            valid = false;
+          }
+          // Store field value
+          formData[field.id] = field.value.trim();
+        });
+
+        console.log("Contact Form Data:", formData);
+
+        if (valid) {
+          // Clear all errors
+          clearAllErrors(contactForm);
+          // Show success message
+          showSuccessMessage(contactForm);
+          // Here you would typically send the data to your server
+          // contactForm.reset(); // Uncomment to reset form after successful submission
+        } else {
+          hideSuccessMessage(contactForm);
+        }
+      });
     });
-  } else {
-    console.error("Contact form not found.");
+  }
+
+  function validateField(field, form) {
+    const errorMsg = form.querySelector(`#${field.id}-error-msg`);
+    let fieldValue = field.value.trim();
+    let isFieldValid = true;
+
+    // Check if field is empty
+    if (!fieldValue) {
+      isFieldValid = false;
+    }
+
+    // Email validation
+    if (field.type === "email" && fieldValue) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(fieldValue)) {
+        isFieldValid = false;
+      }
+    }
+
+    // Phone validation
+    if (field.type === "tel" && fieldValue) {
+      const phoneRegex = /^[\d\-\+\(\)\s]+$/;
+      if (!phoneRegex.test(fieldValue) || fieldValue.length < 9) {
+        isFieldValid = false;
+      }
+    }
+
+    if (!isFieldValid) {
+      showFieldError(field, errorMsg);
+    } else {
+      clearFieldError(field, errorMsg);
+    }
+
+    return isFieldValid;
+  }
+
+  function showFieldError(field, errorMsg) {
+    field.classList.add("error");
+    field.style.marginBottom = "0";
+
+    if (errorMsg) {
+      errorMsg.style.display = "block";
+      const isDesktop = window.innerWidth >= 1200;
+      errorMsg.style.marginBottom = isDesktop ? "20px" : "16px";
+    }
+  }
+
+  function clearFieldError(field, errorMsg = null) {
+    field.classList.remove("error");
+    const isDesktop = window.innerWidth >= 1200;
+    field.style.marginBottom = isDesktop ? "20px" : "16px";
+
+    if (!errorMsg) {
+      errorMsg = document.querySelector(`#${field.id}-error-msg`);
+    }
+
+    if (errorMsg) {
+      errorMsg.style.display = "none";
+    }
+  }
+
+  function clearAllErrors(form) {
+    const fields = form.querySelectorAll("input, select, textarea");
+    fields.forEach((field) => {
+      clearFieldError(field);
+    });
+  }
+
+  function showSuccessMessage(form) {
+    const successMessage = form.querySelector(".form-success-message");
+    if (successMessage) {
+      successMessage.style.display = "flex";
+    }
+  }
+
+  function hideSuccessMessage(form) {
+    const successMessage = form.querySelector(".form-success-message");
+    if (successMessage) {
+      successMessage.style.display = "none";
+    }
   }
 }
 
